@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { NavLink } from "react-router-dom";
 function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu Button */}
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden ml-auto p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
       >
@@ -29,7 +29,7 @@ function Navbar() {
         {["Home", "Events", "Timeline", "About"].map((item) => (
           <a
             key={item}
-            href={`#${item.toLowerCase()}`}
+            href={`${item.toLowerCase()}`}
             className="relative hover:text-white/80 transition-colors duration-200 group"
           >
             {item}
@@ -39,20 +39,23 @@ function Navbar() {
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`lg:hidden fixed inset-0 top-[8vh] bg-[#080C18]/95 backdrop-blur-md transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
+      <div
+        className={`lg:hidden fixed inset-0 top-[8vh] bg-[#080C18]/95 backdrop-blur-md transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div className="flex flex-col items-center pt-10 space-y-8">
           {["Home", "Events", "Timeline", "About"].map((item) => (
-            <a
+            <NavLink
               key={item}
-              href={`#${item.toLowerCase()}`}
+              to={`/${item.toLowerCase()}`}
               className="text-white text-xl font-secFont1 hover:text-white/80 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               {item}
-            </a>
+            </NavLink>
           ))}
+
           <button className="bg-white text-[#080C18] border-none rounded-full px-8 py-4 hover:bg-white/90 transition-colors duration-200">
             Contact Us
           </button>

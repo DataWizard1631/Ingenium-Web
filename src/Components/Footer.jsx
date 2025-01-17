@@ -1,14 +1,22 @@
 import React from "react";
-
+import Home from "../Pages/Home";
+import Event from "../Pages/Event";
+import Timeline from "../Pages/TImeline";
+import About from "../Pages/About";
+import { NavLink } from "react-router-dom";
 function Footer() {
   return (
-    <section className="bg-colBlack w-full text-white px-6 md:px-20 py-16 md:py-32 flex flex-col gap-12">
+    <section className="bg-colBlack w-full h-screen text-white px-6 md:px-20 py-16 md:py-32 flex flex-col justify-between gap-12">
       {/* Top Section */}
       <section className="flex flex-col md:flex-row gap-8">
         {/* Title Section */}
         <div className="flex flex-col gap-4">
-          <h1 className="text-4xl md:text-6xl font-primaryFont">Lorem, ipsum</h1>
-          <h2 className="text-2xl md:text-4xl font-primaryFont">Lorem, ipsum dolor</h2>
+          <h1 className="text-4xl md:text-6xl font-primaryFont">
+            Lorem, ipsum
+          </h1>
+          <h2 className="text-2xl md:text-4xl font-primaryFont">
+            Lorem, ipsum dolor
+          </h2>
         </div>
 
         {/* Input Section */}
@@ -27,8 +35,14 @@ function Footer() {
       <section className="flex flex-col md:flex-row justify-between gap-8 font-secFont1 border-b-2 border-gray-600 pb-6">
         {/* Links Section */}
         <div className="text-center md:text-left">
-          <p>Home / About Us / Project /</p>
-          <p>Services / Careers / Blogs</p>
+          <p>
+            <NavLink to="/home">Home </NavLink>/
+            <NavLink to="/events">Events </NavLink>/
+          </p>
+          <p>
+            <NavLink to="/timeline">Timeline </NavLink>/
+            <NavLink to="/about">About</NavLink>/
+          </p>
         </div>
 
         {/* Contact Section */}
@@ -52,6 +66,9 @@ function Footer() {
           </div>
         </div>
       </section>
+      <div>
+        <p className="text-6xl font-secFont2">TOP</p>
+      </div>
     </section>
   );
 }
