@@ -2,8 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>
-      Footer
+    <div className='bg-[#080C18] h-4/5 w-full text-white '>
+      <h1>Lorem, ipsum.</h1>
+      <h2>L</h2>
     </div>
   )
 }
