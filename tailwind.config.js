@@ -12,7 +12,13 @@ export default {
         colPurple: '#C49DD6',
         colGary: '#D9D9D9',
       },
+      fontFamily: {
+        primaryFont: ['primaryFont'], 
+        secFont1: ['secFont1'],
+        secFont2: ['secFont2'],
+      },
     },
   },
+
   plugins: [],
 }
