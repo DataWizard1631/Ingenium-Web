@@ -36,7 +36,7 @@ function Footer() {
         {/* Links Section */}
         <div className="text-center md:text-left">
           <p>
-            <NavLink to="/home">Home </NavLink>/
+            <NavLink to="">Home </NavLink>/
             <NavLink to="/events">Events </NavLink>/
           </p>
           <p>

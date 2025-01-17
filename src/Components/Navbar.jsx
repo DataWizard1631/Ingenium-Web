@@ -2,20 +2,16 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 function Navbar() {
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-
-    <nav className=" bg-colPink fixed top-0 w-screen h-[8vh] flex p-2 items-center  z-50 transition-all duration-300 hover:bg-colBlack/90">
-      
+    <nav className=" bg-colPink fixed top-0 w-screen h-[8vh] flex p-2 items-center  z-50 transition-all duration-300 py-6 hover:bg-colBlack/90">
       {/* Logo */}
       <div className="h-full w-[20%] font-primaryFont text-5xl text-white flex justify-center items-center transition-transform duration-300 hover:scale-105">
         <a href="/" className="transition-opacity">
           INGENIUM
         </a>
       </div>
-
 
       {/* Mobile Menu Button */}
       <button
@@ -28,14 +24,14 @@ function Navbar() {
       {/* Desktop Navigation */}
       <div className="hidden lg:flex h-full w-[75%] text-white text-lg font-secFont1 gap-12 items-center pl-10">
         {["Home", "Events", "Timeline", "About"].map((item) => (
-          <a
+          <NavLink
             key={item}
-            href={`${item.toLowerCase()}`}
+            to={item === "Home" ? "" : `/${item.toLowerCase()}`}
             className="relative hover:text-white/80 transition-colors duration-200 group"
           >
             {item}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
-          </a>
+          </NavLink>
         ))}
       </div>
 
@@ -49,7 +45,7 @@ function Navbar() {
           {["Home", "Events", "Timeline", "About"].map((item) => (
             <NavLink
               key={item}
-              to={`/${item.toLowerCase()}`}
+              to={item === "Home" ? "" : `/${item.toLowerCase()}`} // Correct conditional logic
               className="text-white text-xl font-secFont1 hover:text-white/80 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
@@ -70,7 +66,6 @@ function Navbar() {
         </button>
       </div>
     </nav>
-    
   );
 }
 

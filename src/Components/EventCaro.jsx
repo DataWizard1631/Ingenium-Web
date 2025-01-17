@@ -16,9 +16,10 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div>
-        <div className="font-primaryFont text-5xl text-slate-100">
-            <p>Discover the Magic of Our Extraordinary Events! </p>
+    <div className="px-8 py-20">
+        <div className="font-primaryFont text-5xl text-slate-100 flex flex-col gap-3 pl-10">
+            <p>Discover the Magic of </p>
+            <p>Our Extraordinary Events! </p>
         </div>
       <div className="w-full flex justify-center items-center py-10 bg-colBlack">
         <Swiper
