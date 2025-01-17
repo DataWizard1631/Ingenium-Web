@@ -1,10 +1,9 @@
 import React from 'react'
-import EventCaro from '../Components/EventCaro'
-
+import { Hero } from '../Components/Hero'
 function Home() {
   return (
-    <div className='bg-colBlack w-full h-screen pt-10'>
-      <EventCaro/>
+    <div className='bg-colBlack w-full h-screen'>
+        <Hero/>
     </div>
   )
 }
