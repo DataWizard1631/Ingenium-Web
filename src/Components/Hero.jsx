@@ -1,7 +1,7 @@
 export const Hero = () => {
 
     return(
-        <section className="w-screen pt-[14vh] px-[10vw]">
+        <section className="w-screen pt-[12vh] px-[10vw]">
                 
             {/* Text Area */}
             <div className="w-full flex flex-row h-[45vh]">
