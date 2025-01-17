@@ -13,6 +13,7 @@ function Navbar() {
         </a>
       </div>
 
+
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
