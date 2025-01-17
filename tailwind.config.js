@@ -10,7 +10,7 @@ export default {
         colBlack: '#080C18',
         colPink: '#C90F5B',
         colPurple: '#C49DD6',
-        colGary: '#D9D9D9',
+        colGray: '#D9D9D9',
       },
       fontFamily: {
         primaryFont: ['primaryFont'], 
