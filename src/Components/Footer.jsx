@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <section className="bg-colBlack w-full text-white px-6 md:px-20 py-16 md:py-32 flex flex-col gap-12">
+    <section className="bg-colBlack w-full h-screen text-white px-6 md:px-20 py-16 md:py-32 flex flex-col justify-between gap-12">
       {/* Top Section */}
       <section className="flex flex-col md:flex-row gap-8">
         {/* Title Section */}
@@ -51,7 +51,11 @@ function Footer() {
             </div>
           </div>
         </div>
+
       </section>
+        <div>
+            <p className="text-6xl font-secFont2">TOP</p>
+        </div>
     </section>
   );
 }
