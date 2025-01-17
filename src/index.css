@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+:root {
+    --color-dark-blue: #080C18;
+    --color-pink: #C90F5B;
+    --color-lavender: #C49DD6;
+    --color-light-gray: #D9D9D9;
+  }
+  
+  /* Example usage */
+  /* body {
+    background-color: var(--color-dark-blue);
+    color: var(--color-light-gray);
+  } */
+   /* */
