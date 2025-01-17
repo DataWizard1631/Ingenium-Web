@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 function Navbar() {
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" fixed top-0 w-screen h-[8vh] flex p-2 items-center bg-colGray/40 backdrop-blur-lg z-50 transition-all duration-300 hover:bg-[#080C18]/90">
+
+    <nav className=" bg-colPink fixed top-0 w-screen h-[8vh] flex p-2 items-center  z-50 transition-all duration-300 hover:bg-colBlack/90">
+      
       {/* Logo */}
-      <div className="bg-transparent h-full w-[20%] font-primaryFont text-5xl text-white flex justify-center items-center transition-transform duration-300 hover:scale-105">
-        <a href="/" className="hover:opacity-80 transition-opacity">
+      <div className="h-full w-[20%] font-primaryFont text-5xl text-white flex justify-center items-center transition-transform duration-300 hover:scale-105">
+        <a href="/" className="transition-opacity">
           INGENIUM
         </a>
       </div>
@@ -63,6 +66,7 @@ function Navbar() {
         </button>
       </div>
     </nav>
+    
   );
 }
 
