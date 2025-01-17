@@ -25,3 +25,10 @@
 .swiper-slide-active img {
   transform: scale(1.2);
 }
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
