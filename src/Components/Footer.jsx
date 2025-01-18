@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "../Pages/Home";
 import Event from "../Pages/Event";
-import Timeline from "../Pages/TImeline";
+import TimelinePage from "../Pages/TimelinePage";
 import About from "../Pages/About";
 import { NavLink } from "react-router-dom";
 function Footer() {
