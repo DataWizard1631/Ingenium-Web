@@ -3,7 +3,7 @@ export const Hero = () => {
     return(
         <section className="w-full h-full px-[10vw] pt-16">
             {/* Text Area */}
-            <div className="w-full flex flex-row h-[45vh]">
+            <div className="w-full flex flex-row h-[40vh]">
                 <div className=" w-1/2 font-secFont1 text-8xl  text-white font-extrabold">
                     Lorem ipsum dolor sit lOREM.
                 </div>
