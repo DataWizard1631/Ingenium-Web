@@ -4,7 +4,7 @@ export const Hero = () => {
         <section className="w-screen pt-[12vh] px-[10vw]">
                 
             {/* Text Area */}
-            <div className="w-full flex flex-row h-[45vh]">
+            <div className="w-full flex flex-row h-[40vh]">
                 <div className=" w-1/2 font-secFont1 text-8xl  text-white font-extrabold">
                     Lorem ipsum dolor sit lOREM ASS.
                 </div>
