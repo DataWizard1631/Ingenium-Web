@@ -1,10 +1,18 @@
 import React from "react";
-import Home from "../Pages/Home";
-import Event from "../Pages/Event";
-import TimelinePage from "../Pages/TimelinePage";
-import About from "../Pages/About";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
 function Footer() {
+  const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth',duration:200 });
+  };
+
+  const handleNavClick = (to) => {
+    scrollToTop();
+    navigate(to);  // Navigate to the new route
+  };
+
   return (
     <section className="bg-colBlack w-full h-screen text-white px-6 md:px-20 py-16 md:py-32 flex flex-col justify-between gap-12">
       {/* Top Section */}
@@ -36,12 +44,12 @@ function Footer() {
         {/* Links Section */}
         <div className="text-center md:text-left">
           <p>
-            <NavLink to="">Home </NavLink>/
-            <NavLink to="/events">Events </NavLink>/
+            <NavLink to="" onClick={() => handleNavClick("/")}>Home </NavLink>/
+            <NavLink to="/events" onClick={() => handleNavClick("/events")}>Events </NavLink>/
           </p>
           <p>
-            <NavLink to="/timeline">Timeline </NavLink>/
-            <NavLink to="/about">About</NavLink>/
+            <NavLink to="/timeline" onClick={() => handleNavClick("/timeline")}>Timeline </NavLink>/
+            <NavLink to="/about" onClick={() => handleNavClick("/about")}>About</NavLink>/
           </p>
         </div>
 

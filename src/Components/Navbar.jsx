@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,18 +22,22 @@ function Navbar() {
       </button>
 
       {/* Desktop Navigation */}
-      <div className="hidden lg:flex h-full w-[75%] text-white text-lg font-secFont1 gap-12 items-center pl-10">
-        {["Home", "Events", "Timeline", "About"].map((item) => (
-          <NavLink
-            key={item}
-            to={item === "Home" ? "" : `/${item.toLowerCase()}`}
-            className="relative hover:text-white/80 transition-colors duration-200 group"
-          >
-            {item}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
-          </NavLink>
-        ))}
-      </div>
+
+    <div className="hidden lg:flex h-full w-[75%] text-white text-lg font-secFont1 gap-12 items-center pl-10">
+      {["Home", "Events", "Timeline", "About"].map((item) => (
+        <Link
+          key={item}
+          to={item === "Home" ? "/" : `/${item.toLowerCase()}`} // Make sure Home links to the root ("/")
+          className="relative hover:text-white/80 transition-colors duration-200 group"
+        >
+          {item}
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
+        </Link>
+      ))}
+    </div>
+
+
+
 
       {/* Mobile Navigation */}
       <div
