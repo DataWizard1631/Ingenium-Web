@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className='bg-colBlack w-full h-full'>
         <Hero/>
-        <AboutUs
+        <AboutUs/>
     </div>
   )
 }
