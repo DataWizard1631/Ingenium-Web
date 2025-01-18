@@ -57,7 +57,7 @@ export const ParallaxScrollSecond = ({ images = [], className = "" }) => {
 
   return (
     <div
-      className={cn("h-[100rem] items-start overflow-y-auto w-full", className)}
+      className={cn("w-full overflow-y-auto", className)}
       ref={gridRef}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-7xl mx-[10vw] gap-10 py-40 px-10">
