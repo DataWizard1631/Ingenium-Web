@@ -5,16 +5,19 @@ function Footer() {
   const navigate = useNavigate();
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth',duration:200 });
+    window.scrollTo({ top: 0, behavior: "smooth", duration: 200 });
   };
 
   const handleNavClick = (to) => {
     scrollToTop();
-    navigate(to);  // Navigate to the new route
+    navigate(to); // Navigate to the new route
   };
 
   return (
     <section className="bg-colBlack w-full h-screen text-white px-6 md:px-20 py-16 md:py-32 flex flex-col justify-between gap-12">
+      <div className=" text-white font-secFont1 w-[9rem] px-4 py-2 flex justify-center items-center border-2 border-white rounded-full ">
+        Footer
+      </div>
       {/* Top Section */}
       <section className="flex flex-col md:flex-row gap-8">
         {/* Title Section */}
@@ -44,12 +47,40 @@ function Footer() {
         {/* Links Section */}
         <div className="text-center md:text-left">
           <p>
-            <NavLink to="" onClick={() => handleNavClick("/")}>Home </NavLink>/
-            <NavLink to="/events" onClick={() => handleNavClick("/events")}>Events </NavLink>/
+            <NavLink
+              className="hover:text-gray-500"
+              to=""
+              onClick={() => handleNavClick("/")}
+            >
+              Home{" "}
+            </NavLink>
+            /
+            <NavLink
+              className="hover:text-gray-500"
+              to="/events"
+              onClick={() => handleNavClick("/events")}
+            >
+              Events{" "}
+            </NavLink>
+            /
           </p>
           <p>
-            <NavLink to="/timeline" onClick={() => handleNavClick("/timeline")}>Timeline </NavLink>/
-            <NavLink to="/about" onClick={() => handleNavClick("/about")}>About</NavLink>/
+            <NavLink
+              className="hover:text-gray-500"
+              to="/timeline"
+              onClick={() => handleNavClick("/timeline")}
+            >
+              Timeline{" "}
+            </NavLink>
+            /
+            <NavLink
+              className="hover:text-gray-500"
+              to="/about"
+              onClick={() => handleNavClick("/about")}
+            >
+              About
+            </NavLink>
+            /
           </p>
         </div>
 
@@ -74,8 +105,15 @@ function Footer() {
           </div>
         </div>
       </section>
-      <div>
-        <p className="text-6xl font-secFont2">TOP</p>
+
+      {/* Top Scroll Arrow */}
+      <div className="text-center mt-6">
+        <button
+          onClick={scrollToTop}
+          className="text-6xl font-secFont2 cursor-pointer hover:text-white transition-colors"
+        >
+          <img src="/public/up-arrow.png " className="h-16 w-auto" />
+        </button>
       </div>
     </section>
   );

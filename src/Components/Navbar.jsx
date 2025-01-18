@@ -65,7 +65,7 @@ function Navbar() {
 
       {/* Contact Us Button (Desktop) */}
       <div className="hidden lg:flex justify-center items-center h-full w-[15%] font-secFont1">
-        <button className="bg-white text-[#080C18] border-none rounded-full px-8 py-4 hover:bg-white/90 transition-all duration-300 hover:scale-105 active:scale-95">
+        <button className="bg-white text-[#080C18] border-none rounded-full px-3 py-2 hover:bg-white/90 transition-all duration-300 hover:scale-105 active:scale-95">
           Contact Us
         </button>
       </div>
