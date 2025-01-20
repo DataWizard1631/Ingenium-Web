@@ -2,6 +2,7 @@ import React from 'react'
 import { Hero } from '../Components/Hero'
 import { AboutUs } from '../Components/AboutUs'
 import ImageGallary from '../Components/ImageGallary'
+import EventCarousel from '../Components/EventCardScroll';
 function Home() {
 
  
@@ -30,6 +31,7 @@ function Home() {
   return (
     <div className='bg-colBlack w-full h-full pt-16'>
         <Hero/>
+        <EventCarousel/>
         <AboutUs/>
         <ImageGallary images={images} className="custom-class" />
     </div>
