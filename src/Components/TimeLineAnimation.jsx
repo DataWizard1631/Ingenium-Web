@@ -22,19 +22,13 @@ export const TimeLineAnimation = ({ data }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="w-full bg-colBlack font-primaryFont md:px-10"
-      ref={containerRef}
-    >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-colPink max-w-4xl font-primaryFont">
-          Changelog from my journey
+    <div ref={containerRef} className="w-full mt-[8vh] pt-[2em] bg-colBlack font-primaryFont md:px-10">
+      <div className="max-w-7xl mx-auto pu-20 ">
+        <h2 className="relative text-xl font-extrabold md:text-9xl mb-4 text-colPink max-w-4xl font-secFont1">
+          UNFOLDING THE FEST
         </h2>
-        <p className="text-colGray text-sm md:text-base max-w-sm font-secFont1">
-          I've been working on Aceternity for the past 2 years. Here's
-          a timeline of my journey.
-        </p>
       </div>
+
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
@@ -42,13 +36,13 @@ export const TimeLineAnimation = ({ data }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-colBlack flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-colGray border border-colPurple p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-colPurple font-primaryFont">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-colPurple font-secFont1">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-colPurple font-primaryFont">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-colPurple font-secFont1">
                 {item.title}
               </h3>
               {item.content}

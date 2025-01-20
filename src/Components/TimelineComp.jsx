@@ -4,11 +4,11 @@ import { TimeLineAnimation } from "../Components/TimeLineAnimation";
 export const TimelineComp = () => {
   const data = [
     {
-      title: "2024",
+      title: "DAY 1",
       content: (
         <div>
           <p className="text-colPink font-secFont1 text-xs md:text-sm font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+            Built and launched Ingenium and Ingenium Pro from scratch
           </p>
           <div className="grid grid-cols-2 gap-4">
             {[1, 2, 3, 4].map((i) => (
@@ -28,7 +28,7 @@ export const TimelineComp = () => {
       ),
     },
     {
-      title: "Early 2023",
+      title: "DAY 2",
       content: (
         <div>
           <p className="text-colPink font-secFont1 text-xs md:text-sm font-normal mb-8">
@@ -57,25 +57,12 @@ export const TimelineComp = () => {
       ),
     },
     {
-      title: "Changelog",
+      title: "DAY 3",
       content: (
         <div>
           <p className="text-colPink font-secFont1 text-xs md:text-sm font-normal mb-4">
             Deployed 5 new components on Aceternity today
           </p>
-          <div className="mb-8">
-            {[
-              "Card grid component",
-              "Startup template Aceternity",
-              "Random file upload lol",
-              "Himesh Reshammiya Music CD",
-              "Salman Bhai Fan Club registrations open"
-            ].map((item, i) => (
-              <div key={i} className="flex gap-2 items-center text-colGray font-secFont1 text-xs md:text-sm">
-                ✅ {item}
-              </div>
-            ))}
-          </div>
           <div className="grid grid-cols-2 gap-4">
             {[1, 2, 3, 4].map((i) => (
               <div 

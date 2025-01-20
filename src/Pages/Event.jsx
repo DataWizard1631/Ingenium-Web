@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 function Event() {
   return (
     <div>
-        Event page
+        Events
     </div>
   )
 }
