@@ -80,6 +80,55 @@ export const TimelineComp = () => {
         </div>
       ),
     },
+    {
+      title: "DAY 4",
+      content: (
+        <div>
+          <p className="text-colPink font-secFont1 text-xs md:text-sm font-normal mb-8">
+            Built and launched Ingenium and Ingenium Pro from scratch
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div 
+                key={i}
+                className="rounded-lg h-20 md:h-44 lg:h-60 w-full bg-colBlack shadow-lg overflow-hidden"
+              >
+                <img 
+                  src={`/gif.png`}
+                  alt={`Project screenshot ${i}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "DAY 5",
+      content: (
+        <div>
+          <p className="text-colPink font-secFont1 text-xs md:text-sm font-normal mb-8">
+            Built and launched Ingenium and Ingenium Pro from scratch
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div 
+                key={i}
+                className="rounded-lg h-20 md:h-44 lg:h-60 w-full bg-colBlack shadow-lg overflow-hidden"
+              >
+                <img 
+                  src={`/gif.png`}
+                  alt={`Project screenshot ${i}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      ),
+    },
+
   ];
 
   return (

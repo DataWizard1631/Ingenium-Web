@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 export const TimeLineAnimation = ({ data }) => {
@@ -15,11 +15,19 @@ export const TimeLineAnimation = ({ data }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ["start 15%", "end center"],
   });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+ 
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 50,  
+    damping: 20,    
+    restDelta: 0.001
+  });
+
+  
+  const heightTransform = useTransform(smoothProgress, [0, 1], [0, height]);
+  const opacityTransform = useTransform(smoothProgress, [0, 0.2], [0, 1]);
 
   return (
     <div ref={containerRef} className="w-full mt-[8vh] pt-[2em] bg-colBlack font-primaryFont md:px-10">
@@ -67,3 +75,5 @@ export const TimeLineAnimation = ({ data }) => {
     </div>
   );
 };
+
+export default TimeLineAnimation;
