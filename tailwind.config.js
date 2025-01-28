@@ -18,10 +18,24 @@ export default {
         colGray: '#D9D9D9',
       },
       fontFamily: {
-        primaryFont: ['primaryFont'], 
-        secFont1: ['secFont1'],
-        secFont2: ['secFont2'],
+        primaryFont: ['ModernAge', 'sans-serif'], 
+        secFont1: ['OfficialBook', 'sans-serif'],
+        secFont2: ['Poppins-Regular', 'sans-serif'],
       },
+      keyframes: {
+        scrollX: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" }
+        },
+        scrollY: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-100%)" }
+        }
+      },
+      animation: {
+        scrollX: "scrollX var(--duration) linear infinite",
+        scrollY: "scrollY var(--duration) linear infinite"
+      }
     },
   },
 
@@ -29,7 +43,7 @@ export default {
 }
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
+function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])

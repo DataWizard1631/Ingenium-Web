@@ -3,32 +3,49 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'primaryFont';
-  src: url('./assets/fonts/ModernAge.ttf'),
- 
+  font-family: 'ModernAge';
+  src: url('@/assets/Fonts/ModernAge.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'secFont1';
-  src: url('./assets/fonts/OfficialBook.ttf')
+  font-family: 'OfficialBook';
+  src: url('@/assets/Fonts/OfficialBook.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "secFont1";
-  src: url('./assets/fonts/Poppins-Regular.ttf')
+  font-family: 'Poppins-Regular';
+  src: url('@/assets/Fonts/Poppins-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
-.swiper-slide img {
-  transition: transform 0.3s ease-in-out;
-}
+@layer utilities {
+  .mask-horizontal {
+    @apply [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_20%,rgba(0,0,0,1)_80%,rgba(0,0,0,0)_100%)]
+           [mask-size:cover]
+           [mask-repeat:no-repeat];
+  }
 
-.swiper-slide-active img {
-  transform: scale(1.2);
-}
+  .mask-vertical {
+    @apply [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_20%,rgba(0,0,0,1)_80%,rgba(0,0,0,0)_100%)]
+           [mask-size:cover]
+           [mask-repeat:no-repeat];
+  }
 
+  .paused .animate-scrollX,
+  .paused .animate-scrollY {
+    animation-play-state: paused !important;
+  }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  .reverse-x {
+    animation-direction: reverse;
+    animation-delay: -3s;
+  }
 }
