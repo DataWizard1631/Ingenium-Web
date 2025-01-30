@@ -13,9 +13,9 @@
 @font-face {
   font-family: 'OfficialBook';
   src: url('@/assets/Fonts/OfficialBook.ttf') format('truetype');
-  font-display: swap;
+  /* font-display: swap;
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; */
 }
 
 @font-face {

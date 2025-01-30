@@ -1,10 +1,10 @@
 import React from 'react'
-
+import { EventLog } from '../Components/EventLog'
 
 function Event() {
   return (
     <div>
-        Events
+      <EventLog />
     </div>
   )
 }
