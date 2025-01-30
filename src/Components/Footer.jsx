@@ -112,7 +112,7 @@ function Footer() {
           onClick={scrollToTop}
           className="text-6xl font-secFont2 cursor-pointer hover:text-white transition-colors"
         >
-          <img src="/public/up-arrow.png " className="h-16 w-auto" />
+          <img src="up-arrow.png " className="h-16 w-auto" />
         </button>
       </div>
     </section>
