@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: black;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: black;
+}
+
 @font-face {
   font-family: 'ModernAge';
   src: url('@/assets/Fonts/ModernAge.ttf') format('truetype');
