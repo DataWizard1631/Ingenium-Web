@@ -1,11 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+  }, [location]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (location.pathname === '/') {
+        if (window.scrollY > 100) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location]);
 
   return (
-    <nav className=" bg-colPink fixed top-0 w-screen h-[8vh] flex p-2 items-center  z-50 transition-all duration-300 py-6 hover:bg-colBlack/90">
+    <nav className={`bg-colPink fixed top-0 w-screen h-[8vh] flex p-2 items-center z-50 transition-all duration-300 hover:bg-colBlack/90 ${
+      !isVisible ? '-translate-y-full' : 'translate-y-0'
+    }`}>
       {/* Logo */}
       <div className="h-full w-[20%] font-primaryFont text-5xl text-white flex justify-center items-center transition-transform duration-300 hover:scale-105">
         <a href="/" className="transition-opacity">
@@ -22,22 +50,18 @@ function Navbar() {
       </button>
 
       {/* Desktop Navigation */}
-
-    <div className="hidden lg:flex h-full w-[75%] text-white text-lg font-secFont1 gap-12 items-center pl-10">
-      {["Home", "Events", "Timeline", "About"].map((item) => (
-        <Link
-          key={item}
-          to={item === "Home" ? "/" : `/${item.toLowerCase()}`} // Make sure Home links to the root ("/")
-          className="relative hover:text-white/80 transition-colors duration-200 group"
-        >
-          {item}
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
-        </Link>
-      ))}
-    </div>
-
-
-
+      <div className="hidden lg:flex h-full w-[75%] text-white text-lg font-secFont1 gap-12 items-center pl-10">
+        {["Home", "Events", "Timeline", "About"].map((item) => (
+          <Link
+            key={item}
+            to={item === "Home" ? "/" : `/${item.toLowerCase()}`} // Make sure Home links to the root ("/")
+            className="relative hover:text-white/80 transition-colors duration-200 group"
+          >
+            {item}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
+          </Link>
+        ))}
+      </div>
 
       {/* Mobile Navigation */}
       <div

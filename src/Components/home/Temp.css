@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'ModernAge';
+    src: url('/fonts/ModernAge.ttf') format('truetype');
+}
+
+.title {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'ModernAge', sans-serif;
+    font-size: 7rem;
+    z-index: 100;
+    text-align: center;
+    pointer-events: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
+/* Large Mobile */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 4rem;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 320px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+/* For landscape orientation on mobile */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    .title {
+        font-size: 2.5rem;
+    }
+} 

@@ -5,6 +5,7 @@ import Event from './Pages/Event'
 // import TimelinePage from './Pages/TimelinePage'
 import About from './Pages/About'
 import EventDetails from './Components/eventDetails/eventDetails'
+import Temp from './Components/home/Temp'
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
         {/* <Route path="/timeline" element={<TimelinePage/>}/> */}
         <Route path="/about" element={<About/>}/>
         <Route path="/eventDetails" element={<EventDetails/>}/>
+        <Route path="/temp" element={<Temp/>}/>
       </Route>
     </Routes>
     </>
