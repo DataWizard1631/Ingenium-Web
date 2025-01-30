@@ -17,4 +17,14 @@ export default defineConfig({
       'Cross-Origin-Embedder-Policy': 'require-corp',
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
+    outDir: 'dist',
+    // Copy _redirects file to build output
+    copyPublicDir: true,
+  }
 })
