@@ -10,31 +10,31 @@ const ServiceCarousel = () => {
       id: 1,
       title: "Digital Design",
       description: "Creating beautiful and functional digital experiences through thoughtful design and innovation.",
-      image: "/public/1.jpg"
+      image: "/1.jpg"
     },
     {
       id: 2,
       title: "Web Development",
       description: "Building robust and scalable web applications with cutting-edge technologies.",
-      image: "/public/2.jpg"
+      image: "2.jpg"
     },
     {
       id: 3,
       title: "Mobile Apps",
       description: "Crafting intuitive mobile experiences that engage and delight users across platforms.",
-      image: "/public/3.jpg"
+      image: "3.jpg"
     },
     {
       id: 4,
       title: "UI/UX Design",
       description: "Designing user-centered interfaces that combine aesthetics with seamless functionality.",
-      image: "/public/4.jpg"
+      image: "4.jpg"
     },
     {
       id: 5,
       title: "Brand Identity",
       description: "Developing distinctive brand identities that resonate with your target audience.",
-      image: "/public/5.jpg"
+      image: "5.jpg"
     }
   ];
 
