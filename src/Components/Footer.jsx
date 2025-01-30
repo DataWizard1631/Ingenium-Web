@@ -1,97 +1,121 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Footer() {
-  const fadeInUp = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    transition: { duration: 0.5 }
+  const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth", duration: 200 });
+  };
+
+  const handleNavClick = (to) => {
+    scrollToTop();
+    navigate(to); // Navigate to the new route
   };
 
   return (
-    <footer className="bg-black text-white relative overflow-hidden">
+    <section className="bg-colBlack w-full h-screen text-white px-6 md:px-20 py-16 md:py-32 flex flex-col justify-between gap-12">
+      <div className=" text-white font-secFont1 w-[9rem] px-4 py-2 flex justify-center items-center border-2 border-white rounded-full ">
+        Footer
+      </div>
+      {/* Top Section */}
+      <section className="flex flex-col md:flex-row gap-8">
+        {/* Title Section */}
+        <div className="flex flex-col gap-4">
+          <h1 className="text-4xl md:text-6xl font-primaryFont">
+            Lorem, ipsum
+          </h1>
+          <h2 className="text-2xl md:text-4xl font-primaryFont">
+            Lorem, ipsum dolor
+          </h2>
+        </div>
 
-      {/* Main Content */}
-      <div className="relative z-20 w-[90%] border-t border-white/10 mx-auto px-4 md:px-8 pt-20 pb-8">
+        {/* Input Section */}
+        <div className="flex-1 flex flex-col md:flex-row gap-4 items-center md:items-end border-b-2 border-gray-600 py-4">
+          <input
+            className="bg-colBlack text-gray-600 w-full md:w-auto flex-grow pl-4 py-3 rounded-md"
+            placeholder="What's your name?"
+          />
+          <button className="bg-slate-50 font-secFont1 text-black px-6 py-3 rounded-3xl">
+            SUBMIT
+          </button>
+        </div>
+      </section>
 
-        {/* Middle Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center md:text-left">
-          {/* Brand Section */}
-          <div className="lg:col-span-2 flex flex-col items-center md:items-start">
-            <h3 className="font-['ModernAge'] text-3xl md:text-4xl mb-4">INGENIUM</h3>
-            <p className="font-['OfficialBook'] text-gray-400 mb-6 max-w-md text-xl">
-              Empowering innovation and creativity through technology and design. Join us in shaping the future.
-            </p>
-            <div className="flex space-x-4">
-              {[FaTwitter, FaInstagram, FaLinkedinIn, FaGithub].map((Icon, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF1F79] transition-colors duration-300"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
+      {/* Bottom Section */}
+      <section className="flex flex-col md:flex-row justify-between gap-8 font-secFont1 border-b-2 border-gray-600 pb-6">
+        {/* Links Section */}
+        <div className="text-center md:text-left">
+          <p>
+            <NavLink
+              className="hover:text-gray-500"
+              to=""
+              onClick={() => handleNavClick("/")}
+            >
+              Home{" "}
+            </NavLink>
+            /
+            <NavLink
+              className="hover:text-gray-500"
+              to="/events"
+              onClick={() => handleNavClick("/events")}
+            >
+              Events{" "}
+            </NavLink>
+            /
+          </p>
+          <p>
+            <NavLink
+              className="hover:text-gray-500"
+              to="/timeline"
+              onClick={() => handleNavClick("/timeline")}
+            >
+              Timeline{" "}
+            </NavLink>
+            /
+            <NavLink
+              className="hover:text-gray-500"
+              to="/about"
+              onClick={() => handleNavClick("/about")}
+            >
+              About
+            </NavLink>
+            /
+          </p>
+        </div>
+
+        {/* Contact Section */}
+        <div className="flex flex-col gap-6">
+          {/* Contact Info */}
+          <div className="text-center md:text-left">
+            <p className="text-gray-400 text-sm">Contact us</p>
+            <p>+9876543210</p>
+          </div>
+
+          {/* Location and Email */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-12 text-center sm:text-left">
+            <div>
+              <p className="text-gray-400 text-sm">Location</p>
+              <p>Lorem ipsum dolor.</p>
+            </div>
+            <div>
+              <p className="text-gray-400 text-sm">Email</p>
+              <p>Lorem, ipsum dolor.</p>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-['OfficialBook'] text-2xl mb-6">Quick Links</h4>
-            <ul className="space-y-4">
-              {["Home", "Events", "Timeline", "About"].map((item) => (
-                <li key={item} className="flex justify-center md:justify-start">
-                  <NavLink
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2"
-                  >
-                    <span className="w-2 h-2 bg-[#FF1F79] rounded-full" />
-                    {item}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="flex flex-col items-center md:items-start font-['OfficialBook']">
-            <h4 className="text-2xl mb-6">Contact Us</h4>
-            <ul className="space-y-4 text-gray-400">
-              <li className="flex flex-col md:flex-row items-center md:items-start gap-2">
-                <span className="font-bold text-white flex items-center gap-2">
-                  <HiLocationMarker className="text-[#FF1F79] text-xl" />
-                </span>
-                <span className="text-xl">123 Innovation Street, Tech City</span>
-              </li>
-              <li className="flex flex-col md:flex-row items-center md:items-start gap-2">
-                <span className="font-bold text-white flex items-center gap-2">
-                  <HiMail className="text-[#FF1F79] text-xl" />
-                </span>
-                <span className="text-xl">ingenium@ahduni.edu.in</span>
-              </li>
-            </ul>
-          </div>
         </div>
+      </section>
 
-        {/* Bottom Section */}
-        <div className="border-t border-white/10 pt-8 mt-8">
-          <div className="flex flex-col items-center md:flex-row md:justify-between gap-4">
-            <p className="font-['OfficialBook'] text-gray-400 text-md text-center w-full">
-              © 2025 Ingenium. All rights reserved.
-            </p>
-          </div>
-        </div>
+      {/* Top Scroll Arrow */}
+      <div className="text-center mt-6">
+        <button
+          onClick={scrollToTop}
+          className="text-6xl font-secFont2 cursor-pointer hover:text-white transition-colors"
+        >
+          <img src="up-arrow.png " className="h-16 w-auto" />
+        </button>
       </div>
-
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FF1F79] rounded-full filter blur-[128px] opacity-20" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#FF1F79] rounded-full filter blur-[128px] opacity-20" />
-      </div>
-    </footer>
+    </section>
   );
 }
 

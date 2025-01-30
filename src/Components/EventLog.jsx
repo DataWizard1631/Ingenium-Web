@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 
 // Event data structure
 const eventData = {
@@ -62,8 +61,6 @@ const categories = [
 ];
 
 function CardComp({ event }) {
-  const navigate = useNavigate();
-
   return (
     <motion.section 
       className="w-full"
@@ -96,10 +93,7 @@ function CardComp({ event }) {
             <button className="px-6 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-colors">
               Register
             </button>
-            <button 
-              onClick={() => navigate(`/eventdetails`)}
-              className="px-6 py-2 border border-white text-white rounded-full hover:bg-white/10 transition-colors"
-            >
+            <button className="px-6 py-2 border border-white text-white rounded-full hover:bg-white/10 transition-colors">
               Read More
             </button>
           </div>
@@ -113,7 +107,7 @@ export const EventLog = () => {
   const [selectedCategory, setSelectedCategory] = useState('esports');
 
   return (
-    <section className="w-full bg-black flex flex-col justify-center gap-[4em] min-h-screen py-20">
+    <section className="w-full bg-colBlack flex flex-col justify-center gap-[4em] min-h-screen py-20">
       {/* Event Log Header */}
       <div className="flex h-[30vh] items-center flex-col justify-around mt-[8vh]">
         <div>

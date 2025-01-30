@@ -4,7 +4,6 @@ import { AboutUs } from '../Components/AboutUs'
 import ImageGallary from '../Components/ImageGallary'
 import EventCarousel from '../Components/EventCardScroll';
 import Sponsors from '../Components/Sponsors';
-import Temp from '../Components/home/Temp';
 
 import reactbits from "../assets/image.png";
 const logoImgs = [
@@ -39,8 +38,7 @@ function Home() {
   ];
 
   return (
-    <div className='bg-black w-full h-full pt-16'>
-        <Temp/>
+    <div className='bg-colBlack w-full h-full pt-16'>
         <Hero/>
         <EventCarousel/>
         <AboutUs/>
@@ -50,7 +48,7 @@ function Home() {
             Sponsors
           </h1>
           
-          <div className="h-[250px] sm:h-[250px] w-full relative mb-32">
+          <div className="h-[250px] sm:h-[250px] w-full relative">
             <Sponsors
               items={logoImgs}
               direction='horizontal'
