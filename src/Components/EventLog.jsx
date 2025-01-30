@@ -1,6 +1,6 @@
 export const EventLog = () => {
   return (
-    <section>  
+    <section className="w-full">  
             {/* Event Log */}
             <div className="flex h-[30vh] items-center flex-col justify-around mt-[8vh] bg-colBlack ">
                 {/* Logo */}
@@ -14,7 +14,7 @@ export const EventLog = () => {
                 </div>
                 {/* Description */}
                 <div>
-                    <p className="text-2xl font-secFont1 max-w-[60vw] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque culpa quisquam vel quos distinctio inventore.</p>
+                    <p className="text-2xl font-secFont1 max-w-[60vw] text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque culpa quisquam vel quos distinctio inventore.</p>
                 </div>
             </div>
 
@@ -22,7 +22,7 @@ export const EventLog = () => {
             <div className="w-full flex flex-col items-center  ">
 
                 {/* Event Selector Bars */}
-                <div className="items-center flex gap-4 justify-between bg-gray-400 max-w-[60vw]">
+                <div className="flex items-center justify-between bg-gray-400">
                     <div className="text-2xl font-secFont1">e-sports</div>
                     <div className="text-2xl font-secFont1">e-sports</div>
                     <div className="text-2xl font-secFont1">e-sports</div>
