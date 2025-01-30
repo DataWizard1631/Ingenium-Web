@@ -46,22 +46,22 @@ export const AboutUs = () => {
             </div>
 
             {/* Text Area*/}
-            <div className=" w-full flex flex-row ">
+            <div className=" w-full flex flex-col md:flex-row ">
                 {/* Primary Text */}
-                <div className="border-r-[1px] border-r-white w-[50%] font-secFont1 text-white text-6xl">
+                <div className="border-r-[1px] border-r-white w-full md:w-[50%] font-secFont1 text-white text-6xl">
                     Lorem ipsum dolor 
                     <br/>
                     sit amet.
                 </div>
 
                 {/* Secondary Text + counters */}
-                <div className="w-[50%] flex flex-col pl-8 gap-[50px]">
+                <div className="w-full md:w-[50%] flex flex-col pl-8 gap-[50px]">
                     <div className="w-full font-secFont1 text-white text-[0.98rem]">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quidem similique facere, recusandae mollitia cumque sed nostrum ad eaque tempora voluptatibus culpa voluptatem. Est nobis earum dolorem maxime quod minima saepe cum delectus ipsam nulla ipsa, nemo quis dicta, soluta odio omnis, molestiae quo. Velit nisi maiores deleniti.
                     </div>
 
                     {/* Counters */}
-                    <div className="text-white font-secFont1 w-full flex justify-between items-center">
+                    <div className="text-white font-secFont1 w-full flex flex-col md:flex-row justify-between items-center">
                         <div className="flex flex-col gap-[5px] ">
                             <p className="text-6xl">
                                 <Counter end={50} />
