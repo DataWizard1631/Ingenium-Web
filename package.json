@@ -12,7 +12,7 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "cookie-parser": "^1.4.7",
-    "framer-motion": "^11.18.1",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.471.1",
     "path": "^0.12.7",
     "postprocessing": "^6.36.6",

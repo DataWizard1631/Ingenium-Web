@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import eventsData from '../data/events.json';
 
 // Event data structure
 const eventData = {
   esports: [
     {
       id: 1,
-      title: "EVENT TITLE",
+      title: "EVENT 1",
       image: "/1.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
@@ -15,7 +16,7 @@ const eventData = {
     },
     {
       id: 2,
-      title: "EVENT TITLE",
+      title: "EVENT 2",
       image: "/3.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "offline",
@@ -25,7 +26,7 @@ const eventData = {
   csevents: [
     {
       id: 3,
-      title: "EVENT TITLE",
+      title: "EVENT 3",
       image: "/2.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "hybrid",
@@ -35,7 +36,7 @@ const eventData = {
   mechevnets: [
     {
       id: 4,
-      title: "EVENT TITLE",
+      title: "EVENT 4",
       image: "/5.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "offline",
@@ -45,7 +46,7 @@ const eventData = {
   eeeevents: [
     {
       id: 5,
-      title: "EVENT TITLE",
+      title: "EVENT 5",
       image:"/6.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
@@ -55,7 +56,7 @@ const eventData = {
   chemevents: [
     {
       id: 6,
-      title: "EVENT TITLE",
+      title: "EVENT 6",
       image:"/1.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
@@ -112,7 +113,7 @@ function CardComp({ event }) {
             Register
           </button>
           <button 
-            onClick={() => navigate(`/eventdetails`)}
+            onClick={() => navigate(`/eventdetails/${event.id}`)}
             className="px-4 sm:px-6 py-2 border border-colPink text-colPink rounded-full hover:bg-colPink hover:text-white transition-colors text-sm sm:text-base"
           >
             Read More
@@ -127,7 +128,7 @@ export const EventLog = () => {
   const [selectedCategory, setSelectedCategory] = useState('esports');
 
   return (
-    <section className="w-full  flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+    <section className="w-full bg-colBlack flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
       {/* Event Log Header */}
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-24">
         {/* Logo */}

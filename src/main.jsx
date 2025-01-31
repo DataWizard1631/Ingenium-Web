@@ -9,8 +9,9 @@ import EventsManager from './Components/admin/EventsManager';
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Event from "./Pages/Event";
-import Timeline from "./Pages/Timeline.jsx";
-import EventDetails from "./Components/eventDetails/eventDetails.jsx"
+import EventDetails from "./Components/eventDetails/eventDetails";
+import NotFound from "./Pages/NotFound";
+import Timeline from "./Pages/Timeline";
 
 const router = createBrowserRouter([
   {
@@ -30,12 +31,13 @@ const router = createBrowserRouter([
         element: <Event />
       },
       {
-        path : "timeline",
-        element : <Timeline/>
+        path: "/eventdetails/:id",
+        element: <EventDetails />
       },
+      // timeline
       {
-        path : "eventDetails",
-        element : <EventDetails/>
+        path: "/timeline",
+        element: <Timeline />
       }
     ]
   },
@@ -52,6 +54,10 @@ const router = createBrowserRouter([
         element: <EventsManager />
       }
     ]
+  },
+  {
+    path: "/*",
+    element: <NotFound />
   }
 ]);
 
