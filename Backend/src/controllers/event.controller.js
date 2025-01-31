@@ -55,4 +55,4 @@ export {
   getEventById,
   updateEvent,
   deleteEvent
-}; 
+};

@@ -18,4 +18,4 @@ app.use(cookieParser())
 // Routes
 app.use('/api/v1/events', eventRoutes)
 
-export { app }  
+export { app }
