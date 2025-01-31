@@ -7,47 +7,67 @@ const eventData = {
   esports: [
     {
       id: 1,
-      title: "VALORANT Tournament",
-      image: "/path/to/valorant.jpg",
-      description: "Join our exciting 5v5 tactical shooter tournament with prizes worth...",
+      title: "EVENT TITLE",
+      image: "/1.jpg",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
       registrationPeriod: "1st Feb - 15th Feb",
     },
     {
       id: 2,
-      title: "FIFA Championship",
-      image: "/path/to/fifa.jpg",
-      description: "Show off your football skills in our FIFA tournament...",
+      title: "EVENT TITLE",
+      image: "/3.jpg",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "offline",
       registrationPeriod: "5th Feb - 20th Feb",
     },
   ],
-  technical: [
+  csevents: [
     {
       id: 3,
-      title: "Hackathon 2024",
-      image: "/path/to/hackathon.jpg",
-      description: "48-hour coding challenge to build innovative solutions...",
+      title: "EVENT TITLE",
+      image: "/2.jpg",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "hybrid",
       registrationPeriod: "10th Feb - 25th Feb",
     },
   ],
-  cultural: [
+  mechevnets: [
     {
       id: 4,
-      title: "Dance Competition",
-      image: "/path/to/dance.jpg",
-      description: "Showcase your dance moves in this grand competition...",
+      title: "EVENT TITLE",
+      image: "/5.jpg",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "offline",
       registrationPeriod: "15th Feb - 28th Feb",
     },
   ],
-  workshops: [
+  eeeevents: [
     {
       id: 5,
-      title: "AI Workshop",
-      image: "/path/to/ai.jpg",
-      description: "Learn about artificial intelligence and its applications...",
+      title: "EVENT TITLE",
+      image:"/6.jpg",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
+      meetingType: "online",
+      registrationPeriod: "20th Feb - 5th Mar",
+    },
+  ],
+  chemevents: [
+    {
+      id: 6,
+      title: "EVENT TITLE",
+      image:"/1.jpg",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
+      meetingType: "online",
+      registrationPeriod: "20th Feb - 5th Mar",
+    },
+  ],
+  concert: [
+    {
+      id: 7,
+      title: "EVENT TITLE",
+      image:"/6.jpg",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
       registrationPeriod: "20th Feb - 5th Mar",
     },
@@ -55,57 +75,51 @@ const eventData = {
 };
 
 const categories = [
-  { id: 'esports', label: 'E-Sports' },
-  { id: 'technical', label: 'Technical' },
-  { id: 'cultural', label: 'Cultural' },
-  { id: 'workshops', label: 'Workshops' },
+  { id: 'esports', label: 'e-sports' },
+  { id: 'csevents', label: 'CS Events' },
+  { id: 'mechevnets', label: 'Mech Event' },
+  { id: 'eeeevents', label: 'EEE Event' },
+  { id: 'chemevents', label: 'Chem Events' },
+  { id: 'concert', label: 'Concert' },
 ];
 
 function CardComp({ event }) {
   const navigate = useNavigate();
 
   return (
-    <motion.section 
-      className="w-full"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3 }}
-    >
-      <div className="w-[60vw] flex gap-8 bg-gray-900 rounded-xl overflow-hidden p-6">
-        {/* Image */}
-        <div className="w-1/3">
-          <img 
-            src={event.image} 
-            alt={event.title}
-            className="w-full h-[200px] object-cover rounded-lg"
-          />
-        </div>
+    <div className="w-[45vw] h-[45vh] flex bg-white rounded-lg overflow-hidden">
+      {/* Image */}
+      <div className="w-[47%]">
+        <img 
+          src={event.image} 
+          alt={event.title}
+          className="w-full h-full object-cover "
+        />
+      </div>
 
-        {/* Description */}
-        <div className="flex flex-col flex-1 gap-4">
-          <div className="font-primaryFont text-3xl text-white">{event.title}</div>
-          <div className="font-secFont1 text-[1.2em] text-gray-300">
-            {event.description}
-          </div>
-          <div className="font-secFont1 text-[1.2em] text-gray-400">
-            <p><span className="text-white">Meeting: </span><span>{event.meetingType}</span></p>
-            <p><span className="text-white">Registration: </span><span>{event.registrationPeriod}</span></p>
-          </div>
-          <div className="font-secFont1 text-[1.2em] flex gap-4">
-            <button className="px-6 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-colors">
-              Register
-            </button>
-            <button 
-              onClick={() => navigate(`/eventdetails`)}
-              className="px-6 py-2 border border-white text-white rounded-full hover:bg-white/10 transition-colors"
-            >
-              Read More
-            </button>
-          </div>
+      {/* Description */}
+      <div className="flex flex-col flex-1 justify-between bg-white p-8">
+        <div className="font-primaryFont text-3xl ">{event.title}</div>
+        <div className="font-secFont1 text-[1.2em] ">
+          {event.description}
+        </div>
+        <div className="font-secFont1 text-[1.2em]">
+          <p><span className="">Meeting: </span><span>{event.meetingType}</span></p>
+          <p><span className="">Registration: </span><span>{event.registrationPeriod}</span></p>
+        </div>
+        <div className="font-secFont1 text-[1.2em] flex gap-4">
+          <button className="px-6 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-colors">
+            Register
+          </button>
+          <button 
+            onClick={() => navigate(`/eventdetails`)}
+            className="px-6 py-2 border border-white  rounded-full hover:bg-white/10 transition-colors"
+          >
+            Read More
+          </button>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 }
 
@@ -113,9 +127,10 @@ export const EventLog = () => {
   const [selectedCategory, setSelectedCategory] = useState('esports');
 
   return (
-    <section className="w-full bg-black flex flex-col justify-center gap-[4em] min-h-screen py-20">
+    <section className="w-full bg-colBlack flex flex-col justify-center gap-[4em] min-h-screen py-20">
       {/* Event Log Header */}
       <div className="flex h-[30vh] items-center flex-col justify-around mt-[8vh]">
+        {/* Logo */}
         <div>
           <img src="" alt="" />
         </div>
@@ -133,7 +148,7 @@ export const EventLog = () => {
       {/* Card Section */}
       <div className="w-full flex flex-col items-center gap-12">
         {/* Event Selector Bars */}
-        <div className="flex items-center justify-between bg-gray-800 w-[50vw] rounded-full px-[20px] py-[10px]">
+        <div className="flex items-center justify-between bg-gray-200 w-[52vw] rounded-full px-[7px] py-[7px]">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -151,9 +166,22 @@ export const EventLog = () => {
 
         {/* Event Cards */}
         <div className="flex flex-col gap-8">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             {eventData[selectedCategory]?.map((event) => (
-              <CardComp key={event.id} event={event} />
+              <motion.div
+                key={event.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ 
+                  duration: 0.2999,
+                  ease: "easeOut"
+                }}
+                layout
+                className="card-container"
+              >
+                <CardComp event={event} />
+              </motion.div>
             ))}
           </AnimatePresence>
         </div>

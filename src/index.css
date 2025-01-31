@@ -22,10 +22,10 @@ body {
 
 @font-face {
   font-family: 'OfficialBook';
-  src: url('@/assets/Fonts/OfficialBook.ttf') format('truetype');
-  /* font-display: swap;
+  src: url('./assets/Fonts/OfficialBook.ttf') format('truetype');
+  font-display: swap;
   font-weight: normal;
-  font-style: normal; */
+  font-style: normal;
 }
 
 @font-face {
@@ -58,4 +58,12 @@ body {
     animation-direction: reverse;
     animation-delay: -3s;
   }
+}
+
+.card-container {
+  will-change: transform, opacity;
+  transform-origin: center center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
