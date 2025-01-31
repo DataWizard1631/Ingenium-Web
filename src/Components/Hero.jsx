@@ -19,7 +19,8 @@ export const Hero = () => {
   
         {/* Image */}
         <div className="">
-          <img className="w-full rounded-xl object-cover" src="/gif.png" alt="Hero Image" />
+          <img className="w-full rounded-xl object-cover" src="/gif.gif" alt="Hero Image" />
+            
         </div>
       </section>
     );
