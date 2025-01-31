@@ -37,7 +37,7 @@ const StyledWrapper = styled.div`
   }
 
   .card2:hover {
-    transform: scale(0.98);
+    transform: scale(0.96);
     border-radius: 20px;
   }
 
