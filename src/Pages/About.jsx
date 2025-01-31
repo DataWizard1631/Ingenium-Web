@@ -4,7 +4,7 @@ import MouseCard from '../Components/MouseCard'
 
 function About() {
   return (
-    <div className='bg-colBlack py-24 px-12'>
+    <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto">
       <InfoCard />
       <MouseCard/>
     </div>

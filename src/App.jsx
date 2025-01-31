@@ -1,11 +1,14 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Timeline from './Components/timeline/TimeLineComp';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black">
-      <Outlet />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-black">
+        <Timeline />
+      </div>
+    </Router>
   );
 }
 
