@@ -129,16 +129,16 @@ export const EventLog = () => {
   return (
     <section className="w-full bg-colBlack flex flex-col justify-center gap-[4em] min-h-screen py-20">
       {/* Event Log Header */}
-      <div className="flex h-[30vh] items-center flex-col justify-around mt-[8vh]">
+      <div className="flex h-[40vh] items-center flex-col justify-around mt-[8vh]">
         {/* Logo */}
-        <div>
-          <img src="" alt="" />
+        <div className='pb-10'>
+          <img src="/Logos/Ing_White_2025.png" alt="" />
         </div>
         <div>
           <h2 className="text-9xl font-primaryFont text-white">EVENT LOG</h2>
         </div>
         <div>
-          <p className="text-2xl font-secFont1 max-w-[60vw] text-center text-white">
+          <p className="text-2xl font-secFont1 max-w-[57vw] text-center text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. 
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
@@ -156,7 +156,7 @@ export const EventLog = () => {
               className={`text-xl font-secFont1 px-6 py-2 rounded-full transition-all duration-300 ${
                 selectedCategory === category.id 
                 ? 'bg-colPink text-white' 
-                : 'text-gray-400 hover:text-white'
+                : 'text-black'
               }`}
             >
               {category.label}
