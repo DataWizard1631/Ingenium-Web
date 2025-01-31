@@ -18,26 +18,23 @@ const StyledWrapper = styled.div`
   .book {
     position: relative;
     border-radius: 10px;
-    width: 220px;
-    height: 300px;
+    width: clamp(180px, 80vw, 220px);
+    height: clamp(260px, 90vw, 300px);
     background-color: whitesmoke;
-    -webkit-box-shadow: 1px 1px 12px #000;
     box-shadow: 1px 1px 12px #000;
-    -webkit-transform: preserve-3d;
-    -ms-transform: preserve-3d;
     transform: preserve-3d;
-    -webkit-perspective: 2000px;
     perspective: 2000px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     color: #000;
+    transition: all 0.3s ease;
+
+    @media (min-width: 768px) {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 
   .cover {
@@ -48,35 +45,38 @@ const StyledWrapper = styled.div`
     height: 100%;
     border-radius: 10px;
     cursor: pointer;
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    -webkit-transform-origin: 0;
-    -ms-transform-origin: 0;
     transform-origin: 0;
-    -webkit-box-shadow: 1px 1px 12px #000;
     box-shadow: 1px 1px 12px #000;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-  }
+    
+    @media (hover: hover) {
+      &:hover {
+        transform: rotatey(-80deg);
+      }
+    }
 
-  .book:hover .cover {
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-transform: rotatey(-80deg);
-    -ms-transform: rotatey(-80deg);
-    transform: rotatey(-80deg);
+    @media (hover: none) {
+      &:active {
+        transform: rotatey(-80deg);
+      }
+    }
   }
 
   p {
-    font-size: 20px;
+    font-size: clamp(16px, 5vw, 20px);
     font-weight: bolder;
-  }`;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .book {
+      margin: 0 auto;
+    }
+  }
+`;
 
 export default InfoCard;

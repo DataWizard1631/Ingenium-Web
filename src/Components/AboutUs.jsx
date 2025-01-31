@@ -38,51 +38,47 @@ const Counter = ({ end, duration = 2000 }) => {
 };
 
 export const AboutUs = () => {
-    return(
-        <section className="px-[10vw] pt-[100px] w-full flex flex-col gap-5 border-t-[1px] border-white border-opacity-30">
-            {/* Title */}
-            <div className=" text-white font-secFont1 w-[9rem] px-4 py-2 flex justify-center items-center border-2 border-white rounded-full " >
-                About Us
-            </div>
+  return (
+    <section className="px-4 sm:px-6 md:px-[10vw] py-16 sm:py-20 md:py-24 w-full flex flex-col gap-6 sm:gap-8 md:gap-10 border-t border-white/30">
+      {/* Title */}
+      <div className="text-white font-secFont1 w-fit px-4 py-2 flex justify-center items-center border-2 border-white rounded-full text-sm sm:text-base">
+        About Us
+      </div>
 
-            {/* Text Area*/}
-            <div className=" w-full flex flex-col md:flex-row ">
-                {/* Primary Text */}
-                <div className="border-r-[1px] border-r-white w-full md:w-[50%] font-secFont1 text-white text-6xl">
-                    Lorem ipsum dolor 
-                    <br/>
-                    sit amet.
-                </div>
+      {/* Text Area */}
+      <div className="w-full flex flex-col md:flex-row gap-8 md:gap-12">
+        {/* Primary Text */}
+        <div className="w-full md:w-1/2 md:border-r border-white/30 pr-0 md:pr-8">
+          <h2 className="font-secFont1 text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Lorem ipsum dolor
+            <br />
+            sit amet.
+          </h2>
+        </div>
 
-                {/* Secondary Text + counters */}
-                <div className="w-full md:w-[50%] flex flex-col pl-8 gap-[50px]">
-                    <div className="w-full font-secFont1 text-white text-[0.98rem]">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quidem similique facere, recusandae mollitia cumque sed nostrum ad eaque tempora voluptatibus culpa voluptatem. Est nobis earum dolorem maxime quod minima saepe cum delectus ipsam nulla ipsa, nemo quis dicta, soluta odio omnis, molestiae quo. Velit nisi maiores deleniti.
-                    </div>
+        {/* Secondary Text + Counters */}
+        <div className="w-full md:w-1/2 flex flex-col gap-8 md:gap-12">
+          <p className="font-secFont1 text-white text-sm sm:text-base md:text-lg leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quidem similique facere, recusandae mollitia cumque sed nostrum ad eaque tempora voluptatibus culpa voluptatem.
+          </p>
 
-                    {/* Counters */}
-                    <div className="text-white font-secFont1 w-full flex flex-col md:flex-row justify-between items-center">
-                        <div className="flex flex-col gap-[5px] ">
-                            <p className="text-6xl">
-                                <Counter end={50} />
-                            </p>
-                            <span className="opacity-50">Events</span>
-                        </div>
-                        <div className="flex flex-col gap-[5px] ">
-                            <p className="text-6xl">
-                                <Counter end={100} />
-                            </p>
-                            <span className="opacity-50">Events</span>
-                        </div>
-                        <div className="flex flex-col gap-[5px] ">
-                            <p className="text-6xl">
-                                <Counter end={10} />
-                            </p>
-                            <span className="opacity-50">Events</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
+          {/* Counters */}
+          <div className="text-white font-secFont1 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {[
+              { count: 50, label: "Events" },
+              { count: 100, label: "Participants" },
+              { count: 10, label: "Years" }
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center sm:items-start gap-2">
+                <p className="text-4xl sm:text-5xl md:text-6xl font-bold">
+                  <Counter end={item.count} />
+                </p>
+                <span className="text-white/50 text-sm sm:text-base">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

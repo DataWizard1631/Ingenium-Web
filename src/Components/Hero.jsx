@@ -1,28 +1,35 @@
 export const Hero = () => {
-    return (
-      <section className="w-full h-full px-6 sm:px-[10vw] pt-16 mb-[10vh]">
-        {/* Text Area */}
-        <div className="w-full flex flex-col md:flex-row h-auto md:h-[40vh]">
-          {/* Left Column */}
-          <div className="w-full md:w-1/2 font-secFont1 text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white font-extrabold mb-6 md:mb-0">
+  return (
+    <section className="w-full min-h-screen px-4 sm:px-6 md:px-[10vw] pt-20 sm:pt-24 md:pt-28 mb-10 sm:mb-16 md:mb-[10vh]">
+      {/* Text Area */}
+      <div className="w-full flex flex-col md:flex-row gap-8 md:gap-12 mb-12 md:mb-16">
+        {/* Left Column */}
+        <div className="w-full md:w-1/2">
+          <h1 className="font-secFont1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-extrabold leading-tight">
             Lorem ipsum dolor sit lOREM.
-          </div>
-  
-          {/* Right Column */}
-          <div className="w-full md:w-1/2 font-secFont1 text-white text-sm sm:text-base md:text-[1rem] lg:text-[1.1rem] pt-6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus unde placeat at reiciendis maxime deleniti sapiente iure dicta ipsam ut rem illum error optio aperiam exercitationem, neque nobis id, dolor numquam quod quaerat! In quas minus blanditiis eligendi nisi rerum ducimus, earum quam dolorem illum molestiae consectetur sit, modi officiis qui vero aliquam adipisci suscipit consequuntur perspiciatis ad veniam distinctio.
-            <button className="bg-colPink text-white rounded-full px-12 py-4 ml-0 mt-5 md:mt-10 transition-all duration-300 hover:bg-gray-200">
-              Learn More
-            </button>
-          </div>
+          </h1>
         </div>
-  
-        {/* Image */}
-        <div className="">
-          <img className="w-full rounded-xl object-cover" src="/gif.gif" alt="Hero Image" />
-            
+
+        {/* Right Column */}
+        <div className="w-full md:w-1/2 flex flex-col gap-6">
+          <p className="font-secFont1 text-white text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus unde placeat at reiciendis maxime deleniti sapiente iure dicta ipsam ut rem illum error optio aperiam exercitationem, neque nobis id, dolor numquam quod quaerat!
+          </p>
+          <button className="bg-colPink text-white rounded-full px-8 sm:px-12 py-3 sm:py-4 w-fit text-sm sm:text-base transition-all duration-300 hover:bg-opacity-90 active:scale-95">
+            Learn More
+          </button>
         </div>
-      </section>
-    );
-  };
+      </div>
+
+      {/* Image Container */}
+      <div className="w-full h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] relative overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl">
+        <img 
+          className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" 
+          src="/gif.gif" 
+          alt="Hero Image"
+        />
+      </div>
+    </section>
+  );
+};
   
