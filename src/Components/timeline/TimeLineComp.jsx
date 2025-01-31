@@ -36,18 +36,18 @@ const TimelineEvent = ({ event, position }) => {
   const navigate = useNavigate();
   
   return (
-    <div className={`relative mb-24 w-full lg:w-1/2 ${position === 'left' ? 'lg:pr-12 lg:left-0' : 'lg:pl-12 lg:left-1/2'}`}>
-      {/* Timeline Dot */}
-      <div className={`absolute w-3 h-3 md:w-5 md:h-5 bg-white rounded-full top-0 transform -translate-y-1/2 z-10
-        ${position === 'left' ? 'right-[-6px] md:right-[-10px] lg:right-[-10px]' : 'left-[-6px] md:left-[-10px] lg:left-[-10px]'}`} 
+    <div className={`relative mb-12 md:mb-24 w-full lg:w-1/2 ${position === 'left' ? 'lg:pr-12 lg:left-0' : 'lg:pl-12 lg:left-1/2'}`}>
+      {/* Timeline Dot - Hidden on mobile */}
+      <div className={`hidden md:block absolute w-5 h-5 bg-white rounded-full top-0 transform -translate-y-1/2 z-10
+        ${position === 'left' ? 'md:right-[-10px] lg:right-[-10px]' : 'md:left-[-10px] lg:left-[-10px]'}`} 
       />
 
       {/* Date Badge */}
-      <div className={`absolute bg-colPink px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm z-10 -top-8 
+      <div className={`bg-colPink px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm mb-4 md:mb-0 md:absolute md:-top-8 
         max-w-[200px] flex justify-center items-center text-white font-secFont2
         ${position === 'left' ? 
-          'left-0 lg:right-12 lg:left-auto text-left lg:text-right' : 
-          'right-0 lg:left-12 lg:right-auto text-right lg:text-left'}`}>
+          'mx-auto md:mx-0 md:right-12 md:left-auto md:text-right' : 
+          'mx-auto md:mx-0 md:left-12 md:right-auto md:text-left'}`}>
         {event.date}
       </div>
 
@@ -171,27 +171,29 @@ const TimeLineComp = () => {
 
       {/* Timeline */}
       <div className="relative max-w-[1200px] mx-auto pb-8">
-        {/* Timeline Line */}
-        <div className="absolute left-[6px] md:left-[10px] lg:left-1/2 top-0 bottom-0 w-[2px] md:w-0.5 bg-white 
+        {/* Timeline Line - Hidden on mobile */}
+        <div className="hidden md:block absolute md:left-[10px] lg:left-1/2 top-0 bottom-0 w-0.5 bg-white 
           lg:transform lg:-translate-x-1/2" />
 
-        <AnimatePresence mode="wait" initial={false}>
-          {events.map((event, index) => (
-            <motion.div
-              key={event.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              layout
-            >
-              <TimelineEvent 
-                event={event} 
-                position={index % 2 === 0 ? 'right' : 'left'} 
-              />
-            </motion.div>
-          ))}
-        </AnimatePresence>
+        <div className="flex flex-col gap-6 md:gap-0">
+          <AnimatePresence mode="wait" initial={false}>
+            {events.map((event, index) => (
+              <motion.div
+                key={event.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                layout
+              >
+                <TimelineEvent 
+                  event={event} 
+                  position={index % 2 === 0 ? 'right' : 'left'} 
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );
