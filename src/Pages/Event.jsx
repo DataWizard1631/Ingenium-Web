@@ -3,7 +3,7 @@ import { EventLog } from '../Components/EventLog'
 
 function Event() {
   return (
-    <div>
+    <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto">
       <EventLog />
     </div>
   )

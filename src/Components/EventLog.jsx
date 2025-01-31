@@ -127,7 +127,7 @@ export const EventLog = () => {
   const [selectedCategory, setSelectedCategory] = useState('esports');
 
   return (
-    <section className="w-full bg-colBlack flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+    <section className="w-full  flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
       {/* Event Log Header */}
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-24">
         {/* Logo */}
