@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Event from "./Pages/Event";
 import Timeline from "./Pages/Timeline.jsx";
+import EventDetails from "./Components/eventDetails/eventDetails.jsx"
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path : "timeline",
         element : <Timeline/>
+      },
+      {
+        path : "eventDetails",
+        element : <EventDetails/>
       }
     ]
   },
