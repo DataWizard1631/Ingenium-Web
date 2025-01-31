@@ -5,12 +5,12 @@
 
 .title {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 0%;
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'ModernAge', sans-serif;
-    font-size: 7rem;
+    font-size: 10rem;
     z-index: 100;
     text-align: center;
     pointer-events: none;

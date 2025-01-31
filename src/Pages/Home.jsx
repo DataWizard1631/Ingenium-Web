@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Hero } from '../Components/Hero'
 import { AboutUs } from '../Components/AboutUs'
 import ImageGallary from '../Components/ImageGallary'
 import EventCarousel from '../Components/EventCardScroll';
 import Sponsors from '../Components/Sponsors';
+import Temp from '../Components/home/Temp';
 
 import reactbits from "../assets/image.png";
 const logoImgs = [
@@ -17,7 +18,46 @@ const logoImgs = [
 ];
 
 function Home() {
- 
+  useEffect(() => {
+    // Initially hide navbar
+    const navbar = document.querySelector('nav');
+    if (navbar) {
+      navbar.style.transform = 'translateY(-100%)';
+    }
+
+    let lastScrollY = 0;
+    const showThreshold = 100; // Show navbar after scrolling this many pixels
+
+    const handleScroll = () => {
+      const navbar = document.querySelector('nav');
+      if (!navbar) return;
+
+      const currentScrollY = window.scrollY;
+
+      // Show navbar after scrolling past threshold
+      if (currentScrollY > showThreshold) {
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.transition = 'transform 0.3s ease-in-out';
+      } else {
+        navbar.style.transform = 'translateY(-100%)';
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      // Reset navbar state when component unmounts
+      const navbar = document.querySelector('nav');
+      if (navbar) {
+        navbar.style.transform = 'translateY(0)';
+      }
+    };
+  }, []);
+
   const images = [
     "1.jpg",
     "2.jpg",
@@ -38,7 +78,8 @@ function Home() {
   ];
 
   return (
-    <div className='bg-colBlack w-full h-full pt-16'>
+    <div className='bg-black w-full h-full pt-16'>
+        <Temp/>
         <Hero/>
         <EventCarousel/>
         <AboutUs/>
@@ -48,7 +89,7 @@ function Home() {
             Sponsors
           </h1>
           
-          <div className="h-[250px] sm:h-[250px] w-full relative">
+          <div className="h-[250px] sm:h-[250px] w-full relative mb-32">
             <Sponsors
               items={logoImgs}
               direction='horizontal'
