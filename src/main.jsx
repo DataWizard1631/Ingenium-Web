@@ -11,6 +11,7 @@ import About from "./Pages/About";
 import Event from "./Pages/Event";
 import EventDetails from "./Components/eventDetails/eventDetails";
 import NotFound from "./Pages/NotFound";
+import Timeline from "./Pages/Timeline";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +31,13 @@ const router = createBrowserRouter([
         element: <Event />
       },
       {
-        path: "/eventdetails",
+        path: "/eventdetails/:id",
         element: <EventDetails />
+      },
+      // timeline
+      {
+        path: "/timeline",
+        element: <Timeline />
       }
     ]
   },

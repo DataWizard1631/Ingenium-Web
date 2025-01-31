@@ -51,7 +51,7 @@ const NotFound = () => {
         </motion.p>
         
         <motion.p 
-          className="text-gray-400 mb-8 max-w-md mx-auto text-sm sm:text-base md:text-lg"
+          className="font-['ModernAge'] text-gray-400 mb-8 max-w-md mx-auto text-sm sm:text-base md:text-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -81,7 +81,7 @@ const NotFound = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
       >
-        INGENIUM
+        INGENIUM'25
       </motion.div>
     </div>
   );
