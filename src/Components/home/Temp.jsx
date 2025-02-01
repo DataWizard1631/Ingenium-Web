@@ -18,8 +18,19 @@ const Temp = () => {
   }, []);
 
   return (
-    <div style={{ width: '100vw', height: '100vh', position: 'relative', background: '#000' }}>
-      <div className="hero-section" style={{ height: '100vh', position: 'relative' }}>
+    <div style={{ 
+      width: '100%',
+      height: '100vh', 
+      position: 'relative', 
+      background: '#000',
+      overflow: 'hidden'
+    }}>
+      <div className="hero-section" style={{ 
+        height: '100vh', 
+        position: 'relative',
+        width: '100%',
+        overflow: 'hidden'
+      }}>
         <Hyperspeed 
           effectOptions={{
             onSpeedUp: () => { },
@@ -64,7 +75,9 @@ const Temp = () => {
           style={{
             '--scroll-progress': scrollProgress,
             opacity: 1 - scrollProgress,
-            transform: `scale(${1 - (scrollProgress * 0.3)})`
+            transform: `scale(${1 - (scrollProgress * 0.3)})`,
+            position: 'relative',
+            zIndex: 2
           }}
         >
           Ingenium'25
