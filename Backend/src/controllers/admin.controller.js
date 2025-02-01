@@ -6,8 +6,8 @@ import bcrypt from "bcryptjs";
 dotenv.config();
 
 const addAdmin = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
-  if (!email || !password) {
+  const { email} = req.body;
+  if (!email) {
     throw new ApiError(400, "Please fill all the fields");
   }
 
@@ -15,7 +15,7 @@ const addAdmin = asyncHandler(async (req, res) => {
   if (adminExists) {
     throw new ApiError(400, "Admin already exists");
   }
-
+  const password = process.env.ADMIN_PASSWORD;
   const hashedPassword = bcrypt.hashSync(password, 10);
 
   const admin = await AdminModel.create({

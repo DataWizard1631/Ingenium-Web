@@ -15,12 +15,16 @@ function AdminSettings() {
   }, []);
 
   const fetchAdmins = async () => {
+    setLoading(true);
     try {
       const response = await axios.get("http://localhost:4000/api/v1/admin");
       setAdmins(response.data.data);
     } catch (error) {
       console.error("Error fetching admins:", error);
       setError("Failed to fetch admin list.");
+    }
+    finally {
+      setLoading(false);
     }
   };
 
