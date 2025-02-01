@@ -148,17 +148,20 @@ const TimeLineComp = () => {
   return (
     <div className="w-full px-3 xs:px-4 sm:px-6 lg:px-8 py-6 xs:py-8 sm:py-12 lg:py-16 min-h-screen">
       {/* Logo */}
-      <div className="w-full flex justify-center items-center mt-3 xs:mt-5 sm:mt-8 lg:mt-10">
-        <img 
-          src="/Logos/Ing_White_2025.png" 
-          alt="Ingenium Logo" 
-          className="w-[150px] xs:w-[180px] sm:w-[200px] lg:w-auto" 
-        />
+      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-24">
+        {/* Logo */}
+        <div className="w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8">
+          <img 
+            src="/Logos/Ing_White_2025.png" 
+            alt="Ingenium Logo" 
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       {/* Header */}
       <div className="text-center w-full lg:max-w-[60vw] mx-auto mb-8 xs:mb-10 sm:mb-16 lg:mb-24">
-        <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-[9rem] 
+        <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl
           mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.2em] font-semibold text-white">
           TIMELINE
         </h1>
