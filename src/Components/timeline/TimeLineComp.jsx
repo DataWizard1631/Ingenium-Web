@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import './TimeLineComp.css';
+
 
 const events = [
   {
@@ -37,22 +39,25 @@ const TimelineEvent = ({ event, position }) => {
   
   return (
     <div className={`relative mb-12 md:mb-24 w-full lg:w-1/2 ${position === 'left' ? 'lg:pr-12 lg:left-0' : 'lg:pl-12 lg:left-1/2'}`}>
-      {/* Timeline Dot - Hidden on mobile */}
-      <div className={`hidden md:block absolute w-5 h-5 bg-white rounded-full top-0 transform -translate-y-1/2 z-10
+      {/* Timeline Dot */}
+      <div className={`hidden md:block absolute w-5 h-5 bg-white rounded-full top-0 transform z-10
         ${position === 'left' ? 'md:right-[-10px] lg:right-[-10px]' : 'md:left-[-10px] lg:left-[-10px]'}`} 
       />
 
-      {/* Date Badge */}
-      <div className={`bg-colPink px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm mb-4 md:mb-0 md:absolute md:-top-8 
-        max-w-[200px] flex justify-center items-center text-white font-secFont2
+      {/* Date Badge - Aligned with dot */}
+      <div className={`bg-colPink px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm 
+        inline-block text-white font-secFont2 transform -translate-y-2
         ${position === 'left' ? 
-          'mx-auto md:mx-0 md:right-12 md:left-auto md:text-right' : 
-          'mx-auto md:mx-0 md:left-12 md:right-auto md:text-left'}`}>
+          'float-right md:mr-4' : 
+          'float-left md:ml-4'}`}>
         {event.date}
       </div>
 
-      {/* Event Card */}
-      <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row">
+      {/* Clear float */}
+      <div className="clear-both"></div>
+
+      {/* Event Card - Below date */}
+      <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row mt-8">
         {/* Image */}
         <div className="w-full h-[150px] xs:h-[200px] sm:w-[47%] sm:h-auto">
           <img 
@@ -147,7 +152,7 @@ const MobileTimelineEvent = ({ event }) => {
 const TimeLineComp = () => {
   return (
     <div className="w-full px-3 xs:px-4 sm:px-6 lg:px-8 py-6 xs:py-8 sm:py-12 lg:py-16 min-h-screen">
-      {/* Logo */}
+      {/* Logo & Header section */}
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-24">
         {/* Logo */}
         <div className="w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8">
@@ -157,26 +162,25 @@ const TimeLineComp = () => {
             className="w-full h-auto"
           />
         </div>
-      </div>
 
-      {/* Header */}
-      <div className="text-center w-full lg:max-w-[60vw] mx-auto mb-8 xs:mb-10 sm:mb-16 lg:mb-24">
-        <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl
-          mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.2em] font-semibold text-white">
-          TIMELINE
-        </h1>
-        <p className="font-secFont1 text-sm xs:text-base sm:text-lg lg:text-xl 
-          leading-relaxed opacity-90 text-white px-2 xs:px-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-        </p>
+        {/* Header */}
+        <div className="text-center w-full lg:max-w-[60vw] mx-auto mb-8 xs:mb-10 sm:mb-16 lg:mb-24">
+          <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl
+            mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.2em] font-semibold text-white">
+            TIMELINE
+          </h1>
+          <p className="font-secFont1 text-sm xs:text-base sm:text-lg lg:text-xl 
+            leading-relaxed opacity-90 text-white px-2 xs:px-4">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          </p>
+        </div>
       </div>
 
       {/* Timeline */}
       <div className="relative max-w-[1200px] mx-auto pb-8">
-        {/* Timeline Line - Hidden on mobile */}
-        <div className="hidden md:block absolute md:left-[10px] lg:left-1/2 top-0 bottom-0 w-0.5 bg-white 
-          lg:transform lg:-translate-x-1/2" />
+        {/* Timeline Line */}
+        <div className="hidden md:block absolute md:left-[10px] lg:left-1/2 top-0 w-0.5 bg-white lg:transform lg:-translate-x-1/2 timeline-line" />
 
         <div className="flex flex-col gap-6 md:gap-0">
           <AnimatePresence mode="wait" initial={false}>
@@ -188,6 +192,8 @@ const TimeLineComp = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 layout
+                className="timeline-event"
+                data-last={index === events.length - 1}
               >
                 <TimelineEvent 
                   event={event} 
