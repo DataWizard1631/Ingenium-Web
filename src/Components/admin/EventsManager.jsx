@@ -62,7 +62,7 @@ const EventsSection = () => {
     if (sortBy === "date") {
       filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
     } else if (sortBy === "alphabetically") {
-      filtered.sort((a, b) => a.name.localeCompare(b.name));
+      filtered.sort((a, b) => a.title.localeCompare(b.title));
     }
     setFilteredEvents(filtered);
   }, [searchQuery, sortBy, events]);
@@ -338,7 +338,7 @@ const EventsSection = () => {
       {loading ? (
         <p className="text-white">Loading events...</p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6 py-4">
           {filteredEvents.map((event) => (
             <div
               key={event._id}
@@ -348,7 +348,7 @@ const EventsSection = () => {
                 src={event.image}
                 alt={event.name}
                 crossOrigin="anonymous"
-                className="w-fit mx-auto h-48 object-cover"
+                className="w-fit mx-auto h-48 object-cover py-2"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold">{event.title}</h3>

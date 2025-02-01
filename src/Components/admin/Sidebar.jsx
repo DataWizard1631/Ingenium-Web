@@ -3,11 +3,10 @@ import { Home, Users, Calendar, FileText, Settings, LogOut, Menu, X } from 'luci
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen, activeSection, setActiveSection }) => {
   const sidebarItems = [
-    { icon: Home, label: 'Dashboard', id: 'dashboard' },
     { icon: Users, label: 'Members', id: 'members' },
     { icon: Calendar, label: 'Events', id: 'events' },
     { icon: FileText, label: 'Forms', id: 'forms' },
-    { icon: Settings, label: 'Settings', id: 'settings' },
+    { icon: Settings, label: 'Admin Settings', id: 'settings' },
   ];
 
   return (
