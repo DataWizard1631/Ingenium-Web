@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "./Loader";
 import { Plus, X, Edit, Trash } from "lucide-react";
 import Button from "./Button";
 
@@ -68,6 +69,8 @@ const EventsSection = () => {
   const handleAddEvent = async (e) => {
     e.preventDefault();
     // console.log("New Event Data:", newEvent);
+    setLoading(true);
+    setIsAddModalOpen(false);
     const formData = new FormData();
     formData.append("title", newEvent.title);
     formData.append("description", newEvent.description);
@@ -116,12 +119,15 @@ const EventsSection = () => {
     } catch (err) {
       setError("Failed to add event: " + err.message);
     }
+    finally{
+      setLoading(false);
+    }
   };
 
   const handleUpdateEvent = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-  
+
     formData.append("title", newEvent.title);
     formData.append("description", newEvent.description);
     formData.append("date", newEvent.date);
@@ -129,12 +135,12 @@ const EventsSection = () => {
     formData.append("category", newEvent.category);
     formData.append("meetingType", newEvent.meetingType);
     formData.append("registrationPeriod", newEvent.registrationPeriod);
-  
+
     // Only append the image if the user has uploaded a new one
     if (newEvent.image) {
       formData.append("image", newEvent.image);
     }
-  
+
     try {
       const response = await axios.put(
         `http://localhost:4000/api/v1/events/${currentEvent._id}`,
@@ -143,7 +149,7 @@ const EventsSection = () => {
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
-  
+
       if (response.data && response.data.data) {
         setEvents((prev) =>
           prev.map((event) =>
@@ -153,7 +159,7 @@ const EventsSection = () => {
       } else {
         throw new Error("Invalid response from server");
       }
-  
+
       setIsUpdateModalOpen(false);
       setNewEvent({
         title: "",
@@ -170,7 +176,7 @@ const EventsSection = () => {
       setError("Failed to update event: " + err.message);
     }
   };
-  
+
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -192,7 +198,11 @@ const EventsSection = () => {
     <div className="p-6">
       {/* Add Event Button */}
       <Button text="Add an Event" onClick={() => setIsAddModalOpen(true)} />
-
+      {loading && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
+          <Loader />
+        </div>
+      )}
       {/* Sort and Search Filters */}
       <div className="mb-4 flex justify-between items-center">
         <input

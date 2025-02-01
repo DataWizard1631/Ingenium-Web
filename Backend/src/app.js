@@ -5,6 +5,7 @@ import eventRoutes from './routes/event.routes.js'
 import aboutusRoutes from './routes/aboutus.routes.js'
 import adminRoutes from './routes/admin.routes.js'
 import dotenv from 'dotenv'
+
 dotenv.config()
 
 

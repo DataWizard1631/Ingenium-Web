@@ -4,7 +4,7 @@ import { Navbar } from './Navbar';
 import { MembersSection } from './Member'
 import EventsManager from './EventsManager';
 import { FormsSection } from './FormsSection';
-
+import AdminSettings from './AdminSettings';
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeSection, setActiveSection] = useState('members');
@@ -26,6 +26,7 @@ const App = () => {
             {activeSection === 'members' && <MembersSection />}
             {activeSection === 'events' && <EventsManager />}
             {activeSection === 'forms' && <FormsSection />}
+            {activeSection === 'settings' && <AdminSettings />}
           </div>
         </main>
       </div>

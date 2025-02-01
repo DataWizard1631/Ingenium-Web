@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Plus, X, Edit, Trash } from "lucide-react";
 import Button from "./Button";
+import Loader from "./Loader";
 
 export const MembersSection = () => {
   const [members, setMembers] = useState([]);
@@ -23,6 +24,7 @@ export const MembersSection = () => {
   const [sortBy, setSortBy] = useState("department");
 
   const fetchMembers = async () => {
+    setLoading(true);
     try {
       setLoading(true);
       const response = await axios.get("http://localhost:4000/api/v1/aboutus");
@@ -71,7 +73,7 @@ export const MembersSection = () => {
     formData.append("enrollment", newMember.enrollment);
     formData.append("department", newMember.department);
     formData.append("image", newMember.image);
-
+    setLoading(true);
     try {
       const response = await axios.post(
         "http://localhost:4000/api/v1/aboutus",
@@ -98,6 +100,9 @@ export const MembersSection = () => {
     } catch (err) {
       setError("Failed to add member");
     }
+    finally {
+      setLoading(false);
+    }
   };
 
   const handleUpdateMember = async (e) => {
@@ -111,7 +116,7 @@ export const MembersSection = () => {
     if (newMember.image) {
       formData.append("image", newMember.image);
     }
-
+    setLoading(true);
     try {
       const response = await axios.put(
         `http://localhost:4000/api/v1/aboutus/${currentMember._id}`,
@@ -142,6 +147,9 @@ export const MembersSection = () => {
     } catch (err) {
       setError("Failed to update member: " + err.message);
     }
+    finally {
+      setLoading(false);
+    }
   };
 
   const handleImageChange = (e) => {
@@ -153,11 +161,15 @@ export const MembersSection = () => {
   };
 
   const handleDeleteMember = async (id) => {
+    setLoading(true);
     try {
       await axios.delete(`http://localhost:4000/api/v1/aboutus/${id}`);
       setMembers((prev) => prev.filter((member) => member._id !== id));
     } catch (err) {
       setError("Failed to delete member");
+    }
+    finally {
+      setLoading(false);
     }
   };
 
@@ -165,7 +177,11 @@ export const MembersSection = () => {
     <div className="p-6">
       {/* Add Member Button */}
       <Button text="Add a member" onClick={() => setIsAddModalOpen(true)} />
-
+      {loading && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
+          <Loader />
+        </div>
+      )}
       {/* Sort and Search Filters */}
       <div className="mb-4 flex justify-between items-center">
         <input
@@ -281,7 +297,9 @@ export const MembersSection = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold text-white">Update Member</h3>
+              <h3 className="text-xl font-semibold text-white">
+                Update Member
+              </h3>
               <button
                 onClick={() => setIsUpdateModalOpen(false)}
                 className="text-gray-400 hover:text-white"

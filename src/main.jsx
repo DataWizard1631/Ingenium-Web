@@ -12,6 +12,7 @@ import Event from "./Pages/Event";
 import EventDetails from "./Components/eventDetails/eventDetails";
 import NotFound from "./Pages/NotFound";
 import Timeline from "./Pages/Timeline";
+import AdminLogin from "./Pages/AdminLogin.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/timeline",
         element: <Timeline />
+      },
+      {
+        path: "/admin-login",
+        element: <AdminLogin/>
       }
     ]
   },
