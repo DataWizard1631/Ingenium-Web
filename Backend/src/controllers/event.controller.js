@@ -11,27 +11,27 @@ const createEvent = asyncHandler(async (req, res) => {
     meetingType,
     registrationPeriod,
   } = req.body;
-if(!title){
-  throw new ApiError(400, "Please provide event title");
-}
-if(!description){
-  throw new ApiError(400, "Please provide event description");
-}
-if(!date){
-  throw new ApiError(400, "Please provide event date");
-}
-if(!time){
-  throw new ApiError(400,"Please enter time");
-}
-if(!category){
-  throw new ApiError(400,"Please enter category")
-}
-if(!meetingType){
-  throw new ApiError(400,"Please enter meetingType")
-}
-if(!registrationPeriod){
-  throw new ApiError(400,"Please enter registrationPeriod")
-}
+  if (!title) {
+    throw new ApiError(400, "Please provide event title");
+  }
+  if (!description) {
+    throw new ApiError(400, "Please provide event description");
+  }
+  if (!date) {
+    throw new ApiError(400, "Please provide event date");
+  }
+  if (!time) {
+    throw new ApiError(400, "Please enter time");
+  }
+  if (!category) {
+    throw new ApiError(400, "Please enter category");
+  }
+  if (!meetingType) {
+    throw new ApiError(400, "Please enter meetingType");
+  }
+  if (!registrationPeriod) {
+    throw new ApiError(400, "Please enter registrationPeriod");
+  }
 
   if (!req.file) {
     throw new ApiError(400, "Please upload the event image");

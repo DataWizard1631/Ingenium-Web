@@ -53,12 +53,10 @@ const EventsSection = () => {
     if (searchQuery) {
       filtered = filtered.filter(
         (event) =>
-          event.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           event.description.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-
-    // Sort Filter
     if (sortBy === "date") {
       filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
     } else if (sortBy === "alphabetically") {
@@ -86,7 +84,7 @@ const EventsSection = () => {
     formData.forEach((value, key) => {
       console.log(`${key}:`, value);
     });
-  
+
     try {
       const response = await axios.post(
         "http://localhost:4000/api/v1/events",
@@ -101,7 +99,7 @@ const EventsSection = () => {
       } else {
         throw new Error("Invalid response from server");
       }
-  
+
       // Reset the form and close the modal
       setIsAddModalOpen(false);
       setNewEvent({
@@ -123,15 +121,20 @@ const EventsSection = () => {
   const handleUpdateEvent = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("name", newEvent.name);
+  
+    formData.append("title", newEvent.title);
     formData.append("description", newEvent.description);
     formData.append("date", newEvent.date);
     formData.append("time", newEvent.time);
     formData.append("category", newEvent.category);
-    formData.append("image", newEvent.image);
     formData.append("meetingType", newEvent.meetingType);
     formData.append("registrationPeriod", newEvent.registrationPeriod);
-
+  
+    // Only append the image if the user has uploaded a new one
+    if (newEvent.image) {
+      formData.append("image", newEvent.image);
+    }
+  
     try {
       const response = await axios.put(
         `http://localhost:4000/api/v1/events/${currentEvent._id}`,
@@ -140,6 +143,7 @@ const EventsSection = () => {
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
+  
       if (response.data && response.data.data) {
         setEvents((prev) =>
           prev.map((event) =>
@@ -149,7 +153,7 @@ const EventsSection = () => {
       } else {
         throw new Error("Invalid response from server");
       }
-
+  
       setIsUpdateModalOpen(false);
       setNewEvent({
         title: "",
@@ -163,10 +167,10 @@ const EventsSection = () => {
       });
       setImagePreview(null);
     } catch (err) {
-      setError("Failed to update event");
+      setError("Failed to update event: " + err.message);
     }
   };
-
+  
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -346,14 +350,16 @@ const EventsSection = () => {
             >
               <img
                 src={event.image}
-                alt={event.name}
+                alt={event.title}
                 crossOrigin="anonymous"
                 className="w-fit mx-auto h-48 object-cover py-2"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold">{event.title}</h3>
                 <p className="text-gray-400">{event.description}</p>
-                <p className="text-gray-400">{new Date(event.date).toLocaleDateString()}</p>
+                <p className="text-gray-400">
+                  {new Date(event.date).toLocaleDateString()}
+                </p>
                 <p className="text-gray-400">{event.time}</p>
                 <p className="text-gray-400">{event.category}</p>
                 <p className="text-gray-400">{event.meetingType}</p>
