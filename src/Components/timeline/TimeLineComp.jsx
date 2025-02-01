@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import './TimeLineComp.css';
 
-
 const events = [
   {
     id: 1,
@@ -179,8 +178,8 @@ const TimeLineComp = () => {
 
       {/* Timeline */}
       <div className="relative max-w-[1200px] mx-auto pb-8">
-        {/* Timeline Line */}
-        <div className="hidden md:block absolute md:left-[10px] lg:left-1/2 top-0 w-0.5 bg-white lg:transform lg:-translate-x-1/2 timeline-line" />
+        {/* Updated Timeline Line positioning */}
+        <div className="hidden md:block absolute left-1/2 top-0 w-0.5 bg-white transform -translate-x-1/2 timeline-line" />
 
         <div className="flex flex-col gap-6 md:gap-0">
           <AnimatePresence mode="wait" initial={false}>
