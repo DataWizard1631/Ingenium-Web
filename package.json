@@ -16,6 +16,7 @@
     "@coreui/icons-react": "^2.3.0",
     "@coreui/react": "^5.4.1",
     "@rewind-ui/core": "^0.20.0",
+    "axios": "^1.7.9",
     "clsx": "^2.1.1",
     "cookie-parser": "^1.4.7",
     "framer-motion": "^11.18.2",

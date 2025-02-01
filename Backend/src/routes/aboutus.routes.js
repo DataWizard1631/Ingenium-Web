@@ -10,7 +10,7 @@ import {
 const router = Router();
 
 router
-  .route("/about-us")
+  .route("/")
   .post(upload.single("image"), addMember)
   .get(getMembers);
 router.route("/:id").put(updateMember).delete(removeMember).get(getMemberById);
