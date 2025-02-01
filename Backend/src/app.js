@@ -2,6 +2,10 @@ import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import eventRoutes from './routes/event.routes.js'
+import aboutusRoutes from './routes/aboutus.routes.js'
+import dotenv from 'dotenv'
+dotenv.config()
+
 
 const app = express()
 
@@ -17,5 +21,6 @@ app.use(cookieParser())
 
 // Routes
 app.use('/api/v1/events', eventRoutes)
+app.use('api/v1/aboutus', aboutusRoutes)
 
 export { app }  

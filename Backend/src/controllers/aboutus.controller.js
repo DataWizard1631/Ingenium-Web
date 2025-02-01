@@ -59,4 +59,17 @@ const updateMember = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, user, "User updated successfully"));
 });
 
-export { addMember, removeMember, updateMember };
+const getMembers = asyncHandler(async (req, res) => {
+  const users = await AboutUs.find();
+  return res.status(200).json(new ApiResponse(200, users, "All members"));
+});
+
+const getMemberById=asyncHandler(async(req,res)=>{
+  const user=await AboutUs.findById(req.params.id);
+  if(!user){
+    throw new ApiError(404,"User not found");
+  }
+  return res.status(200).json(new ApiResponse(200,user,"User found successfully"));
+})
+export { addMember, removeMember, updateMember, getMembers, getMemberById };
+
