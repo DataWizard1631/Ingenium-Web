@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import { Navbar } from './Navbar';
 import { MembersSection } from './Member'
-// import { EventsSection } from './EventsManager';
+import EventsManager from './EventsManager';
 import { FormsSection } from './FormsSection';
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
         <main className="pt-20 p-6">
           <div className="bg-gray-800 rounded-lg shadow-lg">
             {activeSection === 'members' && <MembersSection />}
-            {activeSection === 'events' && <EventsSection />}
+            {activeSection === 'events' && <EventsManager />}
             {activeSection === 'forms' && <FormsSection />}
           </div>
         </main>

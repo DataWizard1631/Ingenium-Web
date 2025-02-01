@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Plus, X, Edit, Trash } from "lucide-react";
+import Button from "./Button";
 
 export const MembersSection = () => {
   const [members, setMembers] = useState([]);
@@ -43,10 +44,8 @@ export const MembersSection = () => {
   }, []);
 
   useEffect(() => {
-    // Apply search and sorting filters
     let filtered = [...members];
 
-    // Search Filter
     if (searchQuery) {
       filtered = filtered.filter(
         (member) =>
@@ -55,7 +54,6 @@ export const MembersSection = () => {
       );
     }
 
-    // Sort Filter
     if (sortBy === "department") {
       filtered.sort((a, b) => a.department.localeCompare(b.department));
     } else if (sortBy === "alphabetically") {
@@ -75,9 +73,13 @@ export const MembersSection = () => {
     formData.append("image", newMember.image);
 
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/aboutus", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.post(
+        "http://localhost:4000/api/v1/aboutus",
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
       if (response.data && response.data.data) {
         setMembers((prev) => [...prev, response.data.data]);
       } else {
@@ -85,7 +87,13 @@ export const MembersSection = () => {
       }
 
       setIsAddModalOpen(false);
-      setNewMember({ name: "", email: "", enrollment: "", department: "", image: null });
+      setNewMember({
+        name: "",
+        email: "",
+        enrollment: "",
+        department: "",
+        image: null,
+      });
       setImagePreview(null);
     } catch (err) {
       setError("Failed to add member");
@@ -99,25 +107,40 @@ export const MembersSection = () => {
     formData.append("email", newMember.email);
     formData.append("enrollment", newMember.enrollment);
     formData.append("department", newMember.department);
-    formData.append("image", newMember.image);
+
+    if (newMember.image) {
+      formData.append("image", newMember.image);
+    }
 
     try {
-      const response = await axios.put(`http://localhost:4000/api/v1/aboutus/${currentMember._id}`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.put(
+        `http://localhost:4000/api/v1/aboutus/${currentMember._id}`,
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
       if (response.data && response.data.data) {
         setMembers((prev) =>
-          prev.map((member) => (member._id === currentMember._id ? response.data.data : member))
+          prev.map((member) =>
+            member._id === currentMember._id ? response.data.data : member
+          )
         );
       } else {
         throw new Error("Invalid response from server");
       }
 
       setIsUpdateModalOpen(false);
-      setNewMember({ name: "", email: "", enrollment: "", department: "", image: null });
+      setNewMember({
+        name: "",
+        email: "",
+        enrollment: "",
+        department: "",
+        image: null,
+      });
       setImagePreview(null);
     } catch (err) {
-      setError("Failed to update member");
+      setError("Failed to update member: " + err.message);
     }
   };
 
@@ -141,16 +164,10 @@ export const MembersSection = () => {
   return (
     <div className="p-6">
       {/* Add Member Button */}
-      <button
-        onClick={() => setIsAddModalOpen(true)}
-        className="px-4 py-2 mb-4 bg-green-600 text-white rounded-lg flex items-center gap-2 hover:bg-green-500"
-      >
-        <Plus size={18} /> Add Member
-      </button>
+      <Button text="Add a member" onClick={() => setIsAddModalOpen(true)} />
 
       {/* Sort and Search Filters */}
       <div className="mb-4 flex justify-between items-center">
-        {/* Search Input */}
         <input
           type="text"
           value={searchQuery}
@@ -159,7 +176,6 @@ export const MembersSection = () => {
           className="px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500 w-1/2 sm:w-1/3"
         />
 
-        {/* Sort Dropdown */}
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
@@ -176,7 +192,10 @@ export const MembersSection = () => {
           <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-semibold text-white">Add Member</h3>
-              <button onClick={() => setIsAddModalOpen(false)} className="text-gray-400 hover:text-white">
+              <button
+                onClick={() => setIsAddModalOpen(false)}
+                className="text-gray-400 hover:text-white"
+              >
                 <X size={24} />
               </button>
             </div>
@@ -186,7 +205,9 @@ export const MembersSection = () => {
                 type="text"
                 placeholder="Name"
                 value={newMember.name}
-                onChange={(e) => setNewMember({ ...newMember, name: e.target.value })}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, name: e.target.value })
+                }
                 className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -194,7 +215,9 @@ export const MembersSection = () => {
                 type="email"
                 placeholder="Email"
                 value={newMember.email}
-                onChange={(e) => setNewMember({ ...newMember, email: e.target.value })}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, email: e.target.value })
+                }
                 className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -202,7 +225,9 @@ export const MembersSection = () => {
                 type="text"
                 placeholder="Enrollment No"
                 value={newMember.enrollment}
-                onChange={(e) => setNewMember({ ...newMember, enrollment: e.target.value })}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, enrollment: e.target.value })
+                }
                 className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -210,7 +235,9 @@ export const MembersSection = () => {
                 type="text"
                 placeholder="Department"
                 value={newMember.department}
-                onChange={(e) => setNewMember({ ...newMember, department: e.target.value })}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, department: e.target.value })
+                }
                 className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -222,7 +249,11 @@ export const MembersSection = () => {
                 required
               />
               {imagePreview && (
-                <img src={imagePreview} alt="Preview" className="mt-2 w-full h-32 object-cover rounded-lg" />
+                <img
+                  src={imagePreview}
+                  alt="Preview"
+                  className="mt-2 w-full h-32 object-cover rounded-lg"
+                />
               )}
 
               <div className="flex justify-end space-x-4">
@@ -238,6 +269,95 @@ export const MembersSection = () => {
                   className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500"
                 >
                   Add Member
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Update Member Modal */}
+      {isUpdateModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-semibold text-white">Update Member</h3>
+              <button
+                onClick={() => setIsUpdateModalOpen(false)}
+                className="text-gray-400 hover:text-white"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <form onSubmit={handleUpdateMember} className="space-y-4">
+              <input
+                type="text"
+                placeholder="Name"
+                value={newMember.name}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, name: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                value={newMember.email}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, email: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Enrollment No"
+                value={newMember.enrollment}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, enrollment: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Department"
+                value={newMember.department}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, department: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+              />
+              {imagePreview && (
+                <img
+                  src={imagePreview}
+                  alt="Preview"
+                  className="mt-2 w-full h-32 object-cover rounded-lg"
+                />
+              )}
+
+              <div className="flex justify-end space-x-4">
+                <button
+                  type="button"
+                  onClick={() => setIsUpdateModalOpen(false)}
+                  className="px-4 py-2 rounded-lg bg-gray-600 text-white hover:bg-gray-500"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500"
+                >
+                  Update Member
                 </button>
               </div>
             </form>
@@ -273,6 +393,14 @@ export const MembersSection = () => {
                     onClick={() => {
                       setIsUpdateModalOpen(true);
                       setCurrentMember(member);
+                      setNewMember({
+                        name: member.name,
+                        email: member.email,
+                        enrollment: member.enrollment,
+                        department: member.department,
+                        image: member.image,
+                      });
+                      setImagePreview(member.image);
                     }}
                     className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500"
                   >
