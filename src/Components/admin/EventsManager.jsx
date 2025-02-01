@@ -195,8 +195,9 @@ const EventsSection = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6 mt-10">
       {/* Add Event Button */}
+      <p className="font-primaryFont text-6xl text-fuchsia-50">MANAGE EVENTS</p>
       <Button text="Add an Event" onClick={() => setIsAddModalOpen(true)} />
       {loading && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
@@ -364,16 +365,16 @@ const EventsSection = () => {
                 crossOrigin="anonymous"
                 className="w-fit mx-auto h-48 object-cover py-2"
               />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">{event.title}</h3>
-                <p className="text-gray-400">{event.description}</p>
+              <div className="p-4 font-secFont2">
+                <h3 className="text-xl font-semibold">Title: {event.title}</h3>
+                <p className="text-gray-400">Description: {event.description}</p>
                 <p className="text-gray-400">
-                  {new Date(event.date).toLocaleDateString()}
+                  Date:{new Date(event.date).toLocaleDateString()} (MM/DD/YYYY)
                 </p>
-                <p className="text-gray-400">{event.time}</p>
-                <p className="text-gray-400">{event.category}</p>
-                <p className="text-gray-400">{event.meetingType}</p>
-                <p className="text-gray-400">{event.registrationPeriod}</p>
+                <p className="text-gray-400">Time: {event.time}</p>
+                <p className="text-gray-400">Category: {event.category}</p>
+                <p className="text-gray-400">Meeting Type: {event.meetingType}</p>
+                <p className="text-gray-400">Registration Period: {event.registrationPeriod}</p>
 
                 {/* Edit and Delete Buttons */}
                 <div className="flex justify-between items-center mt-4">

@@ -29,6 +29,7 @@ function AdminSettings() {
       setError("Please enter a valid email.");
       return;
     }
+    setIsAddModalOpen(false);
     setLoading(true);
     setError(null);
     try {
@@ -61,13 +62,15 @@ function AdminSettings() {
   };
 
   return (
-    <div className="p-6 text-white pt-20 pl-24 relative">
-      <h1 className="text-5xl mb-4 font-primaryFont">Manage Admins</h1>
+    <div className="p-6 text-white mt-10 pl-4 sm:pl-10 md:pl-16 lg:pl-24 relative">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl mb-4 font-primaryFont">Manage Admins</h1>
       <div>
         <Button text="Add an Admin" onClick={() => setIsAddModalOpen(true)} />
       </div>
 
-      {/* Full-screen Loader when adding/removing an admin */}
+      <p className="text-3xl sm:text-4xl text-green-600 font-secFont2">
+        Current Active Admins: {admins.length}
+      </p>
       {loading && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
           <Loader />
@@ -83,7 +86,7 @@ function AdminSettings() {
 
       {isAddModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-gray-800 p-4 rounded-lg w-full sm:w-96">
             <h2 className="text-2xl font-primaryFont text-white mb-4">
               Add an Admin
             </h2>
@@ -92,7 +95,7 @@ function AdminSettings() {
               placeholder="Email"
               value={newAdminEmail}
               onChange={(e) => setNewAdminEmail(e.target.value)}
-              className="p-2 rounded-lg text-black"
+              className="p-2 rounded-lg text-black w-full"
             />
             {error && <p className="text-red-400 mt-2">{error}</p>}
             <div className="flex justify-between mt-4">
@@ -120,9 +123,12 @@ function AdminSettings() {
       )}
 
       <ul className="mt-4 flex flex-col gap-4">
-        {admins.map((admin,index) => (
-          <li key={admin._id} className="flex justify-between items-center font-secFont2 text-2xl">
-            <span>{index+1}.{" "}{admin.email}</span>
+        {admins.map((admin, index) => (
+          <li
+            key={admin._id}
+            className="flex justify-between items-center font-secFont2 text-2xl"
+          >
+            <span>{index + 1}. {admin.email}</span>
             <button
               onClick={() => handleRemoveAdmin(admin._id)}
               className="bg-red-500 px-4 py-2 rounded-md hover:bg-red-800"

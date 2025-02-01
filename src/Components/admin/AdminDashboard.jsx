@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import { Navbar } from './Navbar';
-import { MembersSection } from './Member'
+import { MembersSection } from './Member';
 import EventsManager from './EventsManager';
 import { FormsSection } from './FormsSection';
 import AdminSettings from './AdminSettings';
-const App = () => {
+
+const AdminDashboard= () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeSection, setActiveSection] = useState('members');
 
   return (
     <div className="min-h-screen bg-gray-900">
+      {/* Sidebar */}
       <Sidebar 
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
@@ -18,6 +20,7 @@ const App = () => {
         setActiveSection={setActiveSection}
       />
       
+      {/* Main Content */}
       <div className={`${sidebarOpen ? 'ml-64' : 'ml-20'} transition-all duration-300`}>
         <Navbar />
         
@@ -34,4 +37,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AdminDashboard;
