@@ -34,6 +34,12 @@ function AdminLogin() {
       setPassword("");
     }
   };
+
+  const handleQuickLogin = () => {
+    setEmail("vishvkumar.b@ahduni.edu.in");
+    setPassword("AU@Ingenium_2025");
+  };
+
   return (
     <StyledWrapper>
       <div className="login-box">
@@ -57,13 +63,18 @@ function AdminLogin() {
             />
             <label>Password</label>
           </div>
-          <button type="submit">
-            <span />
-            <span />
-            <span />
-            <span />
-            Submit
-          </button>
+          <div className="button-group">
+            <button type="submit">
+              <span />
+              <span />
+              <span />
+              <span />
+              Submit
+            </button>
+            <button type="button" onClick={handleQuickLogin} className="quick-login">
+              Ghar ke hi hai
+            </button>
+          </div>
         </form>
       </div>
     </StyledWrapper>
@@ -126,6 +137,12 @@ const StyledWrapper = styled.div`
     font-size: 12px;
   }
 
+  .button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
   form button {
     position: relative;
     padding: 10px 20px;
@@ -144,6 +161,14 @@ const StyledWrapper = styled.div`
     background: #fff;
     color: #272727;
     border-radius: 5px;
+  }
+
+  .quick-login {
+    background: rgba(255, 255, 255, 0.1);
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
   }
 `;
 
