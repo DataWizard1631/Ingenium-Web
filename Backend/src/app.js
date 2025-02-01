@@ -3,6 +3,7 @@ import cors from "cors"
 import cookieParser from "cookie-parser"
 import eventRoutes from './routes/event.routes.js'
 import aboutusRoutes from './routes/aboutus.routes.js'
+import adminRoutes from './routes/admin.routes.js'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -27,5 +28,6 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/v1/events', eventRoutes)
 app.use('/api/v1/aboutus', aboutusRoutes)
+app.use('/api/v1/admin', adminRoutes)
 
 export { app }  
