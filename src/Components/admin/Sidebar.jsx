@@ -26,7 +26,11 @@ const Sidebar = ({
     setLoading(true);
     try {
       // Send logout request to backend
+      const token=localStorage.getItem("adminToken");
       const response = await axios.get("http://localhost:4000/api/v1/admin/logout", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
         withCredentials: true, // Ensure the request includes cookies
       });
       console.log("Logout Response:", response.data);
