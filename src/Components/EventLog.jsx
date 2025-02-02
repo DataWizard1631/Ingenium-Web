@@ -128,9 +128,9 @@ export const EventLog = () => {
   const [selectedCategory, setSelectedCategory] = useState('esports');
 
   return (
-    <section className="w-full bg-colBlack flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+    <section className="w-full flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
       {/* Event Log Header */}
-      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-24">
+      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-0 mt-16 sm:mt-20 md:mt-20">
         {/* Logo */}
         <div className="w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8">
           <img 
@@ -144,7 +144,7 @@ export const EventLog = () => {
           EVENT LOG
         </h2>
         
-        <p className="text-base sm:text-lg md:text-xl font-secFont1 max-w-[90%] sm:max-w-[80%] md:max-w-[57vw] text-center text-white">
+        <p className="text-base sm:text-lg md:text-xl font-secFont1 max-w-[90%] sm:max-w-[80%] md:max-w-[57vw] text-center text-white md:mt-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. 
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>

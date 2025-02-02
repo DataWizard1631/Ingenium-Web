@@ -1,0 +1,27 @@
+.timeline-line {
+    height: 0;
+  }
+  
+  .timeline-event {
+    position: relative;
+  }
+  
+  /* This makes the line extend from the top of one event to the dot of the next */
+  .timeline-event:not([data-last="true"])::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Add media query for mobile devices */
+  @media (max-width: 768px) {
+    .timeline-event:not([data-last="true"])::after {
+        left: -2px;
+        transform: none;
+    }
+  }

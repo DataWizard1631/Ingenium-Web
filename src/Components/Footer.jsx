@@ -41,7 +41,7 @@ function Footer() {
           <div className="flex flex-col items-center sm:items-start">
             <h4 className="font-['OfficialBook'] text-xl sm:text-2xl mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              {["Home", "Events", "Timeline", "About"].map((item) => (
+              {["Home", "Events", "Timeline", "About","Admin"].map((item) => (
                 <li key={item}>
                   <NavLink
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -81,8 +81,8 @@ function Footer() {
 
       {/* Background Elements - Keep as is */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-0 left-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-[#FF1F79] rounded-full filter blur-[128px] opacity-20" />
-        <div className="absolute bottom-0 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-[#FF1F79] rounded-full filter blur-[128px] opacity-20" />
+        <div className="absolute top-0 left-1/4 w-48 sm:w-64 h-48 sm:h-64 bg-[#FF1F79] rounded-full filter blur-[128px] opacity-50 md:opacity-20" />
+        <div className="absolute bottom-0 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-[#FF1F79] rounded-full filter blur-[128px] opacity-50 md:opacity-20" />
       </div>
     </footer>
   );

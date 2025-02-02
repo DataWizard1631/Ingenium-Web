@@ -11,7 +11,7 @@ const eventSchema = new mongoose.Schema({
     required: true
   },
   date: {
-    type: Date,
+    type: String,
     required: true
   },
   time: {
@@ -21,7 +21,7 @@ const eventSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-    enum: ['esports', 'csevents', 'mechevents', 'eeeevents', 'chemevents', 'concert']
+    // enum: ['esports', 'csevents', 'mechevents', 'eeeevents', 'chemevents', 'concert']
   },
   image: {
     type: String,
@@ -30,7 +30,7 @@ const eventSchema = new mongoose.Schema({
   meetingType: {
     type: String,
     required: true,
-    enum: ['online', 'offline', 'hybrid']
+    // enum: ['online', 'offline', 'hybrid']
   },
   registrationPeriod: {
     type: String,

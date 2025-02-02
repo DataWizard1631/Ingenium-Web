@@ -81,7 +81,7 @@ function Home() {
     <div className='bg-black w-full h-full pt-16'>
         <Temp/>
         <Hero/>
-        <EventCarousel/>
+        {/* <EventCarousel/> */}
         <AboutUs/>
         <ImageGallary images={images} className="custom-class" />
 

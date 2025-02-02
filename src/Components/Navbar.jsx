@@ -66,7 +66,12 @@ function Navbar() {
                   className="relative font-secFont1 text-white group py-2"
                 >
                   <span className="relative z-10">{item}</span>
-                  <span className="absolute bottom-2 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
+                  <span className={`absolute bottom-2 left-0 h-0.5 bg-white transition-all duration-300 
+                    ${location.pathname === (item === "Home" ? "/" : `/${item.toLowerCase()}`) 
+                      ? "w-full" 
+                      : "w-0 group-hover:w-full"
+                    }`} 
+                  />
                 </Link>
               ))}
               
