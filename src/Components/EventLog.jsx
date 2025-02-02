@@ -108,7 +108,7 @@ function CardComp({ event }) {
           <p className="mb-2"><span className="font-semibold">Meeting: </span><span>{event.meetingType}</span></p>
           <p><span className="font-semibold">Registration: </span><span>{event.registrationPeriod}</span></p>
         </div>
-        <div className="font-secFont1 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <div className="font-secFont1 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:mb-4">
           <button className="px-4 sm:px-6 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-colors text-sm sm:text-base">
             Register
           </button>
@@ -153,7 +153,7 @@ export const EventLog = () => {
       {/* Card Section */}
       <div className="w-full flex flex-col items-center gap-8 sm:gap-10 md:gap-12">
         {/* Event Selector Bars */}
-        <div className="flex flex-wrap justify-center gap-2 bg-gray-200 w-[95%] sm:w-[90%] md:w-[80%] lg:w-[52vw] rounded-full p-2 sm:p-3">
+        <div className="flex flex-wrap justify-center gap-6 bg-gray-200  rounded-full p-2">
           {categories.map((category) => (
             <button
               key={category.id}

@@ -150,7 +150,7 @@ const MobileTimelineEvent = ({ event }) => {
 
 const TimeLineComp = () => {
   return (
-    <div className="w-full px-3 xs:px-4 sm:px-6 lg:px-8 py-6 xs:py-8 sm:py-12 lg:py-16 min-h-screen">
+    <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto w-full px-3 xs:px-4 sm:px-6 lg:px-8 py-6 xs:py-8 sm:py-12 lg:py-16 min-h-screen">
       {/* Logo & Header section */}
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-24">
         {/* Logo */}
