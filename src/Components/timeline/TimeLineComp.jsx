@@ -30,7 +30,8 @@ const events = [
     date: "22nd March, 12:30 PM",
     meetingType: "hybrid",
     registrationPeriod: "2nd Feb - 20 Feb 2025",
-  }
+  },
+  
 ];
 
 const TimelineEvent = ({ event, position }) => {

@@ -140,9 +140,9 @@ export const EventLog = () => {
           />
         </div>
         
-        <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-primaryFont text-white text-center">
-          EVENT LOG
-        </h2>
+        <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.17em] font-semibold text-white">
+            EVENT LOG
+        </h1>
         
         <p className="text-base sm:text-lg md:text-xl font-secFont1 max-w-[90%] sm:max-w-[80%] md:max-w-[57vw] text-center text-white md:mt-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. 
