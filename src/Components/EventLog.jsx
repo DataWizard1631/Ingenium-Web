@@ -6,7 +6,7 @@ import axios from "axios"; // Added missing import
 const categories = [
   { id: "esports", label: "e-sports" },
   { id: "csevents", label: "CS Events" },
-  { id: "mechevnets", label: "Mech Event" },
+  { id: "mechevents", label: "Mech Event" },
   { id: "eeeevents", label: "EEE Event" },
   { id: "chemevents", label: "Chem Events" },
   { id: "concert", label: "Concert" },
