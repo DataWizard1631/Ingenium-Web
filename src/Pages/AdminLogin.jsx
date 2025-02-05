@@ -20,10 +20,9 @@ function AdminLogin() {
 
       const token = response.data.data.token;
       localStorage.setItem("adminToken", token);
-      
-      toast.success("Login successful! Welcome boss 🎉");
-      setTimeout(() => navigate("/admin"), 1000); // Redirect after 1 sec
 
+      toast.success("Login successful! Welcome boss 🎉");
+      // setTimeout(() => navigate("/admin"), 1000); // Redirect after 1 sec
     } catch (error) {
       console.error("Error logging in:", error);
       if (error.response) {
@@ -45,7 +44,9 @@ function AdminLogin() {
 
   return (
     <StyledWrapper>
-      <div><Toaster/></div>
+      <div>
+        <Toaster />
+      </div>
       <div className="login-box">
         <h2>Admin Login</h2>
         <form onSubmit={handleSubmit}>
@@ -75,7 +76,11 @@ function AdminLogin() {
               <span />
               Submit
             </button>
-            <button type="button" onClick={handleQuickLogin} className="quick-login">
+            <button
+              type="button"
+              onClick={handleQuickLogin}
+              className="quick-login"
+            >
               Ghar ke hi hai
             </button>
           </div>
