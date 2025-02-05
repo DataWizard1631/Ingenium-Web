@@ -17,7 +17,7 @@ function AdminSettings() {
   const fetchAdmins = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:4000/api/v1/admin");
+      const response = await axios.get("https://ingenium-web-2.onrender.com/api/v1/admin");
       setAdmins(response.data.data);
     } catch (error) {
       console.error("Error fetching admins:", error);
@@ -37,7 +37,7 @@ function AdminSettings() {
     setLoading(true);
     setError(null);
     try {
-      await axios.post("http://localhost:4000/api/v1/admin", {
+      await axios.post("https://ingenium-web-2.onrender.com/api/v1/admin", {
         email: newAdminEmail,
       });
       setNewAdminEmail("");
@@ -55,7 +55,7 @@ function AdminSettings() {
     setLoading(true);
     setError(null);
     try {
-      await axios.delete(`http://localhost:4000/api/v1/admin/${id}`);
+      await axios.delete(`https://ingenium-web-2.onrender.com/api/v1/admin/${id}`);
       fetchAdmins();
     } catch (error) {
       console.error("Error removing admin:", error);

@@ -27,7 +27,7 @@ export const MembersSection = () => {
   const fetchMembers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:4000/api/v1/aboutus");
+      const response = await axios.get("https://ingenium-web-2.onrender.com/api/v1/aboutus");
       if (response.data && response.data.data) {
         setMembers(response.data.data);
         setFilteredMembers(response.data.data);
@@ -77,7 +77,7 @@ export const MembersSection = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/aboutus",
+        "https://ingenium-web-2.onrender.com/api/v1/aboutus",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -120,7 +120,7 @@ export const MembersSection = () => {
     setLoading(true);
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/v1/aboutus/${currentMember._id}`,
+        `https://ingenium-web-2.onrender.com/api/v1/aboutus/${currentMember._id}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -166,7 +166,7 @@ export const MembersSection = () => {
   const handleDeleteMember = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:4000/api/v1/aboutus/${id}`);
+      await axios.delete(`https://ingenium-web-2.onrender.com/api/v1/aboutus/${id}`);
       setMembers((prev) => prev.filter((member) => member._id !== id));
     } catch (err) {
       setError("Failed to delete member");

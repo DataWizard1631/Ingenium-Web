@@ -29,7 +29,7 @@ const EventsSection = () => {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:4000/api/v1/events");
+      const response = await axios.get("https://ingenium-web-2.onrender.com/api/v1/events");
       if (response.data && response.data.data) {
         setEvents(response.data.data);
         setFilteredEvents(response.data.data);
@@ -90,7 +90,7 @@ const EventsSection = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/events",
+        "https://ingenium-web-2.onrender.com/api/v1/events",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -143,7 +143,7 @@ const EventsSection = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/v1/events/${currentEvent._id}`,
+        `https://ingenium-web-2.onrender.com/api/v1/events/${currentEvent._id}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -187,7 +187,7 @@ const EventsSection = () => {
 
   const handleDeleteEvent = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/v1/events/${id}`);
+      await axios.delete(`https://ingenium-web-2.onrender.com/api/v1/events/${id}`);
       setEvents((prev) => prev.filter((event) => event._id !== id));
     } catch (err) {
       setError("Failed to delete event");
