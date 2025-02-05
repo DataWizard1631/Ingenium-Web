@@ -9,8 +9,6 @@ const Form = (props) => {
     e.preventDefault();
     props.setEmail(email);
     props.setPassword(password);
-    console.log("Email:", email);
-    console.log("Password:", password);
   };
 
   return (

@@ -23,6 +23,7 @@ export const MembersSection = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("department");
 
+  // Fetch members from the backend
   const fetchMembers = async () => {
     setLoading(true);
     try {
@@ -44,9 +45,9 @@ export const MembersSection = () => {
     fetchMembers();
   }, []);
 
+  // Filter and sort members whenever searchQuery, sortBy, or members changes
   useEffect(() => {
     let filtered = [...members];
-
     if (searchQuery) {
       filtered = filtered.filter(
         (member) =>
@@ -60,10 +61,10 @@ export const MembersSection = () => {
     } else if (sortBy === "alphabetically") {
       filtered.sort((a, b) => a.name.localeCompare(b.name));
     }
-
     setFilteredMembers(filtered);
   }, [searchQuery, sortBy, members]);
 
+  // Handle add member form submission
   const handleAddMember = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -72,6 +73,7 @@ export const MembersSection = () => {
     formData.append("enrollment", newMember.enrollment);
     formData.append("department", newMember.department);
     formData.append("image", newMember.image);
+
     setLoading(true);
     try {
       const response = await axios.post(
@@ -86,8 +88,7 @@ export const MembersSection = () => {
       } else {
         throw new Error("Invalid response from server");
       }
-
-      setIsAddModalOpen(false);
+      // Clear form and close modal
       setNewMember({
         name: "",
         email: "",
@@ -96,6 +97,7 @@ export const MembersSection = () => {
         image: null,
       });
       setImagePreview(null);
+      setIsAddModalOpen(false);
     } catch (err) {
       setError("Failed to add member");
     } finally {
@@ -103,6 +105,7 @@ export const MembersSection = () => {
     }
   };
 
+  // Handle update member form submission
   const handleUpdateMember = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -110,8 +113,8 @@ export const MembersSection = () => {
     formData.append("email", newMember.email);
     formData.append("enrollment", newMember.enrollment);
     formData.append("department", newMember.department);
-
-    if (newMember.image) {
+    // Append image if a new one is selected
+    if (newMember.image && typeof newMember.image !== "string") {
       formData.append("image", newMember.image);
     }
     setLoading(true);
@@ -130,10 +133,10 @@ export const MembersSection = () => {
           )
         );
       } else {
+        setError("Failed to update member");
         throw new Error("Invalid response from server");
       }
-
-      setIsUpdateModalOpen(false);
+      // Clear form and close modal
       setNewMember({
         name: "",
         email: "",
@@ -142,6 +145,7 @@ export const MembersSection = () => {
         image: null,
       });
       setImagePreview(null);
+      setIsUpdateModalOpen(false);
     } catch (err) {
       setError("Failed to update member: " + err.message);
     } finally {
@@ -149,6 +153,7 @@ export const MembersSection = () => {
     }
   };
 
+  // Handle image input change for both add and update forms
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -157,6 +162,7 @@ export const MembersSection = () => {
     }
   };
 
+  // Handle delete member action
   const handleDeleteMember = async (id) => {
     setLoading(true);
     try {
@@ -171,21 +177,24 @@ export const MembersSection = () => {
 
   return (
     <div className="p-6 mt-10">
-      {/* Add Member Button */}
+      {/* Heading and Add Button */}
       <p className="text-6xl text-fuchsia-50 font-primaryFont sm:text-5xl md:text-4xl">
         MANAGE MEMBERS
       </p>
       <Button text="Add a member" onClick={() => setIsAddModalOpen(true)} />
+
       {loading && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
           <Loader />
         </div>
       )}
+
+      {/* Add Member Modal */}
       {isAddModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold text-white">Add Event</h3>
+              <h3 className="text-xl font-semibold text-white">Add Member</h3>
               <button
                 onClick={() => setIsAddModalOpen(false)}
                 className="text-gray-400 hover:text-white"
@@ -193,88 +202,52 @@ export const MembersSection = () => {
                 <X size={24} />
               </button>
             </div>
-
             <form onSubmit={handleAddMember} className="space-y-4">
               <input
                 type="text"
-                placeholder="Member name"
-                value={newEvent.title}
+                placeholder="Member Name"
+                value={newMember.name}
                 onChange={(e) =>
-                  setNewEvent({ ...newEvent, title: e.target.value })
+                  setNewMember({ ...newMember, name: e.target.value })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <textarea
-                placeholder="Description"
-                value={newMember.description}
-                onChange={(e) =>
-                  setNewEvent({ ...newEvent, description: e.target.value })
-                }
-                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
                 required
               />
               <input
-                type="date"
-                value={newEvent.date}
+                type="email"
+                placeholder="Email"
+                value={newMember.email}
                 onChange={(e) =>
-                  setNewEvent({ ...newEvent, date: e.target.value })
+                  setNewMember({ ...newMember, email: e.target.value })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
                 required
               />
-              <input
-                type="time"
-                value={newEvent.time}
-                onChange={(e) =>
-                  setNewEvent({ ...newEvent, time: e.target.value })
-                }
-                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <select
-                value={newEvent.category}
-                onChange={(e) =>
-                  setNewEvent({ ...newEvent, category: e.target.value })
-                }
-                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="esports">Esports</option>
-                <option value="csevents">CS Events</option>
-                <option value="mechevents">Mech Events</option>
-                <option value="eeeevents">EEE Events</option>
-                <option value="chemevents">Chemical Events</option>
-                <option value="concert">Concert</option>
-              </select>
-              <select
-                value={newEvent.meetingType}
-                onChange={(e) =>
-                  setNewEvent({ ...newEvent, meetingType: e.target.value })
-                }
-                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="online">Online</option>
-                <option value="offline">Offline</option>
-                <option value="hybrid">Hybrid</option>
-              </select>
               <input
                 type="text"
-                placeholder="Registration Period"
-                value={newEvent.registrationPeriod}
+                placeholder="Enrollment"
+                value={newMember.enrollment}
                 onChange={(e) =>
-                  setNewEvent({
-                    ...newEvent,
-                    registrationPeriod: e.target.value,
-                  })
+                  setNewMember({ ...newMember, enrollment: e.target.value })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Department"
+                value={newMember.department}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, department: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
                 required
               />
               <input
                 type="file"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
                 required
               />
               {imagePreview && (
@@ -284,7 +257,6 @@ export const MembersSection = () => {
                   className="mt-2 w-full h-32 object-cover rounded-lg"
                 />
               )}
-
               <div className="flex justify-end space-x-4">
                 <button
                   type="button"
@@ -297,13 +269,103 @@ export const MembersSection = () => {
                   type="submit"
                   className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500"
                 >
-                  Add Event
+                  Add Member
                 </button>
               </div>
             </form>
           </div>
         </div>
       )}
+
+      {/* Update Member Modal */}
+      {isUpdateModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-semibold text-white">
+                Update Member
+              </h3>
+              <button
+                onClick={() => setIsUpdateModalOpen(false)}
+                className="text-gray-400 hover:text-white"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <form onSubmit={handleUpdateMember} className="space-y-4">
+              <input
+                type="text"
+                placeholder="Member Name"
+                value={newMember.name}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, name: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                value={newMember.email}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, email: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Enrollment"
+                value={newMember.enrollment}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, enrollment: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Department"
+                value={newMember.department}
+                onChange={(e) =>
+                  setNewMember({ ...newMember, department: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
+              />
+              {imagePreview && (
+                <img
+                  src={imagePreview}
+                  alt="Preview"
+                  className="mt-2 w-full h-32 object-cover rounded-lg"
+                />
+              )}
+              <div className="flex justify-end space-x-4">
+                <button
+                  type="button"
+                  onClick={() => setIsUpdateModalOpen(false)}
+                  className="px-4 py-2 rounded-lg bg-gray-600 text-white hover:bg-gray-500"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500"
+                >
+                  Update Member
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
       {/* Sort and Search Filters */}
       <div className="mb-4 flex flex-col sm:flex-row justify-between items-center">
         <input
@@ -313,7 +375,6 @@ export const MembersSection = () => {
           placeholder="Search by Name or Email"
           className="px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500 w-full sm:w-1/2 md:w-1/3"
         />
-
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
@@ -345,13 +406,13 @@ export const MembersSection = () => {
                 <p className="text-gray-400">{member.email}</p>
                 <p className="text-gray-400">{member.enrollment}</p>
                 <p className="text-gray-400">{member.department}</p>
-
                 {/* Edit and Delete Buttons */}
                 <div className="flex justify-between items-center mt-4">
                   <button
                     onClick={() => {
                       setIsUpdateModalOpen(true);
                       setCurrentMember(member);
+                      // Prepopulate update form fields with the member's current data
                       setNewMember({
                         name: member.name,
                         email: member.email,
