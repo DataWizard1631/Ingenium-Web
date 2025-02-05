@@ -8,6 +8,7 @@ function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [popup, ispopup] = useState(false);
+  const navigate=useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -20,6 +21,7 @@ function AdminLogin() {
       localStorage.setItem("adminToken", token);
       toast.success("Login successful! Welcome boss 🎉");
       ispopup(true);
+      navigate('/admin')
     } catch (error) {
       console.error("Error logging in:", error);
       if (error.response) {
