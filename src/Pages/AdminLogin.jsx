@@ -14,7 +14,7 @@ function AdminLogin() {
       // console.log(import.meta.env.VITE_API_URL)
       const response = await axios.post(
         // `${import.meta.env.VITE_API_URL}/api/v1/admin/login`,
-        "https://ingenium-web-2.onrender.com/api/admin/login",
+        "https://ingenium-web-2.onrender.com/api/v1/admin/login",
 
         { email, password },
         { withCredentials: true }
