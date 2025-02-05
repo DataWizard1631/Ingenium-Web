@@ -7,8 +7,8 @@ import { toast, Toaster } from "react-hot-toast";
 function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [popup, ispopup] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -17,11 +17,13 @@ function AdminLogin() {
         { email, password },
         { withCredentials: true }
       );
+
       const token = response.data.data.token;
       localStorage.setItem("adminToken", token);
+      
       toast.success("Login successful! Welcome boss 🎉");
-      ispopup(true);
-      navigate('/admin')
+      setTimeout(() => navigate("/admin"), 1000); // Redirect after 1 sec
+
     } catch (error) {
       console.error("Error logging in:", error);
       if (error.response) {
@@ -29,10 +31,8 @@ function AdminLogin() {
         toast.error(error.response.data.message || "Login failed ❌");
       } else {
         toast.error("Login failed ❌");
-        ispopup(true);
       }
     } finally {
-      ispopup(false);
       setEmail("");
       setPassword("");
     }
@@ -45,11 +45,7 @@ function AdminLogin() {
 
   return (
     <StyledWrapper>
-      {popup && (
-        <div>
-          <Toaster />
-        </div>
-      )}
+      <div><Toaster/></div>
       <div className="login-box">
         <h2>Admin Login</h2>
         <form onSubmit={handleSubmit}>
@@ -79,11 +75,7 @@ function AdminLogin() {
               <span />
               Submit
             </button>
-            <button
-              type="button"
-              onClick={handleQuickLogin}
-              className="quick-login"
-            >
+            <button type="button" onClick={handleQuickLogin} className="quick-login">
               Ghar ke hi hai
             </button>
           </div>
