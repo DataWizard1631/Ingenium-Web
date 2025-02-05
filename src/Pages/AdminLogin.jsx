@@ -7,8 +7,7 @@ import { toast, Toaster } from "react-hot-toast";
 function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
-
+  const [popup, ispopup] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -17,12 +16,10 @@ function AdminLogin() {
         { email, password },
         { withCredentials: true }
       );
-
       const token = response.data.data.token;
       localStorage.setItem("adminToken", token);
-
       toast.success("Login successful! Welcome boss 🎉");
-      // setTimeout(() => navigate("/admin"), 1000); // Redirect after 1 sec
+      ispopup(true);
     } catch (error) {
       console.error("Error logging in:", error);
       if (error.response) {
@@ -30,8 +27,10 @@ function AdminLogin() {
         toast.error(error.response.data.message || "Login failed ❌");
       } else {
         toast.error("Login failed ❌");
+        ispopup(true);
       }
     } finally {
+      ispopup(false);
       setEmail("");
       setPassword("");
     }
@@ -44,9 +43,11 @@ function AdminLogin() {
 
   return (
     <StyledWrapper>
-      <div>
-        <Toaster />
-      </div>
+      {popup && (
+        <div>
+          <Toaster />
+        </div>
+      )}
       <div className="login-box">
         <h2>Admin Login</h2>
         <form onSubmit={handleSubmit}>
