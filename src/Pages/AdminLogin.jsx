@@ -11,16 +11,19 @@ function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // console.log(import.meta.env.VITE_API_URL)
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/api/v1/admin/login`,
+        // `${import.meta.env.VITE_API_URL}/api/v1/admin/login`,
+        "https://ingenium-web-2.onrender.com/api/admin/login",
+
         { email, password },
-        { withCredentials: true } 
+        { withCredentials: true }
       );
       const token = response.data.data.token;
       // console.log("Response:", response.data);
       localStorage.setItem("adminToken", token);
       alert("Logged in successfully!");
-      navigate("/admin"); 
+      navigate("/admin");
     } catch (error) {
       console.error("Error logging in:", error);
       if (error.response) {
@@ -71,7 +74,11 @@ function AdminLogin() {
               <span />
               Submit
             </button>
-            <button type="button" onClick={handleQuickLogin} className="quick-login">
+            <button
+              type="button"
+              onClick={handleQuickLogin}
+              className="quick-login"
+            >
               Ghar ke hi hai
             </button>
           </div>
