@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { toast, Toaster } from "react-hot-toast";
 
 function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -11,26 +12,25 @@ function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // console.log(import.meta.env.VITE_API_URL)
       const response = await axios.post(
-        // `${import.meta.env.VITE_API_URL}/api/v1/admin/login`,
         "https://ingenium-web-2.onrender.com/api/v1/admin/login",
-
         { email, password },
         { withCredentials: true }
       );
+
       const token = response.data.data.token;
-      // console.log("Response:", response.data);
       localStorage.setItem("adminToken", token);
-      alert("Logged in successfully!");
-      navigate("/admin");
+      
+      toast.success("Login successful! Welcome boss 🎉");
+      setTimeout(() => navigate("/admin"), 1000); // Redirect after 1 sec
+
     } catch (error) {
       console.error("Error logging in:", error);
       if (error.response) {
         console.error("Response error:", error.response.data);
-        alert(error.response.data.message || "Login failed. Please try again.");
+        toast.error(error.response.data.message || "Login failed ❌");
       } else {
-        alert("Login failed. Please try again.");
+        toast.error("Login failed ❌");
       }
     } finally {
       setEmail("");
@@ -45,6 +45,7 @@ function AdminLogin() {
 
   return (
     <StyledWrapper>
+      <div><Toaster/></div>
       <div className="login-box">
         <h2>Admin Login</h2>
         <form onSubmit={handleSubmit}>
@@ -74,11 +75,7 @@ function AdminLogin() {
               <span />
               Submit
             </button>
-            <button
-              type="button"
-              onClick={handleQuickLogin}
-              className="quick-login"
-            >
+            <button type="button" onClick={handleQuickLogin} className="quick-login">
               Ghar ke hi hai
             </button>
           </div>
