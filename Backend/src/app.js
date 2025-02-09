@@ -12,7 +12,7 @@ const app = express();
 
 // Use CORS with dynamic origin
 app.use(cors({
-  origin:'*', 
+  origin:"http://localhost:5173", 
   credentials: true,
 }));
 
