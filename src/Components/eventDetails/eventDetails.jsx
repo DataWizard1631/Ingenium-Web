@@ -33,34 +33,38 @@ const EventDetails = () => {
   }
 
   return (
-    <section className="bg-black text-white min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
-      <div className="max-w-5xl mx-auto">
-        {/* Back Button */}
-        <div className="mb-8">
-          <Link to="/" className="text-colPink hover:underline">
-            &larr; Back
-          </Link>
-        </div>
+    <section className="font-['OfficialBook'] bg-black text-white min-h-screen p-4 md:p-8 lg:p-12">
+      {/* <div className="max-w-5xl mx-auto"> */}
+      {/* Back Button */}
+      <div className="mb-8">
+        <Link to="/" className="text-colPink hover:underline">
+          &larr; Back
+        </Link>
+      </div>
 
-        {/* Event Header */}
-        <div className="flex flex-col md:flex-row items-center gap-6">
-          <div className="w-full md:w-1/2">
-            <img
-              src={event.image}
-              alt={event.title}
-              className="w-full h-auto rounded-lg shadow-lg object-cover"
-            />
+      {/* Event Header */}
+      <div className="flex flex-col md:flex-row items-center gap-6">
+        <div className="w-full md:w-1/2">
+          <img
+            src={event.image}
+            alt={event.title}
+            className="w-full h-auto rounded-lg shadow-lg object-cover"
+          />
+        </div>
+        <div className="px-4 md:px-16 mx-auto pt-20 pb-20">
+          {/* Date and Time */}
+          <div className="text-base sm:text-lg md:text-2xl lg:text-4xl">
+            <span>{event.date},</span>
+            <span className="ml-2">{event.time}</span>
           </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="font-primaryFont text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase">
+
+          {/* Event Title and Description */}
+          <div className="flex flex-col md:flex-row justify-between w-full items-start md:items-center gap-6 md:gap-8">
+            <h1 className="font-['ModernAge'] text-3xl sm:text-4xl md:text-7xl lg:text-9xl uppercase w-full md:w-[50%]">
               {event.title}
             </h1>
-            {/* Date & Time */}
-            <div className="flex gap-4 text-sm sm:text-base text-gray-300">
-              <span>{event.date}</span>
-              <span>{event.time}</span>
-            </div>
-            <p className="font-secFont1 text-base sm:text-lg md:text-xl">
+
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed w-full md:w-[50%]">
               {event.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 text-sm sm:text-base">
