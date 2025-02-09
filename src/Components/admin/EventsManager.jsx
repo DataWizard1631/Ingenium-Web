@@ -26,10 +26,13 @@ const EventsSection = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("date");
 
+  // Fetch events from the API
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("https://ingenium-web-2.onrender.com/api/v1/events");
+      const response = await axios.get(
+        "https://ingenium-web-2.onrender.com/api/v1/events"
+      );
       if (response.data && response.data.data) {
         setEvents(response.data.data);
         setFilteredEvents(response.data.data);
@@ -47,6 +50,7 @@ const EventsSection = () => {
     fetchEvents();
   }, []);
 
+  // Filter and sort events based on searchQuery and sortBy
   useEffect(() => {
     let filtered = [...events];
 
@@ -58,6 +62,8 @@ const EventsSection = () => {
           event.description.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
+
+    // Sort
     if (sortBy === "date") {
       filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
     } else if (sortBy === "alphabetically") {
@@ -66,11 +72,30 @@ const EventsSection = () => {
     setFilteredEvents(filtered);
   }, [searchQuery, sortBy, events]);
 
+  // Pre-populate the update form when the update modal opens
+  useEffect(() => {
+    if (isUpdateModalOpen && currentEvent) {
+      setNewEvent({
+        title: currentEvent.title || "",
+        description: currentEvent.description || "",
+        date: currentEvent.date || "",
+        time: currentEvent.time || "",
+        category: currentEvent.category || "esports",
+        image: null, // we don't prefill the file input; user can upload a new image if needed
+        meetingType: currentEvent.meetingType || "online",
+        registrationPeriod: currentEvent.registrationPeriod || "",
+      });
+      // Set the image preview to the current event image
+      setImagePreview(currentEvent.image);
+    }
+  }, [isUpdateModalOpen, currentEvent]);
+
+  // Handle adding a new event
   const handleAddEvent = async (e) => {
     e.preventDefault();
-    // console.log("New Event Data:", newEvent);
     setLoading(true);
     setIsAddModalOpen(false);
+
     const formData = new FormData();
     formData.append("title", newEvent.title);
     formData.append("description", newEvent.description);
@@ -84,10 +109,6 @@ const EventsSection = () => {
       formData.append("image", newEvent.image);
     }
 
-    formData.forEach((value, key) => {
-      console.log(`${key}:`, value);
-    });
-
     try {
       const response = await axios.post(
         "https://ingenium-web-2.onrender.com/api/v1/events",
@@ -96,15 +117,13 @@ const EventsSection = () => {
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
-      console.log("Response", response); // Debugging: Log the response from the server
-      if (response.data && response.data) {
+      if (response.data && response.data.data) {
         setEvents((prev) => [...prev, response.data.data]);
       } else {
         throw new Error("Invalid response from server");
       }
 
       // Reset the form and close the modal
-      setIsAddModalOpen(false);
       setNewEvent({
         title: "",
         description: "",
@@ -118,12 +137,12 @@ const EventsSection = () => {
       setImagePreview(null);
     } catch (err) {
       setError("Failed to add event: " + err.message);
-    }
-    finally{
+    } finally {
       setLoading(false);
     }
   };
 
+  // Handle updating an event (using the currentEvent._id passed as props)
   const handleUpdateEvent = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -160,7 +179,9 @@ const EventsSection = () => {
         throw new Error("Invalid response from server");
       }
 
+      // Close update modal and clear currentEvent
       setIsUpdateModalOpen(false);
+      setCurrentEvent(null);
       setNewEvent({
         title: "",
         description: "",
@@ -177,6 +198,7 @@ const EventsSection = () => {
     }
   };
 
+  // Handle image changes (both for add and update)
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -185,6 +207,7 @@ const EventsSection = () => {
     }
   };
 
+  // Handle deletion of an event
   const handleDeleteEvent = async (id) => {
     try {
       await axios.delete(`https://ingenium-web-2.onrender.com/api/v1/events/${id}`);
@@ -196,14 +219,17 @@ const EventsSection = () => {
 
   return (
     <div className="p-6 mt-10">
-      {/* Add Event Button */}
+      {/* Header and Add Event Button */}
       <p className="font-primaryFont text-6xl text-fuchsia-50">MANAGE EVENTS</p>
       <Button text="Add an Event" onClick={() => setIsAddModalOpen(true)} />
+
+      {/* Loader */}
       {loading && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
           <Loader />
         </div>
       )}
+
       {/* Sort and Search Filters */}
       <div className="mb-4 flex justify-between items-center">
         <input
@@ -349,6 +375,138 @@ const EventsSection = () => {
         </div>
       )}
 
+      {/* Update Event Modal */}
+      {isUpdateModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-semibold text-white">
+                Update Event
+              </h3>
+              <button
+                onClick={() => {
+                  setIsUpdateModalOpen(false);
+                  setCurrentEvent(null);
+                }}
+                className="text-gray-400 hover:text-white"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <form onSubmit={handleUpdateEvent} className="space-y-4">
+              <input
+                type="text"
+                placeholder="Event Name"
+                value={newEvent.title}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, title: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <textarea
+                placeholder="Description"
+                value={newEvent.description}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, description: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="date"
+                value={newEvent.date}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, date: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="time"
+                value={newEvent.time}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, time: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <select
+                value={newEvent.category}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, category: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="esports">Esports</option>
+                <option value="csevents">CS Events</option>
+                <option value="mechevents">Mech Events</option>
+                <option value="eeeevents">EEE Events</option>
+                <option value="chemevents">Chemical Events</option>
+                <option value="concert">Concert</option>
+              </select>
+              <select
+                value={newEvent.meetingType}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, meetingType: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+                <option value="hybrid">Hybrid</option>
+              </select>
+              <input
+                type="text"
+                placeholder="Registration Period"
+                value={newEvent.registrationPeriod}
+                onChange={(e) =>
+                  setNewEvent({
+                    ...newEvent,
+                    registrationPeriod: e.target.value,
+                  })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-blue-500"
+              />
+              {imagePreview && (
+                <img
+                  src={imagePreview}
+                  alt="Preview"
+                  className="mt-2 w-full h-32 object-cover rounded-lg"
+                />
+              )}
+
+              <div className="flex justify-end space-x-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsUpdateModalOpen(false);
+                    setCurrentEvent(null);
+                  }}
+                  className="px-4 py-2 rounded-lg bg-gray-600 text-white hover:bg-gray-500"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500"
+                >
+                  Update Event
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
       {/* Events Grid */}
       {loading ? (
         <p className="text-white">Loading events...</p>
@@ -367,14 +525,20 @@ const EventsSection = () => {
               />
               <div className="p-4 font-secFont2">
                 <h3 className="text-xl font-semibold">Title: {event.title}</h3>
-                <p className="text-gray-400">Description: {event.description}</p>
                 <p className="text-gray-400">
-                  Date:{new Date(event.date).toLocaleDateString()} (MM/DD/YYYY)
+                  Description: {event.description}
+                </p>
+                <p className="text-gray-400">
+                  Date: {new Date(event.date).toLocaleDateString()} (MM/DD/YYYY)
                 </p>
                 <p className="text-gray-400">Time: {event.time}</p>
                 <p className="text-gray-400">Category: {event.category}</p>
-                <p className="text-gray-400">Meeting Type: {event.meetingType}</p>
-                <p className="text-gray-400">Registration Period: {event.registrationPeriod}</p>
+                <p className="text-gray-400">
+                  Meeting Type: {event.meetingType}
+                </p>
+                <p className="text-gray-400">
+                  Registration Period: {event.registrationPeriod}
+                </p>
 
                 {/* Edit and Delete Buttons */}
                 <div className="flex justify-between items-center mt-4">
