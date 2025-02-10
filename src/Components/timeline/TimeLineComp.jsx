@@ -27,9 +27,9 @@ const events = [
     title: "EVENT TITLE",
     image: "/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-    date: "2025-12-10 16:30:00",
+    date: "2024-2-9 16:30:00",
     meetingType: "hybrid",
-    registrationPeriod: "2nd Feb - 20 Feb 2025",
+    registrationPeriod: "2nd Feb - 9th Feb 2025",
   },
   {
     id: 4,
