@@ -1,0 +1,91 @@
+{
+  "heads": [
+    {
+      "name": "Deep Patel",
+      "post": "Head of Technical",
+      "image": "/1.jpg",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "github": "https://github.com/johndoe",
+      "instagram": "https://instagram.com/johndoe",
+      "email": "john@ingenium.com"
+    },
+    {
+      "name": "Deep Patel",
+      "post": "Head of Operations",
+      "image": "/2.jpg",
+      "linkedin": "https://linkedin.com/in/janesmith",
+      "github": "https://github.com/janesmith",
+      "instagram": "https://instagram.com/janesmith",
+      "email": "jane@ingenium.com"
+    },
+    {
+      "name": "Deep Patel",
+      "post": "Head of Operations",
+      "image": "/2.jpg",
+      "linkedin": "https://linkedin.com/in/janesmith",
+      "github": "https://github.com/janesmith",
+      "instagram": "https://instagram.com/janesmith",
+      "email": "jane@ingenium.com"
+    }
+  ],
+  "webDevTeam": [
+    {
+      "name": "Deep Patel",
+      "post": "Frontend Developer",
+      "image": "/3.jpg",
+      "linkedin": "https://linkedin.com/in/alexj",
+      "github": "https://github.com/alexj",
+      "instagram": "https://instagram.com/alexj",
+      "email": "alex@ingenium.com"
+    },
+    {
+      "name": "Deep Patel",
+      "post": "Backend Developer",
+      "image": "/4.jpg",
+      "linkedin": "https://linkedin.com/in/sarahw",
+      "github": "https://github.com/sarahw",
+      "instagram": "https://instagram.com/sarahw",
+      "email": "sarah@ingenium.com"
+    }
+  ],
+  "logistics": [
+    {
+      "name": "Deep Patel",
+      "post": "Logistics Coordinator",
+      "image": "/5.jpg",
+      "linkedin": "https://linkedin.com/in/mikeb",
+      "github": "https://github.com/mikeb",
+      "instagram": "https://instagram.com/mikeb",
+      "email": "mike@ingenium.com"
+    },
+    {
+      "name": "Deep Patel",
+      "post": "Event Manager",
+      "image": "/6.jpg",
+      "linkedin": "https://linkedin.com/in/emilyd",
+      "github": "https://github.com/emilyd",
+      "instagram": "https://instagram.com/emilyd",
+      "email": "emily@ingenium.com"
+    }
+  ],
+  "designTeam": [
+    {
+      "name": "Deep Patel",
+      "post": "UI/UX Designer",
+      "image": "/3.jpg",
+      "linkedin": "https://linkedin.com/in/chrisl",
+      "github": "https://github.com/chrisl",
+      "instagram": "https://instagram.com/chrisl",
+      "email": "chris@ingenium.com"
+    },
+    {
+      "name": "Deep Patel",
+      "post": "Graphic Designer",
+      "image": "/7.jpg",
+      "linkedin": "https://linkedin.com/in/lisap",
+      "github": "https://github.com/lisap",
+      "instagram": "https://instagram.com/lisap",
+      "email": "lisa@ingenium.com"
+    }
+  ]
+}
