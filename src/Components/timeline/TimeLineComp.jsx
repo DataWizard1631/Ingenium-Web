@@ -9,7 +9,7 @@ const events = [
     title: "EVENT TITLE",
     image: "/1.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-    date: "22nd March, 12:30 PM",
+    date: "2024-03-22 12:30:00",
     meetingType: "online",
     registrationPeriod: "2nd Feb - 20 Feb 2025",
   },
@@ -18,7 +18,7 @@ const events = [
     title: "EVENT TITLE",
     image: "/3.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-    date: "22nd March, 12:30 PM",
+    date: "2024-05-15 14:00:00",
     meetingType: "offline",
     registrationPeriod: "2nd Feb - 20 Feb 2025",
   },
@@ -27,37 +27,83 @@ const events = [
     title: "EVENT TITLE",
     image: "/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-    date: "22nd March, 12:30 PM",
+    date: "2025-12-10 16:30:00",
+    meetingType: "hybrid",
+    registrationPeriod: "2nd Feb - 20 Feb 2025",
+  },
+  {
+    id: 4,
+    title: "EVENT TITLE",
+    image: "/2.jpg",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
+    date: "2025-12-10 16:30:00",
+    meetingType: "hybrid",
+    registrationPeriod: "2nd Feb - 20 Feb 2025",
+  },
+  {
+    id: 5,
+    title: "EVENT TITLE",
+    image: "/2.jpg",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
+    date: "2025-12-10 16:30:00",
+    meetingType: "hybrid",
+    registrationPeriod: "2nd Feb - 20 Feb 2025",
+  },
+  {
+    id: 6,
+    title: "EVENT TITLE",
+    image: "/2.jpg",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
+    date: "2025-12-10 16:30:00",
     meetingType: "hybrid",
     registrationPeriod: "2nd Feb - 20 Feb 2025",
   },
   
 ];
 
+const isEventExpired = (eventDate) => {
+  const currentDate = new Date();
+  const eventDateTime = new Date(eventDate);
+  return eventDateTime < currentDate;
+};
+
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+  });
+};
+
 const TimelineEvent = ({ event, position }) => {
   const navigate = useNavigate();
+  const isExpired = isEventExpired(event.date);
   
   return (
     <div className={`relative mb-12 md:mb-24 w-full lg:w-1/2 ${position === 'left' ? 'lg:pr-12 lg:left-0' : 'lg:pl-12 lg:left-1/2'}`}>
       {/* Timeline Dot */}
-      <div className={`hidden md:block absolute w-5 h-5 bg-white rounded-full top-0 transform z-10
+      <div className={`hidden md:block absolute w-5 h-5 ${isExpired ? 'bg-gray-400' : 'bg-white'} rounded-full top-0 transform z-10
         ${position === 'left' ? 'md:right-[-10px] lg:right-[-10px]' : 'md:left-[-10px] lg:left-[-10px]'}`} 
       />
 
       {/* Date Badge - Aligned with dot */}
-      <div className={`bg-colPink px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm 
+      <div className={`${isExpired ? 'bg-gray-500' : 'bg-colPink'} px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm 
         inline-block text-white font-secFont2 transform -translate-y-2
         ${position === 'left' ? 
           'float-right md:mr-4' : 
           'float-left md:ml-4'}`}>
-        {event.date}
+        {formatDate(event.date)}
       </div>
 
       {/* Clear float */}
       <div className="clear-both"></div>
 
       {/* Event Card - Below date */}
-      <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row mt-8">
+      <div className={`bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row mt-8 
+        ${isExpired ? 'grayscale' : ''}`}>
         {/* Image */}
         <div className="w-full h-[150px] xs:h-[200px] sm:w-[47%] sm:h-auto">
           <img 
@@ -102,19 +148,20 @@ const TimelineEvent = ({ event, position }) => {
 
 const MobileTimelineEvent = ({ event }) => {
   const navigate = useNavigate();
+  const isExpired = isEventExpired(event.date);
   
   return (
     <div className="relative pl-12 pr-4 mb-16 ">
       {/* Timeline Dot */}
-      <div className="absolute w-5 h-5 bg-white rounded-full left-[-10px] transform -translate-y-1/2 z-10" />
+      <div className={`absolute w-5 h-5 ${isExpired ? 'bg-gray-400' : 'bg-white'} rounded-full left-[-10px] transform -translate-y-1/2 z-10`} />
 
       {/* Date Badge */}
-      <div className="bg-colPink px-6 py-2 rounded-full text-sm z-10 -top-8 left-12">
-        {event.date} 
+      <div className={`${isExpired ? 'bg-gray-500' : 'bg-colPink'} px-6 py-2 rounded-full text-sm z-10 -top-8 left-12`}>
+        {formatDate(event.date)}
       </div>
 
       {/* Event Card */}
-      <div className="bg-white rounded-2xl overflow-hidden shadow-md flex flex-col">
+      <div className={`bg-white rounded-2xl overflow-hidden shadow-md flex flex-col ${isExpired ? 'grayscale' : ''}`}>
         <div className="w-full h-[200px]">
           <img 
             src={event.image} 
