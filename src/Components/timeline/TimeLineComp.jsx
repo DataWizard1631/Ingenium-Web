@@ -85,13 +85,13 @@ const TimelineEvent = ({ event, position }) => {
   return (
     <div className={`relative mb-12 md:mb-24 w-full lg:w-1/2 ${position === 'left' ? 'lg:pr-12 lg:left-0' : 'lg:pl-12 lg:left-1/2'}`}>
       {/* Timeline Dot */}
-      <div className={`hidden md:block absolute w-5 h-5 ${isExpired ? 'bg-gray-400' : 'bg-white'} rounded-full top-0 transform z-10
-        ${position === 'left' ? 'md:right-[-10px] lg:right-[-10px]' : 'md:left-[-10px] lg:left-[-10px]'}`} 
+      <div className={`hidden md:block absolute w-5 h-5 ${isExpired ? 'bg-gray-400' : 'bg-white'} rounded-full transform z-10 timeline-dot
+        ${position === 'left' ? 'right-0 translate-x-1/2' : 'left-0 -translate-x-1/2'}`} 
       />
 
       {/* Date Badge - Aligned with dot */}
       <div className={`${isExpired ? 'bg-gray-500' : 'bg-colPink'} px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm 
-        inline-block text-white font-secFont2 transform -translate-y-2
+        inline-block text-white font-secFont2 transform -translate-y-2 date-badge
         ${position === 'left' ? 
           'float-right md:mr-4' : 
           'float-left md:ml-4'}`}>
@@ -102,10 +102,10 @@ const TimelineEvent = ({ event, position }) => {
       <div className="clear-both"></div>
 
       {/* Event Card - Below date */}
-      <div className={`bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row mt-8 
-        ${isExpired ? 'grayscale' : ''}`}>
+      <div className={`event-card bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row mt-8 
+        ${isExpired ? 'grayscale expired-event' : ''}`}>
         {/* Image */}
-        <div className="w-full h-[150px] xs:h-[200px] sm:w-[47%] sm:h-auto">
+        <div className="event-image w-full h-[150px] xs:h-[200px] sm:w-[47%] sm:h-auto">
           <img 
             src={event.image} 
             alt={event.title}
@@ -134,7 +134,7 @@ const TimelineEvent = ({ event, position }) => {
             </div>
           </div>
           <div className="font-secFont1 flex flex-col sm:flex-row gap-2 xs:gap-3">
-            <button className="px-3 xs:px-4 sm:px-5 lg:px-6 py-1.5 xs:py-2 bg-colPink text-white rounded-full 
+            <button className="register-btn px-3 xs:px-4 sm:px-5 lg:px-6 py-1.5 xs:py-2 bg-colPink text-white rounded-full 
               hover:bg-pink-700 transition-all duration-300 ease-in-out hover:-translate-y-0.5 
               text-xs xs:text-sm lg:text-base uppercase tracking-wider">
               Register
@@ -151,18 +151,18 @@ const MobileTimelineEvent = ({ event }) => {
   const isExpired = isEventExpired(event.date);
   
   return (
-    <div className="relative pl-12 pr-4 mb-16 ">
+    <div className="relative pl-12 pr-4 mb-16">
       {/* Timeline Dot */}
-      <div className={`absolute w-5 h-5 ${isExpired ? 'bg-gray-400' : 'bg-white'} rounded-full left-[-10px] transform -translate-y-1/2 z-10`} />
+      <div className={`absolute w-5 h-5 ${isExpired ? 'bg-gray-400' : 'bg-white'} rounded-full transform z-10 timeline-dot mobile-timeline-dot top-0 left-0`} />
 
       {/* Date Badge */}
-      <div className={`${isExpired ? 'bg-gray-500' : 'bg-colPink'} px-6 py-2 rounded-full text-sm z-10 -top-8 left-12`}>
+      <div className={`${isExpired ? 'bg-gray-500' : 'bg-colPink'} px-6 py-2 rounded-full text-sm z-10 -top-8 left-12 date-badge`}>
         {formatDate(event.date)}
       </div>
 
       {/* Event Card */}
-      <div className={`bg-white rounded-2xl overflow-hidden shadow-md flex flex-col ${isExpired ? 'grayscale' : ''}`}>
-        <div className="w-full h-[200px]">
+      <div className={`event-card bg-white rounded-2xl overflow-hidden shadow-md flex flex-col ${isExpired ? 'grayscale expired-event' : ''}`}>
+        <div className="event-image w-full h-[200px]">
           <img 
             src={event.image} 
             alt={event.title}
@@ -187,7 +187,7 @@ const MobileTimelineEvent = ({ event }) => {
               </p>
             </div>
           </div>
-          <button className="w-full px-4 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-all duration-300 ease-in-out text-sm uppercase tracking-wider">
+          <button className="register-btn w-full px-4 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-all duration-300 ease-in-out text-sm uppercase tracking-wider">
             Register
           </button>
         </div>
@@ -198,7 +198,7 @@ const MobileTimelineEvent = ({ event }) => {
 
 const TimeLineComp = () => {
   return (
-    <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto w-full px-3 xs:px-4 sm:px-6 lg:px-8 py-6 xs:py-8 sm:py-12 lg:py-16 min-h-screen">
+    <div className="bg-[url('/bg-texture.jpg')] w-full px-3 xs:px-4 sm:px-6 lg:px-8 py-6 xs:py-8 sm:py-12 lg:py-16 min-h-screen">
       {/* Logo & Header section */}
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-24">
         {/* Logo */}
