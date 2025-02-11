@@ -27,7 +27,7 @@ const AboutCard = (props) => {
           </div>
         </div>
       </div>
-      <div className="info-container">
+      <div className="info-container font-secFont1">
         <div className="tech-line"></div>
         <div className="tech-corners"></div>
         <p className="name">{props.name}</p>

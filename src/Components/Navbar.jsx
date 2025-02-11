@@ -45,11 +45,11 @@ function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out
         ${visible ? 'translate-y-0' : '-translate-y-full'}`}
     >
-      {/* Main Navbar */}
-      <div className="bg-colPink">
+      {/* Main Navbar with semi-transparent background */}
+      <div className="bg-colPink/70 backdrop-blur-sm">
         <div className="w-[90%] mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
+            {/* Logo - fully opaque */}
             <Link 
               to="/" 
               className="font-primaryFont text-2xl md:text-3xl text-white hover:opacity-90 transition-opacity"
@@ -57,9 +57,9 @@ function Navbar() {
               INGENIUM
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - fully opaque text */}
             <div className="hidden lg:flex items-center space-x-8 text-xl">
-              {["Home", "Events", "Timeline", "About"].map((item) => (
+              {["Home", "Events", "Timeline", "About", "Contact Us"].map((item) => (
                 <Link
                   key={item}
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -74,14 +74,9 @@ function Navbar() {
                   />
                 </Link>
               ))}
-              
-              <button className="bg-white text-colPink px-6 py-2 rounded-full font-secFont1
-                transition-all duration-300 hover:bg-opacity-90 active:scale-95">
-                Contact Us
-              </button>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - fully opaque */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 text-white focus:outline-none"
@@ -97,15 +92,15 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay with semi-transparent background */}
       <div 
-        className={`lg:hidden fixed inset-0 bg-black/95 transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-0 bg-black/95 backdrop-blur-sm transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-[50%]' : 'translate-x-full'
         }`}
-        style={{ top: '64px' }} // height of navbar
+        style={{ top: '64px' }}
       >
-        <div className="flex flex-col items-center pt-8 space-y-6 bg-[#080C18] h-screen w-[50%]">
-          {["Home", "Events", "Timeline", "About"].map((item) => (
+        <div className="flex flex-col items-center pt-8 space-y-6 bg-[#080C18]/80 backdrop-blur-sm h-screen w-[50%]">
+          {["Home", "Events", "Timeline", "About", "Contact Us"].map((item) => (
             <Link
               key={item}
               to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -115,14 +110,6 @@ function Navbar() {
               {item}
             </Link>
           ))}
-          
-          <button 
-            className="mt-4 bg-white text-colPink px-8 py-3 rounded-full font-secFont1
-              transition-all duration-300 hover:bg-opacity-90 active:scale-95"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact Us
-          </button>
         </div>
       </div>
     </nav>

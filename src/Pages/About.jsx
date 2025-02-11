@@ -72,23 +72,19 @@ function About() {
             <div className="title-line"></div>
           </div>
 
-          {/* Heads Section */}
+          {/* OBs Section */}
           <div className="w-full mb-20">
-            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
-              HEADS
+            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#5b5b5b] bg-clip-text cyber-text mb-12">
+              OFFICE BEARERS
             </h2>
             <div className="w-full flex justify-center">
               <div className="max-w-[1200px] w-full flex flex-wrap justify-center gap-x-8 gap-y-12">
-                {teamMembers.heads.map((member, i) => (
+                {teamMembers.Obs.map((member, i) => (
                   <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                     <AboutCard 
-                      name={member.name}
-                      post={member.post}
-                      image={member.image}
-                      linkedin={member.linkedin}
-                      github={member.github}
-                      instagram={member.instagram}
-                      email={member.email}
+                      name={member.Name}
+                      post={member.Position}
+                      image={member.imageUrl}
                     />
                   </div>
                 ))}
@@ -96,98 +92,157 @@ function About() {
             </div>
           </div>
 
-          {/* Web Development Team Section */}
+          {/* Core Teams - 4 cards per row groups */}
+          <div className="w-full mb-20">
+            {/* Logistics & Decoration */}
+            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
+              LOGISTICS & DECORATION TEAM
+            </h2>
+            <div className="flex flex-wrap justify-center gap-8 mb-20">
+              {[...teamMembers.Cores["Logistics"], ...teamMembers.Cores["Decoration"]].map((member, i) => (
+                <div key={i} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
+                  <AboutCard 
+                    name={member.Name}
+                    post={i < 2 ? "Logistics" : "Decoration"}
+                    image={member.imageUrl}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Graphics & CSE Events */}
+            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
+              GRAPHICS & CSE EVENTS TEAM
+            </h2>
+            <div className="flex flex-wrap justify-center gap-8 mb-20">
+              {[...teamMembers.Cores["Graphics"], ...teamMembers.Cores["CSE Events"]].map((member, i) => (
+                <div key={i} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
+                  <AboutCard 
+                    name={member.Name}
+                    post={i < 2 ? "Graphics" : "CSE Events"}
+                    image={member.imageUrl}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Mech Events & Escape Room */}
+            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
+              MECH EVENTS & ESCAPE ROOM TEAM
+            </h2>
+            <div className="flex flex-wrap justify-center gap-8 mb-20">
+              {[...teamMembers.Cores["Mech Events"], ...teamMembers.Cores["Escape Room"]].map((member, i) => (
+                <div key={i} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
+                  <AboutCard 
+                    name={member.Name}
+                    post={i < 2 ? "Mech Events" : "Escape Room"}
+                    image={member.imageUrl}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* AUmazing Talent & Gaming */}
+            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
+              AUMAZING TALENT & GAMING TEAM
+            </h2>
+            <div className="flex flex-wrap justify-center gap-8 mb-20">
+              {[...teamMembers.Cores["AUmazing Talent"], ...teamMembers.Cores["Gaming"]].map((member, i) => (
+                <div key={i} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
+                  <AboutCard 
+                    name={member.Name}
+                    post={i < 2 ? "AUmazing Talent" : "Gaming"}
+                    image={member.imageUrl}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Social Media & Content */}
+            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
+              SOCIAL MEDIA & CONTENT TEAM
+            </h2>
+            <div className="flex flex-wrap justify-center gap-8 mb-20">
+              {[...teamMembers.Cores["Social Media"], ...teamMembers.Cores["Content"]].map((member, i) => (
+                <div key={i} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
+                  <AboutCard 
+                    name={member.Name}
+                    post={i < 2 ? "Social Media" : "Content"}
+                    image={member.imageUrl}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Core Teams - 3 cards per row */}
+          <div className="w-full mb-20">
+            {/* Technical Teams */}
+            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
+              TECHNICAL TEAMS
+            </h2>
+            <div className="flex flex-wrap justify-center gap-8 mb-20">
+              {[
+                "Chem Events",
+                "EEE",
+                "Hackathon",
+                "Mechathon",
+                "Chemathon"
+              ].map(teamName => (
+                teamMembers.Cores[teamName]?.map((member, i) => (
+                  <div key={`${teamName}-${i}`} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
+                    <AboutCard 
+                      name={member.Name}
+                      post={teamName}
+                      image={member.imageUrl}
+                    />
+                  </div>
+                ))
+              ))}
+            </div>
+
+            {/* Management Teams */}
+            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
+              MANAGEMENT TEAMS
+            </h2>
+            <div className="flex flex-wrap justify-center gap-8">
+              {[
+                "Registration",
+                "Outreach",
+                "Sponsorship",
+                "Invest-o-mania"
+              ].map(teamName => (
+                teamMembers.Cores[teamName]?.map((member, i) => (
+                  <div key={`${teamName}-${i}`} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
+                    <AboutCard 
+                      name={member.Name}
+                      post={teamName}
+                      image={member.imageUrl}
+                    />
+                  </div>
+                ))
+              ))}
+            </div>
+          </div>
+
+          {/* Web Development Team */}
           <div className="w-full mb-20">
             <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
               WEB DEVELOPMENT TEAM
             </h2>
             <div className="w-full flex justify-center">
-              <div className="max-w-[1200px] w-full flex flex-wrap justify-center gap-x-8 gap-y-12">
-                {teamMembers.webDevTeam.map((member, i) => (
-                  <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
-                    <AboutCard 
-                      name={member.name}
-                      post={member.post}
-                      image={member.image}
-                      linkedin={member.linkedin}
-                      github={member.github}
-                      instagram={member.instagram}
-                      email={member.email}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Logistics */}
-          <div className="w-full mb-20">
-            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
-            Logistics TEAM
-            </h2>
-            <div className="w-full flex justify-center">
-              <div className="max-w-[1200px] w-full flex flex-wrap justify-center gap-x-8 gap-y-12">
-                {teamMembers.designTeam.map((member, i) => (
-                  <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
-                    <AboutCard 
-                      name={member.name}
-                      post={member.post}
-                      image={member.image}
-                      linkedin={member.linkedin}
-                      github={member.github}
-                      instagram={member.instagram}
-                      email={member.email}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* CSE */}
-          <div className="w-full mb-20">
-            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
-              cse TEAM
-            </h2>
-            <div className="w-full flex justify-center">
-              <div className="max-w-[1200px] w-full flex flex-wrap justify-center gap-x-8 gap-y-12">
-                {teamMembers.webDevTeam.map((member, i) => (
-                  <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
-                    <AboutCard 
-                      name={member.name}
-                      post={member.post}
-                      image={member.image}
-                      linkedin={member.linkedin}
-                      github={member.github}
-                      instagram={member.instagram}
-                      email={member.email}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* EEE */}
-          <div className="w-full mb-20">
-            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text mb-12">
-              EEE TEAM
-            </h2>
-            <div className="w-full flex justify-center">
-              <div className="max-w-[1200px] w-full flex flex-wrap justify-center gap-x-8 gap-y-12">
-                {teamMembers.webDevTeam.map((member, i) => (
-                  <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
-                    <AboutCard 
-                      name={member.name}
-                      post={member.post}
-                      image={member.image}
-                      linkedin={member.linkedin}
-                      github={member.github}
-                      instagram={member.instagram}
-                      email={member.email}
-                    />
-                  </div>
-                ))}
+              <div className="max-w-[1200px] w-full">
+                <div className="flex flex-wrap justify-center gap-8">
+                  {teamMembers["Web Devs"].map((member, i) => (
+                    <div key={i} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
+                      <AboutCard 
+                        name={member.Name}
+                        post="Papa log"
+                        image={member.imageUrl}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

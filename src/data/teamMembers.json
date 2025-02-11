@@ -1,91 +1,103 @@
 {
-  "heads": [
-    {
-      "name": "Deep Patel",
-      "post": "Head of Technical",
-      "image": "/1.jpg",
-      "linkedin": "https://linkedin.com/in/johndoe",
-      "github": "https://github.com/johndoe",
-      "instagram": "https://instagram.com/johndoe",
-      "email": "john@ingenium.com"
-    },
-    {
-      "name": "Deep Patel",
-      "post": "Head of Operations",
-      "image": "/2.jpg",
-      "linkedin": "https://linkedin.com/in/janesmith",
-      "github": "https://github.com/janesmith",
-      "instagram": "https://instagram.com/janesmith",
-      "email": "jane@ingenium.com"
-    },
-    {
-      "name": "Deep Patel",
-      "post": "Head of Operations",
-      "image": "/2.jpg",
-      "linkedin": "https://linkedin.com/in/janesmith",
-      "github": "https://github.com/janesmith",
-      "instagram": "https://instagram.com/janesmith",
-      "email": "jane@ingenium.com"
-    }
+  "Obs": [
+      {
+          "Position": "Fest Head",
+          "Name": "Pratham Patel",
+          "imageUrl": "./public/1.jpg"
+      },
+      {
+          "Position": "Fest Head",
+          "Name": "Purvansh Desai",
+          "imageUrl": "./public/1.jpg"
+      },
+      {
+          "Position": "Treasurer",
+          "Name": "Shrey Salvi",
+          "imageUrl": "./public/1.jpg"
+      },
+      {
+          "Position": "Secretary",
+          "Name": "Bhishmadevsinh Rathod",
+          "imageUrl": "./public/1.jpg"
+      },
+      {
+          "Position": "Joint Secretary",
+          "Name": "Manya Trivedi",
+          "imageUrl": "./public/1.jpg"
+      }
   ],
-  "webDevTeam": [
-    {
-      "name": "Deep Patel",
-      "post": "Frontend Developer",
-      "image": "/3.jpg",
-      "linkedin": "https://linkedin.com/in/alexj",
-      "github": "https://github.com/alexj",
-      "instagram": "https://instagram.com/alexj",
-      "email": "alex@ingenium.com"
-    },
-    {
-      "name": "Deep Patel",
-      "post": "Backend Developer",
-      "image": "/4.jpg",
-      "linkedin": "https://linkedin.com/in/sarahw",
-      "github": "https://github.com/sarahw",
-      "instagram": "https://instagram.com/sarahw",
-      "email": "sarah@ingenium.com"
-    }
-  ],
-  "logistics": [
-    {
-      "name": "Deep Patel",
-      "post": "Logistics Coordinator",
-      "image": "/5.jpg",
-      "linkedin": "https://linkedin.com/in/mikeb",
-      "github": "https://github.com/mikeb",
-      "instagram": "https://instagram.com/mikeb",
-      "email": "mike@ingenium.com"
-    },
-    {
-      "name": "Deep Patel",
-      "post": "Event Manager",
-      "image": "/6.jpg",
-      "linkedin": "https://linkedin.com/in/emilyd",
-      "github": "https://github.com/emilyd",
-      "instagram": "https://instagram.com/emilyd",
-      "email": "emily@ingenium.com"
-    }
-  ],
-  "designTeam": [
-    {
-      "name": "Deep Patel",
-      "post": "UI/UX Designer",
-      "image": "/3.jpg",
-      "linkedin": "https://linkedin.com/in/chrisl",
-      "github": "https://github.com/chrisl",
-      "instagram": "https://instagram.com/chrisl",
-      "email": "chris@ingenium.com"
-    },
-    {
-      "name": "Deep Patel",
-      "post": "Graphic Designer",
-      "image": "/7.jpg",
-      "linkedin": "https://linkedin.com/in/lisap",
-      "github": "https://github.com/lisap",
-      "instagram": "https://instagram.com/lisap",
-      "email": "lisa@ingenium.com"
-    }
+  "Cores": {
+      "Logistics": [
+          { "Name": "Param Shah", "imageUrl": "./public/1.jpg" },
+          { "Name": "Shreya Godhani", "imageUrl": "./public/1.jpg" }
+      ],
+      "Decoration": [
+          { "Name": "Maitri Shah", "imageUrl": "./public/1.jpg" },
+          { "Name": "Krisha Shah", "imageUrl": "./public/1.jpg" }
+      ],
+      "Graphics": [
+          { "Name": "Deepayu Ninama", "imageUrl": "./public/1.jpg" },
+          { "Name": "Diya Kuria", "imageUrl": "./public/1.jpg" }
+      ],
+      "CSE Events": [
+          { "Name": "Dhrumi Panchal", "imageUrl": "./public/1.jpg" },
+          { "Name": "Jugal Vaghmashi", "imageUrl": "./public/1.jpg" }
+      ],
+      "Mech Events": [
+          { "Name": "Manush Shah", "imageUrl": "./public/1.jpg" },
+          { "Name": "Dev Shah", "imageUrl": "./public/1.jpg" }
+      ],
+      "Chem Events": [
+          { "Name": "Moksh Vora", "imageUrl": "./public/1.jpg" }
+      ],
+      "EEE": [
+          { "Name": "Ayush Purohit", "imageUrl": "./public/1.jpg" }
+      ],
+      "Escape Room": [
+          { "Name": "Archi Daga", "imageUrl": "./public/1.jpg" },
+          { "Name": "Vrushti Patel", "imageUrl": "./public/1.jpg" }
+      ],
+      "Registration": [
+          { "Name": "Pratham Sandesara", "imageUrl": "./public/1.jpg" }
+      ],
+      "Outreach": [
+          { "Name": "Hitanshu Shah", "imageUrl": "./public/1.jpg" }
+      ],
+      "AUmazing Talent": [
+          { "Name": "Vaishvi Patel", "imageUrl": "./public/1.jpg" },
+          { "Name": "Vishwa Dave", "imageUrl": "./public/1.jpg" }
+      ],
+      "Gaming": [
+          { "Name": "Laksh Thanki", "imageUrl": "./public/1.jpg" },
+          { "Name": "Tanmay Bansal", "imageUrl": "./public/1.jpg" }
+      ],
+      "Sponsorship": [
+          { "Name": "Vansh Narania", "imageUrl": "./public/1.jpg" }
+      ],
+      "Social Media": [
+          { "Name": "Jainik Patel", "imageUrl": "./public/1.jpg" },
+          { "Name": "Heer Shah", "imageUrl": "./public/1.jpg" }
+      ],
+      "Hackathon": [
+          { "Name": "Deepayu Ninama", "imageUrl": "./public/1.jpg" }
+      ],
+      "Mechathon": [
+          { "Name": "Manya Trivedi", "imageUrl": "./public/1.jpg" }
+      ],
+      "Chemathon": [
+          { "Name": "AiChE", "imageUrl": "./public/1.jpg" }
+      ],
+      "Content": [
+          { "Name": "Naman Badiani", "imageUrl": "./public/1.jpg" },
+          { "Name": "Tirth Teraiya", "imageUrl": "./public/1.jpg" }
+      ],
+      "Invest-o-mania": [
+          { "Name": "Even Patel", "imageUrl": "./public/1.jpg" }
+      ]
+  },
+  "Web Devs": [
+    { "Name": "Deep Patel", "imageUrl": "./public/1.jpg" },
+    { "Name": "Vishv Boda", "imageUrl": "./public/1.jpg" },
+    { "Name": "Subrat Jain", "imageUrl": "./public/1.jpg" }
   ]
 }

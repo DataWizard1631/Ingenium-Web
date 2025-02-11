@@ -84,7 +84,7 @@ function Home() {
         <Hero/>
         {/* <EventCarousel/> */}
         <AboutUs/>
-        <ImageGallary images={images} className="custom-class" />
+        {/* <ImageGallary images={images} className="custom-class" /> */}
         <RecapCards/>
 
         <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12'>
