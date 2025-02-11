@@ -5,6 +5,7 @@ import ImageGallary from '../Components/ImageGallary'
 import EventCarousel from '../Components/EventCardScroll';
 import Sponsors from '../Components/Sponsors';
 import Temp from '../Components/home/Temp';
+import RecapCards from '../Components/home/RecapCards';
 
 import reactbits from "../assets/image.png";
 const logoImgs = [
@@ -84,6 +85,7 @@ function Home() {
         {/* <EventCarousel/> */}
         <AboutUs/>
         <ImageGallary images={images} className="custom-class" />
+        <RecapCards/>
 
         <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12'>
             Sponsors
