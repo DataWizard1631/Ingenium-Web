@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { FaBook } from "react-icons/fa";
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { FaBook, FaArrowLeft } from "react-icons/fa";
 import eventsData from '../../data/events.json';
 
 const EventDetails = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    
     const foundEvent = eventsData.events.find(e => e.id === id);
     setEvent(foundEvent);
   }, [id]);
@@ -18,7 +24,16 @@ const EventDetails = () => {
 
   return (
     <div className="font-['OfficialBook'] bg-black text-white min-h-screen p-4 md:p-8 lg:p-12">
-      <div className="px-4 md:px-16 mx-auto pt-20 pb-20">
+      <div className="px-4 md:px-16 mx-auto pt-14 pb-20">
+        {/* Back Button */}
+        <button 
+          onClick={() => navigate(-1)}
+          className="mb-8 flex items-center gap-2 px-4 py-2 border-[1px] border-white text-white rounded-full transition-all duration-300 group w-fit"
+        >
+          <FaArrowLeft className="text-sm md:text-base transition-transform duration-300 group-hover:-translate-x-1" />
+          <span className="text-sm md:text-base">Back</span>
+        </button>
+
         {/* Date and Time */}
         <div className="text-base sm:text-lg md:text-2xl lg:text-4xl">
           <span>{event.date},</span>

@@ -7,11 +7,12 @@ import Event from "./Pages/Event";
 import Contact from "./Pages/Contact";
 import EventDetails from "./Components/eventDetails/eventDetails";
 import Timeline from "./Components/timeline/TimeLineComp";
-
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
     <div>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
