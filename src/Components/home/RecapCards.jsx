@@ -7,14 +7,14 @@ const RecapCards = () => {
         {/* First column: 2x1 and 2x1 */}
         <div className="row-span-1 col-span-1 rounded-2xl overflow-hidden bg-gray-200">
           <img 
-            src="./public/1.jpg" 
+            src="/Images/1.jpg" 
             alt="Image 1"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="row-span-3 col-span-1 rounded-2xl overflow-hidden bg-gray-200">
           <img 
-            src="./public/swati.png" 
+            src="/Images/swati.png" 
             alt="Image 2"
             className="w-full h-full object-cover"
           />
@@ -23,7 +23,7 @@ const RecapCards = () => {
         {/* Second column: 2x1, RECAP 1x1, 1x1 */}
         <div className="col-span-1 row-span-2 md:col-start-2 md:row-start-1 rounded-2xl overflow-hidden bg-gray-200">
           <img 
-            src="./public/1.jpg" 
+            src="/Images/1.jpg" 
             alt="Image 3"
             className="w-full h-full object-cover"
           />
@@ -33,7 +33,7 @@ const RecapCards = () => {
         </div>
         <div className="col-span-1 row-span-1 md:col-start-2 md:row-start-4 rounded-2xl overflow-hidden bg-gray-200">
           <img 
-            src="./public/1.jpg" 
+            src="/Images/1.jpg" 
             alt="Image 4"
             className="w-full h-full object-cover"
           />
@@ -42,14 +42,14 @@ const RecapCards = () => {
         {/* Third column: 3x1, 1x1 */}
         <div className="col-span-1 row-span-3 md:col-start-3 md:row-start-1 rounded-2xl overflow-hidden bg-gray-200">
           <img 
-            src="./public/samay-raina.png" 
+            src="/Images/samay-raina.png" 
             alt="Image 5"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="col-span-1 row-span-1 md:col-start-3 md:row-start-4 rounded-2xl overflow-hidden bg-gray-200">
           <img 
-            src="./public/1.jpg" 
+            src="/Images/1.jpg" 
             alt="Image 6"
             className="w-full h-full object-cover"
           />
@@ -58,14 +58,14 @@ const RecapCards = () => {
         {/* Fourth column: 2x1 and 2x1 */}
         <div className="col-span-2 md:col-span-1 row-span-2 md:col-start-4 md:row-start-1 rounded-2xl overflow-hidden bg-gray-200">
           <img 
-            src="./public/1.jpg" 
+            src="/Images/1.jpg" 
             alt="Image 7"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="col-span-2 md:col-span-1 row-span-2 md:col-start-4 md:row-start-3 rounded-2xl overflow-hidden bg-gray-200">
           <img 
-            src="./public/chirayu-mistry.png" 
+            src="/Images/chirayu-mistry.png" 
             alt="Image 8"
             className="w-full h-full object-contain"
           />
