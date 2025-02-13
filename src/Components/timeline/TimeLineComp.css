@@ -1,9 +1,11 @@
 .timeline-line {
     height: 0;
+    transition: background 0.5s ease;
   }
   
   .timeline-event {
     position: relative;
+    transition: transform 0.3s ease;
   }
   
   /* This makes the line extend from the top of one event to the dot of the next */
@@ -17,6 +19,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    background-color: #dd558ed2;
   }
 
   /* Add glow effect to the line */
@@ -47,9 +50,11 @@
     position: absolute;
     top: 0;
     z-index: 2;
+    transition: all 0.3s ease;
   }
 
-  .timeline-dot::before {
+  /* Remove the :not(.completed) selector and use specific classes */
+  .timeline-dot.upcoming::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -62,14 +67,43 @@
     animation: pulseGlow 2s ease-out infinite;
   }
 
+  .timeline-dot.current::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background: rgba(221, 85, 142, 0.2);
+    border-radius: 50%;
+    animation: pulseGlow 1.5s ease-out infinite;
+  }
+
   @keyframes pulseGlow {
     0% {
       transform: translate(-50%, -50%) scale(0.7);
-      opacity: 1;
+      opacity: 0;
     }
     100% {
       transform: translate(-50%, -50%) scale(2);
-      opacity: 0;
+      opacity: 1;
+    }
+  }
+
+  /* Ensure pulse effect stays visible */
+  @keyframes ping-slow {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.5;
     }
   }
 

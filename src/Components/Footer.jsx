@@ -39,7 +39,7 @@ function Footer() {
           <div className="flex flex-col items-center sm:items-start m-auto">
             <h4 className="font-['OfficialBook'] text-2xl sm:text-2xl mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              {["Home", "Events", "Timeline", "About","Contactus"].map((item) => (
+              {["Home", "Events", "Timeline", "About","Contact"].map((item) => (
                 <li key={item}>
                   <NavLink
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

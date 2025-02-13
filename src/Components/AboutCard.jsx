@@ -4,7 +4,7 @@ import CloudinaryImage from './CloudinaryImage';
 
 const AboutCard = (props) => {
   return (
-    <StyledWrapper>
+    <StyledWrapper className="font-primaryFont">
       <div className="card">
         <div className="card2">
           <div className="glitch-wrapper">
@@ -216,7 +216,7 @@ const StyledWrapper = styled.div`
   /* Text styling */
   .name {
     font-family: var(--secFont1);
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     color: #C90F5B;
     margin: 6px 0 3px 0;
     text-align: center;
