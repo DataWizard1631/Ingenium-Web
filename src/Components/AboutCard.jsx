@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CloudinaryImage from './CloudinaryImage';
 
 const AboutCard = (props) => {
   return (
@@ -7,7 +8,11 @@ const AboutCard = (props) => {
       <div className="card">
         <div className="card2">
           <div className="glitch-wrapper">
-            <img className="w-full h-full object-cover" src={props.image} />
+            <CloudinaryImage 
+              className="w-full  object-cover"
+              src={props.image}
+              alt={props.name}
+            />
             <div className="glitch-effect"></div>
             <div className="tech-scanline"></div>
           </div>
@@ -27,7 +32,7 @@ const AboutCard = (props) => {
           </div>
         </div>
       </div>
-      <div className="info-container font-secFont1">
+      <div className="info-container">
         <div className="tech-line"></div>
         <div className="tech-corners"></div>
         <p className="name">{props.name}</p>
@@ -44,7 +49,8 @@ const StyledWrapper = styled.div`
   min-width: 240px;
   margin: 0 auto;
   perspective: 1000px;
-  
+
+  /* Main card styling */
   .card {
     width: 100%;
     aspect-ratio: 3/4;
@@ -55,45 +61,9 @@ const StyledWrapper = styled.div`
     overflow: hidden;
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        45deg,
-        transparent,
-        transparent 40%,
-        rgba(201, 15, 91, 0.6),
-        transparent 60%,
-        transparent
-      );
-      transform: rotate(45deg);
-      animation: shine 3s infinite;
-    }
   }
 
-  .tech-scanline {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: rgba(201, 15, 91, 0.5);
-    top: 0;
-    animation: scan 2s linear infinite;
-  }
-
-  @keyframes scan {
-    0% {
-      top: 0;
-    }
-    100% {
-      top: 100%;
-    }
-  }
-
+  /* Inner card styling */
   .card2 {
     width: 100%;
     height: 100%;
@@ -105,6 +75,7 @@ const StyledWrapper = styled.div`
     box-shadow: 0 8px 16px rgba(201, 15, 91, 0.15);
   }
 
+  /* Glitch effect container */
   .glitch-wrapper {
     position: relative;
     width: 100%;
@@ -113,6 +84,17 @@ const StyledWrapper = styled.div`
     border-radius: 10px;
   }
 
+  /* Scanline animation */
+  .tech-scanline {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgba(201, 15, 91, 0.5);
+    top: 0;
+    animation: scan 2s linear infinite;
+  }
+
+  /* Glitch effect */
   .glitch-effect {
     content: '';
     position: absolute;
@@ -132,6 +114,7 @@ const StyledWrapper = styled.div`
     transition: all 0.3s ease;
   }
 
+  /* Tech border effect */
   .tech-border {
     position: absolute;
     inset: 0;
@@ -147,6 +130,7 @@ const StyledWrapper = styled.div`
     transition: all 0.3s ease;
   }
 
+  /* Overlay styling */
   .overlay {
     position: absolute;
     top: 0;
@@ -162,6 +146,7 @@ const StyledWrapper = styled.div`
     border-radius: 10px;
   }
 
+  /* Social links styling */
   .social-links {
     display: flex;
     gap: clamp(20px, 4vw, 35px);
@@ -182,6 +167,7 @@ const StyledWrapper = styled.div`
     }
   }
 
+  /* Info container styling */
   .info-container {
     margin-top: 15px;
     padding: 12px;
@@ -194,6 +180,7 @@ const StyledWrapper = styled.div`
     border: 1px solid rgba(201, 15, 91, 0.2);
   }
 
+  /* Tech corners effect */
   .tech-corners::before,
   .tech-corners::after {
     content: '';
@@ -217,6 +204,7 @@ const StyledWrapper = styled.div`
     border-top: none;
   }
 
+  /* Tech line effect */
   .tech-line {
     height: 2px;
     background: linear-gradient(90deg, transparent, #C90F5B, transparent);
@@ -225,6 +213,7 @@ const StyledWrapper = styled.div`
     transition: transform 0.3s ease;
   }
 
+  /* Text styling */
   .name {
     font-family: var(--secFont1);
     font-size: clamp(1.25rem, 3vw, 1.75rem);
@@ -244,6 +233,7 @@ const StyledWrapper = styled.div`
     letter-spacing: 1.2px;
   }
 
+  /* Hover effects */
   .card:hover {
     transform: translateZ(15px);
     
@@ -276,6 +266,7 @@ const StyledWrapper = styled.div`
     }
   }
 
+  /* Animations */
   @keyframes glitch {
     0% {
       transform: translateX(-100%);
@@ -285,12 +276,12 @@ const StyledWrapper = styled.div`
     }
   }
 
-  @keyframes shine {
+  @keyframes scan {
     0% {
-      transform: translateX(-200%) translateY(-200%) rotate(45deg);
+      top: 0;
     }
     100% {
-      transform: translateX(200%) translateY(200%) rotate(45deg);
+      top: 100%;
     }
   }
 `;
