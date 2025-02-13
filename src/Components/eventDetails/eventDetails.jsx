@@ -52,7 +52,7 @@ const EventDetails = () => {
         </div>
 
         {/* Event Image */}
-        <img src={event.image} alt={event.title} className='my-8 md:my-16 w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover' />
+        <img src={event.image} alt={event.title} className='my-8 md:my-16 w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg' />
 
         {/* Long Description */}
         <p className="text-sm sm:text-base md:text-xl lg:text-2xl leading-relaxed text-justify my-12 md:my-28">
@@ -63,11 +63,11 @@ const EventDetails = () => {
         <div className='flex flex-col md:flex-row justify-between w-full items-start gap-8 md:gap-12 px-0 md:px-16 my-8 md:my-16'>
           {/* Rules Section */}
           <div className='w-full md:w-[50%]'>
-            <div className='flex flex-row gap-4 md:gap-6 w-full items-center bg-[#FF1F79] p-3 md:p-4'>
+            <div className='flex flex-row gap-4 md:gap-6 w-full items-center bg-[#FF1F79] p-3 md:p-4 rounded-tl-lg rounded-tr-lg'>
               <FaBook className='text-3xl md:text-5xl' />
               <p className="text-2xl md:text-4xl lg:text-6xl">Rule Book</p>
             </div>
-            <div className="flex flex-col gap-4 md:text-xl bg-[#252525] px-6 md:px-12 py-6 md:py-8">
+            <div className="flex flex-col gap-4 md:text-xl bg-[#252525] px-6 md:px-12 py-6 md:py-8 rounded-b-lg ">
               {event.rules.map((rule, index) => (
                 <li key={index}>{rule}</li>
               ))}

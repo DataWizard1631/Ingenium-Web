@@ -2,10 +2,11 @@ import React, { useEffect } from 'react'
 import { Hero } from '../Components/Hero'
 import { AboutUs } from '../Components/AboutUs'
 import ImageGallary from '../Components/ImageGallary'
-import EventCarousel from '../Components/EventCardScroll';
+import EventCarousel from '../Components/home/EventCarousel';
 import Sponsors from '../Components/Sponsors';
 import Temp from '../Components/home/Temp';
 import RecapCards from '../Components/home/RecapCards';
+import WhyJoinUs from '../Components/home/WhyJoinUs';
 
 import reactbits from "../assets/image.png";
 const logoImgs = [
@@ -82,10 +83,10 @@ function Home() {
     <div className='bg-black w-full h-full pt-16'>
         <Temp/>
         <Hero/>
-        {/* <EventCarousel/> */}
         <AboutUs/>
-        {/* <ImageGallary images={images} className="custom-class" /> */}
         <RecapCards/>
+        <WhyJoinUs />
+        <EventCarousel/>
 
         <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12'>
             Sponsors
