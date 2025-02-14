@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const tagManagerArgs = {
-        gtmId: 'GTM-PM3H6V8JY1'
+        gtmId: 'G-PM3H6V8JY1'
     };
     TagManager.initialize(tagManagerArgs);
 }, []);
