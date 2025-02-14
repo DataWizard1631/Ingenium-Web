@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout.jsx";
 import Home from "./Pages/Home";
@@ -10,6 +11,14 @@ import Timeline from "./Components/timeline/TimeLineComp";
 import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
+
+  useEffect(() => {
+    const tagManagerArgs = {
+        gtmId: 'GTM-PM3H6V8JY1'
+    };
+    TagManager.initialize(tagManagerArgs);
+}, []);
+
   return (
     <div>
       <ScrollToTop />
