@@ -4,11 +4,17 @@ import './Temp.css';
 
 const Temp = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const maxScroll = 300; // Increased for smoother fade
+      const maxScroll = 300;
       const progress = Math.min(Math.max(scrollPosition / maxScroll, 0), 1);
       setScrollProgress(progress);
     };
@@ -16,6 +22,30 @@ const Temp = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const targetDate = new Date('2025-03-22T00:00:00');
+
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const padNumber = (num) => String(num).padStart(2, '0');
 
   return (
     <div style={{ 
@@ -76,11 +106,37 @@ const Temp = () => {
             '--scroll-progress': scrollProgress,
             opacity: 1 - scrollProgress,
             transform: `scale(${1 - (scrollProgress * 0.3)})`,
-            position: 'relative',
-            zIndex: 2
           }}
         >
           Ingenium'25
+        </div>
+        <div 
+          className="countdown-container"
+          style={{
+            '--scroll-progress': scrollProgress,
+            opacity: 1 - scrollProgress,
+            transform: `scale(${1 - (scrollProgress * 0.3)})`
+          }}
+        >
+          <div className="countdown-box">
+            <div className="countdown-value">{padNumber(timeLeft.days)}</div>
+            <div className="countdown-label">Days</div>
+          </div>
+          <div className="countdown-separator">:</div>
+          <div className="countdown-box">
+            <div className="countdown-value">{padNumber(timeLeft.hours)}</div>
+            <div className="countdown-label">Hours</div>
+          </div>
+          <div className="countdown-separator">:</div>
+          <div className="countdown-box">
+            <div className="countdown-value">{padNumber(timeLeft.minutes)}</div>
+            <div className="countdown-label">Minutes</div>
+          </div>
+          <div className="countdown-separator">:</div>
+          <div className="countdown-box">
+            <div className="countdown-value">{padNumber(timeLeft.seconds)}</div>
+            <div className="countdown-label">Seconds</div>
+          </div>
         </div>
       </div>
     </div>
