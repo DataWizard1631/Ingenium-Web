@@ -23,6 +23,7 @@
     "axios": "^1.7.9",
     "clsx": "^2.1.1",
     "cookie-parser": "^1.4.7",
+    "emailjs": "^4.0.3",
     "framer-motion": "^11.18.2",
     "lucide-react": "^0.471.1",
     "multer": "^1.4.5-lts.1",
