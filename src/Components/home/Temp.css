@@ -203,7 +203,7 @@
     }
     
     .countdown-container {
-        top: 45%;
+        top: 60%;
         gap: 10px;
         background: rgba(201, 15, 91, 0.1);
         backdrop-filter: blur(10px);
