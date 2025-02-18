@@ -25,7 +25,7 @@
 .countdown-container {
     font-family: 'ModernAge', sans-serif;
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 0%;
     transform: translate(-50%, -50%);
     display: flex;
