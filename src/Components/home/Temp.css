@@ -7,7 +7,7 @@
     position: absolute;
     top: 35%;
     left: 0%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     color: white;
     font-family: 'ModernAge', sans-serif;
     font-size: 10rem;
@@ -27,7 +27,7 @@
     position: absolute;
     top: 10%;
     left: 0%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     display: flex;
     gap: 30px;
     align-items: center;
@@ -196,22 +196,32 @@
 }
 
 /* Mobile Devices */
+/* Mobile Devices */
 @media screen and (max-width: 768px) {
     .title {
         font-size: 3.5rem;
         top: 30%;
+        width: 100%;
+        text-align: center;
     }
     
     .countdown-container {
+        position: fixed;
         top: 60%;
-        left: 0%;
-        max-width : 95%;
-        gap: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 95%;
+        margin: 0 auto;
+        gap: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         background: rgba(201, 15, 91, 0.1);
         backdrop-filter: blur(10px);
         border-radius: 15px;
-        padding: 15px 20px;
-        width: auto;
+        padding: 20px;
         border: 1px solid rgba(201, 15, 91, 0.3);
         box-shadow: 0 8px 32px 0 rgba(201, 15, 91, 0.2);
     }
@@ -221,37 +231,44 @@
         backdrop-filter: none;
         border: none;
         box-shadow: none;
-        width: auto;
-        height: auto;
-        padding: 0;
-        animation: none;
-    }
-    
-    .countdown-box::before,
-    .countdown-box::after {
-        display: none;
+        min-width: 60px;
+        text-align: center;
+        padding: 5px;
     }
     
     .countdown-value {
         font-size: 2.5rem;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
+        line-height: 1.2;
+        white-space: nowrap;
     }
     
     .countdown-label {
         font-size: 0.8rem;
         letter-spacing: 1px;
+        white-space: nowrap;
+        display: block;
+        text-align: center;
+        margin-top: 2px;
     }
     
     .countdown-separator {
         font-size: 2.5rem;
         margin: 0 5px;
+        align-self: flex-start;
+        padding-top: 5px;
     }
 }
 
 /* Small Mobile */
 @media screen and (max-width: 480px) {
-    .title {
-        font-size: 2.8rem;
+    .countdown-container {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .countdown-box {
+        min-width: 50px;
     }
     
     .countdown-value {
@@ -264,23 +281,6 @@
     
     .countdown-separator {
         font-size: 2rem;
+        margin: 0 2px;
     }
 }
-
-/* Extra Small Mobile */
-@media screen and (max-width: 320px) {
-    .title {
-        font-size: 2.5rem;
-    }
-    
-    .countdown-container {
-        top: 50%;
-    }
-}
-
-/* For landscape orientation on mobile */
-@media screen and (max-height: 480px) and (orientation: landscape) {
-    .title {
-        font-size: 2.5rem;
-    }
-} 

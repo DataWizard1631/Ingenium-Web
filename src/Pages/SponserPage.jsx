@@ -3,16 +3,23 @@ import { Sponsers } from '../Components/Sponsers/Sponsers'
 
 function SponserPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 py-10">
-        <div className="text-center mb-16">
-          <img src="/ingenium-logo.png" alt="Ingenium" className="h-16 mx-auto mb-8" />
-          <h1 className="text-4xl font-bold mb-2">Presenting our</h1>
-          <h2 className="text-5xl font-bold text-pink-500 mb-4">TITLE SPONSOR</h2>
+    <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto min-h-screen bg-black text-white">
+      <div className='w-full flex justify-center items-center'>
+      <div className="mt-[8vh] w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8">
+          <img
+            src="/Logos/Ing_White_2025.png"
+            alt="Ingenium Logo"
+            className="w-full h-auto"
+          />
         </div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 py-10">
+        
         <Sponsers />
       </div>
     </div>
+
   )
 }
 
