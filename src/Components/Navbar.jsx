@@ -59,7 +59,7 @@ function Navbar() {
 
             {/* Desktop Navigation - fully opaque text */}
             <div className="hidden lg:flex items-center space-x-8 text-xl">
-              {["Home", "Events", "Timeline", "About", "Contact"].map((item) => (
+              {["Home", "Events", "Timeline", "Sponsors", "Contact", "About"].map((item) => (
                 <Link
                   key={item}
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -100,7 +100,7 @@ function Navbar() {
         style={{ top: '64px' }}
       >
         <div className="flex flex-col items-center pt-8 space-y-6 bg-[#080C18]/80 backdrop-blur-sm h-screen w-[50%]">
-          {["Home", "Events", "Timeline", "About", "Contact"].map((item) => (
+          {["Home", "Events", "Timeline", "Sponsors", "Contact", "About"].map((item) => (
             <Link
               key={item}
               to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

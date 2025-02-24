@@ -1,7 +1,7 @@
 import React from 'react'
 import { Sponsers } from '../Components/Sponsers/Sponsers'
 
-function SponserPage() {
+function SponsorPage() {
   return (
     <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto min-h-screen bg-black text-white">
       <div className='w-full flex justify-center items-center'>
@@ -23,4 +23,4 @@ function SponserPage() {
   )
 }
 
-export default SponserPage
+export default SponsorPage

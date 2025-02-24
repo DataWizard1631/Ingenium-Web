@@ -33,11 +33,11 @@
       ],
       "Decoration": [
           { "Name": "Maitri Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372270/Maitri_Shah_Decoration_Head_yl62as.jpg" },
-          { "Name": "Krisha Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372277/Krisha_Patwa_Decoration_Head_xiroql.jpg" }
+          { "Name": "Krisha Patwa", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372277/Krisha_Patwa_Decoration_Head_xiroql.jpg" }
       ],
       "Graphics": [
-          { "Name": "Deepayu Ninama", "imageUrl": "./public/1.jpg" },
-          { "Name": "Diya Kuria", "imageUrl": "./public/1.jpg" }
+          { "Name": "Deepayu Ninama", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1740389157/Deepayu_Ninama_k8v3ff.jpg" },
+          { "Name": "Diya Kuria", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1740389441/IMG_20250224_145937_pctxbf.jpg" }
       ],
       "CSE Events": [
           { "Name": "Dhrumi Panchal", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372278/Dhrumi_Panchal_CSE_Head_cdbqhj.jpg" },
@@ -68,8 +68,8 @@
           { "Name": "Vishwa Dave", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372256/Vishwa_Dave_Talent_Show_Head_d7iary.jpg" }
       ],
       "Gaming": [
-          { "Name": "Laksh Thanki", "imageUrl": "./public/1.jpg" },
-          { "Name": "Tanmay Bansal", "imageUrl": "./public/1.jpg" }
+          { "Name": "Laksh Thanki", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1740389333/Lakshya_Thanki_cs3hfw.jpg" },
+          { "Name": "Tanmay Bansal", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1740389334/Tanmay_Bansal_whzts4.jpg" }
       ],
       "Sponsorship": [
           { "Name": "Vansh Narania", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372257/Vansh_Narania_Sponsorship_Head_ttvcri.jpg" }

@@ -32,7 +32,7 @@ const AboutCard = (props) => {
           </div>
         </div>
       </div>
-      <div className="info-container">
+      <div className="info-container p-0 md:p-4">
         <div className="tech-line"></div>
         <div className="tech-corners"></div>
         <p className="name">{props.name}</p>
@@ -170,7 +170,6 @@ const StyledWrapper = styled.div`
   /* Info container styling */
   .info-container {
     margin-top: 15px;
-    padding: 12px;
     position: relative;
     transform: translateY(0);
     transition: all 0.3s ease;

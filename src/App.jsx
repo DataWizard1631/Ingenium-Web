@@ -9,7 +9,8 @@ import Contact from "./Pages/Contact";
 import EventDetails from "./Components/eventDetails/eventDetails";
 import Timeline from "./Components/timeline/TimeLineComp";
 import ScrollToTop from "./Components/ScrollToTop";
-import SponserPage from "./Pages/SponserPage.jsx";
+import SponsorPage from "./Pages/SponsorPage.jsx";
+import NotFound from "./Pages/NotFound.jsx";
 
 function App() {
 
@@ -31,7 +32,8 @@ function App() {
           <Route path="events" element={<Event />} />
           <Route path="contact" element={<Contact />} />
           <Route path="eventdetails/:id" element={<EventDetails />} />
-          <Route path="sponsers" element={<SponserPage />} />
+          <Route path="sponsors" element={<SponsorPage />} /> 
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </div>
