@@ -1,5 +1,5 @@
 import React from 'react'
-import { EventLog } from '../Components/EventLog'
+import { EventLog } from '../Components/events/EventLog'
 
 function Event() {
   return (

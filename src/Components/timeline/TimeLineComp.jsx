@@ -92,7 +92,7 @@ const TimelineEvent = ({ event, position, isCurrentEvent }) => {
         timeline-dot items-center justify-center
         ${position === 'left' ? 'right-[-8px]' : 'left-[-8px]'}
         ${isCompleted ? 'bg-colPink' : 
-          isCurrentEvent ? 'bg-colPink current left-[8px]' : 
+          isCurrentEvent ? 'bg-colPink current right-[2px] w-6 h-6' : 
           'bg-white upcoming'}`} 
       >
         {/* Static dot to prevent pulse effect on the icon */}
@@ -269,7 +269,7 @@ const TimeLineComp = () => {
       
       timelineRef.current.style.background = `linear-gradient(
         to bottom,
-        #dd558ed2 ${percentage}%,
+        #dd558ed2 ${percentage+0.25}%,
         #ffffff ${percentage}% 100%
       )`;
     }
@@ -290,12 +290,15 @@ const TimeLineComp = () => {
 
         {/* Header */}
         <div className="text-center w-full lg:max-w-[60vw] mx-auto mb-8 xs:mb-10 sm:mb-16 lg:mb-24">
-          <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl
-            mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.2em] font-semibold text-white">
-            TIMELINE
-          </h1>
+          <div className="relative inline-block">
+            <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl
+              mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.17em] font-semibold text-white">
+              TIMELINE
+            </h1>
+            <div className="absolute bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+          </div>
           <p className="font-secFont1 text-sm xs:text-base sm:text-lg lg:text-xl 
-            leading-relaxed opacity-90 text-white px-2 xs:px-4">
+            leading-relaxed opacity-90 text-white px-2 xs:px-4 mt-8">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
           </p>

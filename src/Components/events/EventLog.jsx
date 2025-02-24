@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import eventsData from '../data/events.json';
+import eventsData from '../../data/events.json';
 
 // Event data structure
 const eventData = {
@@ -76,6 +76,7 @@ const eventData = {
 };
 
 const categories = [
+  { id: 'all', label: 'All' },
   { id: 'esports', label: 'e-sports' },
   { id: 'csevents', label: 'CS Events' },
   { id: 'mechevnets', label: 'Mech Event' },
@@ -125,12 +126,19 @@ function CardComp({ event }) {
 }
 
 export const EventLog = () => {
-  const [selectedCategory, setSelectedCategory] = useState('esports');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const getAllEvents = () => {
+    const allEvents = Object.values(eventData)
+      .flat()
+      .sort((a, b) => a.id - b.id);
+    return allEvents;
+  };
 
   return (
     <section className="w-full flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
       {/* Event Log Header */}
-      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-0 mt-16 sm:mt-20 md:mt-20">
+      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-20">
         {/* Logo */}
         <div className="w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8">
           <img 
@@ -140,11 +148,14 @@ export const EventLog = () => {
           />
         </div>
         
-        <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.17em] font-semibold text-white">
-            EVENT LOG
+        <h1 
+          className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white relative tracking-[0.17em]"
+        >
+          EVENT LOG
+          <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl font-secFont1 max-w-[90%] sm:max-w-[80%] md:max-w-[57vw] text-center text-white md:mt-8">
+        <p className="text-base sm:text-lg md:text-xl font-secFont1 max-w-[90%] sm:max-w-[80%] md:max-w-[57vw] text-center text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. 
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
@@ -152,19 +163,18 @@ export const EventLog = () => {
 
       {/* Card Section */}
       <div className="w-full flex flex-col items-center gap-8 sm:gap-10 md:gap-12">
-        {/* Event Selector Bars */}
-        <div className="flex flex-wrap justify-center gap-6 bg-gray-200  rounded-full p-2">
+        <div className="flex flex-wrap justify-center gap-6 bg-gray-200/20 backdrop-blur-md rounded-full p-2">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`text-sm sm:text-base md:text-lg font-secFont1 px-3 sm:px-4 md:px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`text-sm sm:text-base md:text-lg font-secFont1 px-3 sm:px-4 md:px-6 py-2 rounded-full transition-all duration-150 flex items-center gap-2 ${
                 selectedCategory === category.id 
-                ? 'bg-colPink text-white' 
-                : 'text-black hover:bg-gray-300'
+                ? 'bg-colPink text-white shadow-lg' 
+                : 'text-white hover:bg-gray-300/20'
               }`}
             >
-              {category.label}
+              <span>{category.label}</span>
             </button>
           ))}
         </div>
@@ -172,7 +182,7 @@ export const EventLog = () => {
         {/* Event Cards */}
         <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full items-center">
           <AnimatePresence mode="wait" initial={false}>
-            {eventData[selectedCategory]?.map((event) => (
+            {(selectedCategory === 'all' ? getAllEvents() : eventData[selectedCategory])?.map((event) => (
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
