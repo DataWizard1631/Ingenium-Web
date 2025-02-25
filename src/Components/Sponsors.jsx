@@ -3,15 +3,12 @@ import { useState } from "react";
 function Sponsors({
   items = [],
   direction = "horizontal",
-  pauseOnHover = false,
   size = "clamp(8rem, 1rem + 30vmin, 25rem)",
   duration = "60s",
   textColor = "#ffffff",
   bgColor = "#060606",
   bgAccentColor = "#111111"
 }) {
-  const [isPaused, setIsPaused] = useState(false);
-
   const wrapperClass = [
     "flex",
     "flex-col",
@@ -19,8 +16,6 @@ function Sponsors({
     "mx-auto",
     "max-w-full",
     "p-[20px_10px]",
-    // Apply text and bg from CSS variables if desired
-    // (We do that inline style below)
     direction === "vertical" && "flex-row justify-center h-full"
   ]
     .filter(Boolean)
@@ -35,8 +30,7 @@ function Sponsors({
     "justify-start",
     "w-full",
     "mask-horizontal",
-    direction === "vertical" && "flex-col h-full mask-vertical",
-    isPaused && "paused"
+    direction === "vertical" && "flex-col h-full mask-vertical"
   ]
     .filter(Boolean)
     .join(" ");
@@ -56,8 +50,6 @@ function Sponsors({
     >
       <div
         className={marqueeClass}
-        onMouseEnter={() => pauseOnHover && setIsPaused(true)}
-        onMouseLeave={() => pauseOnHover && setIsPaused(false)}
       >
         <div
           className={[
@@ -129,11 +121,7 @@ function Sponsors({
       </div>
 
       <div
-        className={
-          marqueeClass + " marquee--reverse"
-        }
-        onMouseEnter={() => pauseOnHover && setIsPaused(true)}
-        onMouseLeave={() => pauseOnHover && setIsPaused(false)}
+        className={marqueeClass + " marquee--reverse"}
       >
         <div
           className={[

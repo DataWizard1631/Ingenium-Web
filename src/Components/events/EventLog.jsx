@@ -127,12 +127,30 @@ function CardComp({ event }) {
 
 export const EventLog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [visibleEvents, setVisibleEvents] = useState(4); // Initial number of visible events
+  
   const getAllEvents = () => {
     const allEvents = Object.values(eventData)
       .flat()
       .sort((a, b) => a.id - b.id);
     return allEvents;
+  };
+
+  const currentEvents = selectedCategory === 'all' 
+    ? getAllEvents().slice(0, visibleEvents) 
+    : eventData[selectedCategory];
+
+  const totalEvents = selectedCategory === 'all' ? getAllEvents().length : 0;
+  const hasMoreEvents = selectedCategory === 'all' && visibleEvents < totalEvents;
+
+  const handleLoadMore = () => {
+    setVisibleEvents(prev => prev + 4); // Load 4 more events
+  };
+
+  // Reset visible events when category changes
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setVisibleEvents(4);
   };
 
   return (
@@ -167,7 +185,7 @@ export const EventLog = () => {
           {categories.map((category) => (
             <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={() => handleCategoryChange(category.id)}
               className={`text-sm sm:text-base md:text-lg font-secFont1 px-3 sm:px-4 md:px-6 py-2 rounded-full transition-all duration-150 flex items-center gap-2 ${
                 selectedCategory === category.id 
                 ? 'bg-colPink text-white shadow-lg' 
@@ -182,7 +200,7 @@ export const EventLog = () => {
         {/* Event Cards */}
         <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full items-center">
           <AnimatePresence mode="wait" initial={false}>
-            {(selectedCategory === 'all' ? getAllEvents() : eventData[selectedCategory])?.map((event) => (
+            {currentEvents?.map((event) => (
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -197,6 +215,18 @@ export const EventLog = () => {
             ))}
           </AnimatePresence>
         </div>
+
+        {/* Load More Button */}
+        {hasMoreEvents && (
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            onClick={handleLoadMore}
+            className="mt-8 px-8 py-3 border-[1px] border-white text-white rounded-full hover:bg-white/20 transition-all duration-300 font-secFont1 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            Load More Events
+          </motion.button>
+        )}
       </div>
     </section>
   );

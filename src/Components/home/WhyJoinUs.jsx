@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLaptopCode, FaUsers, FaHandshake, FaTrophy } from 'react-icons/fa';
+import { FaLaptopCode, FaUsers, FaHandshake, FaSmile } from 'react-icons/fa';
 
 const WhyJoinUs = () => {
   const benefits = [
@@ -19,9 +19,9 @@ const WhyJoinUs = () => {
       description: "Access exclusive job opportunities and internships through our industry partners"
     },
     {
-      icon: <FaTrophy size={40} />,
-      title: "Competitive Edge",
-      description: "Participate in hackathons and competitions to showcase your skills"
+      icon: <FaSmile size={40} />,
+      title: "Endless Enjoyment",
+      description: "Experience unforgettable moments and create lasting memories with fellow enthusiasts"
     }
   ];
 
