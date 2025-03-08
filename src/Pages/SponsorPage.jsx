@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sponsers } from '../Components/Sponsers/Sponsers'
+import { Sponsers } from '../Components/Sponsors/Sponsers'
 
 function SponsorPage() {
   return (
