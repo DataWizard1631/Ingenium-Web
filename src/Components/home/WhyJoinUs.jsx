@@ -26,7 +26,7 @@ const WhyJoinUs = () => {
   ];
 
   return (
-    <div className="w-full bg-black pt-20 md:pt-20">
+    <div className="w-full bg-black pt-20 md:pt-0 md: pb-24">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-primaryFont text-white text-center mb-16">
           Why Join Us?
@@ -44,7 +44,7 @@ const WhyJoinUs = () => {
               <h3 className="text-white text-xl md:text-2xl font-primaryFont mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-gray-400 text-sm md:text-base">
+              <p className="text-gray-400 text-sm md:text-lg font-secFont1">
                 {benefit.description}
               </p>
             </div>

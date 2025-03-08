@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Event from "./Pages/Event";
 import Contact from "./Pages/Contact";
-import EventDetails from "./Components/eventDetails/eventDetails";
+import EventDetails from "./Components/eventDetails/EventDetails";
 import Timeline from "./Components/timeline/TimeLineComp";
 import ScrollToTop from "./Components/common/ScrollToTop.jsx";
 import SponsorPage from "./Pages/SponsorPage.jsx";
