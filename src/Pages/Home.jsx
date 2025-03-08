@@ -7,6 +7,7 @@ import Sponsors from '../Components/Sponsors';
 import Temp from '../Components/home/Temp';
 import RecapCards from '../Components/home/RecapCards';
 import WhyJoinUs from '../Components/home/WhyJoinUs';
+import AuGlimpes from '../Components/home/AuGlimpes';
 
 import reactbits from "../assets/image.png";
 const logoImgs = [
@@ -82,7 +83,8 @@ function Home() {
   return (
     <div className='bg-black w-full h-full pt-16'>
         <Temp/>
-        <Hero/>
+        {/* <Hero/> */}
+        <AuGlimpes/>
         <AboutUs/>
         <RecapCards/>
         <WhyJoinUs />
