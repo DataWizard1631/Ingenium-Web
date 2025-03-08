@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sponsers } from '../Components/Sponsors/Sponsers'
+import { Sponsors } from '../Components/Sponsors/Sponsors'
 
 function SponsorPage() {
   return (
@@ -16,7 +16,7 @@ function SponsorPage() {
       
       <div className="max-w-7xl mx-auto px-4 py-10">
         
-        <Sponsers />
+        <Sponsors />
       </div>
     </div>
 

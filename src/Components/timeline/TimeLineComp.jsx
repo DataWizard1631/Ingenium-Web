@@ -7,7 +7,7 @@ const events = [
   {
     id: 1,
     title: "EVENT TITLE",
-    image: "/1.jpg",
+    image: "Images/1.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2024-03-22 12:30:00",
     meetingType: "online",
@@ -16,7 +16,7 @@ const events = [
   {
     id: 2,
     title: "EVENT TITLE",
-    image: "/3.jpg",
+    image: "Images/3.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2024-05-15 14:00:00",
     meetingType: "offline",
@@ -25,7 +25,7 @@ const events = [
   {
     id: 3,
     title: "EVENT TITLE",
-    image: "/2.jpg",
+    image: "Images/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2025-02-19 16:30:00",
     meetingType: "hybrid",
@@ -34,7 +34,7 @@ const events = [
   {
     id: 4,
     title: "EVENT TITLE",
-    image: "/2.jpg",
+    image: "Images/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2025-12-10 16:30:00",
     meetingType: "hybrid",
@@ -43,7 +43,7 @@ const events = [
   {
     id: 5,
     title: "EVENT TITLE",
-    image: "/2.jpg",
+    image: "Images/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2025-12-10 16:30:00",
     meetingType: "hybrid",
@@ -52,7 +52,7 @@ const events = [
   {
     id: 6,
     title: "EVENT TITLE",
-    image: "/2.jpg",
+    image: "Images/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2025-12-10 16:30:00",
     meetingType: "hybrid",

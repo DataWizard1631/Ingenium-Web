@@ -2,7 +2,7 @@ import React from 'react';
 
 const RecapCards = () => {
   return (
-    <div className="container mx-auto px-4 h-[800px] md:h-[600px] lg:h-[800px] mb-24">
+    <div className="container mx-auto px-4 h-[800px] md:h-[600px] lg:h-[800px] mt-48 mb-4">
       <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-20 md:grid-rows-4 gap-4 h-full">
         {/* First column: 2x1 and 2x1 */}
         <div className="row-span-1 col-span-1 rounded-2xl overflow-hidden bg-gray-200">

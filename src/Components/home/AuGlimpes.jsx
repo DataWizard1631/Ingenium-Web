@@ -11,7 +11,7 @@ import uc from '../../../public/Images/uc.jpg';
 
 const AuGlimpes = () => {
   return (
-    <section className="relative pt-2 pb-8 md:py-20">
+    <section className="relative pt-16 pb-8 md:pb-32">
 
       {/* Main Container with 90% width */}
       <div className="relative w-[90%] md:w-[80%] mx-auto">

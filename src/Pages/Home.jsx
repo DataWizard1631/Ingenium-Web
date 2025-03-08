@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import { AboutUs } from '../Components/AboutSection_Home_Page/AboutUs'
+import { AboutUs } from '../Components/home/AboutUs'
 import EventCarousel from '../Components/home/EventCarousel';
-import Sponsors from '../Components/Sponsors/Sponsors';
+import Sponsors from '../Components/Sponsors/Home_Sponsors';
 import Temp from '../Components/home/Temp';
 import RecapCards from '../Components/home/RecapCards';
 import WhyJoinUs from '../Components/home/WhyJoinUs';
@@ -81,12 +81,8 @@ function Home() {
   return (
     <div className='bg-black w-full h-full pt-16'>
         <Temp/>
-        {/* <Hero/> */}
         <AboutUs/>
         <AuGlimpes/>
-        <RecapCards/>
-        <WhyJoinUs />
-        <EventCarousel/>
 
         <>
         <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12'>
@@ -105,6 +101,9 @@ function Home() {
           />
         </div>
         </>
+        <RecapCards/>
+        <EventCarousel/>
+        <WhyJoinUs />
         
     </div>
   )

@@ -9,7 +9,7 @@ const eventData = {
     {
       id: 1,
       title: "EVENT 1",
-      image: "/1.jpg",
+      image: "Images/1.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
       registrationPeriod: "1st Feb - 15th Feb",
@@ -17,7 +17,7 @@ const eventData = {
     {
       id: 2,
       title: "EVENT 2",
-      image: "/3.jpg",
+      image: "Images/3.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "offline",
       registrationPeriod: "5th Feb - 20th Feb",
@@ -27,7 +27,7 @@ const eventData = {
     {
       id: 3,
       title: "EVENT 3",
-      image: "/2.jpg",
+      image: "Images/2.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "hybrid",
       registrationPeriod: "10th Feb - 25th Feb",
@@ -37,7 +37,7 @@ const eventData = {
     {
       id: 4,
       title: "EVENT 4",
-      image: "/5.jpg",
+      image: "Images/5.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "offline",
       registrationPeriod: "15th Feb - 28th Feb",
@@ -47,7 +47,7 @@ const eventData = {
     {
       id: 5,
       title: "EVENT 5",
-      image:"/6.jpg",
+      image:"Images/6.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
       registrationPeriod: "20th Feb - 5th Mar",
@@ -57,7 +57,7 @@ const eventData = {
     {
       id: 6,
       title: "EVENT 6",
-      image:"/1.jpg",
+      image:"Images/1.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
       registrationPeriod: "20th Feb - 5th Mar",
@@ -67,7 +67,7 @@ const eventData = {
     {
       id: 7,
       title: "EVENT TITLE",
-      image:"/6.jpg",
+      image:"Images/6.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
       meetingType: "online",
       registrationPeriod: "20th Feb - 5th Mar",
