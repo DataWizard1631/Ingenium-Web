@@ -7,17 +7,6 @@ import RecapCards from '../Components/home/RecapCards';
 import WhyJoinUs from '../Components/home/WhyJoinUs';
 import AuGlimpes from '../Components/home/AuGlimpes';
 
-import reactbits from "../assets/image.png";
-const logoImgs = [
-  { imgUrl: reactbits, altText: "React Bits Logo" },
-  { imgUrl: reactbits, altText: "React Bits Logo" },
-  { imgUrl: reactbits, altText: "React Bits Logo" },
-  { imgUrl: reactbits, altText: "React Bits Logo" },
-  { imgUrl: reactbits, altText: "React Bits Logo" },
-  { imgUrl: reactbits, altText: "React Bits Logo" },
-  { imgUrl: reactbits, altText: "React Bits Logo" }
-];
-
 function Home() {
   useEffect(() => {
     // Initially hide navbar
@@ -59,25 +48,6 @@ function Home() {
     };
   }, []);
 
-  const images = [
-    "1.jpg",
-    "2.jpg",
-    "3.jpg",
-    "4.jpg",
-    "5.jpg",
-    "6.jpg",
-    "7.jpg",
-    "1.jpg",
-    "2.jpg",
-    "3.jpg",
-    "4.jpg",
-    "5.jpg",
-    "6.jpg",
-    "7.jpg",
-   
-    // ... more image URLs
-  ];
-
   return (
     <div className='bg-black w-full h-full pt-16'>
         <Temp/>
@@ -86,12 +56,11 @@ function Home() {
 
         <>
         <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12'>
-            Sponsors
+            Past Sponsors
         </h1>
           
         <div className="h-[250px] sm:h-[250px] w-full relative mb-32">
           <Sponsors
-            items={logoImgs}
             direction='horizontal'
             pauseOnHover={true}
             size='clamp(6rem, 7rem + 15vmin, 20rem)'
@@ -101,6 +70,7 @@ function Home() {
           />
         </div>
         </>
+
         <RecapCards/>
         <EventCarousel/>
         <WhyJoinUs />

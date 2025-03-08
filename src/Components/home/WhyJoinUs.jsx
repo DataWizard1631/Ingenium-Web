@@ -26,7 +26,7 @@ const WhyJoinUs = () => {
   ];
 
   return (
-    <div className="w-full bg-black py-20 md:py-12">
+    <div className="w-full bg-black pt-20 md:pt-20">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-primaryFont text-white text-center mb-16">
           Why Join Us?

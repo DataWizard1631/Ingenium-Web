@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { HiLocationMarker, HiMail } from "react-icons/hi";
-import logo from "../../../public/ing-logo.svg"
+import logo from "/Logos/ing-logo.svg"
 
 function Footer() {
   const fadeInUp = {

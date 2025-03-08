@@ -1,13 +1,32 @@
 import { useState } from "react";
 
+const logoImgs = [
+  { imgUrl: "/Logos/1.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/2.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/3.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/4.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/5.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/6.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/7.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/8.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/9.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/10.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/11.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/12.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/13.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/14.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/15.png", altText: "React Bits Logo" },
+  { imgUrl: "/Logos/16.png", altText: "React Bits Logo" },
+];
+
 function Sponsors({
-  items = [],
   direction = "horizontal",
   size = "clamp(8rem, 1rem + 30vmin, 25rem)",
   duration = "60s",
   textColor = "#ffffff",
   bgColor = "#060606",
-  bgAccentColor = "#111111"
+  bgAccentColor = "#111111",
+  pauseOnHover = true
 }) {
   const wrapperClass = [
     "flex",
@@ -65,7 +84,7 @@ function Sponsors({
             .filter(Boolean)
             .join(" ")}
         >
-          {items.map((item, idx) => (
+          {logoImgs.map((item, idx) => (
             <img
               key={idx}
               src={item.imgUrl}
@@ -99,7 +118,7 @@ function Sponsors({
             .filter(Boolean)
             .join(" ")}
         >
-          {items.map((item, idx) => (
+          {logoImgs.map((item, idx) => (
             <img
               key={`dup1-${idx}`}
               src={item.imgUrl}
@@ -137,7 +156,7 @@ function Sponsors({
             .filter(Boolean)
             .join(" ")}
         >
-          {items.map((item, idx) => (
+          {logoImgs.map((item, idx) => (
             <img
               key={`rev-${idx}`}
               src={item.imgUrl}
@@ -171,7 +190,7 @@ function Sponsors({
             .filter(Boolean)
             .join(" ")}
         >
-          {items.map((item, idx) => (
+          {logoImgs.map((item, idx) => (
             <img
               key={`dup2-${idx}`}
               src={item.imgUrl}

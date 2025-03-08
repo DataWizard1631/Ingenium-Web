@@ -49,7 +49,7 @@ export const AboutUs = () => {
       <div className="w-full flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Primary Text */}
         <div className="w-full md:w-1/2 md:border-r border-white/30 pr-0 md:pr-8">
-          <img src="public/ing-logo.svg" alt="Ingenium Logo" className="w-[40%] mb-12 h-auto" />
+          <img src="Logos/ing-logo.svg" alt="Ingenium Logo" className="w-[40%] mb-12 h-auto" />
           <h2 className="font-primaryFont text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Tech Ingenium
           </h2>
@@ -78,9 +78,9 @@ export const AboutUs = () => {
           {/* Counters */}
           <div className="text-white font-secFont1 grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[
-              { count: 50, label: "Events" },
-              { count: 100, label: "Participants" },
-              { count: 10, label: "Years" }
+              { count: 18, label: "Events" },
+              { count: 1500, label: "Participants" },
+              { count: 8, label: "Years" },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center sm:items-start gap-2">
                 <p className="text-4xl sm:text-5xl md:text-6xl font-bold">
