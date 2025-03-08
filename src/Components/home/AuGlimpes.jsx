@@ -37,8 +37,8 @@ const AuGlimpes = () => {
             rel="noopener noreferrer" 
             className="absolute top-4 right-4 md:top-6 md:right-6 flex items-center gap-2 bg-white/90 hover:bg-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-10"
           >
-            <span className="font-medium text-[0.65rem] md:text-lg text-gray-800">Virtual Tour</span>
-            <FaArrowRight className="text-blue-600" />
+            <span className="font-medium text-[0.65rem] md:text-lg text-gray-800">Virtual Campus Tour</span>
+            <FaArrowRight className="text-colPink " />
           </a>
 
           
