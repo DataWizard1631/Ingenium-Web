@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import AboutCard from '../Components/AboutCard';
+import AboutCard from '../Components/Members/AboutCard';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from 'styled-components';
-import { ChevronDown } from 'lucide-react';
 import teamMembers from '../data/teamMembers.json';
 
 function About() {

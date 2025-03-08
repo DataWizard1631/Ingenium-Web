@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 import { Routes, Route } from "react-router-dom";
-import Layout from "./Components/Layout.jsx";
+import Layout from "./Components/common/Layout.jsx";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Event from "./Pages/Event";
 import Contact from "./Pages/Contact";
 import EventDetails from "./Components/eventDetails/eventDetails";
 import Timeline from "./Components/timeline/TimeLineComp";
-import ScrollToTop from "./Components/ScrollToTop";
+import ScrollToTop from "./Components/common/ScrollToTop.jsx";
 import SponsorPage from "./Pages/SponsorPage.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 import Hackathon from "./Pages/Hackathon.jsx";
