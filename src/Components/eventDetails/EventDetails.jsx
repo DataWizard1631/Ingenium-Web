@@ -52,7 +52,7 @@ const EventDetails = () => {
         </div>
 
         {/* Event Image */}
-        <img src={event.image} alt={event.title} className='my-8 md:my-16 w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg' />
+        <img src={event.innerImage} alt={event.title} className='my-8 md:my-16 w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg' />
 
         {/* Long Description */}
         <p className="text-sm sm:text-base md:text-xl lg:text-2xl leading-relaxed text-justify my-12 md:my-28">

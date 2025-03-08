@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { AboutUs } from '../Components/home/AboutUs'
 import EventCarousel from '../Components/home/EventCarousel';
-import Sponsors from '../Components/Sponsors/Home_Sponsors';
+import Sponsors from '../Components/home/Home_Sponsors';
 import Temp from '../Components/home/Temp';
 import RecapCards from '../Components/home/RecapCards';
 import WhyJoinUs from '../Components/home/WhyJoinUs';

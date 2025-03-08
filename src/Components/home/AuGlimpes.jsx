@@ -2,12 +2,11 @@ import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
 // import images and videos
-import auVideo from '../../../public/Images/au_video.mp4';
-
-import seas from '../../../public/Images/seas.png';
-import sas from '../../../public/Images/sas.jpeg';
-import amsom from '../../../public/Images/amsom.jpeg';
-import uc from '../../../public/Images/uc.jpg';
+import auVideo from '/Images/au_video.mp4';
+import seas from '/Images/seas.png';
+import sas from '/Images/sas.jpeg';
+import amsom from '/Images/amsom.jpeg';
+import uc from '/Images/uc.jpg';
 
 const AuGlimpes = () => {
   return (

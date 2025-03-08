@@ -11,6 +11,7 @@
       "meetingType": "hybrid",
       "registrationPeriod": "1st Feb - 15th Feb",
       "image": "/Images/sample.png",
+      "innerImage": "/Images/500w.jpg",
       "rules": [
         "Rule 1: Teams must consist of 2-4 members",
         "Rule 2: All code must be written during the hackathon",
@@ -51,6 +52,7 @@
       "meetingType": "offline",
       "registrationPeriod": "5th Feb - 20th Feb",
       "image": "/Images/sample.png",
+      "innerImage": "/Images/500w.jpg",
       "rules": [
         "Rule 1: Basic knowledge of electronics required",
         "Rule 2: All materials will be provided",
@@ -84,7 +86,8 @@
       "category": "CSE Events",
       "meetingType": "hybrid",
       "registrationPeriod": "1st Feb - 15th Feb",
-        "image": "/Images/sample.png",
+      "image": "/Images/sample.png",
+      "innerImage": "/Images/500w.jpg",
       "rules": [
         "Rule 1: Teams must consist of 2-4 members",
         "Rule 2: All code must be written during the hackathon",
@@ -125,6 +128,7 @@
       "meetingType": "offline",
       "registrationPeriod": "5th Feb - 20th Feb",
       "image": "/Images/sample.png",
+      "innerImage": "/Images/500w.jpg",
       "rules": [
         "Rule 1: Basic knowledge of electronics required",
         "Rule 2: All materials will be provided",
@@ -159,6 +163,7 @@
         "meetingType": "hybrid",
         "registrationPeriod": "1st Feb - 15th Feb",
         "image": "/Images/sample.png",
+        "innerImage": "/Images/500w.jpg",
         "rules": [
           "Rule 1: Teams must consist of 2-4 members",
           "Rule 2: All code must be written during the hackathon",
@@ -199,6 +204,7 @@
         "meetingType": "offline",
         "registrationPeriod": "5th Feb - 20th Feb",
         "image": "/Images/sample.png",
+        "innerImage": "/Images/500w.jpg",
         "rules": [
           "Rule 1: Basic knowledge of electronics required",
           "Rule 2: All materials will be provided",

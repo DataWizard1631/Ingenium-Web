@@ -339,7 +339,7 @@ function About() {
           {/* Web Development Team */}
           <div className="w-full mb-20">
             <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text my-6 md:my-0 md:mb-12">
-              WEB DEVELOPMENT TEAM
+              WEB DEV<span>s</span>
             </h2>
             <div className="w-full flex justify-center">
               <div className="max-w-[1200px] w-full">
