@@ -78,8 +78,8 @@
           { "Name": "Jainik Patel", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372379/Jainik_Patel_Social_Media_Head_madd3i.jpg" },
           { "Name": "Heer Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372275/Heer_Shah_Social_Media_Head_cbdpdl.jpg" }
       ],
-      "Hackathon": [
-          { "Name": "Deepayu Ninama", "imageUrl": "./public/1.jpg" }
+      "Hackathon head": [
+          { "Name": "Deepayu Ninama", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1740389157/Deepayu_Ninama_k8v3ff.jpg" }
       ],
       "Mechathon": [
           { "Name": "Manya Trivedi", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372271/Manya_Trivedi_Joint_Secretary_ev240f.jpg" }

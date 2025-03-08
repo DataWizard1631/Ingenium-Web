@@ -207,7 +207,7 @@
     
     .countdown-container {
         position: fixed;
-        top: 60%;
+        top: 10%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 90%;
@@ -263,16 +263,21 @@
 /* Small Mobile */
 @media screen and (max-width: 480px) {
     .countdown-container {
-        padding: 15px 10px;
-        gap: 10px;
+        padding: 5px 6px;
+        gap: 5px;
+        top: 20%;
+        left: 5%;
+        width: 90%;
     }
 
     .countdown-box {
-        min-width: 50px;
+        min-width: 20px;
+        width: 70px;
+        height: 70px;
     }
     
     .countdown-value {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     
     .countdown-label {
