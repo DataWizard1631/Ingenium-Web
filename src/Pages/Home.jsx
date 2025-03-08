@@ -84,8 +84,8 @@ function Home() {
     <div className='bg-black w-full h-full pt-16'>
         <Temp/>
         {/* <Hero/> */}
-        <AuGlimpes/>
         <AboutUs/>
+        <AuGlimpes/>
         <RecapCards/>
         <WhyJoinUs />
         <EventCarousel/>

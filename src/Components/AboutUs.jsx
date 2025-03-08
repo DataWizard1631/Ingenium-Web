@@ -49,17 +49,30 @@ export const AboutUs = () => {
       <div className="w-full flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Primary Text */}
         <div className="w-full md:w-1/2 md:border-r border-white/30 pr-0 md:pr-8">
-          <h2 className="font-secFont1 text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Lorem ipsum dolor
-            <br />
-            sit amet.
+          <img src="public/ing-logo.png" alt="Ingenium Logo" className="w-[40%] mb-12 h-auto" />
+          <h2 className="font-primaryFont text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Tech Ingenium
           </h2>
         </div>
 
         {/* Secondary Text + Counters */}
         <div className="w-full md:w-1/2 flex flex-col gap-8 md:gap-12">
           <p className="font-secFont1 text-white text-sm sm:text-base md:text-lg leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quidem similique facere, recusandae mollitia cumque sed nostrum ad eaque tempora voluptatibus culpa voluptatem.
+          Launched in 2016, Ingenium stands as Ahmedabad University's
+          premier annual tech festival. hosted by the School of
+          Engineering and Applied Sciences. This expansive event offers
+          a captivating blend of innovation and learning, featuring
+          dynamic workshops exploring industry trends, a thrilling
+          hackathon spotlighting coding prowess, and specialized tracks
+          like Chemathon and Mechathons delving into chemistry and
+          mechanical engineering. Ingenium is not merely an event; it's
+          a celebration of ideas. teamwork. and the limitless potential of
+          technology. Attendees can expect interactive sessions, cutting-
+          edge tech exhibitions, and networking opportunities with
+          industry experts. As the hub Of innovation at Ahmedabad
+          University, Ingenium invites everyone to shape the future—a
+          space where concepts come to life in the ever-evolving world
+          of technology.
           </p>
 
           {/* Counters */}
