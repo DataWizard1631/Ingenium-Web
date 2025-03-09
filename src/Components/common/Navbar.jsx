@@ -59,10 +59,10 @@ function Navbar() {
 
             {/* Desktop Navigation - fully opaque text */}
             <div className="hidden lg:flex items-center space-x-8 text-xl">
-              {["Home", "Events", "Timeline", "Sponsors", "Contact", "About"].map((item) => (
+              {["Home", "Sponsors", "Events", "Timeline", "Our team", "Contact"].map((item) => (
                 <Link
                   key={item}
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    to={item === "Our team" ? "/about" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   className="relative font-secFont1 text-white group py-2"
                 >
                   <span className="relative z-10">{item}</span>

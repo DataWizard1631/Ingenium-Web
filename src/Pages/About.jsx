@@ -37,33 +37,9 @@ function About() {
           </div>
         </div>
 
-        {/* About Section */}
-        <div className="flex flex-col md:flex-row items-center justify-around px-4 sm:px-12 py-5 gap-10 mt-20">
-          <div className="w-full md:w-1/2 text-white" data-aos="fade-right">
-            <div className="tech-container p-8">
-              <p className="font-secFont1 text-xl sm:text-2xl text-[#C90F5B] glitch-text">About</p>
-              <p className="font-primaryFont text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text text-transparent cyber-text mt-4">
-                INGENIUM
-              </p>
-              <p className="font-secFont1 text-base sm:text-lg md:text-xl text-justify pt-6 leading-relaxed text-gray-200">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto temporibus
-                tenetur facere. Repudiandae dolor voluptate corrupti blanditiis.
-              </p>
-            </div>
-          </div>
-          
-          <div className="tech-image-container" data-aos="fade-left">
-            <img 
-              src="/3.jpg" 
-              className="h-72 sm:h-80 md:h-96 w-48 sm:w-64 md:w-72 rounded-lg object-cover" 
-              alt="Tech"
-            />
-          </div>
-        </div>
-
         {/* Meet Our Team */}
-        <div className="w-full mt-0 md:mt-32">
-          <div className="section-title mb-16" data-aos="zoom-in">
+        <div className="w-full mt-0 md:mt-12">
+          <div className="section-title mb-12" data-aos="zoom-in">
             <div className="title-line"></div>
             <p className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl py-8 font-primaryFont text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text text-center cyber-text">
               MEET OUR TEAM
@@ -344,29 +320,8 @@ function About() {
             <div className="flex flex-wrap justify-center gap-8 mb-0 md:mb-20">
               {[
                 "Chem Events",
-                "EEE"
-              ].map(teamName => (
-                teamMembers.Cores[teamName]?.map((member, i) => (
-                  <div key={`${teamName}-${i}`} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
-                    <AboutCard 
-                      name={member.Name}
-                      post={teamName}
-                      image={member.imageUrl}
-                    />
-                  </div>
-                ))
-              ))}
-            </div>
-
-
-            <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text my-6 md:my-0 md:mb-12">
-              MERATHONS
-            </h2>
-            <div className="flex flex-wrap justify-center gap-8 mb-0 md:mb-20">
-              {[
-                "Hackathon",
-                "Mechathon",
-                "Chemathon"
+                "EEE",
+                "Hackathon head",
               ].map(teamName => (
                 teamMembers.Cores[teamName]?.map((member, i) => (
                   <div key={`${teamName}-${i}`} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
@@ -384,7 +339,7 @@ function About() {
           {/* Web Development Team */}
           <div className="w-full mb-20">
             <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text my-6 md:my-0 md:mb-12">
-              WEB DEVELOPMENT TEAM
+              WEB DEV<span>s</span>
             </h2>
             <div className="w-full flex justify-center">
               <div className="max-w-[1200px] w-full">

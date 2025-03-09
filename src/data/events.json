@@ -10,7 +10,8 @@
       "category": "CSE Events",
       "meetingType": "hybrid",
       "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/public/Images/1.jpg",
+      "image": "/Images/sample.png",
+      "innerImage": "/Images/500w.jpg",
       "rules": [
         "Rule 1: Teams must consist of 2-4 members",
         "Rule 2: All code must be written during the hackathon",
@@ -30,92 +31,18 @@
           "id": "2",
           "title": "Code Sprint",
           "category": "CSE Events",
-          "image": "/Images/2.jpg"
+          "image": "/2.jpg"
         },
         {
           "id": "3",
           "title": "Tech Talk",
           "category": "CSE Events",
-          "image": "/Images/3.jpg"
+          "image": "/3.jpg"
         }
       ]
     },
     {
       "id": "2",
-      "title": "Robotics Workshop 1",
-      "date": "25th March",
-      "time": "10:00 AM",
-      "description": "Hands-on workshop on building and programming robots. Perfect for beginners and intermediate enthusiasts.",
-      "longDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, vitae nostrum similique ipsam cumque delectus beatae maxime at qui.",
-      "category": "Mech Events",
-      "meetingType": "offline",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/4.jpg",
-      "rules": [
-        "Rule 1: Basic knowledge of electronics required",
-        "Rule 2: All materials will be provided",
-        "Rule 3: Participants must bring their laptops",
-        "Rule 4: Follow safety protocols",
-        "Rule 5: No prior robotics experience needed",
-        "Rule 6: Attendance is mandatory",
-        "Rule 7: Group work is encouraged"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Pay the workshop fee",
-        "Attend orientation session"
-      ],
-      "relatedEvents": [
-        {
-          "id": "4",
-          "title": "AI Workshop",
-          "category": "CSE Events",
-          "image": "/Images/5.jpg"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Hackathon 2025 2",
-      "date": "23rd March",
-      "time": "12:30 PM",
-      "description": "Join us for a 24-hour coding marathon where innovation meets technology. Build, create, and compete with the best minds in the field.",
-      "longDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, vitae nostrum similique ipsam cumque delectus beatae maxime at qui, eos praesentium iure accusamus, saepe earum atque cupiditate itaque aspernatur. Vitae, itaque. Atque vel debitis repellat quas ab est consequatur incidunt error consequuntur recusandae possimus voluptatem qui perferendis doloremque.",
-      "category": "CSE Events",
-      "meetingType": "hybrid",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/1.jpg",
-      "rules": [
-        "Rule 1: Teams must consist of 2-4 members",
-        "Rule 2: All code must be written during the hackathon",
-        "Rule 3: Use of open source libraries is allowed",
-        "Rule 4: Projects must be original work",
-        "Rule 5: Submission deadline is strict",
-        "Rule 6: Code must be pushed to GitHub",
-        "Rule 7: Live presentation is mandatory"
-      ],
-      "howToApply": [
-        "Register on the official website",
-        "Complete team formation",
-        "Submit project proposal"
-      ],
-      "relatedEvents": [
-        {
-          "id": "2",
-          "title": "Code Sprint",
-          "category": "CSE Events",
-          "image": "/Images/2.jpg"
-        },
-        {
-          "id": "3",
-          "title": "Tech Talk",
-          "category": "CSE Events",
-          "image": "/public/Images/1.jpg"
-        }
-      ]
-    },
-    {
-      "id": "4",
       "title": "Robotics Workshop 1",
       "date": "25th March",
       "time": "10:00 AM",
@@ -149,6 +76,81 @@
       ]
     },
     {
+      "id": "3",
+      "title": "Hackathon 2025 2",
+      "date": "23rd March",
+      "time": "12:30 PM",
+      "description": "Join us for a 24-hour coding marathon where innovation meets technology. Build, create, and compete with the best minds in the field.",
+      "longDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, vitae nostrum similique ipsam cumque delectus beatae maxime at qui, eos praesentium iure accusamus, saepe earum atque cupiditate itaque aspernatur. Vitae, itaque. Atque vel debitis repellat quas ab est consequatur incidunt error consequuntur recusandae possimus voluptatem qui perferendis doloremque.",
+      "category": "CSE Events",
+      "meetingType": "hybrid",
+      "registrationPeriod": "1st Feb - 15th Feb",
+      "image": "/1.jpg",
+      "rules": [
+        "Rule 1: Teams must consist of 2-4 members",
+        "Rule 2: All code must be written during the hackathon",
+        "Rule 3: Use of open source libraries is allowed",
+        "Rule 4: Projects must be original work",
+        "Rule 5: Submission deadline is strict",
+        "Rule 6: Code must be pushed to GitHub",
+        "Rule 7: Live presentation is mandatory"
+      ],
+      "howToApply": [
+        "Register on the official website",
+        "Complete team formation",
+        "Submit project proposal"
+      ],
+      "relatedEvents": [
+        {
+          "id": "2",
+          "title": "Code Sprint",
+          "category": "CSE Events",
+          "image": "/2.jpg"
+        },
+        {
+          "id": "3",
+          "title": "Tech Talk",
+          "category": "CSE Events",
+          "image": "/3.jpg"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Robotics Workshop 1",
+      "date": "25th March",
+      "time": "10:00 AM",
+      "description": "Hands-on workshop on building and programming robots. Perfect for beginners and intermediate enthusiasts.",
+      "longDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, vitae nostrum similique ipsam cumque delectus beatae maxime at qui.",
+      "category": "Mech Events",
+      "meetingType": "offline",
+      "registrationPeriod": "5th Feb - 20th Feb",
+      "image": "/Images/sample.png",
+      "innerImage": "/Images/500w.jpg",
+      "rules": [
+        "Rule 1: Basic knowledge of electronics required",
+        "Rule 2: All materials will be provided",
+        "Rule 3: Participants must bring their laptops",
+        "Rule 4: Follow safety protocols",
+        "Rule 5: No prior robotics experience needed",
+        "Rule 6: Attendance is mandatory",
+        "Rule 7: Group work is encouraged"
+      ],
+      "howToApply": [
+        "Fill the registration form",
+        "Pay the workshop fee",
+        "Attend orientation session"
+      ],
+      "relatedEvents": [
+        {
+          "id": "4",
+          "title": "AI Workshop",
+          "category": "CSE Events",
+          "image": "/Images/sample.png"
+        }
+      ]
+    },
+    {
         "id": "5",
         "title": "Hackathon 2025 3",
         "date": "23rd March",
@@ -158,7 +160,8 @@
         "category": "CSE Events",
         "meetingType": "hybrid",
         "registrationPeriod": "1st Feb - 15th Feb",
-        "image": "/1.jpg",
+        "image": "/Images/sample.png",
+        "innerImage": "/Images/500w.jpg",
         "rules": [
           "Rule 1: Teams must consist of 2-4 members",
           "Rule 2: All code must be written during the hackathon",
@@ -178,13 +181,13 @@
             "id": "2",
             "title": "Code Sprint",
             "category": "CSE Events",
-            "image": "/2.jpg"
+            "image": "/Images/sample.png"
           },
           {
             "id": "3",
             "title": "Tech Talk",
             "category": "CSE Events",
-            "image": "/3.jpg"
+            "image": "/Images/sample.png"
           }
         ]
       },
@@ -198,7 +201,8 @@
         "category": "Mech Events",
         "meetingType": "offline",
         "registrationPeriod": "5th Feb - 20th Feb",
-        "image": "/4.jpg",
+        "image": "/Images/sample.png",
+        "innerImage": "/Images/500w.jpg",
         "rules": [
           "Rule 1: Basic knowledge of electronics required",
           "Rule 2: All materials will be provided",
@@ -218,7 +222,7 @@
             "id": "4",
             "title": "AI Workshop",
             "category": "CSE Events",
-            "image": "/5.jpg"
+            "image": "/Images/sample.png"
           }
         ]
       }

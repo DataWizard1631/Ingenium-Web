@@ -7,7 +7,7 @@ const events = [
   {
     id: 1,
     title: "EVENT TITLE",
-    image: "/1.jpg",
+    image: "Images/1.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2024-03-22 12:30:00",
     meetingType: "online",
@@ -16,7 +16,7 @@ const events = [
   {
     id: 2,
     title: "EVENT TITLE",
-    image: "/3.jpg",
+    image: "Images/3.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2024-05-15 14:00:00",
     meetingType: "offline",
@@ -25,7 +25,7 @@ const events = [
   {
     id: 3,
     title: "EVENT TITLE",
-    image: "/2.jpg",
+    image: "Images/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2025-02-19 16:30:00",
     meetingType: "hybrid",
@@ -34,7 +34,7 @@ const events = [
   {
     id: 4,
     title: "EVENT TITLE",
-    image: "/2.jpg",
+    image: "Images/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2025-12-10 16:30:00",
     meetingType: "hybrid",
@@ -43,7 +43,7 @@ const events = [
   {
     id: 5,
     title: "EVENT TITLE",
-    image: "/2.jpg",
+    image: "Images/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2025-12-10 16:30:00",
     meetingType: "hybrid",
@@ -52,7 +52,7 @@ const events = [
   {
     id: 6,
     title: "EVENT TITLE",
-    image: "/2.jpg",
+    image: "Images/2.jpg",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2025-12-10 16:30:00",
     meetingType: "hybrid",
@@ -92,7 +92,7 @@ const TimelineEvent = ({ event, position, isCurrentEvent }) => {
         timeline-dot items-center justify-center
         ${position === 'left' ? 'right-[-8px]' : 'left-[-8px]'}
         ${isCompleted ? 'bg-colPink' : 
-          isCurrentEvent ? 'bg-colPink current right-[2px] w-6 h-6' : 
+          isCurrentEvent ? 'bg-colPink current right-[6px] w-4 h-4' : 
           'bg-white upcoming'}`} 
       >
         {/* Static dot to prevent pulse effect on the icon */}
@@ -158,14 +158,14 @@ const TimelineEvent = ({ event, position, isCurrentEvent }) => {
               </p>
             ) : (
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                <button className="register-btn px-3 xs:px-4 sm:px-5 lg:px-6 py-1.5 xs:py-2 
+                <button className="register-btn px-4 py-2
                   bg-colPink text-white rounded-full hover:bg-pink-700 transition-all duration-300 
                   ease-in-out hover:-translate-y-0.5 text-xs xs:text-sm lg:text-base uppercase tracking-wider">
                   Register
                 </button>
                 <button 
                   onClick={() => navigate(`/eventdetails/${event.id}`)}
-                  className="px-3 xs:px-4 sm:px-5 lg:px-6 py-1.5 xs:py-2 
+                  className="px-3 py-2
                   border border-colPink text-colPink rounded-full hover:bg-colPink hover:text-white 
                   transition-all duration-300 ease-in-out hover:-translate-y-0.5 
                   text-xs xs:text-sm lg:text-base uppercase tracking-wider"

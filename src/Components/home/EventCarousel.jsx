@@ -49,44 +49,44 @@ const EventCarousel = () => {
               className="absolute inset-0 flex flex-col md:flex-row gap-8 md:gap-12"
             >
               {/* Image Section */}
-              <div className="relative w-full md:w-2/3 h-[300px] md:h-full rounded-3xl overflow-hidden">
+              <div className="relative w-full md:w-fit h-[300px] md:h-full rounded-3xl overflow-hidden">
                 <img 
                   src={eventsData.events[activeIndex].image}
                   alt={eventsData.events[activeIndex].title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                {/* <div className="absolute -bottom-4 inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" /> */}
               </div>
 
               {/* Content Section */}
-              <div className="w-full md:w-1/3 text-white space-y-6 p-4">
+              <div className="w-full md:w-[60%] text-white space-y-6 p-4">
                 <div className="space-y-2">
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-primaryFont">
                     {eventsData.events[activeIndex].title}
                   </h3>
-                  <div className="flex items-center gap-3 text-colPink">
+                  <div className="font-secFont1 flex items-center gap-3 text-colPink text-xl">
                     <span>{eventsData.events[activeIndex].date}</span>
                     <span>•</span>
                     <span>{eventsData.events[activeIndex].time}</span>
                   </div>
                 </div>
 
-                <p className="text-gray-300 text-lg leading-relaxed">
+                <p className="font-secFont1 text-gray-300 text-xl leading-relaxed">
                   {eventsData.events[activeIndex].description}
                 </p>
 
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                <div className="font-secFont1 space-y-3">
+                  <div className="flex items-center gap-2 text-lg text-gray-400">
                     <span>Registration Period:</span>
                     <span className="text-white">{eventsData.events[activeIndex].registrationPeriod}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <div className="flex items-center gap-2 text-lg text-gray-400">
                     <span>Meeting Type:</span>
                     <span className="text-white capitalize">{eventsData.events[activeIndex].meetingType}</span>
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-4 pt-6">
+                <div className="font-secFont1 flex flex-col gap-4 pt-6">
                   <button className="w-full bg-colPink text-white py-3 rounded-xl text-lg font-semibold hover:bg-pink-700 transition-colors">
                     Register Now
                   </button>

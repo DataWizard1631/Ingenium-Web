@@ -2,16 +2,15 @@ import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
 // import images and videos
-import auVideo from '../../../public/Images/au_video.mp4';
-
-import seas from '../../../public/Images/seas.png';
-import sas from '../../../public/Images/sas.jpeg';
-import amsom from '../../../public/Images/amsom.jpeg';
-import uc from '../../../public/Images/uc.jpg';
+import auVideo from '/Images/au_video.mp4';
+import seas from '/Images/seas.png';
+import sas from '/Images/sas.jpeg';
+import amsom from '/Images/amsom.jpeg';
+import uc from '/Images/uc.jpg';
 
 const AuGlimpes = () => {
   return (
-    <section className="relative pt-2 pb-8 md:py-20">
+    <section className="relative pt-16 pb-8 md:pb-32">
 
       {/* Main Container with 90% width */}
       <div className="relative w-[90%] md:w-[80%] mx-auto">

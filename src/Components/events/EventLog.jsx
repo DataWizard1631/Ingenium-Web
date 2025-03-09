@@ -3,78 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import eventsData from '../../data/events.json';
 
-// Event data structure
-const eventData = {
-  esports: [
-    {
-      id: 1,
-      title: "EVENT 1",
-      image: "/1.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-      meetingType: "online",
-      registrationPeriod: "1st Feb - 15th Feb",
-    },
-    {
-      id: 2,
-      title: "EVENT 2",
-      image: "/3.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-      meetingType: "offline",
-      registrationPeriod: "5th Feb - 20th Feb",
-    },
-  ],
-  csevents: [
-    {
-      id: 3,
-      title: "EVENT 3",
-      image: "/2.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-      meetingType: "hybrid",
-      registrationPeriod: "10th Feb - 25th Feb",
-    },
-  ],
-  mechevnets: [
-    {
-      id: 4,
-      title: "EVENT 4",
-      image: "/5.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-      meetingType: "offline",
-      registrationPeriod: "15th Feb - 28th Feb",
-    },
-  ],
-  eeeevents: [
-    {
-      id: 5,
-      title: "EVENT 5",
-      image:"/6.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-      meetingType: "online",
-      registrationPeriod: "20th Feb - 5th Mar",
-    },
-  ],
-  chemevents: [
-    {
-      id: 6,
-      title: "EVENT 6",
-      image:"/1.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-      meetingType: "online",
-      registrationPeriod: "20th Feb - 5th Mar",
-    },
-  ],
-  concert: [
-    {
-      id: 7,
-      title: "EVENT TITLE",
-      image:"/6.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
-      meetingType: "online",
-      registrationPeriod: "20th Feb - 5th Mar",
-    },
-  ],
-};
-
 const categories = [
   { id: 'all', label: 'All' },
   { id: 'esports', label: 'e-sports' },
@@ -91,7 +19,7 @@ function CardComp({ event }) {
   return (
     <div className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[300px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg">
       {/* Image */}
-      <div className="w-full sm:w-[47%] h-[200px] sm:h-full">
+      <div className="w-full sm:w-[38%] h-full sm:h-full">
         <img 
           src={event.image} 
           alt={event.title}
@@ -130,7 +58,7 @@ export const EventLog = () => {
   const [visibleEvents, setVisibleEvents] = useState(4); // Initial number of visible events
   
   const getAllEvents = () => {
-    const allEvents = Object.values(eventData)
+    const allEvents = Object.values(eventsData)
       .flat()
       .sort((a, b) => a.id - b.id);
     return allEvents;
@@ -138,7 +66,7 @@ export const EventLog = () => {
 
   const currentEvents = selectedCategory === 'all' 
     ? getAllEvents().slice(0, visibleEvents) 
-    : eventData[selectedCategory];
+    : eventsData[selectedCategory];
 
   const totalEvents = selectedCategory === 'all' ? getAllEvents().length : 0;
   const hasMoreEvents = selectedCategory === 'all' && visibleEvents < totalEvents;
