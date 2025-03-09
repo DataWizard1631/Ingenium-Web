@@ -31,13 +31,13 @@
           "id": "2",
           "title": "Code Sprint",
           "category": "CSE Events",
-          "image": "/2.jpg"
+          "image": "/Images/sample.png"
         },
         {
           "id": "3",
           "title": "Tech Talk",
           "category": "CSE Events",
-          "image": "/3.jpg"
+          "image": "/Images/sample.png"
         }
       ]
     },
@@ -51,7 +51,8 @@
       "category": "Mech Events",
       "meetingType": "offline",
       "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/4.jpg",
+      "image": "/Images/sample.png",
+      "innerImage": "/Images/500w.jpg",
       "rules": [
         "Rule 1: Basic knowledge of electronics required",
         "Rule 2: All materials will be provided",
@@ -71,7 +72,7 @@
           "id": "4",
           "title": "AI Workshop",
           "category": "CSE Events",
-          "image": "/5.jpg"
+          "image": "/Images/sample.png"
         }
       ]
     },
@@ -85,7 +86,8 @@
       "category": "CSE Events",
       "meetingType": "hybrid",
       "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/1.jpg",
+      "image": "/Images/sample.png",
+      "innerImage": "/Images/500w.jpg",
       "rules": [
         "Rule 1: Teams must consist of 2-4 members",
         "Rule 2: All code must be written during the hackathon",
@@ -105,13 +107,13 @@
           "id": "2",
           "title": "Code Sprint",
           "category": "CSE Events",
-          "image": "/2.jpg"
+          "image": "/Images/sample.png"
         },
         {
           "id": "3",
           "title": "Tech Talk",
           "category": "CSE Events",
-          "image": "/3.jpg"
+          "image": "/Images/sample.png"
         }
       ]
     },
