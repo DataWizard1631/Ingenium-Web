@@ -44,8 +44,8 @@ const AuGlimpes = () => {
         </div>
 
         {/* Images Grid Container - Separate from video */}
-        <div className="absolute -bottom-16 md:-bottom-12 left-1/2 transform -translate-x-1/2 w-[80%] z-10">
-          <div className="flex justify-between">
+        <div className="absolute hidden sm:block -bottom-16 sm:-bottom-12 md:-bottom-12 left-1/2 transform -translate-x-1/2 w-[80%] z-10">
+          <div className="flex justify-between flex-wrap gap-y-4 sm:flex-nowrap">
             {[
               { src: seas, title: "School of Engineering & Applied Sciences" },
               { src: sas, title: "School of Arts & Sciences" },
@@ -54,7 +54,7 @@ const AuGlimpes = () => {
             ].map((image, index) => (
               <div 
                 key={index} 
-                className="relative w-[23%] rounded-lg md:rounded-2xl shadow-lg overflow-hidden group isolate"
+                className="relative w-[48%] sm:w-[23%] rounded-lg md:rounded-2xl shadow-lg overflow-hidden group isolate"
               >
                 {/* Image */}
                 <img 
