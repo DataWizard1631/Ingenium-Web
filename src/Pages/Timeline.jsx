@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import eventsData from '../data/events.json';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function Timeline() {
   const navigate = useNavigate();
   const events = eventsData.events;
+  const currentEventRef = useRef(null);
 
   // Helper function to parse date string like "25th March"
   const parseDate = (dateStr, timeStr) => {
@@ -64,12 +65,6 @@ function Timeline() {
     const eventDateTime = parseDate(event.date, event.time);
     const now = new Date();
     
-    // For debugging
-    console.log('Event:', event.title);
-    console.log('Event Date:', eventDateTime);
-    console.log('Now:', now);
-    console.log('Comparison:', eventDateTime >= now);
-    
     return eventDateTime >= now;
   });
 
@@ -79,10 +74,23 @@ function Timeline() {
   // If all events are in the past, use the length of the array
   const progressIndex = currentEventIndex === -1 ? sortedEvents.length : currentEventIndex;
 
+  // Add useEffect for scrolling
+  useEffect(() => {
+    if (currentEventIndex !== -1 && currentEventRef.current) {
+      // Wait for animations to complete
+      setTimeout(() => {
+        currentEventRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      }, 1000); // Adjust timing based on your animations
+    }
+  }, [currentEventIndex]);
+
   return (
     <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto min-h-screen">
       {/* Header Section */}
-      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 pt-16 sm:pt-20 md:pt-24">
+      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 pt-16 sm:pt-20 md:pt-48">
         {/* Logo with Glow Effect */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -126,7 +134,7 @@ function Timeline() {
             <div 
               className="absolute top-0 left-0 w-full bg-colPink transition-all duration-500"
               style={{ 
-                height: `${(progressIndex / sortedEvents.length) * 100}%`
+                height: `${(progressIndex / sortedEvents.length) * 100 + 0.5}%`
               }} 
             />
           </div>
@@ -138,6 +146,7 @@ function Timeline() {
             return (
               <motion.div
                 key={event.id}
+                ref={eventStatus === 'current' ? currentEventRef : null}
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -154,7 +163,7 @@ function Timeline() {
                     {/* Current Event Animation */}
                     {eventStatus === 'current' && (
                       <>
-                        <div className="absolute -inset-2 bg-colPink rounded-full animate-ping opacity-75" />
+                        <div className="absolute -inset-2 bg-colPink rounded-full animate-pulse opacity-75" />
                         <div className="absolute -inset-3 bg-colPink/30 rounded-full animate-pulse" />
                       </>
                     )}
@@ -163,25 +172,45 @@ function Timeline() {
                     {eventStatus === 'upcoming' && (
                       <>
                         <div className="absolute -inset-2 bg-white rounded-full animate-pulse opacity-30" />
-                        <div className="absolute -inset-3 bg-white/20 rounded-full" />
+                        <div className="absolute -inset-3 bg-white/20 rounded-full animate-pulse" />
                       </>
                     )}
                   </div>
                 </div>
 
                 {/* Event Card with Date Label */}
-                <div className="ml-12 w-[90%]">
+                <div className="ml-12 w-[90%] relative">
                   {/* Date Label */}
                   <motion.div 
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
-                    className={`px-4 py-2 rounded-full w-fit mb-4 backdrop-blur-sm border 
+                    className={`px-4 py-2 rounded-full backdrop-blur-sm border 
+                      hidden sm:block absolute -left-[250px] -top-4
+                      ${eventStatus === 'completed' ? 'bg-gray-900/30 border-colPink/50' :
+                        eventStatus === 'current' ? 'bg-colPink/20 border-colPink' :
+                        'bg-white/10 border-white/20'}`}
+                  >
+                    <div className={`text-lg font-semibold font-secFont1 ${
+                      eventStatus === 'completed' ? 'text-colPink' :
+                      eventStatus === 'current' ? 'text-colPink' :
+                      'text-white'
+                    }`}>
+                      {event.date} • {event.time}
+                    </div>
+                  </motion.div>
+
+                  {/* Mobile Date Label */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
+                    className={`px-4 py-2 rounded-full mb-4 backdrop-blur-sm border sm:hidden w-fit
                       ${eventStatus === 'completed' ? 'bg-gray-900/80 border-colPink/20' :
                         eventStatus === 'current' ? 'bg-colPink/20 border-colPink' :
                         'bg-white/10 border-white/20'}`}
                   >
-                    <div className={`text-sm font-semibold ${
+                    <div className={`text-sm font-semibold font-secFont1 ${
                       eventStatus === 'completed' ? 'text-colPink' :
                       eventStatus === 'current' ? 'text-colPink' :
                       'text-white'
@@ -191,12 +220,12 @@ function Timeline() {
                   </motion.div>
 
                   {/* Card */}
-                  <div className={`bg-gradient-to-b from-gray-900/80 to-black/95 
+                  <div className={`bg-gradient-to-b from-gray-900/90 to-black/95 
                     rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl 
                     transition-all duration-300 hover:-translate-y-1 border 
                     ${eventStatus === 'completed' ? 'border-colPink/10' :
                       eventStatus === 'current' ? 'border-colPink/30' :
-                      'border-white/10'}`}
+                      'border-white/20'}`}
                   >
                     <div className="flex flex-col sm:flex-row">
                       {/* Image Section */}
@@ -209,17 +238,17 @@ function Timeline() {
                       </div>
 
                       {/* Content Section */}
-                      <div className="sm:w-[65%] p-6">
+                      <div className="sm:w-[65%] p-6 font-secFont1">
                         <div className="flex flex-col gap-2">
-                          <h3 className="font-primaryFont text-2xl text-white transition-colors duration-300">{event.title}</h3>
-                          <p className="text-gray-500 text-sm mt-2">{event.description}</p>
+                          <h3 className="font-primaryFont text-3xl text-white transition-colors duration-300">{event.title}</h3>
+                          <p className="text-gray-400 text-lg mt-2">{event.description}</p>
                           <div className="mt-4 flex flex-col sm:flex-row gap-2">
-                            <button className="px-4 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-all duration-300 text-sm">
+                            <button className="px-4 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-all duration-300 text-lg">
                               Register Now
                             </button>
                             <button 
                               onClick={() => navigate(`/event/${event.id}`)}
-                              className="px-4 py-2 border border-colPink text-colPink rounded-full hover:bg-colPink hover:text-white transition-all duration-300 text-sm"
+                              className="px-4 py-2 border border-colPink text-colPink rounded-full hover:bg-colPink hover:text-white transition-all duration-300 text-lg"
                             >
                               Learn More
                             </button>

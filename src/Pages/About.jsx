@@ -321,7 +321,7 @@ function About() {
               {[
                 "Chem Events",
                 "EEE",
-                "Hackathon head",
+                "Hackathon",
               ].map(teamName => (
                 teamMembers.Cores[teamName]?.map((member, i) => (
                   <div key={`${teamName}-${i}`} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>

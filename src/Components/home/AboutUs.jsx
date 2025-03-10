@@ -43,14 +43,14 @@ const Counter = ({ end, duration = 2000 , suffix}) => {
 
 export const AboutUs = () => {
   return (
-    <section className="px-4 sm:px-6 md:px-[10vw] md:pt-24 md:pb-16 w-full flex flex-col gap-6 sm:gap-8 md:gap-10">
+    <section className="px-4 sm:px-6 md:px-[10vw] md:pt-16 md:pb-16 w-full flex flex-col gap-6 sm:gap-8 md:gap-10">
       {/* Title */}
-      <div className="flex sm:hidden text-colPink font-secFont1 mt-6 w-fit text-base text-left">
+      <div className="flex text-colPink font-secFont1 mt-6 w-fit text-2xl underline-offset-4 underline decoration-colPink/90 text-left">
         About Us
       </div>
-      <div className="hidden sm:flex text-white font-secFont1 w-fit px-4 py-2 justify-center items-center rounded-full text-base border-2 border-white">
+      {/* <div className="hidden sm:flex text-white font-secFont1 w-fit px-4 py-2 justify-center items-center rounded-full text-base border-2 border-white">
         About Us
-      </div>
+      </div> */}
 
       {/* Text Area */}
       <div className="w-full flex flex-col md:flex-row gap-8 md:gap-12">

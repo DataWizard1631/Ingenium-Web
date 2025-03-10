@@ -53,7 +53,7 @@
     box-shadow: 0 8px 32px 0 rgba(201, 15, 91, 0.2);
     position: relative;
     overflow: hidden;
-    animation: pulse 2s infinite;
+    /* animation: pulse 2s infinite; */
 }
 
 .countdown-box::before {
@@ -123,7 +123,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.02);
+        transform: scale(0.5);
     }
     100% {
         transform: scale(1);

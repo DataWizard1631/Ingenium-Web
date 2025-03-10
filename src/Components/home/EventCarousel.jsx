@@ -38,7 +38,7 @@ const EventCarousel = () => {
 
   return (
     <div className="relative w-full bg-black py-8 sm:py-16 md:py-24 overflow-hidden">
-      <h2 className="text-[2.2rem] sm:text-4xl md:text-6xl lg:text-7xl font-primaryFont text-white text-center mb-8 mt-8 md:mt-0 sm:mb-16 px-4">
+      <h2 className="text-[2.2rem] sm:text-4xl md:text-6xl font-primaryFont text-white text-center mb-8 mt-8 md:mt-0 sm:mb-16 px-4">
         Upcoming Events
       </h2>
 
@@ -87,12 +87,12 @@ const EventCarousel = () => {
               </div>
 
               {/* Content Section - Mobile Optimized */}
-              <div className= "w-full md:w-[55%] text-white space-y-3 md:space-y-6 p-2 md:p-6 select-none " >
+              <div className= "w-full md:w-[55%] font-secFont1 text-white space-y-3 md:space-y-6 p-2 md:p-6 select-none " >
                 <div className="space-y-2">
-                  <h3 className="text-2xl md:text-4xl lg:text-5xl font-primaryFont leading-tight">
+                  <h3 className="text-2xl md:text-4xl font-primaryFont leading-tight">
                     {eventsData.events[activeIndex].title}
                   </h3>
-                  <div className="flex items-center gap-2 text-colPink text-sm md:text-lg">
+                  <div className="flex items-center gap-2 text-colPink text-sm md:text-lg pt-4">
                     <span className="bg-colPink/10 px-3 py-1 rounded-full">{eventsData.events[activeIndex].date}</span>
                     <span className="w-1 h-1 rounded-full bg-colPink"></span>
                     <span className="bg-colPink/10 px-3 py-1 rounded-full">{eventsData.events[activeIndex].time}</span>
@@ -104,23 +104,23 @@ const EventCarousel = () => {
                 </p>
 
                 <div className="font-secFont1 space-y-2 bg-white/5 rounded-lg p-3 md:p-0 md:bg-transparent">
-                  <div className="flex items-center gap-2 text-xs md:text-base text-gray-400">
+                  <div className="flex items-center gap-2 text-xs md:text-lg text-gray-400">
                     <span className="text-colPink font-medium">Registration Period:</span>
                     <span className="text-white">{eventsData.events[activeIndex].registrationPeriod}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs md:text-base text-gray-400">
+                  <div className="flex items-center gap-2 text-xs md:text-lg text-gray-400">
                     <span className="text-colPink font-medium">Meeting Type:</span>
                     <span className="text-white capitalize">{eventsData.events[activeIndex].meetingType}</span>
                   </div>
                 </div>
 
                 <div className="font-secFont1 flex flex-col gap-2 md:flex-row md:gap-4 pt-3">
-                  <button className="w-full md:w-1/2 bg-colPink text-white py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-pink-700 transition-all duration-300 md:transform md:hover:scale-105 shadow-lg shadow-pink-500/20">
+                  <button className="w-full md:w-1/2 bg-colPink text-white py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-pink-700/80 transition-all duration-300 md:transform shadow-lg shadow-pink-500/20">
                     Register Now
                   </button>
                   <button 
                     onClick={() => navigate(`/eventdetails/${eventsData.events[activeIndex].id}`)}
-                    className="w-full md:w-1/2 border border-colPink text-colPink py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-colPink md:hover:text-white transition-all duration-300 md:transform md:hover:scale-105"
+                    className="w-full md:w-1/2 border border-colPink text-colPink py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-colPink md:hover:text-white transition-all duration-300 md:transform "
                   >
                     Learn More
                   </button>
