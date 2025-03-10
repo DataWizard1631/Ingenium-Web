@@ -100,10 +100,10 @@ function Navbar() {
         style={{ top: '64px' }}
       >
         <div className="flex flex-col items-center pt-8 space-y-6 bg-[#080C18]/80 backdrop-blur-sm h-screen w-[50%]">
-          {["Home", "Events", "Timeline", "Sponsors", "Contact", "About"].map((item) => (
+          {["Home", "Sponsors", "Events", "Timeline", "Our team", "Contact"].map((item) => (
             <Link
               key={item}
-              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+              to={item === "Our team" ? "/about" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
               className="text-white text-xl font-secFont1 hover:text-gray-300 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >

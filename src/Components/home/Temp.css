@@ -11,7 +11,7 @@
     color: white;
     font-family: 'ModernAge', sans-serif;
     font-size: 10rem;
-    z-index: 100;
+    z-index: 999;
     text-align: center;
     pointer-events: none;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
@@ -33,7 +33,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    z-index: 100;
+    z-index: 2;
     padding: 0 20px;
     box-sizing: border-box;
 }

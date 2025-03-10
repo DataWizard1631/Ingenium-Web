@@ -36,7 +36,7 @@ const WhyJoinUs = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="bg-[#1A1A1A] p-6 rounded-2xl hover:bg-[#252525] transition-colors duration-300 group"
+              className="bg-[#131313] p-6 rounded-2xl hover:bg-[#252525] transition-colors duration-300 group"
             >
               <div className="text-colPink mb-4">
                 {benefit.icon}

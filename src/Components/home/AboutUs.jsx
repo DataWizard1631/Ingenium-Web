@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 
-const Counter = ({ end, duration = 2000 }) => {
+const Counter = ({ end, duration = 2000 , suffix}) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
   
-
+  
   useEffect(() => {
     if (isInView) {
       let startTime;
@@ -35,8 +35,10 @@ const Counter = ({ end, duration = 2000 }) => {
       };
     }
   }, [end, duration, isInView]);
+
   
-  return <span ref={ref}>{count}<span className=" m-0 p-0 text-colPink">+</span></span>;
+    return <span ref={ref}>{count}<span className=" m-0 p-0 text-colPink">{suffix}</span></span>;
+  
 };
 
 export const AboutUs = () => {
@@ -56,9 +58,9 @@ export const AboutUs = () => {
       {/* Text Area */}
       <div className="w-full flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Primary Text */}
-        <div className="w-full md:w-1/2 md:border-r border-white/30 pr-0 md:pr-8">
+        <div className="w-full md:w-1/2 md:border-r border-white/30 pr-0 md:pr-8 leading-tight">
           <img src="Logos/ing-logo.svg" alt="Ingenium Logo" className="w-[40%] mb-12 h-auto" />
-          <h2 className="font-primaryFont text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h2 className="font-primaryFont text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ">
             Tech Ingenium
           </h2>
         </div>
@@ -84,17 +86,21 @@ export const AboutUs = () => {
           </p>
 
           {/* Counters */}
-          <div className="text-white font-secFont1 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="w-full text-white font-secFont1 grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4">
             {[
-              { count: 18, label: "Events" },
-              { count: 1500, label: "Participants" },
-              { count: 8, label: "Years" },
+              { count: 18, label: "Events", suffix: "+", width: "sm:w-[15%]" },
+              { count: 500, label: "Impressions", suffix: "K+", width: "sm:w-[35%]" },
+              { count: 1500, label: "Participants", suffix: "+", width: "sm:w-[35%]" },
+              { count: 8, label: "Years", suffix: "+", width: "sm:w-[15%]" },
             ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center sm:items-start gap-2">
-                <p className="text-4xl sm:text-5xl md:text-6xl font-bold">
-                  <Counter end={item.count} />
+              <div 
+                key={index} 
+                className={`flex flex-col items-center sm:items-start gap-2 ${item.width}`}
+              >
+                <p className={`text-4xl sm:text-5xl md:text-6xl font-bold whitespace-nowrap ${item.width}`}>
+                  <Counter end={item.count} suffix={item.suffix} />
                 </p>
-                <span className="text-white/50 text-sm sm:text-base">{item.label}</span>
+                <span className="text-white/50 text-sm sm:text-base whitespace-nowrap">{item.label}</span>
               </div>
             ))}
           </div>

@@ -101,7 +101,7 @@ const Temp = () => {
           }}
         />
         <div 
-          className="title"
+          className="title z-[9999999]"
           style={{
             '--scroll-progress': scrollProgress,
             opacity: 1 - scrollProgress,
