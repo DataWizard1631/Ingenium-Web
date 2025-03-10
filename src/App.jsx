@@ -7,11 +7,11 @@ import About from "./Pages/About";
 import Event from "./Pages/Event";
 import Contact from "./Pages/Contact";
 import EventDetails from "./Components/eventDetails/EventDetails";
-import Timeline from "./Components/timeline/TimeLineComp";
 import ScrollToTop from "./Components/common/ScrollToTop.jsx";
 import SponsorPage from "./Pages/SponsorPage.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 import Hackathon from "./Pages/Hackathon.jsx";
+import Timeline from "./Pages/Timeline.jsx";
 
 function App() {
 
