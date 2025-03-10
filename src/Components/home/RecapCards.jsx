@@ -9,7 +9,7 @@ const RecapCards = () => {
       </h1>
     </div>
     <div className="container mx-auto px-4 h-[800px] md:h-[600px] lg:h-[800px] ">
-      <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-20 md:grid-rows-4 gap-4 h-full">
+      <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-20 md:grid-rows-4 gap-4 h-full">
         {/* First column: 2x1 and 2x1 */}
         <div className="row-span-1 col-span-1 rounded-2xl overflow-hidden bg-gray-200">
           <img 
@@ -62,14 +62,14 @@ const RecapCards = () => {
         </div>
 
         {/* Fourth column: 2x1 and 2x1 */}
-        <div className="col-span-2 md:col-span-1 row-span-2 md:col-start-4 md:row-start-1 rounded-2xl overflow-hidden bg-gray-200">
+        <div className="col-span-1 md:col-span-1 row-span-2 md:col-start-4 md:row-start-1 rounded-2xl overflow-hidden bg-gray-200">
           <img 
             src="/Images/piyush-sharma.jpg" 
             alt="Image 7"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="col-span-2 md:col-span-1 row-span-2 md:col-start-4 md:row-start-3 rounded-2xl overflow-hidden bg-gray-200">
+        <div className="col-span-1 col-start-2 md:col-span-1 row-span-2 md:col-start-4 md:row-start-3 rounded-2xl overflow-hidden bg-gray-200">
           <img 
             src="/Images/chirayu-mistri.jpeg" 
             alt="Image 8"
