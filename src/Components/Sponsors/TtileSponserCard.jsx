@@ -43,13 +43,13 @@ export const TitleSponserCard = ({
           }}
           className="w-full absolute left-1/2 top-1/2 flex flex-row rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-gradient-to-br from-zinc-900 to-zinc-800 group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
         >
-          {/* Image Section - Takes up 50% width */}
-          <div className="w-1/2 h-full bg-black">
+          {/* Image Section  */}
+          <div className="w-1/3 h-full bg-black">
             {children}
           </div>
 
-          {/* Content Section - Takes up 50% width */}
-          <div className="w-1/2 p-8 bg-gradient-to-l from-black/90 via-black/70 to-transparent backdrop-blur-sm flex flex-col justify-between">
+          {/* Content Section*/}
+          <div className="w-2/3 p-8 bg-gradient-to-l from-black/90 via-black/70 to-transparent backdrop-blur-sm flex flex-col justify-between">
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl xl:text-4xl font-bold text-white mb-3 font-primaryFont">
