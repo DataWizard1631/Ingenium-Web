@@ -1,30 +1,25 @@
 {
   "events": [
     {
-      "id": "1",
-      "title": "Hackathon 2025 1",
+      "id": "aumazing",
+      "title": "AUMzing Talent",
       "date": "23rd March",
       "time": "12:30 PM",
-      "description": "Join us for a 24-hour coding marathon where innovation meets technology. Build, create, and compete with the best minds in the field.",
-      "longDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, vitae nostrum similique ipsam cumque delectus beatae maxime at qui, eos praesentium iure accusamus, saepe earum atque cupiditate itaque aspernatur. Vitae, itaque. Atque vel debitis repellat quas ab est consequatur incidunt error consequuntur recusandae possimus voluptatem qui perferendis doloremque.",
+      "description": "An activity to show the nine emotions that form the essence of performing arts - Navarasa.",
+      "longDescription": "AUmazing Talent is a unique talent showcase event dedicated to the theme of Navaras - the nine emotions that form the essence of performing arts. The event aims to bring together individuals who can express these emotions through various art forms, providing a stage for performers to showcase their talent through diverse performances. The event is open to all art forms, including dance, music, theatre, poetry, and any other creative expressions that depict the nine rasas: Shringara (Love), Hasya (Laughter), Karuna (Compassion), Raudra (Anger), Veera (Heroism), Bhayanaka (Fear), Bibhatsa (Disgust), Adbhuta (Wonder), and Shanta (Peace).Performances: Open to dance, music that embodies Navarasa.",
       "category": "CSE Events",
       "meetingType": "hybrid",
       "registrationPeriod": "1st Feb - 15th Feb",
       "image": "/Images/sample.png",
       "innerImage": "/Images/500w.jpg",
       "rules": [
-        "Rule 1: Teams must consist of 2-4 members",
-        "Rule 2: All code must be written during the hackathon",
-        "Rule 3: Use of open source libraries is allowed",
-        "Rule 4: Projects must be original work",
-        "Rule 5: Submission deadline is strict",
-        "Rule 6: Code must be pushed to GitHub",
-        "Rule 7: Live presentation is mandatory"
+        "Rule 1: Content should be original and expressive",
+        "Rule 2: Performances must align with one or more of the nine rasas",
+        "Rule 3: Time limit 5 mins maximum"
       ],
       "howToApply": [
-        "Register on the official website",
-        "Complete team formation",
-        "Submit project proposal"
+        "Fill the registration form",
+        "Enjoy the event"
       ],
       "relatedEvents": [
         {
@@ -42,30 +37,28 @@
       ]
     },
     {
-      "id": "2",
-      "title": "Robotics Workshop 1",
+      "id": "jab-we-code",
+      "title": "Jab We Code",
       "date": "25th March",
       "time": "10:00 AM",
-      "description": "Hands-on workshop on building and programming robots. Perfect for beginners and intermediate enthusiasts.",
-      "longDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, vitae nostrum similique ipsam cumque delectus beatae maxime at qui.",
-      "category": "Mech Events",
+      "description": "A unique coding contest where teams of two switch contests midway and strategize together in the final phase. The final score is based on combined contest performance.",
+      "longDescription": "Jab We Code is a unique programming contest that tests teamwork, adaptability, and strategic decision-making. Teams of two begin by solving separate contests (Contest A and Contest B) for 30 minutes before discussing their progress and swapping challenges. After another 30 minutes, they strategize once more before entering the final 20-minute phase, where both contests are open, and members decide who tackles which problem. The final ranking is determined by the combined scores of both contests. The top three teams win cash prizes.",
+      "category": "CSE Events",
       "meetingType": "offline",
       "registrationPeriod": "5th Feb - 20th Feb",
       "image": "/Images/sample.png",
       "innerImage": "/Images/500w.jpg",
       "rules": [
-        "Rule 1: Basic knowledge of electronics required",
-        "Rule 2: All materials will be provided",
-        "Rule 3: Participants must bring their laptops",
-        "Rule 4: Follow safety protocols",
-        "Rule 5: No prior robotics experience needed",
-        "Rule 6: Attendance is mandatory",
-        "Rule 7: Group work is encouraged"
+        "Rule 1: Teams consist of two members",
+        "Rule 2: Each member starts solving a separate coding contest",
+        "Rule 3: After 30 minutes, a 5-minute discussion is allowed before switching contests",
+        "Rule 4: After another 30 minutes, teams get a final 5-minute discussion",
+        "Rule 5: The last 20 minutes allow both members to work on separate contests simultaneously",
+        "Rule 6: The team’s total score determines the winners"
       ],
       "howToApply": [
         "Fill the registration form",
-        "Pay the workshop fee",
-        "Attend orientation session"
+        "Enjoy the event"
       ],
       "relatedEvents": [
         {

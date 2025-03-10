@@ -30,19 +30,19 @@ function CardComp({ event }) {
       {/* Description */}
       <div className="flex flex-col flex-1 justify-between p-4 sm:p-6 md:p-8">
         <div className="font-primaryFont text-xl sm:text-2xl md:text-3xl mb-4">{event.title}</div>
-        <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4">
-          {event.description}
+        <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4 line-clamp-5">
+          {event.longDescription}
         </div>
         <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4">
-          <p className="mb-2"><span className="font-semibold">Meeting: </span><span>{event.meetingType}</span></p>
-          <p><span className="font-semibold">Registration: </span><span>{event.registrationPeriod}</span></p>
+          <p className="mb-2"><span className="font-semibold">Date: </span><span>{event.date}</span></p>
+          <p><span className="font-semibold">Time: </span><span>{event.time}</span></p>
         </div>
         <div className="font-secFont1 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:mb-4">
           <button className="px-4 sm:px-6 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-colors text-sm sm:text-base">
             Register
           </button>
           <button 
-            onClick={() => navigate(`/eventdetails/${event.id}`)}
+            onClick={() => navigate(`/event/${event.id}`)}
             className="px-4 sm:px-6 py-2 border border-colPink text-colPink rounded-full hover:bg-colPink hover:text-white transition-colors text-sm sm:text-base"
           >
             Read More

@@ -119,7 +119,7 @@ const EventCarousel = () => {
                     Register Now
                   </button>
                   <button 
-                    onClick={() => navigate(`/eventdetails/${eventsData.events[activeIndex].id}`)}
+                    onClick={() => navigate(`/event/${eventsData.events[activeIndex].id}`)}
                     className="w-full md:w-1/2 border border-colPink text-colPink py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-colPink md:hover:text-white transition-all duration-300 md:transform "
                   >
                     Learn More

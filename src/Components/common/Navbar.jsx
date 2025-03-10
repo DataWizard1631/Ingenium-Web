@@ -62,7 +62,7 @@ function Navbar() {
               {["Home", "Sponsors", "Events", "Timeline", "Our team", "Contact"].map((item) => (
                 <Link
                   key={item}
-                    to={item === "Our team" ? "/about" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    to={item === "Our team" ? "/team" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   className="relative font-secFont1 text-white group py-2"
                 >
                   <span className="relative z-10">{item}</span>
@@ -103,7 +103,7 @@ function Navbar() {
           {["Home", "Sponsors", "Events", "Timeline", "Our team", "Contact"].map((item) => (
             <Link
               key={item}
-              to={item === "Our team" ? "/about" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
+              to={item === "Our team" ? "/team" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
               className="text-white text-xl font-secFont1 hover:text-gray-300 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >

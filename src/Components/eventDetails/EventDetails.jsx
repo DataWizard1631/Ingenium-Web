@@ -94,7 +94,7 @@ const EventDetails = () => {
                 {event.relatedEvents.map((relatedEvent) => (
                   <Link 
                     key={relatedEvent.id}
-                    to={`/eventdetails/${relatedEvent.id}`} 
+                    to={`/event/${relatedEvent.id}`} 
                     className='bg-[#252525] rounded-lg p-4 flex flex-row gap-4 hover:bg-[#2f2f2f] transition-colors duration-300'
                   >
                     <img src={relatedEvent.image} alt={relatedEvent.title} className='w-16 h-16 md:w-20 md:h-20 object-cover' />

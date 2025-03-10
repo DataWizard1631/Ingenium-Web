@@ -39,10 +39,10 @@ function Footer() {
           <div className="flex flex-col items-center sm:items-start m-auto">
             <h4 className="font-['OfficialBook'] text-2xl sm:text-2xl mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              {["Home", "Events", "Timeline", "About","Contact"].map((item) => (
+              {["Home", "Sponsors", "Events", "Timeline", "Our team","Contact"].map((item) => (
                 <li key={item}>
                   <NavLink
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    to={item === "Home" ? "/" : item === "Our team" ? "/team" : `/${item.toLowerCase()}`}
                     className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 text-sm sm:text-xl"
                   >
                     <span className="w-2 h-2 bg-[#FF1F79] rounded-full" />
