@@ -1,75 +1,226 @@
 import { SponserCard } from "./SponserCard"
 import { TitleSponserCard } from "./TtileSponserCard"
+import { sponsorsData } from "../../data/sponsorsData"
 
 export const Sponsors = () => {
+    const {
+        titleSponsor,
+        presentingSponsors,
+        platinumSponsors,
+        goldSponsors,
+        fashionSponsors,
+        automobileSponsors
+    } = sponsorsData;
+
     return (
-        <>
-       
-        <div className="space-y-20">
-            {/* Logo */}
-            
-            {/* Card Section Title Sponsers */}
-            <div className="w-full flex flex-row justify-center items-center">
-                <div className="w-[70%] flex flex-col">
-                    <div className="w-full mb-11 text-center font-primaryFont text-6xl text-colPink">TITLE SPONSoR</div>
-                    <div className="w-full">
-                        <TitleSponserCard
-                            title="PYRAMID"
-                            href="http://www.pyramidconsultants.com"
-                            containerClassName="w-full"
-                        >
-                            <img 
-                                className="w-full h-full object-contain" 
-                                src="/Pyramid.png" 
-                                alt="Pyramid Overseas Education Consultants" 
-                            />
-                        </TitleSponserCard>
+        <div className="min-h-screen py-20">
+            <div className="space-y-40 container mx-auto px-4">
+                {/* Title Sponsors Section */}
+                <div className="w-full flex flex-row justify-center items-center">
+                    <div className="w-[80%] flex flex-col">
+                        <div className="w-full mb-16 text-center">
+                            <h1 className="text-8xl font-bold bg-gradient-to-r from-rose-500 via-pink-500 to-purple-600 text-transparent bg-clip-text mb-4 hover:scale-105 transition-transform duration-300">
+                                TITLE SPONSOR
+                            </h1>
+                            <div className="h-1 w-40 bg-gradient-to-r from-rose-500 via-pink-500 to-purple-600 mx-auto"></div>
+                        </div>
+                        <div className="w-full transform hover:scale-105 transition-transform duration-500">
+                            <TitleSponserCard
+                                title={titleSponsor.title}
+                                name={titleSponsor.name}
+                                href={titleSponsor.href}
+                                containerClassName="w-full"
+                            >
+                                <img 
+                                    className="w-full h-full object-contain" 
+                                    src={titleSponsor.logo}
+                                    alt={titleSponsor.name}
+                                />
+                            </TitleSponserCard>
+                            <div className="text-center mt-8">
+                                <h3 className="text-3xl font-semibold text-white">{titleSponsor.name}</h3>
+                                <p className="text-rose-400 mt-2 text-lg">Title Sponsor</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                {/* Presenting Sponsors Section */}
+                <section className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 via-transparent to-violet-500/10 blur-3xl -z-10"></div>
+                    <h2 className="text-6xl font-bold text-center mb-20">
+                        <span className="bg-gradient-to-r from-violet-400 to-violet-600 text-transparent bg-clip-text">
+                            Presenting Sponsors
+                        </span>
+                        <div className="h-1 w-40 bg-gradient-to-r from-violet-400 to-violet-600 mx-auto mt-4"></div>
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-6xl mx-auto">
+                        {presentingSponsors.map((sponsor, index) => (
+                            <div key={`presenting-${index}`} className="flex flex-col items-center group">
+                                <div className="transform group-hover:scale-105 transition-transform duration-500">
+                                    <SponserCard
+                                        title={sponsor.title}
+                                        name={sponsor.name}
+                                        href={sponsor.href}
+                                    >
+                                        <div className="w-72 h-52 rounded-xl flex items-center justify-center border border-violet-500/20 backdrop-blur-sm">
+                                            <img 
+                                                src={sponsor.logo} 
+                                                alt={sponsor.name}
+                                                className="w-full h-full object-contain p-4"
+                                            />
+                                        </div>
+                                    </SponserCard>
+                                    <div className="text-center mt-8">
+                                        <h3 className="text-2xl font-semibold text-white">{sponsor.name}</h3>
+                                        <p className="text-violet-400 mt-2">Presenting Partner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Platinum Sponsors Section */}
+                <section className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-300/10 via-transparent to-slate-300/10 blur-3xl -z-10"></div>
+                    <h2 className="text-6xl font-bold text-center mb-20">
+                        <span className="bg-gradient-to-r from-slate-200 to-slate-400 text-transparent bg-clip-text">
+                            Platinum Sponsors
+                        </span>
+                        <div className="h-1 w-40 bg-gradient-to-r from-slate-200 to-slate-400 mx-auto mt-4"></div>
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-7xl mx-auto">
+                        {platinumSponsors.map((sponsor, index) => (
+                            <div key={`platinum-${index}`} className="flex flex-col items-center group">
+                                <div className="transform group-hover:scale-105 transition-transform duration-500">
+                                    <SponserCard
+                                        title={sponsor.title}
+                                        href={sponsor.href}
+                                    >
+                                        <div className="w-64 h-48 rounded-xl flex items-center justify-center border border-slate-500/20 backdrop-blur-sm">
+                                            <img 
+                                                src={sponsor.logo} 
+                                                alt={sponsor.title}
+                                                className="w-full h-full object-contain p-4"
+                                            />
+                                        </div>
+                                    </SponserCard>
+                                    <div className="text-center mt-8">
+                                        <h3 className="text-2xl font-semibold text-white">{sponsor.title}</h3>
+                                        <p className="text-slate-400 mt-2">Platinum Partner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Gold Sponsors Section */}
+                <section className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-amber-500/10 blur-3xl -z-10"></div>
+                    <h2 className="text-6xl font-bold text-center mb-20">
+                        <span className="bg-gradient-to-r from-amber-400 to-amber-600 text-transparent bg-clip-text">
+                            Gold Sponsors
+                        </span>
+                        <div className="h-1 w-40 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto mt-4"></div>
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-7xl mx-auto">
+                        {goldSponsors.map((sponsor, index) => (
+                            <div key={`gold-${index}`} className="flex flex-col items-center group">
+                                <div className="transform group-hover:scale-105 transition-transform duration-500">
+                                    <SponserCard
+                                        title={sponsor.title}
+                                        href={sponsor.href}
+                                    >
+                                        <div className="w-64 h-48 rounded-xl flex items-center justify-center border border-amber-500/20 backdrop-blur-sm">
+                                            <img 
+                                                src={sponsor.logo} 
+                                                alt={sponsor.title}
+                                                className="w-full h-full object-contain p-4"
+                                            />
+                                        </div>
+                                    </SponserCard>
+                                    <div className="text-center mt-8">
+                                        <h3 className="text-2xl font-semibold text-white">{sponsor.title}</h3>
+                                        <p className="text-amber-400 mt-2">Gold Partner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Fashion Sponsors Section */}
+                <section className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-transparent to-pink-500/10 blur-3xl -z-10"></div>
+                    <h2 className="text-6xl font-bold text-center mb-20">
+                        <span className="bg-gradient-to-r from-pink-400 to-pink-600 text-transparent bg-clip-text">
+                            Fashion Sponsors
+                        </span>
+                        <div className="h-1 w-40 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto mt-4"></div>
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-7xl mx-auto">
+                        {fashionSponsors.map((sponsor, index) => (
+                            <div key={`fashion-${index}`} className="flex flex-col items-center group">
+                                <div className="transform group-hover:scale-105 transition-transform duration-500">
+                                    <SponserCard
+                                        title={sponsor.title}
+                                        href={sponsor.href}
+                                    >
+                                        <div className="w-64 h-48 rounded-xl flex items-center justify-center border border-pink-500/20 backdrop-blur-sm">
+                                            <img 
+                                                src={sponsor.logo} 
+                                                alt={sponsor.title}
+                                                className="w-full h-full object-contain p-4"
+                                            />
+                                        </div>
+                                    </SponserCard>
+                                    <div className="text-center mt-8">
+                                        <h3 className="text-2xl font-semibold text-white">{sponsor.title}</h3>
+                                        <p className="text-pink-400 mt-2">Fashion Partner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Automobile Sponsors Section */}
+                <section className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-transparent to-red-500/10 blur-3xl -z-10"></div>
+                    <h2 className="text-6xl font-bold text-center mb-20">
+                        <span className="bg-gradient-to-r from-red-400 to-red-600 text-transparent bg-clip-text">
+                            Automobile Sponsors
+                        </span>
+                        <div className="h-1 w-40 bg-gradient-to-r from-red-400 to-red-600 mx-auto mt-4"></div>
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-7xl mx-auto">
+                        {automobileSponsors.map((sponsor, index) => (
+                            <div key={`automobile-${index}`} className="flex flex-col items-center group">
+                                <div className="transform group-hover:scale-105 transition-transform duration-500">
+                                    <SponserCard
+                                        title={sponsor.title}
+                                        href={sponsor.href}
+                                    >
+                                        <div className="w-64 h-48 rounded-xl flex items-center justify-center border border-red-500/20 backdrop-blur-sm">
+                                            <img 
+                                                src={sponsor.logo} 
+                                                alt={sponsor.title}
+                                                className="w-full h-full object-contain p-4"
+                                            />
+                                        </div>
+                                    </SponserCard>
+                                    <div className="text-center mt-8">
+                                        <h3 className="text-2xl font-semibold text-white">{sponsor.title}</h3>
+                                        <p className="text-red-400 mt-2">Automobile Partner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </div>
-
-            {/* Gold Sponsors Section */}
-            <section className="pt-10">
-                <h2 className="text-3xl font-bold text-center mb-12 relative">
-                    Gold Sponsors
-                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-yellow-500"></div>
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {[...Array(6)].map((_, index) => (
-                        <SponserCard
-                            key={`gold-${index}`}
-                            title={`Gold Sponsor ${index + 1}`}
-                            href="#"
-                        >
-                            <div className="w-64 h-48 bg-gray-800/50 rounded-lg flex items-center justify-center">
-                                <span className="text-white">Gold Sponsor Logo</span>
-                            </div>
-                        </SponserCard>
-                    ))}
-                </div>
-            </section>
-
-            {/* Automobile Section */}
-            <section className="pt-10">
-                <h2 className="text-3xl font-bold text-center mb-12 relative">
-                    Automobile
-                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-pink-500"></div>
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {[...Array(6)].map((_, index) => (
-                        <SponserCard
-                            key={`auto-${index}`}
-                            title={`Automobile Sponsor ${index + 1}`}
-                            href="#"
-                        >
-                            <div className="w-64 h-48 bg-gray-800/50 rounded-lg flex items-center justify-center">
-                                <span className="text-white">Automobile Sponsor Logo</span>
-                            </div>
-                        </SponserCard>
-                    ))}
-                </div>
-            </section>
         </div>
-        </>
     )
 }
