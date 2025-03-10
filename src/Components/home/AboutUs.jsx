@@ -5,7 +5,9 @@ const Counter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
   
+
   useEffect(() => {
     if (isInView) {
       let startTime;
@@ -34,16 +36,22 @@ const Counter = ({ end, duration = 2000 }) => {
     }
   }, [end, duration, isInView]);
   
-  return <span ref={ref}>{count}+</span>;
+  return <span ref={ref}>{count}<span className=" m-0 p-0 text-colPink">+</span></span>;
 };
 
 export const AboutUs = () => {
   return (
     <section className="px-4 sm:px-6 md:px-[10vw] md:pt-24 pb-16 w-full flex flex-col gap-6 sm:gap-8 md:gap-10">
       {/* Title */}
-      <div className="text-white font-secFont1 w-fit px-4 py-2 flex justify-center items-center border-2 border-white rounded-full text-sm sm:text-base">
+      <div className="flex sm:hidden text-colPink font-secFont1 mt-6 w-fit text-base text-left">
         About Us
       </div>
+      <div className="hidden sm:flex text-white font-secFont1 w-fit px-4 py-2 justify-center items-center rounded-full text-base border-2 border-white">
+        About Us
+      </div>
+
+
+      
 
       {/* Text Area */}
       <div className="w-full flex flex-col md:flex-row gap-8 md:gap-12">

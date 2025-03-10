@@ -196,7 +196,6 @@
 }
 
 /* Mobile Devices */
-/* Mobile Devices */
 @media screen and (max-width: 768px) {
     .title {
         font-size: 3.5rem;
@@ -217,7 +216,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         background: rgba(201, 15, 91, 0.1);
         backdrop-filter: blur(10px);
         border-radius: 15px;
