@@ -55,11 +55,11 @@ function Home() {
         <AuGlimpes/>
 
         <>
-        <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12'>
+        <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-4 mt-8 '>
             Past Sponsors
         </h1>
           
-        <div className="h-[250px] sm:h-[250px] w-full relative mb-32">
+        <div className="md:h-[250px] sm:h-[250px] w-full relative md:mb-32">
           <Sponsors
             direction='horizontal'
             pauseOnHover={true}

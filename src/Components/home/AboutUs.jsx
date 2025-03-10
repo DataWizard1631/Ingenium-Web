@@ -43,7 +43,7 @@ const Counter = ({ end, duration = 2000 , suffix}) => {
 
 export const AboutUs = () => {
   return (
-    <section className="px-4 sm:px-6 md:px-[10vw] md:pt-24 pb-16 w-full flex flex-col gap-6 sm:gap-8 md:gap-10">
+    <section className="px-4 sm:px-6 md:px-[10vw] md:pt-24 md:pb-16 w-full flex flex-col gap-6 sm:gap-8 md:gap-10">
       {/* Title */}
       <div className="flex sm:hidden text-colPink font-secFont1 mt-6 w-fit text-base text-left">
         About Us
@@ -52,22 +52,19 @@ export const AboutUs = () => {
         About Us
       </div>
 
-
-      
-
       {/* Text Area */}
       <div className="w-full flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Primary Text */}
         <div className="w-full md:w-1/2 md:border-r border-white/30 pr-0 md:pr-8 leading-tight">
           <img src="Logos/ing-logo.svg" alt="Ingenium Logo" className="w-[40%] mb-12 h-auto" />
-          <h2 className="font-primaryFont text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ">
-            Tech Ingenium
+          <h2 className="font-primaryFont text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold -tracking-tighter ">
+            Tech <span className="ml-1">Ingenium</span>
           </h2>
         </div>
 
         {/* Secondary Text + Counters */}
         <div className="w-full md:w-1/2 flex flex-col gap-8 md:gap-12">
-          <p className="font-secFont1 text-white text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="font-secFont1 text-white text-sm sm:text-base md:text-lg leading-relaxed text-justify">
           Launched in 2016, Ingenium stands as Ahmedabad University's
           premier annual tech festival. hosted by the School of
           Engineering and Applied Sciences. This expansive event offers
@@ -86,7 +83,7 @@ export const AboutUs = () => {
           </p>
 
           {/* Counters */}
-          <div className="text-white font-secFont1 grid grid-cols-1 md:grid-cols-[20%_30%_30%_20%] gap-8 sm:gap-4">
+          <div className="text-white font-secFont1 grid grid-cols-[40%_60%] md:grid-cols-[20%_30%_30%_20%] gap-8 sm:gap-4 w-[90%] md:w-full mx-auto">
             {[
               { count: 18, label: "Events", suffix: "+"},
               { count: 500, label: "Impressions", suffix: "K+" },
@@ -95,7 +92,7 @@ export const AboutUs = () => {
             ].map((item, index) => (
               <div 
                 key={index} 
-                className={`flex flex-col items-center sm:items-start gap-2`}
+                className={`flex flex-col md:items-center sm:items-start gap-2`}
               >
                 <p className={`text-4xl sm:text-5xl md:text-6xl font-bold whitespace-nowrap`}>
                   <Counter end={item.count} suffix={item.suffix} />

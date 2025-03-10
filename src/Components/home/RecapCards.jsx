@@ -4,7 +4,7 @@ const RecapCards = () => {
   return (
     <div>
       <div>
-      <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-12 mt-48'>
+      <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12 mt-12 md:mt-48'>
         past Artists
       </h1>
     </div>
