@@ -19,7 +19,7 @@ function CardComp({ event }) {
   return (
     <div className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[300px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg">
       {/* Image */}
-      <div className="w-full sm:w-[38%] h-full sm:h-full">
+      <div className="w-full sm:w-fit h-full sm:h-full">
         <img 
           src={event.image} 
           alt={event.title}
