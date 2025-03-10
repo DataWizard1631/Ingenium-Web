@@ -7,7 +7,7 @@ const events = [
   {
     id: 1,
     title: "EVENT TITLE",
-    image: "Images/1.jpg",
+    image: "Images/sample.png",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi sapiente totam sed possimus laboriosam, rem fugiat deleniti illo voluptatem!",
     date: "2024-03-22 12:30:00",
     meetingType: "online",
@@ -118,12 +118,12 @@ const TimelineEvent = ({ event, position, isCurrentEvent }) => {
       <div className="clear-both"></div>
 
       {/* Event Card */}
-      <div className={`event-card bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row mt-8 
+      <div className={`event-card bg-white rounded-lg overflow-hidden shadow-md flex flex-col sm:flex-row mt-8 
         transition-all duration-500 ease-in-out relative
         ${isCompleted ? 'opacity-75' : ''}`}
       >
         {/* Image */}
-        <div className="event-image w-full h-[150px] xs:h-[200px] sm:w-[47%] sm:h-auto relative">
+        <div className="event-image w-full h-[150px] xs:h-[200px] sm:w-[50%] sm:h-auto relative">
           <img 
             src={event.image} 
             alt={event.title}
@@ -196,7 +196,7 @@ const MobileTimelineEvent = ({ event }) => {
       </div>
 
       {/* Event Card */}
-      <div className={`event-card bg-white rounded-2xl overflow-hidden shadow-md flex flex-col ${isExpired ? 'grayscale expired-event' : ''}`}>
+      <div className={`event-card bg-white  overflow-hidden shadow-md flex flex-col ${isExpired ? 'grayscale expired-event' : ''}`}>
         <div className="event-image w-full h-[200px]">
           <img 
             src={event.image} 

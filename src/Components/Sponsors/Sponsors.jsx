@@ -15,16 +15,15 @@ export const Sponsors = () => {
                     <div className="w-full">
                         <TitleSponserCard
                             title="PYRAMID"
-                            href="#"
+                            href="http://www.pyramidconsultants.com"
                             containerClassName="w-full"
                         >
-                            <div className="w-[60%] h-96 bg-gray-800/50 rounded-lg overflow-hidden flex items-center justify-center">
-                                <img className="w-full h-full object-cover" src="/Pyramid.png" alt="" />
-
-                            </div>
-
+                            <img 
+                                className="w-full h-full object-contain" 
+                                src="/Pyramid.png" 
+                                alt="Pyramid Overseas Education Consultants" 
+                            />
                         </TitleSponserCard>
-
                     </div>
                 </div>
             </div>

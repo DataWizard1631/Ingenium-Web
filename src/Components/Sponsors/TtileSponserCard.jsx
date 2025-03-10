@@ -41,14 +41,46 @@ export const TitleSponserCard = ({
           style={{
             transform: transform,
           }}
-          className="w-full absolute left-1/2  top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-[#747474] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+          className="w-full absolute left-1/2 top-1/2 flex flex-row rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-gradient-to-br from-zinc-900 to-zinc-800 group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
         >
-          <div className={cn(" relative z-50 ", className)}>
+          {/* Image Section - Takes up 50% width */}
+          <div className="w-1/2 h-full bg-black">
             {children}
           </div>
 
+          {/* Content Section - Takes up 50% width */}
+          <div className="w-1/2 p-8 bg-gradient-to-l from-black/90 via-black/70 to-transparent backdrop-blur-sm flex flex-col justify-between">
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-3xl xl:text-4xl font-bold text-white mb-3 font-primaryFont">
+                  Pyramid Overseas Education Consultants
+                </h2>
+                <p className="text-xl xl:text-2xl text-colPink font-semibold font-secFont1">
+                  Empowering Global Careers Since 2003
+                </p>
+              </div>
+
+              <p className="text-gray-300 leading-relaxed font-secFont1">
+                Pyramid Overseas Education Consultants, a trusted name in overseas education, is proud to be the Title Sponsor of [Event/Initiative Name]. With over two decades of expertise, we have been guiding students towards achieving their dreams of studying abroad in countries like the USA, UK, Canada, Australia, New Zealand, France, Germany, Ireland, Dubai and beyond.
+              </p>
+            </div>
+
+            {/* Website Link */}
+            <div className="mt-6 pt-4 flex items-center justify-between border-t border-white/10">
+              <span className="text-colPink font-secFont1">
+                For more Visit our site:
+              </span>
+              <a 
+                href="http://www.pyramidconsultants.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-colPink transition-colors duration-300 font-secFont1"
+              >
+                www.pyramidconsultants.com
+              </a>
+            </div>
+          </div>
         </div>
-        
       </div>
       <PinPerspective title={title} href={href} />
     </a>
