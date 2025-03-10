@@ -56,6 +56,7 @@ function CardComp({ event }) {
 export const EventLog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [visibleEvents, setVisibleEvents] = useState(4); // Initial number of visible events
+  const [isOpen, setIsOpen] = useState(false);
   
   const getAllEvents = () => {
     const allEvents = Object.values(eventsData)
@@ -109,7 +110,8 @@ export const EventLog = () => {
 
       {/* Card Section */}
       <div className="w-full flex flex-col items-center gap-8 sm:gap-10 md:gap-12">
-        <div className="flex flex-wrap justify-center gap-6 bg-gray-200/20 backdrop-blur-md rounded-full p-2">
+        {/* Categories - Desktop */}
+        <div className="hidden sm:flex flex-wrap justify-center gap-6 bg-gray-200/20 backdrop-blur-md rounded-full p-2">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -123,6 +125,40 @@ export const EventLog = () => {
               <span>{category.label}</span>
             </button>
           ))}
+        </div>
+
+        {/* Categories - Mobile Dropdown */}
+        <div className="sm:hidden w-full max-w-[50%] mx-auto relative">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-full px-4 py-2 rounded-full bg-gray-200/20 backdrop-blur-md text-white font-secFont1 border border-white/20 focus:outline-none focus:border-colPink text-center relative"
+          >
+            {categories.find(cat => cat.id === selectedCategory)?.label}
+            <span className="absolute right-4 top-1/2 transform -translate-y-1/2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          
+          {isOpen && (
+            <div className="absolute top-full left-0 right-0 mt-2 bg-[#1a1a1a] rounded-lg overflow-hidden z-50">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => {
+                    handleCategoryChange(category.id);
+                    setIsOpen(false);
+                  }}
+                  className={`w-full py-2 px-4 text-center font-secFont1 hover:bg-gray-700 transition-colors ${
+                    selectedCategory === category.id ? 'bg-colPink text-white' : 'text-white'
+                  }`}
+                >
+                  {category.label}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Event Cards */}
