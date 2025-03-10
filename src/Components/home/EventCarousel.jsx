@@ -83,11 +83,11 @@ const EventCarousel = () => {
                   className="w-full h-full object-contain md:hover:scale-105 transition-transform duration-300"
                   draggable="false"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent md:from-black/80 md:via-black/20" />
+                <div className="absolute inset-0"  />
               </div>
 
               {/* Content Section - Mobile Optimized */}
-              <div className="w-full md:w-[55%] text-white space-y-3 md:space-y-6 p-2 md:p-6 select-none">
+              <div className= "w-full md:w-[55%] text-white space-y-3 md:space-y-6 p-2 md:p-6 select-none " >
                 <div className="space-y-2">
                   <h3 className="text-2xl md:text-4xl lg:text-5xl font-primaryFont leading-tight">
                     {eventsData.events[activeIndex].title}
