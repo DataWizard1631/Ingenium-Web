@@ -32,7 +32,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="events" element={<Event />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="eventdetails/:id" element={<EventDetails />} />
+          <Route path="event/:id" element={<EventDetails />} />
           <Route path="sponsors" element={<SponsorPage />} /> 
           <Route path="hackathon" element={<Hackathon />} />
           <Route path="*" element={<NotFound />} />

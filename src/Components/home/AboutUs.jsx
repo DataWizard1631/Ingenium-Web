@@ -86,18 +86,18 @@ export const AboutUs = () => {
           </p>
 
           {/* Counters */}
-          <div className="w-full text-white font-secFont1 grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-4">
+          <div className="text-white font-secFont1 grid grid-cols-1 md:grid-cols-[20%_30%_30%_20%] gap-8 sm:gap-4">
             {[
-              { count: 18, label: "Events", suffix: "+", width: "sm:w-[15%]" },
-              { count: 500, label: "Impressions", suffix: "K+", width: "sm:w-[35%]" },
-              { count: 1500, label: "Participants", suffix: "+", width: "sm:w-[35%]" },
-              { count: 8, label: "Years", suffix: "+", width: "sm:w-[15%]" },
+              { count: 18, label: "Events", suffix: "+"},
+              { count: 500, label: "Impressions", suffix: "K+" },
+              { count: 1500, label: "Participants", suffix: "+" },
+              { count: 8, label: "Years", suffix: "+" },
             ].map((item, index) => (
               <div 
                 key={index} 
-                className={`flex flex-col items-center sm:items-start gap-2 ${item.width}`}
+                className={`flex flex-col items-center sm:items-start gap-2`}
               >
-                <p className={`text-4xl sm:text-5xl md:text-6xl font-bold whitespace-nowrap ${item.width}`}>
+                <p className={`text-4xl sm:text-5xl md:text-6xl font-bold whitespace-nowrap`}>
                   <Counter end={item.count} suffix={item.suffix} />
                 </p>
                 <span className="text-white/50 text-sm sm:text-base whitespace-nowrap">{item.label}</span>
