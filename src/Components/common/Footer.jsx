@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { HiLocationMarker, HiMail } from "react-icons/hi";
 import logo from "/Logos/ing-logo.svg"
 
@@ -60,7 +60,7 @@ function Footer() {
 
               </li>
               <li className="flex items-center gap-3 text-md sm:text-xl">
-                <FaLinkedinIn className="text-[#FF1F79] text-xl flex-shrink-0" />
+                <FaLinkedin className="text-[#FF1F79] text-xl flex-shrink-0" />
                 <a href="https://www.linkedin.com/in/tech-ingenium/" className="hover:underline transition-colors duration-200">tech-ingenium</a>
               </li>
             </ul>
