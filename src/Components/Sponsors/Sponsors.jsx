@@ -34,8 +34,8 @@ export const Sponsors = () => {
       partnerText: "Presenting Partner",
       textColor: "text-violet-400",
       cols: "md:grid-cols-2",
-      cardWidth: "sm:w-72",
-      cardHeight: "sm:h-52",
+      cardWidth: "w-full sm:w-[360px]",
+      cardHeight: "h-[240px] sm:h-[260px]",
     },
     platinum: {
       titleText: "Platinum Sponsors",
@@ -45,8 +45,8 @@ export const Sponsors = () => {
       partnerText: "Platinum Partner",
       textColor: "text-slate-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "sm:w-64",
-      cardHeight: "sm:h-48",
+      cardWidth: "w-full sm:w-[340px]",
+      cardHeight: "h-[220px] sm:h-[240px]",
     },
     gold: {
       titleText: "Gold Sponsors",
@@ -56,8 +56,8 @@ export const Sponsors = () => {
       partnerText: "Gold Partner",
       textColor: "text-amber-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-64",
-      cardHeight: "h-48",
+      cardWidth: "w-full sm:w-[320px]",
+      cardHeight: "h-[200px] sm:h-[220px]",
     },
     fashion: {
       titleText: "Fashion Sponsors",
@@ -67,8 +67,8 @@ export const Sponsors = () => {
       partnerText: "Fashion Partner",
       textColor: "text-pink-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-64",
-      cardHeight: "h-48",
+      cardWidth: "w-full sm:w-[320px]",
+      cardHeight: "h-[200px] sm:h-[220px]",
     },
     automobile: {
       titleText: "Automobile Sponsors",
@@ -78,8 +78,8 @@ export const Sponsors = () => {
       partnerText: "Automobile Partner",
       textColor: "text-red-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-64",
-      cardHeight: "h-48",
+      cardWidth: "w-full sm:w-[320px]",
+      cardHeight: "h-[200px] sm:h-[220px]",
     },
     supporting: {
       titleText: "Supporting Sponsors",
@@ -89,8 +89,8 @@ export const Sponsors = () => {
       partnerText: "Supporting Partner",
       textColor: "text-teal-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-64",
-      cardHeight: "h-48",
+      cardWidth: "w-full sm:w-[320px]",
+      cardHeight: "h-[200px] sm:h-[220px]",
     },
   };
 
@@ -146,7 +146,7 @@ export const Sponsors = () => {
               <div className="w-full  flex flex-col">
                 <div className="w-full mb-8 sm:mb-16 text-center">
                   <h1
-                    className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 hover:scale-105 transition-transform duration-300`}
+                    className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 transition-transform duration-300 font-primaryFont`}
                   >
                     {config.titleText}
                   </h1>
@@ -154,7 +154,7 @@ export const Sponsors = () => {
                     className={`h-1 w-20 sm:w-40 bg-gradient-to-r ${config.gradient} mx-auto`}
                   ></div>
                 </div>
-                <div className="w-full transform hover:scale-105 transition-transform duration-500">
+                <div className="w-full transform  transition-transform duration-500">
                   <TitleSponserCard
                     title={titleSponsor.title}
                     name={titleSponsor.name}
@@ -168,11 +168,11 @@ export const Sponsors = () => {
                     />
                   </TitleSponserCard>
                   <div className="text-center mt-8">
-                    <h3 className="text-2xl mt-20 sm:text-3xl font-semibold text-white">
+                    <h3 className="text-2xl mt-20 sm:text-3xl font-semibold text-white font-secFont1">
                       {titleSponsor.name}
                     </h3>
                     <p
-                      className={`${config.textColor} mt-2 text-base sm:text-lg`}
+                      className={`${config.textColor} mt-2 text-base sm:text-lg font-secFont1`}
                     >
                       {config.partnerText}
                     </p>
@@ -188,34 +188,35 @@ export const Sponsors = () => {
             sponsorCards.push(
               <div
                 key={`${category}-${j}`}
-                className="flex flex-col items-center group"
+                className="flex flex-col items-center group w-full"
               >
-                <div className="transform group-hover:scale-105 transition-transform duration-500">
+                <div className="w-full flex justify-center">
                   <SponserCard
                     title={sponsor.title}
                     href={sponsor.href}
                     category={category}
                   >
                     <div
-                      className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm`}
+                      className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm bg-gradient-to-br from-zinc-900/90 to-zinc-900/50 relative overflow-hidden group`}
                     >
-                      <img
-                        src={sponsor.logo}
-                        alt={sponsor.title}
-                        className="w-full h-full object-contain p-4"
-                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/5 group-hover:from-black/30 group-hover:to-black/10 transition-all duration-300"></div>
+                      <div className="absolute inset-0 flex items-center justify-center p-6">
+                        <img
+                          src={sponsor.logo}
+                          alt={sponsor.title}
+                          className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
                     </div>
                   </SponserCard>
-                  <div className="text-center mt-8">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white">
-                      {sponsor.title}
-                    </h3>
-                    <p
-                      className={`${config.textColor} mt-2 text-sm sm:text-base`}
-                    >
-                      {config.partnerText}
-                    </p>
-                  </div>
+                </div>
+                <div className="text-center mt-6">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white/90 group-hover:text-white transition-colors duration-300 font-secFont1">
+                    {sponsor.title}
+                  </h3>
+                  <p className={`${config.textColor} mt-2 text-sm sm:text-base opacity-90 group-hover:opacity-100 transition-opacity duration-300 font-secFont1`}>
+                    {config.partnerText}
+                  </p>
                 </div>
               </div>
             );
@@ -226,7 +227,7 @@ export const Sponsors = () => {
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${config.bgGradient} blur-3xl -z-10`}
               ></div>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center mb-10 sm:mb-20">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center mb-10 sm:mb-20 font-primaryFont">
                 <span
                   className={`bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text`}
                 >
@@ -261,7 +262,7 @@ export const Sponsors = () => {
           <div className="w-full sm:w-[90%] lg:w-[80%] flex flex-col">
             <div className="w-full mb-8 sm:mb-16 text-center">
               <h1
-                className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 hover:scale-105 transition-transform duration-300`}
+                className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 hover:scale-105 transition-transform duration-300 font-primaryFont`}
               >
                 {config.titleText}
               </h1>
@@ -269,7 +270,7 @@ export const Sponsors = () => {
                 className={`h-1 w-20 sm:w-40 bg-gradient-to-r ${config.gradient} mx-auto`}
               ></div>
             </div>
-            <div className="w-full transform hover:scale-105 transition-transform duration-500">
+            <div className="w-full transform  transition-transform duration-500">
               <TitleSponserCard
                 title={titleSponsor.title}
                 name={titleSponsor.name}
@@ -283,10 +284,10 @@ export const Sponsors = () => {
                 />
               </TitleSponserCard>
               <div className="text-center mt-8">
-                <h3 className="text-2xl mt-20 sm:text-3xl font-semibold text-white">
+                <h3 className="text-2xl mt-20 sm:text-3xl font-semibold text-white font-secFont1">
                   {titleSponsor.name}
                 </h3>
-                <p className={`${config.textColor} mt-2 text-base sm:text-lg`}>
+                <p className={`${config.textColor} mt-2 text-base sm:text-lg font-secFont1`}>
                   {config.partnerText}
                 </p>
               </div>
@@ -302,32 +303,35 @@ export const Sponsors = () => {
       sponsorCards.push(
         <div
           key={`${activeCategory}-${i}`}
-          className="flex flex-col items-center group"
+          className="flex flex-col items-center group w-full"
         >
-          <div className="transform group-hover:scale-105 transition-transform duration-500">
+          <div className="w-full flex justify-center">
             <SponserCard
               title={sponsor.title}
               href={sponsor.href}
               category={activeCategory}
             >
               <div
-                className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm`}
+                className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm bg-gradient-to-br from-zinc-900/90 to-zinc-900/50 relative overflow-hidden group`}
               >
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.title}
-                  className="w-full h-full object-contain p-4"
-                />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/5 group-hover:from-black/30 group-hover:to-black/10 transition-all duration-300"></div>
+                <div className="absolute inset-0 flex items-center justify-center p-6">
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.title}
+                    className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
             </SponserCard>
-            <div className="text-center mt-8">
-              <h3 className="text-xl sm:text-2xl font-semibold text-white">
-                {sponsor.title}
-              </h3>
-              <p className={`${config.textColor} mt-2 text-sm sm:text-base`}>
-                {config.partnerText}
-              </p>
-            </div>
+          </div>
+          <div className="text-center mt-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-white/90 group-hover:text-white transition-colors duration-300 font-secFont1">
+              {sponsor.title}
+            </h3>
+            <p className={`${config.textColor} mt-2 text-sm sm:text-base opacity-90 group-hover:opacity-100 transition-opacity duration-300 font-secFont1`}>
+              {config.partnerText}
+            </p>
           </div>
         </div>
       );
@@ -338,7 +342,7 @@ export const Sponsors = () => {
         <div
           className={`absolute inset-0 bg-gradient-to-r ${config.bgGradient} blur-3xl -z-10`}
         ></div>
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center mb-10 sm:mb-20">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center mb-10 sm:mb-20 font-primaryFont">
           <span
             className={`bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text`}
           >
