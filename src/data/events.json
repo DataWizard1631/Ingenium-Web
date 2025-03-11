@@ -515,6 +515,9 @@
           "category": "Chem Events",
           "image": "/Images/sample.png"
         }
+      ],
+      "labels": [
+        { "id": "chemevents", "label": "Chem Events" }
       ]
     },
     {
