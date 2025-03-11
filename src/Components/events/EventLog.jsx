@@ -19,7 +19,12 @@ function CardComp({ event }) {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[300px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg">
+    <motion.div 
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.4 }}
+      className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[300px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+    >
       {/* Image */}
       <div className="w-full sm:w-fit h-full sm:h-full">
         <CloudinaryImage
@@ -80,7 +85,7 @@ function CardComp({ event }) {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -114,33 +119,61 @@ export const EventLog = () => {
     <section className="w-full flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
       {/* Event Log Header */}
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-20">
-        {/* Logo */}
-        <div className="w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8">
+        {/* Logo with Animation */}
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8 relative"
+        >
+          <div className="absolute inset-0 blur-md" />
           <CloudinaryImage
             src="/Logos/Ing_White_2025.png"
             alt="Ingenium Logo"
-            className="w-full h-auto"
+            className="w-full h-auto relative z-10"
           />
-        </div>
+        </motion.div>
 
-        <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white relative tracking-[0.17em]">
-          EVENT LOG
-          <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
-        </h1>
+        {/* Title with Animation */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative inline-block"
+        >
+          <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white tracking-[0.17em]">
+            EVENT LOG
+          </h1>
+          <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent animate-pulse" />
+        </motion.div>
 
-        <p className="text-base sm:text-lg md:text-xl font-secFont1 max-w-[90%] sm:max-w-[80%] md:max-w-[57vw] text-center text-white">
+        {/* Description with Animation */}
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-base sm:text-lg md:text-xl font-secFont1 max-w-[90%] sm:max-w-[80%] md:max-w-[57vw] text-center text-white"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
+        </motion.p>
       </div>
 
-      {/* Card Section */}
-      <div className="w-full flex flex-col items-center gap-8 sm:gap-10 md:gap-12">
-        {/* Categories - Desktop */}
+      {/* Categories Section */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="w-full flex flex-col items-center gap-8 sm:gap-10 md:gap-12"
+      >
+        {/* Desktop Categories */}
         <div className="hidden sm:flex flex-wrap justify-center gap-6 bg-gray-200/20 backdrop-blur-md rounded-full p-2">
-          {categories.map((category) => (
-            <button
+          {categories.map((category, index) => (
+            <motion.button
               key={category.id}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 + 0.8 }}
               onClick={() => handleCategoryChange(category.id)}
               className={`text-sm sm:text-base md:text-lg font-secFont1 px-3 sm:px-4 md:px-6 py-2 rounded-full transition-all duration-150 flex items-center gap-2 ${
                 selectedCategory === category.id
@@ -149,11 +182,11 @@ export const EventLog = () => {
               }`}
             >
               <span>{category.label}</span>
-            </button>
+            </motion.button>
           ))}
         </div>
 
-        {/* Categories - Mobile Dropdown */}
+        {/* Mobile Categories Dropdown */}
         <div className="sm:hidden w-full max-w-[50%] mx-auto relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -198,16 +231,23 @@ export const EventLog = () => {
           )}
         </div>
 
-        {/* Event Cards */}
-        <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full items-center">
-          <AnimatePresence mode="wait" initial={false}>
-            {currentEvents?.map((event) => (
+        {/* Event Cards Grid */}
+        <motion.div 
+          layout
+          className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full items-center"
+        >
+          <AnimatePresence mode="wait">
+            {currentEvents?.map((event, index) => (
               <motion.div
                 key={event.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.2,
+                  ease: [0.4, 0, 0.2, 1]
+                }}
                 layout
                 className="w-full flex justify-center px-4 sm:px-6 md:px-8"
               >
@@ -215,20 +255,23 @@ export const EventLog = () => {
               </motion.div>
             ))}
           </AnimatePresence>
-        </div>
+        </motion.div>
 
         {/* Load More Button */}
         {hasMoreEvents && (
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.3 }}
             onClick={handleLoadMore}
-            className="mt-8 px-8 py-3 border-[1px] border-white text-white rounded-full hover:bg-white/20 transition-all duration-300 font-secFont1 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="mt-8 px-8 py-3 border-[1px] border-white text-white rounded-full hover:bg-white/20 transition-all duration-300 font-secFont1 text-lg shadow-lg hover:shadow-xl"
           >
             Load More Events
           </motion.button>
         )}
-      </div>
+      </motion.div>
     </section>
   );
 };

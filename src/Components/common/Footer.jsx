@@ -83,7 +83,7 @@ function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-6 sm:pt-8">
           <p className="font-['OfficialBook'] text-gray-400 text-sm sm:text-xl text-center">
-            © 2025 Ingenium. All rights reserved.
+            This website is developed with ‪‪❤︎‬ by <a href="https://www.linkedin.com/in/tech-ingenium/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Vishv Boda</a>,  <a href="https://www.linkedin.com/in/tech-ingenium/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Deep Patel</a>, <a href="https://www.linkedin.com/in/tech-ingenium/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Subrat Jain</a>
           </p>
         </div>
       </div>
