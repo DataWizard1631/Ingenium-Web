@@ -22,7 +22,7 @@ export const TitleSponserCard = ({
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       {/* Desktop Version with Pin Effect */}
       <a
         className={cn(
@@ -32,6 +32,8 @@ export const TitleSponserCard = ({
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         href={href || "/"}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div
           style={{
@@ -46,64 +48,57 @@ export const TitleSponserCard = ({
             }}
             className="w-full absolute left-1/2 top-1/2 flex flex-col sm:flex-row rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-gradient-to-br from-zinc-900 to-zinc-800 group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
           >
-            {/* Image Section  */}
-            <div className="w-full sm:w-1/3 h-48 sm:h-full bg-black">
-              {children}
+            {/* Image Section with improved fit */}
+            <div className="w-full sm:w-1/2  h-auto bg-gradient-to-br from-black to-zinc-900 flex items-center justify-center p-8">
+              <div className="w-full h-full relative flex items-center justify-center bg-gradient-to-br from-zinc-900/50 to-black/50 rounded-xl backdrop-blur-sm border border-white/5">
+                {children}
+              </div>
             </div>
 
-            {/* Content Section*/}
-            <div className="w-full sm:w-2/3 p-4 sm:p-8 bg-gradient-to-l from-black/90 via-black/70 to-transparent backdrop-blur-sm flex flex-col justify-between">
-              <div className="space-y-4 sm:space-y-6">
+            {/* Content Section with enhanced styling */}
+            <div className="w-full sm:w-1/2 p-6 sm:p-10 bg-gradient-to-l from-black/90 via-black/70 to-transparent backdrop-blur-sm flex flex-col justify-between">
+              <div className="space-y-6">
                 <div>
-                  <h2 className="text-xl sm:text-3xl xl:text-4xl font-bold text-white mb-2 sm:mb-3 font-primaryFont">
+                  <h2 className="text-2xl sm:text-4xl xl:text-5xl font-bold text-white mb-3 font-primaryFont leading-tight">
                     {name || "Pyramid Overseas Education Consultants"}
                   </h2>
-                  <p className="text-lg sm:text-xl xl:text-2xl text-colPink font-semibold font-secFont1">
+                  <div className="h-1 w-20 bg-gradient-to-r from-rose-500 to-pink-600 rounded-full mb-4"></div>
+                  <p className="text-xl sm:text-2xl xl:text-3xl bg-gradient-to-r from-rose-400 to-pink-600 text-transparent bg-clip-text font-semibold font-secFont1">
                     Empowering Global Careers Since 2003
                   </p>
                 </div>
 
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-secFont1">
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-secFont1">
                   Pyramid Overseas Education Consultants, a trusted name in overseas education, is proud to be the Title Sponsor of Ingenium 2024. With over two decades of expertise, we have been guiding students towards achieving their dreams of studying abroad in countries like the USA, UK, Canada, Australia, New Zealand, France, Germany, Ireland, Dubai and beyond.
                 </p>
               </div>
 
-              {/* Website Link */}
-              <div className="mt-4 sm:mt-6 pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-white/10 gap-2 sm:gap-4">
-                <span className="text-colPink text-sm sm:text-base font-secFont1">
-                  For more Visit our site:
-                </span>
-                <a 
-                  href={href} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-colPink transition-colors duration-300 font-secFont1 text-sm sm:text-base break-all sm:break-normal"
-                >
-                  {href?.replace('https://', '').replace('http://', '')}
-                </a>
-              </div>
+              
             </div>
           </div>
         </div>
         <PinPerspective title={title} href={href} />
       </a>
 
-      {/* Mobile Version */}
+      {/* Mobile Version with enhanced styling */}
       <div className="block sm:hidden">
         <div className="rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-gradient-to-br from-zinc-900 to-zinc-800 overflow-hidden">
           {/* Image Section */}
-          <div className="w-full h-48 bg-black">
-            {children}
+          <div className="w-full h-56 bg-gradient-to-br from-black to-zinc-900 flex items-center justify-center p-6">
+            <div className="w-full h-full relative flex items-center justify-center bg-gradient-to-br from-zinc-900/50 to-black/50 rounded-xl backdrop-blur-sm border border-white/5">
+              {children}
+            </div>
           </div>
 
           {/* Content Section */}
-          <div className="p-4 bg-gradient-to-b from-black/90 via-black/70 to-transparent">
+          <div className="p-6 bg-gradient-to-b from-black/90 via-black/70 to-transparent">
             <div className="space-y-4">
               <div>
                 <h2 className="text-xl font-bold text-white mb-2 font-primaryFont">
                   {name || "Pyramid Overseas Education Consultants"}
                 </h2>
-                <p className="text-lg text-colPink font-semibold font-secFont1">
+                <div className="h-0.5 w-16 bg-gradient-to-r from-rose-500 to-pink-600 rounded-full mb-3"></div>
+                <p className="text-lg bg-gradient-to-r from-rose-400 to-pink-600 text-transparent bg-clip-text font-semibold font-secFont1">
                   Empowering Global Careers Since 2003
                 </p>
               </div>
@@ -116,12 +111,12 @@ export const TitleSponserCard = ({
                 href={href || "/"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-colPink/10 text-colPink border border-colPink/20 hover:bg-colPink/20 transition-colors w-full justify-center"
+                className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-base font-medium bg-gradient-to-r from-rose-500 to-pink-600 text-white hover:from-rose-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-rose-500/25 w-full group"
               >
-                Visit Website
+                <span>Visit Website</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 transform -rotate-45"
+                  className="h-5 w-5 transform -rotate-45 transition-transform group-hover:translate-x-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -151,7 +146,7 @@ export const PinPerspective = ({ title, href }) => {
             className="relative flex items-center gap-2 z-10 rounded-full bg-zinc-950 py-1.5 px-4 ring-1 ring-colPink/10"
           >
             <span className="relative z-20 text-white text-sm font-medium inline-block">
-              Visit My Website
+              Visit Website
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

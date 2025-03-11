@@ -15,7 +15,7 @@ export const Sponsors = () => {
     supportingSponsors, // Added supportingSponsors from the JSON
   } = sponsorsData;
 
-  const [activeCategory, setActiveCategory] = useState("title");
+  const [activeCategory, setActiveCategory] = useState("all");
 
   // Category configurations for styling and layout
   const categoryConfig = {
@@ -105,6 +105,24 @@ export const Sponsors = () => {
     supporting: supportingSponsors, // Added supporting sponsors
   };
 
+  const getGridConfig = (sponsorCount) => {
+    switch (sponsorCount) {
+      case 1:
+        return "grid-cols-1 place-items-center max-w-2xl mx-auto";
+      case 2:
+        return "grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto";
+      case 3:
+        return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto";
+      case 4:
+        return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto";
+      case 5:
+      case 6:
+        return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto";
+      default:
+        return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto";
+    }
+  };
+
   const renderCategory = () => {
     // Handle 'all' category
     if (activeCategory === "all") {
@@ -125,7 +143,7 @@ export const Sponsors = () => {
               key={category}
               className="w-full flex flex-row justify-center items-center"
             >
-              <div className="w-full sm:w-[90%] lg:w-[80%] flex flex-col">
+              <div className="w-full  flex flex-col">
                 <div className="w-full mb-8 sm:mb-16 text-center">
                   <h1
                     className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 hover:scale-105 transition-transform duration-300`}
@@ -219,7 +237,7 @@ export const Sponsors = () => {
                 ></div>
               </h2>
               <div
-                className={`grid grid-cols-1 ${config.cols} gap-10 sm:gap-16 max-w-7xl mx-auto px-4`}
+                className={`grid ${getGridConfig(sponsorCards.length)} gap-10 sm:gap-16 px-4`}
               >
                 {sponsorCards}
               </div>
@@ -331,7 +349,7 @@ export const Sponsors = () => {
           ></div>
         </h2>
         <div
-          className={`grid grid-cols-1 ${config.cols} gap-10 sm:gap-16 max-w-7xl mx-auto px-4`}
+          className={`grid ${getGridConfig(sponsors.length)} gap-10 sm:gap-16 px-4`}
         >
           {sponsorCards}
         </div>
