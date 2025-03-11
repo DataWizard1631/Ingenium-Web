@@ -10,17 +10,6 @@ function Footer() {
     animate: { y: 0, opacity: 1 },
     transition: { duration: 0.5 }
   };
-  
-  const data = [
-    {
-      icon: FaInstagram,
-      link: "https://www.instagram.com/tech.ingenium/"
-    },
-    {
-      icon: FaLinkedinIn,
-      link: "https://www.linkedin.com/in/tech-ingenium/"
-    }
-  ]
 
   return (
     <footer className="bg-black text-white font-secFont1 relative overflow-hidden">
@@ -33,17 +22,6 @@ function Footer() {
           <div className="lg:col-span-1 flex flex-col items-center sm:items-start">
             {/* <h3 className="font-['ModernAge'] text-2xl sm:text-3xl md:text-7xl mb-4">INGENIUM</h3> */}
             <img src={logo} alt="logo" className="w-36 md:w-60 mb-8" />
-            <div className="flex gap-4">
-              {data.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.link}
-                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff1f79c2] transition-colors duration-300"
-                >
-                  <item.icon className="w-4 h-4 sm:w-5 sm:h-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -75,6 +53,15 @@ function Footer() {
               <li className="flex items-center gap-3 text-md sm:text-xl">
                 <HiMail className="text-[#FF1F79] text-xl flex-shrink-0" />
                 <a href="mailto:ingenium@ahduni.edu.in" className="hover:underline transition-colors duration-200">ingenium@ahduni.edu.in</a>
+              </li>
+              <li className="flex items-center gap-3 text-md sm:text-xl">
+                <FaInstagram className="text-[#FF1F79] text-xl flex-shrink-0" />
+                <a href="https://www.instagram.com/tech.ingenium/" className="hover:underline transition-colors duration-200">tech.ingenium</a>
+
+              </li>
+              <li className="flex items-center gap-3 text-md sm:text-xl">
+                <FaLinkedinIn className="text-[#FF1F79] text-xl flex-shrink-0" />
+                <a href="https://www.linkedin.com/in/tech-ingenium/" className="hover:underline transition-colors duration-200">tech-ingenium</a>
               </li>
             </ul>
           </div>
