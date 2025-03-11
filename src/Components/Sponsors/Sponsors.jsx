@@ -167,7 +167,7 @@ export const Sponsors = () => {
                       alt={titleSponsor.name}
                     />
                   </TitleSponserCard>
-                  <div className="text-center mt-8">
+                  {/* <div className="text-center mt-8">
                     <h3 className="text-2xl mt-20 sm:text-3xl font-semibold text-white font-secFont1">
                       {titleSponsor.name}
                     </h3>
@@ -176,7 +176,7 @@ export const Sponsors = () => {
                     >
                       {config.partnerText}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
