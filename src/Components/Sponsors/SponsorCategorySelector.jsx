@@ -1,19 +1,30 @@
-import React, { useState } from 'react';
-import { cn } from './utils';
+import React, { useState } from "react";
+import { cn } from "./utils";
 
 const categories = [
-  { id: 'all', label: 'All', color: 'from-zinc-200 via-zinc-400 to-zinc-300' },
-  { id: 'title', label: 'Title', color: 'from-rose-500 via-pink-500 to-purple-600' },
-  { id: 'presenting', label: 'Presenting', color: 'from-violet-400 to-violet-600' },
-  { id: 'platinum', label: 'Platinum', color: 'from-slate-200 to-slate-400' },
-  { id: 'gold', label: 'Gold', color: 'from-amber-400 to-amber-600' },
-  { id: 'fashion', label: 'Fashion', color: 'from-pink-400 to-pink-600' },
-  { id: 'automobile', label: 'Automobile', color: 'from-red-400 to-red-600' },
+  { id: "all", label: "All", color: "from-zinc-200 via-zinc-400 to-zinc-300" },
+  {
+    id: "title",
+    label: "Title",
+    color: "from-rose-500 via-pink-500 to-purple-600",
+  },
+  // {
+  //   id: "presenting",
+  //   label: "Presenting",
+  //   color: "from-violet-400 to-violet-600",
+  // },
+  { id: "platinum", label: "Platinum", color: "from-slate-200 to-slate-400" },
+  { id: "gold", label: "Gold", color: "from-amber-400 to-amber-600" },
+  { id: "fashion", label: "Fashion", color: "from-pink-400 to-pink-600" },
+  // { id: "automobile", label: "Automobile", color: "from-red-400 to-red-600" },
 ];
 
-export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) => {
+export const SponsorCategorySelector = ({
+  activeCategory,
+  onCategoryChange,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const activeItem = categories.find(cat => cat.id === activeCategory);
+  const activeItem = categories.find((cat) => cat.id === activeCategory);
 
   return (
     <>
@@ -27,7 +38,8 @@ export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) =>
               className={cn(
                 "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
                 activeCategory === category.id
-                  ? "bg-gradient-to-r shadow-lg scale-105 text-white " + category.color
+                  ? "bg-gradient-to-r shadow-lg scale-105 text-white " +
+                      category.color
                   : "text-white/60 hover:text-white hover:bg-white/5"
               )}
             >
@@ -45,15 +57,18 @@ export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) =>
             "w-full flex items-center justify-between px-4 py-3 rounded-xl",
             "bg-zinc-900/50 backdrop-blur-sm border border-white/10",
             "text-white font-medium transition-all duration-300",
-            activeCategory === 'all' && "bg-gradient-to-r from-zinc-900/50 to-zinc-800/50"
+            activeCategory === "all" &&
+              "bg-gradient-to-r from-zinc-900/50 to-zinc-800/50"
           )}
         >
           <div className="flex items-center gap-2">
-            <div className={cn(
-              "w-2 h-2 rounded-full",
-              `bg-gradient-to-r ${activeItem?.color}`
-            )} />
-            <span>{activeItem?.label || 'Select Category'}</span>
+            <div
+              className={cn(
+                "w-2 h-2 rounded-full",
+                `bg-gradient-to-r ${activeItem?.color}`
+              )}
+            />
+            <span>{activeItem?.label || "Select Category"}</span>
           </div>
           <svg
             className={cn(
@@ -88,15 +103,19 @@ export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) =>
                   activeCategory === category.id
                     ? cn(
                         "bg-gradient-to-r text-white",
-                        category.id === 'all' ? "from-zinc-800 to-zinc-900" : "bg-white/10"
+                        category.id === "all"
+                          ? "from-zinc-800 to-zinc-900"
+                          : "bg-white/10"
                       )
                     : "text-white/60 hover:bg-white/5 hover:text-white"
                 )}
               >
-                <div className={cn(
-                  "w-2 h-2 rounded-full",
-                  `bg-gradient-to-r ${category.color}`
-                )} />
+                <div
+                  className={cn(
+                    "w-2 h-2 rounded-full",
+                    `bg-gradient-to-r ${category.color}`
+                  )}
+                />
                 {category.label}
               </button>
             ))}
@@ -105,4 +124,4 @@ export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) =>
       </div>
     </>
   );
-}; 
+};
