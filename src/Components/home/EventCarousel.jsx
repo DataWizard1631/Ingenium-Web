@@ -1,8 +1,8 @@
-import React, { useRef, useState } from 'react';
-import { motion, AnimatePresence, useAnimation } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import eventsData from '../../data/events.json';
-import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import React, { useRef, useState } from "react";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import eventsData from "../../data/events.json";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const EventCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,7 +19,9 @@ const EventCarousel = () => {
   };
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + eventsData.events.length) % eventsData.events.length);
+    setActiveIndex(
+      (prev) => (prev - 1 + eventsData.events.length) % eventsData.events.length
+    );
   };
 
   const handleDragEnd = (event, info) => {
@@ -42,7 +44,7 @@ const EventCarousel = () => {
         Upcoming Events
       </h2>
 
-      <motion.div 
+      <motion.div
         className="relative max-w-[1400px] mx-auto px-3 md:px-4 touch-pan-y"
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
@@ -51,13 +53,13 @@ const EventCarousel = () => {
         animate={controls}
       >
         {/* Desktop Navigation Arrows */}
-        <button 
+        <button
           onClick={handlePrev}
           className="hidden md:block absolute -left-12 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors bg-white/10 p-3 rounded-lg backdrop-blur-sm"
         >
           <FaArrowLeft className="w-6 h-6" />
         </button>
-        <button 
+        <button
           onClick={handleNext}
           className="hidden md:block absolute -right-12 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors bg-white/10 p-3 rounded-lg backdrop-blur-sm"
         >
@@ -67,7 +69,7 @@ const EventCarousel = () => {
         {/* Main Event Display */}
         <div className="relative min-h-[600px] md:h-[700px]">
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               key={activeIndex}
               initial={{ opacity: 0, x: 200 }}
               animate={{ opacity: 1, x: 0 }}
@@ -77,25 +79,29 @@ const EventCarousel = () => {
             >
               {/* Image Section */}
               <div className="relative w-full md:w-fit h-[200px] md:h-full rounded-xl md:rounded-2xl overflow-hidden bg-black/20">
-                <img 
+                <img
                   src={eventsData.events[activeIndex].image}
                   alt={eventsData.events[activeIndex].title}
                   className="w-full h-full object-contain md:hover:scale-105 transition-transform duration-300"
                   draggable="false"
                 />
-                <div className="absolute inset-0"  />
+                <div className="absolute inset-0" />
               </div>
 
               {/* Content Section - Mobile Optimized */}
-              <div className= "w-full md:w-[55%] font-secFont1 text-white space-y-3 md:space-y-6 p-2 md:p-6 select-none " >
+              <div className="w-full md:w-[55%] font-secFont1 text-white space-y-3 md:space-y-6 p-2 md:p-6 select-none ">
                 <div className="space-y-2">
                   <h3 className="text-2xl md:text-4xl font-primaryFont leading-tight">
                     {eventsData.events[activeIndex].title}
                   </h3>
                   <div className="flex items-center gap-2 text-colPink text-sm md:text-lg pt-4">
-                    <span className="bg-colPink/10 px-3 py-1 rounded-full">{eventsData.events[activeIndex].date}</span>
+                    <span className="bg-colPink/10 px-3 py-1 rounded-full">
+                      {eventsData.events[activeIndex].date}
+                    </span>
                     <span className="w-1 h-1 rounded-full bg-colPink"></span>
-                    <span className="bg-colPink/10 px-3 py-1 rounded-full">{eventsData.events[activeIndex].time}</span>
+                    <span className="bg-colPink/10 px-3 py-1 rounded-full">
+                      {eventsData.events[activeIndex].time}
+                    </span>
                   </div>
                 </div>
 
@@ -105,21 +111,44 @@ const EventCarousel = () => {
 
                 <div className="font-secFont1 space-y-2 bg-white/5 rounded-lg p-3 md:p-0 md:bg-transparent">
                   <div className="flex items-center gap-2 text-xs md:text-lg text-gray-400">
-                    <span className="text-colPink font-medium">Registration Period:</span>
-                    <span className="text-white">{eventsData.events[activeIndex].registrationPeriod}</span>
+                    <span className="text-colPink font-medium">
+                      Registration Period:
+                    </span>
+                    <span className="text-white">
+                      {eventsData.events[activeIndex].registrationPeriod}
+                    </span>
                   </div>
                   <div className="flex items-center gap-2 text-xs md:text-lg text-gray-400">
-                    <span className="text-colPink font-medium">Meeting Type:</span>
-                    <span className="text-white capitalize">{eventsData.events[activeIndex].meetingType}</span>
+                    <span className="text-colPink font-medium">
+                      Meeting Type:
+                    </span>
+                    <span className="text-white capitalize">
+                      {eventsData.events[activeIndex].meetingType}
+                    </span>
                   </div>
                 </div>
-
+                {/* className="w-full md:w-1/2 bg-colPink text-white py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-pink-700/80 transition-all duration-300 md:transform shadow-lg shadow-pink-500/20" */}
                 <div className="font-secFont1 flex flex-col gap-2 md:flex-row md:gap-4 pt-3">
-                  <button className="w-full md:w-1/2 bg-colPink text-white py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-pink-700/80 transition-all duration-300 md:transform shadow-lg shadow-pink-500/20">
-                    Register Now
-                  </button>
-                  <button 
-                    onClick={() => navigate(`/event/${eventsData.events[activeIndex].id}`)}
+                  {eventsData.events[activeIndex].registrationLink ? (
+                    <a
+                      href={eventsData.events[activeIndex].registrationLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full md:w-1/2 bg-colPink text-white py-3 text-center rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-pink-700/80 transition-all duration-300 md:transform shadow-lg shadow-pink-500/20"                    >
+                      Register
+                    </a>
+                  ) : (
+                    <button
+                      className="px-4 sm:px-6 py-2 bg-colPink text-white rounded-full opacity-50 cursor-not-allowed text-sm sm:text-base"
+                      disabled
+                    >
+                      Register
+                    </button>
+                  )}
+                  <button
+                    onClick={() =>
+                      navigate(`/event/${eventsData.events[activeIndex].id}`)
+                    }
                     className="w-full md:w-1/2 border border-colPink text-colPink py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-colPink md:hover:text-white transition-all duration-300 md:transform "
                   >
                     Learn More
@@ -136,7 +165,9 @@ const EventCarousel = () => {
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`h-1 md:h-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? 'bg-colPink w-4 md:w-6' : 'bg-white/50 hover:bg-white w-1 md:w-2'
+                  index === activeIndex
+                    ? "bg-colPink w-4 md:w-6"
+                    : "bg-white/50 hover:bg-white w-1 md:w-2"
                 }`}
               />
             ))}
@@ -147,4 +178,4 @@ const EventCarousel = () => {
   );
 };
 
-export default EventCarousel; 
+export default EventCarousel;
