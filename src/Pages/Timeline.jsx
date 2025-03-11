@@ -76,9 +76,6 @@ function Timeline() {
     return eventDateTime >= now;
   });
 
-  // For debugging
-  console.log('Current Event Index:', currentEventIndex);
-
   // If all events are in the past, use the length of the array
   const progressIndex = currentEventIndex === -1 ? sortedEvents.length : currentEventIndex;
 
@@ -98,7 +95,7 @@ function Timeline() {
   return (
     <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto min-h-screen">
       {/* Header Section */}
-      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 pt-16 sm:pt-20 md:pt-48">
+      <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 pt-28 sm:pt-20 md:pt-48">
         {/* Logo with Glow Effect */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -126,7 +123,7 @@ function Timeline() {
               mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.17em] font-semibold text-transparent bg-clip-text bg-white">
               TIMELINE
             </h1>
-            <div className="absolute bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+            <div className="absolute bottom-0 md:bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
           </div>
         </motion.div>
       </div>

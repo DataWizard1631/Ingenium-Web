@@ -111,7 +111,7 @@ const EventCarousel = () => {
                 </p>
 
                 <div className="font-secFont1 space-y-2 bg-white/5 rounded-lg p-3 md:p-0 md:bg-transparent">
-                  <div className="flex items-center gap-2 text-xs md:text-lg text-gray-400">
+                  <div className="flex items-center gap-2 text-sm md:text-lg text-gray-400">
                     <span className="text-colPink font-medium">
                       Contact:
                     </span>

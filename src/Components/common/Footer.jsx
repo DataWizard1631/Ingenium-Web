@@ -54,7 +54,7 @@ function Footer() {
                 <li key={item}>
                   <NavLink
                     to={item === "Home" ? "/" : item === "Our team" ? "/team" : `/${item.toLowerCase()}`}
-                    className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 text-sm sm:text-xl"
+                    className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 text-md sm:text-xl"
                   >
                     <span className="w-2 h-2 bg-[#FF1F79] rounded-full" />
                     {item}
@@ -68,11 +68,11 @@ function Footer() {
           <div className="flex flex-col items-center sm:items-start mx-auto">
             <h4 className="font-['OfficialBook'] text-2xl sm:text-2xl mb-6">Contact Us</h4>
             <ul className="space-y-4 text-gray-400">
-              <li className="flex items-center gap-3 text-sm sm:text-xl">
+              <li className="flex items-center gap-3 text-md sm:text-xl">
                 <HiLocationMarker className="text-[#FF1F79] text-xl flex-shrink-0" />
                 <span>Ahmedabad University, Ahmedabad, Gujarat</span>
               </li>
-              <li className="flex items-center gap-3 text-sm sm:text-xl">
+              <li className="flex items-center gap-3 text-md sm:text-xl">
                 <HiMail className="text-[#FF1F79] text-xl flex-shrink-0" />
                 <span>ingenium@ahduni.edu.in</span>
               </li>

@@ -64,20 +64,20 @@ function CardComp({ event }) {
             <span>{event.contact}</span>
           </p>
         </div>
-        <div className="font-secFont1 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:mb-4">
+        <div className="font-secFont1 flex sm:flex-row gap-3 sm:gap-4 lg:mb-4">
           {/* Register Button */}
           {event.registrationLink ? (
             <a
               href={event.registrationLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 sm:px-6 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-colors text-sm sm:text-base"
+              className="px-4 sm:px-6 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-colors text-sm sm:text-base text-center"
             >
               Register
             </a>
           ) : (
             <button
-              className="px-4 sm:px-6 py-2 bg-colPink text-white rounded-full opacity-50 cursor-not-allowed text-sm sm:text-base"
+              className="px-4 sm:px-6 py-2 bg-colPink text-white rounded-full opacity-50 cursor-not-allowed text-sm sm:text-base text-center"
               disabled
             >
               Register
@@ -205,19 +205,9 @@ export const EventLog = () => {
           <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white tracking-[0.17em]">
             EVENT LOG
           </h1>
-          <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+          <div className="absolute -bottom-0 md:-bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
         </motion.div>
 
-        {/* Description with Animation */}
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base sm:text-lg md:text-xl font-secFont1 max-w-[90%] sm:max-w-[80%] md:max-w-[57vw] text-center text-white"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-          quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </motion.p>
       </div>
 
       {/* Categories Section */}
