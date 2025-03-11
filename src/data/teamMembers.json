@@ -96,8 +96,8 @@
       ]
   },
   "Web Devs": [
-    { "Name": "Deep Patel", "imageUrl": "./public/1.jpg" },
-    { "Name": "Vishv Boda", "imageUrl": "./public/1.jpg" },
-    { "Name": "Subrat Jain", "imageUrl": "./public/1.jpg" }
+    { "Name": "Deep Patel", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741685201/20250311_143408_ynhxtb.jpg" },
+    { "Name": "Vishv Boda", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741685198/1_rkl8xt.jpg" },
+    { "Name": "Subrat Jain", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741685198/2_yaruhy.jpg" }
   ]
 }
