@@ -112,12 +112,12 @@ const EventCarousel = () => {
 
                 <div className="font-secFont1 space-y-2 bg-white/5 rounded-lg p-3 md:p-0 md:bg-transparent">
                   <div className="flex items-center gap-2 text-sm md:text-lg text-gray-400">
-                    <span className="text-colPink font-medium">
-                      Contact:
-                    </span>
-                    <span className="text-gray-300">
-                      {eventsData.events[activeIndex].contact}
-                    </span>
+                    <p className="flex flex-wrap gap-2">
+                      <span className="font-semibold text-gray-100">Contact: </span>
+                      <span className="flex gap-1">{eventsData.events[activeIndex].contact.map((con, index) => (
+                        <span key={index}>{con} | </span>
+                      ))}</span>
+                    </p>
                   </div>
                 </div>
                 {/* className="w-full md:w-1/2 bg-colPink text-white py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-pink-700/80 transition-all duration-300 md:transform shadow-lg shadow-pink-500/20" */}

@@ -7,8 +7,8 @@ export const sponsorsData = {
     },
     "platinumSponsors": [
         {
-            "name": "TIME Education",
-            "title": "TIME Education",
+            "name": "TIME",
+            "title": "T.I.M.E.",
             "href": "#",
             "logo": "/sponsorLogo/time.png"
         },
@@ -34,8 +34,8 @@ export const sponsorsData = {
             "logo": "/sponsorLogo/shyamratna.png"
         },
         {
-            "name": "Gravity",
-            "title": "Gravity",
+            "name": "Gravity Media Marketing",
+            "title": "Gravity Media Marketing",
             "href": "#",
             "logo": "/sponsorLogo/gravity.png"
         }

@@ -7,7 +7,7 @@ import CloudinaryImage from "../../tools/CloudinaryImage";
 const categories = [
   { id: "all", label: "All" },
   { id: "CSE Events", label: "CSE Events" },
-  { id: "Marathon", label: "Marathon" },
+  { id: "Hackathon", label: "Hackathon" },
   { id: "esports", label: "E-sports" },
   { id: "mechevents", label: "Mech Event" },
   { id: "eeeevents", label: "EEE Event" },
@@ -59,9 +59,11 @@ function CardComp({ event }) {
             <span className="font-semibold">Time: </span>
             <span>{event.time}</span>
           </p>
-          <p>
+          <p className="flex flex-wrap gap-2">
             <span className="font-semibold">Contact: </span>
-            <span>{event.contact}</span>
+            <span className="flex flex-col gap-1">{event.contact.map((con, index) => (
+              <span key={index}>{con}</span>
+            ))}</span>
           </p>
         </div>
         <div className="font-secFont1 flex sm:flex-row gap-3 sm:gap-4 lg:mb-4">
