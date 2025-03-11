@@ -55,7 +55,7 @@ function Home() {
         <AuGlimpes/>
 
         <>
-        <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-8 mt-8 '>
+        <h1 className='font-primaryFont text-white text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-8 mt-8 md:mt-12 '>
             Past Sponsors
         </h1>
           

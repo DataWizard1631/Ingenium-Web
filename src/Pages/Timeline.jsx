@@ -54,6 +54,13 @@ function Timeline() {
     }
   };
 
+  // Helper function to check if event has passed
+  const isEventPassed = (dateStr, timeStr) => {
+    const now = new Date();
+    const eventDateTime = parseDate(dateStr, timeStr);
+    return eventDateTime < now;
+  };
+
   // Sort events by date and time
   const sortedEvents = [...events].sort((a, b) => {
     const dateA = parseDate(a.date, a.time);
@@ -143,6 +150,7 @@ function Timeline() {
           {/* Events */}
           {sortedEvents.map((event, index) => {
             const eventStatus = getEventStatus(event.date, event.time);
+            const eventPassed = isEventPassed(event.date, event.time);
             
             return (
               <motion.div
@@ -244,9 +252,24 @@ function Timeline() {
                           <h3 className="font-primaryFont text-3xl text-white transition-colors duration-300">{event.title}</h3>
                           <p className="text-gray-400 text-lg mt-2">{event.description}</p>
                           <div className="mt-4 flex flex-col sm:flex-row gap-2">
-                            <button className="px-4 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-all duration-300 text-lg">
-                              Register Now
-                            </button>
+                            {/* Updated Register Button */}
+                            {!eventPassed && event.registrationLink ? (
+                              <button 
+                                className="px-4 py-2 bg-colPink text-white rounded-full hover:bg-pink-700 transition-all duration-300 text-lg"
+                                onClick={() => window.open(event.registrationLink, '_blank')}
+                              >
+                                Register Now
+                              </button>
+                            ) : (
+                              <button 
+                                className="px-4 py-2 bg-colPink text-white rounded-full opacity-50 cursor-not-allowed text-lg"
+                                disabled
+                              >
+                                Registration Closed
+                              </button>
+                            )}
+                            
+                            {/* Learn More Button */}
                             <button 
                               onClick={() => navigate(`/event/${event.id}`)}
                               className="px-4 py-2 border border-colPink text-colPink rounded-full hover:bg-colPink hover:text-white transition-all duration-300 text-lg"

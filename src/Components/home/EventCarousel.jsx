@@ -40,8 +40,8 @@ const EventCarousel = () => {
   };
 
   return (
-    <div className="relative w-full bg-black py-8 sm:py-16 md:py-24 overflow-hidden">
-      <h2 className="text-[2.2rem] sm:text-4xl md:text-6xl font-primaryFont text-white text-center mb-8 mt-8 md:mt-0 sm:mb-16 px-4">
+    <div className="relative w-full bg-black py-8 sm:py-16 md:py-24 md:pb-28 overflow-hidden">
+      <h2 className="text-[2.2rem] sm:text-4xl md:text-6xl font-primaryFont text-white text-center mb-8 mt-8 md:mt-8 sm:mb-16 px-4">
         Upcoming Events
       </h2>
 
