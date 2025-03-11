@@ -202,21 +202,22 @@ export const Sponsors = () => {
                 key={`${category}-${j}`}
                 className="flex flex-col items-center group w-full"
               >
-                <div className="w-full flex justify-center">
+                <div className="w-full flex justify-center perspective-container">
                   <SponserCard
                     title={sponsor.title}
                     href={sponsor.href}
                     category={category}
                   >
                     <div
-                      className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm bg-gradient-to-br from-zinc-900/90 to-zinc-900/50 relative overflow-hidden group`}
+                      className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm bg-gradient-to-br from-zinc-900/90 to-zinc-900/50 relative overflow-hidden group
+                        sm:transform-gpu sm:transition-all sm:duration-500 sm:hover:rotate-x-12 sm:hover:rotate-y-12 sm:hover:scale-105`}
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/5 group-hover:from-black/30 group-hover:to-black/10 transition-all duration-300"></div>
                       <div className="absolute inset-0 flex items-center justify-center p-6">
                         <img
                           src={sponsor.logo}
                           alt={sponsor.title}
-                          className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain  transition-transform duration-500"
+                          className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain transition-transform duration-500"
                         />
                       </div>
                     </div>
@@ -229,6 +230,17 @@ export const Sponsors = () => {
                   <p className={`${config.textColor} mt-2 text-sm sm:text-base opacity-90 group-hover:opacity-100 transition-opacity duration-300 font-secFont1`}>
                     {config.partnerText}
                   </p>
+                  {/* Mobile Visit Website Button */}
+                  <div className="sm:hidden mt-4">
+                    <a
+                      href={sponsor.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-block px-6 py-2 rounded-full bg-gradient-to-r ${config.gradient} text-white font-secFont1 text-sm transition-all duration-300 hover:scale-105`}
+                    >
+                      Visit Website
+                    </a>
+                  </div>
                 </div>
               </div>
             );
@@ -343,21 +355,22 @@ export const Sponsors = () => {
           key={`${activeCategory}-${i}`}
           className="flex flex-col items-center group w-full"
         >
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center perspective-container">
             <SponserCard
               title={sponsor.title}
               href={sponsor.href}
               category={activeCategory}
             >
               <div
-                className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm bg-gradient-to-br from-zinc-900/90 to-zinc-900/50 relative overflow-hidden group`}
+                className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm bg-gradient-to-br from-zinc-900/90 to-zinc-900/50 relative overflow-hidden group
+                  sm:transform-gpu sm:transition-all sm:duration-500 sm:hover:rotate-x-12 sm:hover:rotate-y-12 sm:hover:scale-105`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/5 group-hover:from-black/30 group-hover:to-black/10 transition-all duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center p-6">
                   <img
                     src={sponsor.logo}
                     alt={sponsor.title}
-                    className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain  transition-transform duration-200"
+                    className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -370,6 +383,17 @@ export const Sponsors = () => {
             <p className={`${config.textColor} mt-2 text-sm sm:text-base opacity-90 group-hover:opacity-100 transition-opacity duration-300 font-secFont1`}>
               {config.partnerText}
             </p>
+            {/* Mobile Visit Website Button */}
+            <div className="sm:hidden mt-4">
+              <a
+                href={sponsor.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-block px-6 py-2 rounded-full bg-gradient-to-r ${config.gradient} text-white font-secFont1 text-sm transition-all duration-300 hover:scale-105`}
+              >
+                Visit Website
+              </a>
+            </div>
           </div>
         </div>
       );
@@ -416,6 +440,11 @@ export const Sponsors = () => {
 
   return (
     <div className="min-h-screen">
+      <style jsx global>{`
+        .perspective-container {
+          perspective: 1000px;
+        }
+      `}</style>
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
