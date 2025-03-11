@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import eventsData from '../data/events.json';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import CloudinaryImage from '../tools/CloudinaryImage';
 
 function Timeline() {
   const navigate = useNavigate();
@@ -230,7 +231,7 @@ function Timeline() {
                     <div className="flex flex-col sm:flex-row">
                       {/* Image Section */}
                       <div className="sm:w-[35%]">
-                        <img 
+                        <CloudinaryImage 
                           src={event.image} 
                           alt={event.title}
                           className="w-full h-full object-cover transition-transform duration-300"

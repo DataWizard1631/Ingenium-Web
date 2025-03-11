@@ -1,43 +1,6 @@
 {
   "events": [
     {
-      "id": "aumazing",
-      "title": "AUmazing Talent",
-      "date": "23rd March",
-      "time": "12:30 PM",
-      "description": "An activity to show the nine emotions that form the essence of performing arts - Navras.",
-      "longDescription": "AUmazing Talent is a unique talent showcase event dedicated to the theme of Navaras - the nine emotions that form the essence of performing arts. The event aims to bring together individuals who can express these emotions through various art forms, providing a stage for performers to showcase their talent through diverse performances. The event is open to all art forms, including dance, music, theatre, poetry, and any other creative expressions that depict the nine rasas: Shringara (Love), Hasya (Laughter), Karuna (Compassion), Raudra (Anger), Veera (Heroism), Bhayanaka (Fear), Bibhatsa (Disgust), Adbhuta (Wonder), and Shanta (Peace). Performances: Open to dance, music that embodies Navarasa.",
-      "category": "Take-A-Break",
-      "meetingType": "hybrid",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeaekug6sbVJAzJCZ1rj0gavJ2gJoUZkOzntVo6HqF9XMBq9Q/viewform",
-      "rules": [
-        "Rule 1: Content should be original and expressive",
-        "Rule 2: Performances must align with one or more of the nine rasas",
-        "Rule 3: Time limit 5 mins maximum"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Enjoy the event"
-      ],
-      "relatedEvents": [
-        {
-          "id": "invest-o-mania",
-          "title": "Invest-O-Mania",
-          "category": "Take-A-Break",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "escape-room",
-          "title": "Override Protocol: Humanity's Last Stand",
-          "category": "Take-A-Break",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
       "id": "jab-we-code",
       "title": "Jab We Code",
       "date": "25th March",
@@ -46,10 +9,8 @@
       "description": "A unique coding contest where teams of two switch contests midway and strategize together in the final phase. The final score is based on combined contest performance.",
       "longDescription": "Jab We Code is a unique programming contest that tests teamwork, adaptability, and strategic decision-making. Teams of two begin by solving separate contests (Contest A and Contest B) for 30 minutes before discussing their progress and swapping challenges. After another 30 minutes, they strategize once more before entering the final 20-minute phase, where both contests are open, and members decide who tackles which problem. The final ranking is determined by the combined scores of both contests. The top three teams win cash prizes.",
       "category": "CSE Events",
-      "meetingType": "offline",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
+      "contact": "Wrong number(9876543210)",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Jab_We_Code_tjqxba.jpg",
       "rules": [
         "Rule 1: Teams consist of two members",
         "Rule 2: Each member starts solving a separate coding contest",
@@ -67,13 +28,13 @@
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "/Images/sample.png"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Optimized_Mind_bbdium.jpg"
         },
         {
           "id": "hera-pheri",
           "title": "Hera Pheri 3.0",
           "category": "CSE Events",
-          "image": "/Images/sample.png"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Hera_Pheri_i4gccg.jpg"
         }
       ]
     },
@@ -85,11 +46,9 @@
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScJ4tjwSKSUuyPgvDUi3PC6SA3rqWcQkPpTClCbH24yW57qHQ/viewform?usp=sharing",
       "description": "Teams choose one of three problem statements and develop an optimized machine learning solution using provided datasets. Solutions are judged on accuracy, efficiency, and innovation.",
       "longDescription": "Participants will work on one of three given problem statements, using relevant datasets to build the most optimized machine learning model. Teams will be judged based on the efficiency of their models, accuracy of predictions, and innovation in approach. The competition lasts three hours, during which teams analyze data, develop models, and present their findings. Judges will assess optimization and performance metrics to determine winners. The best-performing team for each problem statement wins ₹2000.",
-      "category": "CSE Events",
-      "meetingType": "offline",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
+      "category": "CSE-Events",
+      "contact": "Wrong number(9876543210)",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Optimized_Mind_bbdium.jpg",
       "rules": [
         "Rule 1: Teams of 1 to 3 members",
         "Rule 2: Each team selects one problem statement from the given options",
@@ -107,13 +66,13 @@
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "/Images/sample.png"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Jab_We_Code_tjqxba.jpg"
         },
         {
           "id": "hackathon",
           "title": "Ingenious Hackathon 6.0",
           "category": "Marathon",
-          "image": "/Images/sample.png"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
         }
       ]
     },
@@ -126,10 +85,8 @@
       "description": "A three-round event combining a treasure hunt, logical reasoning quiz, and a final \"Potli\" hunt to determine winners. Tests problem-solving, strategy, and teamwork.",
       "longDescription": "This event consists of three rounds. The first is a treasure hunt, where teams solve clues to reach different campus locations. The top 10 teams move to a quiz round, where logical questions determine the final four teams. The last round is a \"Potli\" hunt, where teams search for hidden potlis containing different rewards. The team that finds the golden potli wins ₹5000, with runner-up receiving ₹3000. This event emphasizes problem-solving, teamwork, and quick thinking.",
       "category": "CSE Events",
-      "meetingType": "offline",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
+      "contact": "Wrong number(9876543210)",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Hera_Pheri_i4gccg.jpg",
       "rules": [
         "Rule 1: Teams must complete the treasure hunt to qualify for the quiz round",
         "Rule 2: Top 10 teams from the treasure hunt advance to the quiz round",
@@ -147,450 +104,13 @@
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "/Images/sample.png"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Jab_We_Code_tjqxba.jpg"
         },
         {
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "escape-room",
-      "title": "Override Protocol: Humanity's Last Stand",
-      "date": "23rd March",
-      "time": "3:00 PM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfGkKlV7OiSprJe3CUsrhsFKU8Dz4r3h1o5dAWKP3Usonf8KQ/viewform?usp=sharing",
-      "description": "AI has gone rogue, and the world is about to end! Your team must outsmart the evil scientist in his own lab, solve puzzles, and uncover the kill code within 45 minutes. Work together to save humanity before time runs out!",
-      "longDescription": "The fate of humanity is in your hands! In Override Protocol: Humanity’s Last Stand, an evil scientist has unleashed a rogue AI, and only your team can stop it. Work together in this high-stakes sci-fi escape room to uncover hidden clues, solve mind-bending puzzles, and find the elusive kill code—before time runs out! With just 45 minutes to prevent catastrophe, teamwork and quick thinking are your only hope. Gather your squad of 4-5 players and prove you can save the world! P.S. Amazing prizes await the winning team ;)",
-      "category": "Take-A-Break",
-      "meetingType": "offline",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: No phones/internet allowed during game time",
-        "Rule 2: Direct disqualification if any material or clue in the room gets broken",
-        "Rule 3: Participants must report 10 minutes before the selected time slot",
-        "Rule 4: At least 4 members of the team should be present to start the game",
-        "Rule 5: Participants must not communicate with outsiders/other teams in any way that could compromise the puzzles",
-        "Rule 6: The team with the fastest record wins the game",
-        "Rule 7: In case of conflict, the organiser's decision will be final",
-        "Rule 8: No refund/ cancellation after registration"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Enjoy the event"
-      ],
-      "relatedEvents": [
-        {
-          "id": "aumazing",
-          "title": "AUmazing Talent",
-          "category": "Take-A-Break",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "invest-o-mania",
-          "title": "Invest-O-Mania",
-          "category": "Take-A-Break",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "invest-o-mania",
-      "title": "Invest-O-Mania",
-      "date": "25th March",
-      "time": "1:00 PM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScCfiz22D6W6KxpIPrlOBQNK9iLukY_jp0F__pkCqVtQdfT2w/viewform?usp=sharing",
-      "description": "Join Invest-O-Mania, a Stock Market Workshop designed to help students grasp key financial concepts. Learn about market trends, stock screeners, and investment strategies in a guided session by Mentor: Kalpesh Patel.",
-      "longDescription": "Invest-O-Mania is an exclusive Stock Market Workshop featuring the Master Trader Program (#BhavBhagvanChe) led by Mentor: Kalpesh Patel. This session is designed to provide students with a strong foundation in the world of investing. It will cover essential financial concepts, including investment strategies, risk management, stock screeners, and market indicators. The workshop aims to help students understand market trends and make informed investment decisions. Whether you're a beginner or have prior knowledge, this event will enhance your financial literacy. Plus, exciting giveaways and exclusive rewards await all participants!",
-      "category": "Take-A-Break",
-      "meetingType": "hybrid",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Open to all university students interested in finance & investments",
-        "Rule 2: Prior registration is mandatory",
-        "Rule 3: No prior stock market knowledge is required",
-        "Rule 4: Maintain decorum and avoid disruptions during the session"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Enjoy the event"
-      ],
-      "relatedEvents": [
-        {
-          "id": "aumazing",
-          "title": "AUmazing Talent",
-          "category": "Take-A-Break",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "escape-room",
-          "title": "Override Protocol: Humanity's Last Stand",
-          "category": "Take-A-Break",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "shaft-tank",
-      "title": "Shaft Tank",
-      "date": "24th March",
-      "time": "10:00 AM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeCGtjC2J3N_2ULrQ60oqjSdIXFs0NGOQ7K5doOCYSWBhA2mQ/viewform?usp=sharing",
-      "description": "A competition to encourage students to showcase their creativity, innovation, and confidence by pitching their ideas in front of a panel of judges.",
-      "longDescription": "Shaft Tank is designed to bring out the creativity and innovation of students by allowing them to pitch unique ideas or products. Teams of up to 3 members will present their ideas, which can be in the form of an abstract, CAD model, prototype, or a finished product. The event aims to foster confidence and provide a platform for students to showcase their skills. Judges will evaluate pitches based on idea originality, delivery, and potential investment appeal.",
-      "category": "Mech Events",
-      "meetingType": "offline",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Team cannot exceed 3 members",
-        "Rule 2: All soft copies related to the pitch must be submitted 48 hours before the event",
-        "Rule 3: The idea/product must be something novel",
-        "Rule 4: Any reference taken from any place must be mentioned. Plagiarism is strictly prohibited",
-        "Rule 5: Pitch cannot exceed 7 minutes",
-        "Rule 6: There will be a 10% deduction of investment if the pitch exceeds the time limit",
-        "Rule 7: Teams must reach the venue at least 30 minutes before the event. Failing to do so will result in disqualification",
-        "Rule 8: Decisions taken by the event heads and panel members will be final"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Enjoy the event"
-      ],
-      "relatedEvents": [
-        {
-          "id": "rc-car-race",
-          "title": "RC Car Race",
-          "category": "Mech Events",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "bridge-blitz",
-          "title": "Bridge Blitz",
-          "category": "Mech Events",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "rc-car-race",
-      "title": "RC Car Race",
-      "date": "25th March",
-      "time": "11:30 AM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScvaNSweK5qNHR78CM053jpJKfHmNLiqPCe7V2WfDfkKBY6wA/viewform?usp=sharing",
-      "description": "An RC car racing event where teams build and race their own self-fabricated cars on a challenging track with obstacles, aiming for speed, precision, and innovation.",
-      "longDescription": "RC Car Race challenges teams to design and build their own remote-controlled cars for a thrilling competition. Participants must fabricate their cars and navigate a track filled with obstacles like gravel, dirt, ramps, and sharp turns. With strict rules on construction and fair play, the event emphasizes creativity, technical skills, and racing strategy. Teams must fine-tune their vehicles and race against opponents in multiple rounds, culminating in an exciting final lap battle to determine the champion.",
-      "category": "Mech Events",
-      "meetingType": "offline",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Teams must consist of 2-5 members from the same university/college",
-        "Rule 2: Participants must be pursuing undergraduate majors",
-        "Rule 3: Teams must report 45 minutes prior to the first round",
-        "Rule 4: Teams must submit a video of the car working, along with microcontroller code and car specifications",
-        "Rule 5: Only one driver is allowed to control the car at the event",
-        "Rule 6: No team member (including the driver) is allowed inside the yellow line zone enclosing the track",
-        "Rule 7: If a car goes off track, it will be disqualified from the round and event",
-        "Rule 8: A 2-second penalty will be given for minor car collisions based on judge’s decision",
-        "Rule 9: A 10-second penalty applies for deliberate bumps causing another car to go off course",
-        "Rule 10: Partial off-track violations without collision incur a 2-second penalty"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Enjoy the event"
-      ],
-      "relatedEvents": [
-        {
-          "id": "shaft-tank",
-          "title": "Shaft Tank",
-          "category": "Mech Events",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "bridge-blitz",
-          "title": "Bridge Blitz",
-          "category": "Mech Events",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "valorant",
-      "title": "Valorant",
-      "date": "23rd March",
-      "time": "4:00 PM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfej_hcYvQ1mVzQV_X9MlkyRLbhIh3GILobpm9H86_l9qW34g/viewform?usp=sharing",
-      "description": "Compete in the tactical shooter game Valorant, showcasing your skills in strategy and teamwork.",
-      "longDescription": "Join the Valorant tournament to test your skills in this fast-paced, tactical shooter game. Teams will compete in intense matches, requiring coordination, strategy, and precision. Whether you're a seasoned player or new to the game, this event offers a thrilling competitive experience with exciting prizes for the winners.",
-      "category": "Esports",
-      "meetingType": "online",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Teams must consist of 5 players",
-        "Rule 2: Matches will follow official Valorant competitive rules",
-        "Rule 3: No cheating or use of unauthorized software allowed",
-        "Rule 4: Participants must join the designated Discord server for communication",
-        "Rule 5: Matches will be streamed live"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Join the Discord server",
-        "Participate in the tournament"
-      ],
-      "relatedEvents": [
-        {
-          "id": "bgmi",
-          "title": "BGMI",
-          "category": "Esports",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "fifa",
-          "title": "FIFA",
-          "category": "Esports",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "bgmi",
-      "title": "BGMI",
-      "date": "24th March",
-      "time": "5:00 PM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSen5RaDytHpd_iSQIIIyRY1DcZyKM5cYKx9LWzRITieJR29rw/viewform?usp=sharing",
-      "description": "Battle it out in the mobile battle royale game BGMI, where strategy and survival skills are key to victory.",
-      "longDescription": "Participate in the BGMI tournament, a battle royale experience where squads compete to be the last team standing. Test your survival skills, teamwork, and strategic thinking in intense matches. This event is perfect for mobile gaming enthusiasts looking for a competitive challenge, with exciting rewards for top performers.",
-      "category": "Esports",
-      "meetingType": "online",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Teams must consist of 4 players",
-        "Rule 2: Matches will follow official BGMI tournament rules",
-        "Rule 3: No cheating or use of unauthorized software allowed",
-        "Rule 4: Participants must join the designated Discord server for communication",
-        "Rule 5: Matches will be streamed live"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Join the Discord server",
-        "Participate in the tournament"
-      ],
-      "relatedEvents": [
-        {
-          "id": "valorant",
-          "title": "Valorant",
-          "category": "Esports",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "fifa",
-          "title": "FIFA",
-          "category": "Esports",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "fifa",
-      "title": "FIFA",
-      "date": "25th March",
-      "time": "6:00 PM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSctbUzN6nxrKCJVw6RKBFKOkotlw5xya_sPuiSPUnS7y41HWQ/viewform?usp=sharing",
-      "description": "Compete in the popular football simulation game FIFA, showcasing your skills in virtual football.",
-      "longDescription": "Join the FIFA tournament to compete in exciting virtual football matches. Test your skills in one-on-one matches, showcasing your ability to score goals and defend against opponents. This event is perfect for football enthusiasts and gamers alike, with thrilling competition and prizes for the top players.",
-      "category": "Esports",
-      "meetingType": "online",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Matches will follow official FIFA tournament rules",
-        "Rule 2: No cheating or use of unauthorized software allowed",
-        "Rule 3: Participants must join the designated Discord server for communication",
-        "Rule 4: Matches will be streamed live",
-        "Rule 5: Participants must use the latest version of the game"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Join the Discord server",
-        "Participate in the tournament"
-      ],
-      "relatedEvents": [
-        {
-          "id": "valorant",
-          "title": "Valorant",
-          "category": "Esports",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "bgmi",
-          "title": "BGMI",
-          "category": "Esports",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "bridge-blitz",
-      "title": "Bridge Blitz",
-      "date": "23rd March",
-      "time": "10:30 AM",
-      "registrationLink": "",
-      "description": "A fast-paced bridge-building competition where teams design and test their structures under time constraints.",
-      "longDescription": "Bridge Blitz challenges teams to design and build bridges using limited materials within a strict time limit. Test your engineering skills, creativity, and teamwork as you construct a bridge that can withstand weight and stress. This event is perfect for aspiring engineers looking for a hands-on challenge, with prizes for the strongest and most innovative designs.",
-      "category": "Mech Events",
-      "meetingType": "offline",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Teams must consist of 2-4 members",
-        "Rule 2: Materials will be provided at the event",
-        "Rule 3: Bridge must meet specified dimensions",
-        "Rule 4: No external tools or materials allowed",
-        "Rule 5: Judges will test bridges for weight-bearing capacity",
-        "Rule 6: Time limit for construction is 2 hours"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Enjoy the event"
-      ],
-      "relatedEvents": [
-        {
-          "id": "shaft-tank",
-          "title": "Shaft Tank",
-          "category": "Mech Events",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "rc-car-race",
-          "title": "RC Car Race",
-          "category": "Mech Events",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "chy-workshop",
-      "title": "Chy Workshop",
-      "date": "24th March",
-      "time": "1:30 PM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfEcRNCX3MEnoH9iTjOJBxUHJ5wR1p_MBhV-zWf3vbXKaNL_g/viewform?usp=sharing",
-      "description": "A hands-on workshop on chemical engineering concepts, perfect for beginners and enthusiasts.",
-      "longDescription": "Join the Chy Workshop to explore fundamental concepts of chemical engineering through interactive sessions and experiments. Learn from experts in the field and gain practical knowledge in areas such as chemical reactions, process design, and safety protocols. This workshop is ideal for students interested in chemical engineering, with opportunities for networking and skill development.",
-      "category": "Chem Events",
-      "meetingType": "offline",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Open to all students interested in chemical engineering",
-        "Rule 2: Prior registration is mandatory",
-        "Rule 3: Participants must follow safety protocols",
-        "Rule 4: Attendance is mandatory for certification",
-        "Rule 5: Materials will be provided at the workshop"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Pay the workshop fee",
-        "Attend the workshop"
-      ],
-      "relatedEvents": [
-        {
-          "id": "chy-fragrance",
-          "title": "Chy Fragrance",
-          "category": "Chem Events",
-          "image": "/Images/sample.png"
-        }
-      ],
-      "labels": [
-        { "id": "chemevents", "label": "Chem Events" }
-      ]
-    },
-    {
-      "id": "chy-fragrance",
-      "title": "Chy Fragrance",
-      "date": "25th March",
-      "time": "2:30 PM",
-      "registrationLink": "",
-      "description": "A unique event where participants create their own fragrances using chemical engineering principles.",
-      "longDescription": "Chy Fragrance is a creative and educational event where participants learn to blend fragrances using chemical engineering techniques. Explore the science behind perfumery, experiment with different scents, and create your own signature fragrance. This event combines creativity with technical knowledge, offering a unique experience for chemistry enthusiasts.",
-      "category": "Chem Events",
-      "meetingType": "offline",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Open to all students interested in chemistry and perfumery",
-        "Rule 2: Prior registration is mandatory",
-        "Rule 3: Participants must follow safety protocols",
-        "Rule 4: Materials will be provided at the event",
-        "Rule 5: Each participant will create one fragrance"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Pay the event fee",
-        "Attend the event"
-      ],
-      "relatedEvents": [
-        {
-          "id": "chy-workshop",
-          "title": "Chy Workshop",
-          "category": "Chem Events",
-          "image": "/Images/sample.png"
-        }
-      ]
-    },
-    {
-      "id": "electric-race",
-      "title": "Electric Race",
-      "date": "23rd March",
-      "time": "2:00 PM",
-      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScGe2gekqvbWU3rjwvHyfK7x5nt5cOIXr4aGMioIPxfe-KvuQ/viewform?usp=sharing",
-      "description": "An event to test your electrical and logical skills to advance through a series of increasingly difficult challenges.",
-      "longDescription": "You and your teammates are in search of a treasure long thought to be a myth. Recently, you came across an opportunity that may lead you to the treasure you seek. But your team is not the only one. Put your electrical and logical skills to the test in this melting pot of treasure hunt, code-breaking, and observation as you race against other teams to be the first to reach the lost treasure.",
-      "category": "Electrical Events",
-      "meetingType": "offline",
-      "registrationPeriod": "1st Feb - 15th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
-      "rules": [
-        "Rule 1: Access to internet is not allowed",
-        "Rule 2: Access to a laptop and smartphones is allowed, without internet access",
-        "Rule 3: Only upon the arrival of the entire team can the team start solving the next puzzle",
-        "Rule 4: Contact with other teams or people not a part of the event, which in any form may compromise the integrity of the puzzles, is not allowed",
-        "Rule 5: The team is allowed to click photos of any resource they may consider useful during the duration of the event",
-        "Rule 6: A volunteer will be present with each team to ensure the above rules are followed"
-      ],
-      "howToApply": [
-        "Fill the registration form",
-        "Enjoy the event"
-      ],
-      "relatedEvents": [
-        {
-          "id": "optimized-minds",
-          "title": "Optimized Minds - Machine Learning",
-          "category": "CSE Events",
-          "image": "/Images/sample.png"
-        },
-        {
-          "id": "hackathon",
-          "title": "Ingenious Hackathon 6.0",
-          "category": "Marathon",
-          "image": "/Images/sample.png"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Optimized_Mind_bbdium.jpg"
         }
       ]
     },
@@ -603,10 +123,8 @@
       "description": "The Ingenious Hackathon, a highlight of the annual Ingenium tech fest, is a hub of innovation and coding excellence. Aspiring programmers tackle real-world challenges under time constraints, testing their problem-solving skills, teamwork, and adaptability.",
       "longDescription": "Welcome to Ingenious Hackathon 6.0, a dynamic 36-hour innovation sprint where creativity meets technology! Whether you're a beginner taking your first steps into coding or a seasoned developer pushing the boundaries of what's possible, this is your space to build, learn, and collaborate. At Ingenious Hackathon 6.0, we believe in the power of ideas. Over the course of the event, you'll form teams, brainstorm solutions, and develop impactful projects around cutting-edge themes like AI/ML, Web3, FinTech, Sustainability, IoT, Open Innovation, and much more. We’re bringing together developers, designers, product thinkers, and creators to solve real-world challenges, build something meaningful, and connect with an inspiring tech community. Why Join? ✨ Turn your ideas into working prototypes. 🤝 Network with industry experts, mentors, and fellow innovators. 🏆 Win exciting prizes and showcase your work to top judges. 📚 Learn new skills through workshops and mentorship. 🚀 Build something that could make a difference. No matter your background or experience level, this hackathon is for YOU. So grab your laptop, fuel your creativity, and get ready to build the future.",
       "category": "Marathon",
-      "meetingType": "hybrid",
-      "registrationPeriod": "5th Feb - 20th Feb",
-      "image": "/Images/sample.png",
-      "innerImage": "/Images/500w.jpg",
+      "contact": "Wrong number(9876543210)",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg",
       "rules": [
         "Rule 1: Only upon the arrival of the entire team can the team start solving the next puzzle",
         "Rule 2: Contact with other teams or people not a part of the event, which in any form may compromise the integrity of the puzzles, is not allowed",
@@ -623,13 +141,13 @@
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "/Images/sample.png"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Optimized_Mind_bbdium.jpg"
         },
         {
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "/Images/sample.png"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Jab_We_Code_tjqxba.jpg"
         }
       ]
     }
