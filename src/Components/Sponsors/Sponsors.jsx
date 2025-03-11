@@ -43,7 +43,7 @@ export const Sponsors = () => {
       gradient: "from-slate-200 to-slate-400",
       bgGradient: "from-slate-300/10 via-transparent to-slate-300/10",
       borderColor: "border-slate-500/20",
-      partnerText: "Platinum Partner",
+      partnerText: "Education Partner",
       textColor: "text-slate-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
       cardWidth: "w-full sm:w-[340px]",
@@ -61,7 +61,7 @@ export const Sponsors = () => {
       cardHeight: "h-[200px] sm:h-[220px]",
     },
     fashion: {
-      titleText: "Fashion Sponsors",
+      titleText: "Fashion Sponsor",
       gradient: "from-pink-400 to-pink-600",
       bgGradient: "from-pink-500/10 via-transparent to-pink-500/10",
       borderColor: "border-pink-500/20",
@@ -155,7 +155,7 @@ export const Sponsors = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 font-primaryFont`}
+                    className={`text-4xl sm:text-6xl lg:text-6xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 font-primaryFont`}
                   >
                     {config.titleText}
                   </motion.h1>

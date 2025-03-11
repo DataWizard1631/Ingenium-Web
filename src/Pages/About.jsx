@@ -30,8 +30,8 @@ function About() {
       {/* Main Content */}
       <div className="relative z-10">
         {/* Ingenium Logo */}
-        <div className="w-full flex justify-center mt-20" data-aos="fade-down">
-          <div className="logo-container w-32 pt-4 sm:w-40 md:w-48 lg:w-56 xl:w-64">
+        <div className="w-full flex justify-center mt-12 md:mt-20" data-aos="fade-down">
+          <div className="logo-container w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8">
             <img src="/Logos/Ing_White_2025.png" alt="Ingenium Logo" className="w-full h-auto" />
             <div className="logo-glitch"></div>
           </div>
@@ -39,7 +39,7 @@ function About() {
 
         {/* Meet Our Team */}
         <div className="w-full mt-0 md:mt-12">
-          <div className="section-title mb-12" data-aos="zoom-in">
+          <div className="section-title mb-0 md:mb-12" data-aos="zoom-in">
             <div className="title-line"></div>
             <p className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl py-8 font-primaryFont text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text text-center cyber-text">
               MEET OUR TEAM
