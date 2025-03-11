@@ -81,8 +81,8 @@ export const sponsorsData = {
             "logo": "/sponsorLogo/ajay-modi.png"
         },
         {
-            "name": "Gold Palace",
-            "title": "Gold Palace (Jewellery Partner)",
+            "name": "The 916 Gold Palace",
+            "title": "The 916 Gold Palace (Jewellery Partner)",
             "href": "#",
             "logo": "/sponsorLogo/gold-palace.png"
         }

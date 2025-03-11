@@ -46,7 +46,7 @@ export const TitleSponserCard = ({
             style={{
               transform: transform,
             }}
-            className="w-full absolute left-1/2 top-1/2 flex flex-col sm:flex-row rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-gradient-to-br from-zinc-900 to-zinc-800 group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+            className="w-full sm:w-[80%] absolute left-1/2 top-1/2 flex flex-col sm:flex-row rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-gradient-to-br from-zinc-900 to-zinc-800 group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
           >
             {/* Image Section with improved fit */}
             <div className="w-full sm:w-1/2  h-auto bg-gradient-to-br from-black to-zinc-900 flex items-center justify-center p-8">
@@ -59,7 +59,7 @@ export const TitleSponserCard = ({
             <div className="w-full sm:w-1/2 p-6 sm:p-10 bg-gradient-to-l from-black/90 via-black/70 to-transparent backdrop-blur-sm flex flex-col justify-between">
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-2xl sm:text-4xl xl:text-5xl font-bold text-white mb-3 font-primaryFont leading-tight">
+                  <h2 className="text-2xl sm:text-4xl xl:text-3xl font-bold text-white mb-3 font-primaryFont leading-tight">
                     {name || "Pyramid Overseas Education Consultants"}
                   </h2>
                   <div className="h-1 w-20 bg-gradient-to-r from-rose-500 to-pink-600 rounded-full mb-4"></div>
