@@ -82,8 +82,8 @@ function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-6 sm:pt-8">
-          <p className="font-['OfficialBook'] text-gray-400 text-sm sm:text-xl text-center">
-            This website is developed with ‪‪❤︎‬ by <a href="https://www.linkedin.com/in/tech-ingenium/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Vishv Boda</a>,  <a href="https://www.linkedin.com/in/tech-ingenium/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Deep Patel</a>, <a href="https://www.linkedin.com/in/tech-ingenium/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Subrat Jain</a>
+          <p className="font-['ModernAge'] text-gray-400 text-sm sm:text-lg text-center">
+            Developed by <a href="https://www.linkedin.com/in/vishvboda/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Vishv Boda</a>,  <a href="https://www.linkedin.com/in/deeppateldw1611/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Deep Patel</a>, <a href="https://www.linkedin.com/in/subrat-jain-70078b267/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Subrat Jain</a>
           </p>
         </div>
       </div>
