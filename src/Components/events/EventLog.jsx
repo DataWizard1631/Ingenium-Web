@@ -8,11 +8,17 @@ const categories = [
   { id: "all", label: "All" },
   { id: "CSE Events", label: "CSE Events" },
   { id: "Marathon", label: "Marathon" },
-  // { id: "esports", label: "E-sports" },
-  // { id: "csevents", label: "CSE-Events" },
-  // { id: "mechevents", label: "Mech Event" },
-  // { id: "eeeevents", label: "EEE Event" },
-  // { id: "chemevents", label: "Chem Events" },
+  { id: "esports", label: "E-sports" },
+  { id: "mechevents", label: "Mech Event" },
+  { id: "eeeevents", label: "EEE Event" },
+  { id: "chemevents", label: "Chem Events" },
+];
+
+const comingSoonCategories = [
+  "esports",
+  "mechevents",
+  "eeeevents",
+  "chemevents"
 ];
 
 function CardComp({ event }) {
@@ -113,6 +119,61 @@ export const EventLog = () => {
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     setVisibleEvents(4);
+  };
+
+  const renderContent = () => {
+    if (comingSoonCategories.includes(selectedCategory)) {
+      return (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-full flex flex-col items-center justify-center min-h-[50vh] px-4"
+        >
+          <motion.div
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="text-center space-y-6"
+          >
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-primaryFont text-white">
+              Announcement Coming Soon!
+            </h3>
+            <div className="h-1 w-20 sm:w-32 mx-auto bg-gradient-to-r from-transparent via-colPink to-transparent" />
+            <p className="text-lg sm:text-xl text-gray-300 font-secFont1 max-w-2xl">
+              Stay tuned for exciting events in this category. We're preparing something special for you!
+            </p>
+          </motion.div>
+        </motion.div>
+      );
+    }
+
+    return (
+      <motion.div 
+        layout
+        className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full items-center"
+      >
+        <AnimatePresence mode="wait">
+          {currentEvents?.map((event, index) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ 
+                duration: 0.5,
+                delay: index * 0.2,
+                ease: [0.4, 0, 0.2, 1]
+              }}
+              layout
+              className="w-full flex justify-center px-4 sm:px-6 md:px-8"
+            >
+              <CardComp event={event} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+    );
   };
 
   return (
@@ -231,34 +292,11 @@ export const EventLog = () => {
           )}
         </div>
 
-        {/* Event Cards Grid */}
-        <motion.div 
-          layout
-          className="flex flex-col gap-6 sm:gap-8 md:gap-10 w-full items-center"
-        >
-          <AnimatePresence mode="wait">
-            {currentEvents?.map((event, index) => (
-              <motion.div
-                key={event.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -50 }}
-                transition={{ 
-                  duration: 0.5,
-                  delay: index * 0.2,
-                  ease: [0.4, 0, 0.2, 1]
-                }}
-                layout
-                className="w-full flex justify-center px-4 sm:px-6 md:px-8"
-              >
-                <CardComp event={event} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* Content Section */}
+        {renderContent()}
 
         {/* Load More Button */}
-        {hasMoreEvents && (
+        {hasMoreEvents && !comingSoonCategories.includes(selectedCategory) && (
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
