@@ -343,7 +343,7 @@ function About() {
             </h2>
             <div className="w-full flex justify-center">
               <div className="max-w-[1200px] w-full">
-                <div className="flex justify-center gap-8">
+                <div className="flex flex-wrap md:flex-nowrap justify-center gap-8">
                   {teamMembers["Web Devs"].map((member, i) => (
                     <div key={i} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
                       <AboutCard 

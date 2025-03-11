@@ -74,7 +74,7 @@ function Footer() {
               </li>
               <li className="flex items-center gap-3 text-md sm:text-xl">
                 <HiMail className="text-[#FF1F79] text-xl flex-shrink-0" />
-                <span>ingenium@ahduni.edu.in</span>
+                <a href="mailto:ingenium@ahduni.edu.in" className="hover:underline transition-colors duration-200">ingenium@ahduni.edu.in</a>
               </li>
             </ul>
           </div>
@@ -83,7 +83,7 @@ function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-6 sm:pt-8">
           <p className="font-['ModernAge'] text-gray-400 text-sm sm:text-lg text-center">
-            Developed by <a href="https://www.linkedin.com/in/vishvboda/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Vishv Boda</a>,  <a href="https://www.linkedin.com/in/deeppateldw1611/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Deep Patel</a>, <a href="https://www.linkedin.com/in/subrat-jain-70078b267/" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Subrat Jain</a>
+            Developed by <a href="https://www.linkedin.com/in/vishvboda/" target="_blank" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Vishv Boda</a>,  <a href="https://www.linkedin.com/in/deeppateldw1611/" target="_blank" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Deep Patel</a>, <a href="https://www.linkedin.com/in/subrat-jain-70078b267/" target="_blank" className="text-[#FF1F79] hover:text-white transition-colors duration-200">Subrat Jain</a>
           </p>
         </div>
       </div>

@@ -26,6 +26,8 @@ export const Sponsors = () => {
       partnerText: "Title Sponsor",
       textColor: "text-rose-400",
       isTitle: true,
+      cardWidth: "w-[280px] sm:w-[360px]",
+      cardHeight: "h-[200px] sm:h-[260px]",
     },
     presenting: {
       titleText: "Presenting Sponsors",
@@ -35,8 +37,8 @@ export const Sponsors = () => {
       partnerText: "Presenting Partner",
       textColor: "text-violet-400",
       cols: "md:grid-cols-2",
-      cardWidth: "w-full sm:w-[360px]",
-      cardHeight: "h-[240px] sm:h-[260px]",
+      cardWidth: "w-[280px] sm:w-[360px]",
+      cardHeight: "h-[200px] sm:h-[260px]",
     },
     platinum: {
       titleText: "Platinum Sponsors",
@@ -46,8 +48,8 @@ export const Sponsors = () => {
       partnerText: "Education Partner",
       textColor: "text-slate-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-full sm:w-[340px]",
-      cardHeight: "h-[220px] sm:h-[240px]",
+      cardWidth: "w-[260px] sm:w-[340px]",
+      cardHeight: "h-[180px] sm:h-[240px]",
     },
     gold: {
       titleText: "Gold Sponsors",
@@ -57,8 +59,8 @@ export const Sponsors = () => {
       partnerText: "Gold Partner",
       textColor: "text-amber-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-full sm:w-[320px]",
-      cardHeight: "h-[200px] sm:h-[220px]",
+      cardWidth: "w-[240px] sm:w-[320px]",
+      cardHeight: "h-[160px] sm:h-[220px]",
     },
     fashion: {
       titleText: "Fashion Sponsor",
@@ -68,7 +70,7 @@ export const Sponsors = () => {
       partnerText: "Fashion Partner",
       textColor: "text-pink-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-full sm:w-[320px]",
+      cardWidth: "w-[280px] sm:w-[320px]",
       cardHeight: "h-[200px] sm:h-[220px]",
     },
     automobile: {
@@ -79,7 +81,7 @@ export const Sponsors = () => {
       partnerText: "Automobile Partner",
       textColor: "text-red-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-full sm:w-[320px]",
+      cardWidth: "w-[280px] sm:w-[320px]",
       cardHeight: "h-[200px] sm:h-[220px]",
     },
     supporting: {
@@ -90,7 +92,7 @@ export const Sponsors = () => {
       partnerText: "Supporting Partner",
       textColor: "text-teal-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
-      cardWidth: "w-full sm:w-[320px]",
+      cardWidth: "w-[280px] sm:w-[320px]",
       cardHeight: "h-[200px] sm:h-[220px]",
     },
   };
@@ -210,14 +212,15 @@ export const Sponsors = () => {
                   >
                     <div
                       className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm bg-gradient-to-br from-zinc-900/90 to-zinc-900/50 relative overflow-hidden group
-                        sm:transform-gpu sm:transition-all sm:duration-500 sm:hover:rotate-x-12 sm:hover:rotate-y-12 sm:hover:scale-105`}
+                        transform-gpu transition-all duration-500 hover:rotate-x-12 hover:rotate-y-12 hover:scale-105`}
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/5 group-hover:from-black/30 group-hover:to-black/10 transition-all duration-300"></div>
-                      <div className="absolute inset-0 flex items-center justify-center p-6">
+                      <div className="absolute inset-0 flex items-center justify-center p-4">
                         <img
                           src={sponsor.logo}
                           alt={sponsor.title}
-                          className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain transition-transform duration-500"
+                          className="w-[80%] h-[80%] object-contain transition-transform duration-500"
+                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -363,14 +366,15 @@ export const Sponsors = () => {
             >
               <div
                 className={`${config.cardWidth} ${config.cardHeight} rounded-xl flex items-center justify-center border ${config.borderColor} backdrop-blur-sm bg-gradient-to-br from-zinc-900/90 to-zinc-900/50 relative overflow-hidden group
-                  sm:transform-gpu sm:transition-all sm:duration-500 sm:hover:rotate-x-12 sm:hover:rotate-y-12 sm:hover:scale-105`}
+                  transform-gpu transition-all duration-500 hover:rotate-x-12 hover:rotate-y-12 hover:scale-105`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/5 group-hover:from-black/30 group-hover:to-black/10 transition-all duration-300"></div>
-                <div className="absolute inset-0 flex items-center justify-center p-6">
+                <div className="absolute inset-0 flex items-center justify-center p-4">
                   <img
                     src={sponsor.logo}
                     alt={sponsor.title}
-                    className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain transition-transform duration-500"
+                    className="w-[80%] h-[80%] object-contain transition-transform duration-500"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -440,11 +444,13 @@ export const Sponsors = () => {
 
   return (
     <div className="min-h-screen">
-      <style jsx global>{`
-        .perspective-container {
-          perspective: 1000px;
-        }
-      `}</style>
+      <style>
+        {`
+          .perspective-container {
+            perspective: 1000px;
+          }
+        `}
+      </style>
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"

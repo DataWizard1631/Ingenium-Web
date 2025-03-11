@@ -72,7 +72,7 @@ const Contact = () => {
         {/* Contact Form Section */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Form */}
-          <div className="bg-black/30 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-colPink/20">
+          <div className="bg-black/30 backdrop-blur-sm p-6 sm:px-8 md:pt-0 rounded-xl border border-colPink/20">
             <h2 className="font-primaryFont text-3xl sm:text-4xl text-white mb-6 text-center">Get in Touch</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
