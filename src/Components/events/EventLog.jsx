@@ -127,7 +127,7 @@ export const EventLog = () => {
           className="w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8 relative"
         >
           <div className="absolute inset-0 blur-md" />
-          <CloudinaryImage
+          <img
             src="/Logos/Ing_White_2025.png"
             alt="Ingenium Logo"
             className="w-full h-auto relative z-10"
@@ -144,7 +144,7 @@ export const EventLog = () => {
           <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white tracking-[0.17em]">
             EVENT LOG
           </h1>
-          <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent animate-pulse" />
+          <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
         </motion.div>
 
         {/* Description with Animation */}

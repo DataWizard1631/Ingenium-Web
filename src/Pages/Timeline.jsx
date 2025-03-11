@@ -126,7 +126,7 @@ function Timeline() {
               mb-3 xs:mb-4 sm:mb-6 lg:mb-8 tracking-[0.17em] font-semibold text-transparent bg-clip-text bg-white">
               TIMELINE
             </h1>
-            <div className="absolute bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent animate-pulse" />
+            <div className="absolute bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
           </div>
         </motion.div>
       </div>

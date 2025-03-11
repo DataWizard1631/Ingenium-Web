@@ -3,6 +3,7 @@ import { SponserCard } from "./SponserCard";
 import { TitleSponserCard } from "./TtileSponserCard";
 import { sponsorsData } from "../../data/sponsorsData";
 import { SponsorCategorySelector } from "./SponsorCategorySelector";
+import { motion } from 'framer-motion';
 
 export const Sponsors = () => {
   const {
@@ -144,16 +145,27 @@ export const Sponsors = () => {
               className="w-full flex flex-row justify-center items-center"
             >
               <div className="w-full  flex flex-col">
-                <div className="w-full mb-8 sm:mb-16 text-center">
-                  <h1
-                    className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 transition-transform duration-300 font-primaryFont`}
+                <motion.div 
+                  className="w-full mb-8 sm:mb-16 text-center"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.h1
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 font-primaryFont`}
                   >
                     {config.titleText}
-                  </h1>
-                  <div
+                  </motion.h1>
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
                     className={`h-1 w-20 sm:w-40 bg-gradient-to-r ${config.gradient} mx-auto`}
-                  ></div>
-                </div>
+                  />
+                </motion.div>
                 <div className="w-full transform  transition-transform duration-500">
                   <TitleSponserCard
                     title={titleSponsor.title}
@@ -227,16 +239,31 @@ export const Sponsors = () => {
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${config.bgGradient} blur-3xl -z-10`}
               ></div>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center mb-10 sm:mb-20 font-primaryFont">
-                <span
-                  className={`bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text`}
+              <motion.div 
+                className="text-center mb-10 sm:mb-20"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <motion.h2
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-3xl sm:text-5xl lg:text-6xl font-bold font-primaryFont"
                 >
-                  {config.titleText}
-                </span>
-                <div
+                  <span
+                    className={`bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text`}
+                  >
+                    {config.titleText}
+                  </span>
+                </motion.h2>
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
                   className={`h-1 w-20 sm:w-40 bg-gradient-to-r ${config.gradient} mx-auto mt-4`}
-                ></div>
-              </h2>
+                />
+              </motion.div>
               <div
                 className={`grid ${getGridConfig(sponsorCards.length)} gap-10 sm:gap-16 px-4`}
               >
@@ -260,16 +287,27 @@ export const Sponsors = () => {
       return (
         <div className="w-full flex flex-row justify-center items-center">
           <div className="w-full sm:w-[90%] lg:w-[80%] flex flex-col">
-            <div className="w-full mb-8 sm:mb-16 text-center">
-              <h1
-                className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 hover:scale-105 transition-transform duration-300 font-primaryFont`}
+            <motion.div 
+              className="w-full mb-8 sm:mb-16 text-center"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <motion.h1
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className={`text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text mb-4 font-primaryFont`}
               >
                 {config.titleText}
-              </h1>
-              <div
+              </motion.h1>
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 className={`h-1 w-20 sm:w-40 bg-gradient-to-r ${config.gradient} mx-auto`}
-              ></div>
-            </div>
+              />
+            </motion.div>
             <div className="w-full transform  transition-transform duration-500">
               <TitleSponserCard
                 title={titleSponsor.title}
@@ -342,16 +380,31 @@ export const Sponsors = () => {
         <div
           className={`absolute inset-0 bg-gradient-to-r ${config.bgGradient} blur-3xl -z-10`}
         ></div>
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-center mb-10 sm:mb-20 font-primaryFont">
-          <span
-            className={`bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text`}
+        <motion.div 
+          className="text-center mb-10 sm:mb-20"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold font-primaryFont"
           >
-            {config.titleText}
-          </span>
-          <div
+            <span
+              className={`bg-gradient-to-r ${config.gradient} text-transparent bg-clip-text`}
+            >
+              {config.titleText}
+            </span>
+          </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className={`h-1 w-20 sm:w-40 bg-gradient-to-r ${config.gradient} mx-auto mt-4`}
-          ></div>
-        </h2>
+          />
+        </motion.div>
         <div
           className={`grid ${getGridConfig(sponsors.length)} gap-10 sm:gap-16 px-4`}
         >
@@ -362,8 +415,29 @@ export const Sponsors = () => {
   };
 
   return (
-    <div className="min-h-screen py-10 sm:py-20">
-      <div className="space-y-20 sm:space-y-40 container mx-auto px-4">
+    <div className="min-h-screen">
+      <div className="container mx-auto px-4">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative inline-block"
+          >
+            <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white tracking-[0.17em]">
+              SPONSORS
+            </h1>
+            <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+
+          </motion.div>
+         
+        </motion.div>
+
         <SponsorCategorySelector
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
