@@ -204,7 +204,7 @@ export const Sponsors = () => {
                         <img
                           src={sponsor.logo}
                           alt={sponsor.title}
-                          className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain transform group-hover:scale-105 transition-transform duration-500"
+                          className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain  transition-transform duration-500"
                         />
                       </div>
                     </div>
@@ -319,7 +319,7 @@ export const Sponsors = () => {
                   <img
                     src={sponsor.logo}
                     alt={sponsor.title}
-                    className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-auto h-auto max-w-[85%] max-h-[85%] object-contain  transition-transform duration-200"
                   />
                 </div>
               </div>

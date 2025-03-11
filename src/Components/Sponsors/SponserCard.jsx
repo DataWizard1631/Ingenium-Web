@@ -28,13 +28,13 @@ export const SponserCard = ({
       >
         {/* Card Container */}
         <motion.div
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
           className={cn(
             "relative rounded-2xl overflow-hidden",
             "bg-gradient-to-br from-zinc-900 to-zinc-800",
             "border border-white/10 shadow-lg group-hover:shadow-xl",
-            "transform transition-all duration-500"
+            "transform transition-all duration-300"
           )}
         >
           {/* Gradient Overlay */}
