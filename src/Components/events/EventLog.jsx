@@ -5,9 +5,9 @@ import eventsData from '../../data/events.json';
 
 const categories = [
   { id: 'all', label: 'All' },
-  { id: 'esports', label: 'e-sports' },
+  { id: 'esports', label: 'E-sports' },
   { id: 'csevents', label: 'CS Events' },
-  { id: 'mechevnets', label: 'Mech Event' },
+  { id: 'mechevents', label: 'Mech Event' },
   { id: 'eeeevents', label: 'EEE Event' },
   { id: 'chemevents', label: 'Chem Events' },
   { id: 'concert', label: 'Concert' },
