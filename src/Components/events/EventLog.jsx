@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import eventsData from "../../data/events.json";
+import CloudinaryImage from "../../tools/CloudinaryImage";
 
 const categories = [
   { id: "all", label: "All" },
-  { id: "esports", label: "E-sports" },
-  { id: "csevents", label: "CS Events" },
-  { id: "mechevents", label: "Mech Event" },
-  { id: "eeeevents", label: "EEE Event" },
-  { id: "chemevents", label: "Chem Events" },
-  { id: "concert", label: "Concert" },
+  { id: "CSE Events", label: "CSE Events" },
+  { id: "Marathon", label: "Marathon" },
+  // { id: "esports", label: "E-sports" },
+  // { id: "csevents", label: "CSE-Events" },
+  // { id: "mechevents", label: "Mech Event" },
+  // { id: "eeeevents", label: "EEE Event" },
+  // { id: "chemevents", label: "Chem Events" },
 ];
 
 function CardComp({ event }) {
@@ -20,7 +22,7 @@ function CardComp({ event }) {
     <div className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[300px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg">
       {/* Image */}
       <div className="w-full sm:w-fit h-full sm:h-full">
-        <img
+        <CloudinaryImage
           src={event.image}
           alt={event.title}
           className="w-full h-full object-cover"
@@ -32,7 +34,9 @@ function CardComp({ event }) {
         <div className="font-primaryFont text-xl sm:text-2xl md:text-3xl mb-4">
           {event.title}
         </div>
-        <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4 line-clamp-5">
+        {/* display date time here */}
+
+        <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4 line-clamp-3">
           {event.longDescription}
         </div>
         <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4">
@@ -40,9 +44,13 @@ function CardComp({ event }) {
             <span className="font-semibold">Date: </span>
             <span>{event.date}</span>
           </p>
-          <p>
+          <p className="mb-2">
             <span className="font-semibold">Time: </span>
             <span>{event.time}</span>
+          </p>
+          <p>
+            <span className="font-semibold">Contact: </span>
+            <span>{event.contact}</span>
           </p>
         </div>
         <div className="font-secFont1 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:mb-4">
@@ -82,20 +90,15 @@ export const EventLog = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const getAllEvents = () => {
-    const allEvents = Object.values(eventsData)
-      .flat()
-      .sort((a, b) => a.id - b.id);
-    return allEvents;
+    return eventsData.events.sort((a, b) => a.date.localeCompare(b.date));
   };
 
-  const currentEvents =
-    selectedCategory === "all"
-      ? getAllEvents().slice(0, visibleEvents)
-      : eventsData[selectedCategory];
+  const currentEvents = selectedCategory === "all"
+    ? getAllEvents().slice(0, visibleEvents)
+    : getAllEvents().filter(event => event.category === selectedCategory);
 
   const totalEvents = selectedCategory === "all" ? getAllEvents().length : 0;
-  const hasMoreEvents =
-    selectedCategory === "all" && visibleEvents < totalEvents;
+  const hasMoreEvents = selectedCategory === "all" && visibleEvents < totalEvents;
 
   const handleLoadMore = () => {
     setVisibleEvents((prev) => prev + 4); // Load 4 more events
@@ -113,7 +116,7 @@ export const EventLog = () => {
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 mt-16 sm:mt-20 md:mt-20">
         {/* Logo */}
         <div className="w-48 sm:w-56 md:w-64 mb-4 sm:mb-6 md:mb-8">
-          <img
+          <CloudinaryImage
             src="/Logos/Ing_White_2025.png"
             alt="Ingenium Logo"
             className="w-full h-auto"

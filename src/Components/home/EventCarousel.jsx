@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import eventsData from "../../data/events.json";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import CloudinaryImage from "../../tools/CloudinaryImage";
 
 const EventCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -79,7 +80,7 @@ const EventCarousel = () => {
             >
               {/* Image Section */}
               <div className="relative w-full md:w-fit h-[200px] md:h-full rounded-xl md:rounded-2xl overflow-hidden bg-black/20">
-                <img
+                <CloudinaryImage
                   src={eventsData.events[activeIndex].image}
                   alt={eventsData.events[activeIndex].title}
                   className="w-full h-full object-contain md:hover:scale-105 transition-transform duration-300"
@@ -105,25 +106,17 @@ const EventCarousel = () => {
                   </div>
                 </div>
 
-                <p className="font-secFont1 text-gray-300 text-sm md:text-lg leading-relaxed line-clamp-3 md:line-clamp-none">
-                  {eventsData.events[activeIndex].description}
+                <p className="font-secFont1 text-gray-300 text-sm md:text-lg leading-relaxed line-clamp-3 md:line-clamp-5">
+                  {eventsData.events[activeIndex].longDescription}
                 </p>
 
                 <div className="font-secFont1 space-y-2 bg-white/5 rounded-lg p-3 md:p-0 md:bg-transparent">
                   <div className="flex items-center gap-2 text-xs md:text-lg text-gray-400">
                     <span className="text-colPink font-medium">
-                      Registration Period:
+                      Contact:
                     </span>
-                    <span className="text-white">
-                      {eventsData.events[activeIndex].registrationPeriod}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs md:text-lg text-gray-400">
-                    <span className="text-colPink font-medium">
-                      Meeting Type:
-                    </span>
-                    <span className="text-white capitalize">
-                      {eventsData.events[activeIndex].meetingType}
+                    <span className="text-gray-300">
+                      {eventsData.events[activeIndex].contact}
                     </span>
                   </div>
                 </div>
@@ -159,7 +152,7 @@ const EventCarousel = () => {
           </AnimatePresence>
 
           {/* Event Navigation Dots */}
-          <div className="absolute -bottom-6 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2">
+          <div className="absolute -bottom-6 md:-bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2">
             {eventsData.events.map((_, index) => (
               <button
                 key={index}
