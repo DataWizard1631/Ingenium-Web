@@ -114,9 +114,14 @@ const EventCarousel = () => {
                   <div className="flex items-center gap-2 text-sm md:text-lg text-gray-400">
                     <p className="flex flex-wrap gap-2">
                       <span className="font-semibold text-gray-100">Contact: </span>
-                      <span className="flex gap-1">{eventsData.events[activeIndex].contact.map((con, index) => (
-                        <span key={index}>{con} | </span>
-                      ))}</span>
+                      <span className="flex gap-1">
+                        {eventsData.events[activeIndex].contact.map((con, index, arr) => (
+                          <span key={index}>
+                            {con}{index !== arr.length - 1 && ' | '}
+                          </span>
+                        ))}
+                      </span>
+
                     </p>
                   </div>
                 </div>
