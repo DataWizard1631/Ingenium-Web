@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "./utils";
 
@@ -11,137 +11,286 @@ export const SponserCard = ({
   containerClassName,
   category = "default",
 }) => {
+  const [transform, setTransform] = useState(
+    "translate(-50%,-50%) rotateX(0deg)"
+  );
+
+  const onMouseEnter = () => {
+    setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+  };
+  const onMouseLeave = () => {
+    setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
+  };
+
   const colors = getCategoryColors(category);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={cn("relative group", containerClassName)}
-    >
+    <div className="relative">
+      {/* Desktop Version with Pin Effect */}
       <a
+        className={cn(
+          "relative group/pin z-50 cursor-pointer hidden sm:block",
+          containerClassName
+        )}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
         href={href || "/"}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block"
       >
-        {/* Card Container */}
-        <motion.div
-          whileHover={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className={cn(
-            "relative rounded-2xl overflow-hidden",
-            "bg-gradient-to-br from-zinc-900 to-zinc-800",
-            "border border-white/10 shadow-lg group-hover:shadow-xl",
-            "transform transition-all duration-300"
-          )}
+        <div
+          style={{
+            perspective: "1000px",
+            transform: "rotateX(70deg) translateZ(0deg)",
+          }}
+          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
         >
-          {/* Gradient Overlay */}
-          <div className={cn(
-            "absolute inset-0 opacity-0 group-hover:opacity-100",
-            "transition-opacity duration-500",
-            `bg-gradient-to-br ${colors.gradient} bg-opacity-20`
-          )} />
-
-          {/* Shine Effect */}
-          <div className={cn(
-            "absolute inset-0 opacity-0 group-hover:opacity-30",
-            "bg-gradient-to-r from-transparent via-white to-transparent",
-            "translate-x-[-100%] group-hover:translate-x-[100%]",
-            "transition-transform duration-1000 ease-in-out"
-          )} />
-
-          {/* Content */}
-          <div className="relative z-10">
-            {children}
+          <div
+            style={{
+              transform: transform,
+            }}
+            className="absolute left-1/2 p-4 top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+          >
+            <div className={cn("relative z-50", className)}>{children}</div>
           </div>
-
-          {/* Hover Effects */}
-          <div className={cn(
-            "absolute inset-0 opacity-0 group-hover:opacity-100",
-            "transition-all duration-500 pointer-events-none",
-            "flex items-center justify-center bg-black/40 backdrop-blur-sm"
-          )}>
-            <div className={cn(
-              "px-6 py-3 rounded-full",
-              "bg-black/80 backdrop-blur-sm",
-              "border border-white/20",
-              "transform translate-y-4 group-hover:translate-y-0",
-              "transition-transform duration-500",
-              "flex items-center gap-2 shadow-lg"
-            )}>
-              <span className="text-white text-sm font-medium">Visit Website</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-white transform -rotate-45 group-hover:translate-x-0.5 transition-transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Sponsor Name */}
-        {/* <div className="mt-6 text-center space-y-2">
-          <h3 className={cn(
-            "text-xl font-semibold",
-            "bg-gradient-to-r text-transparent bg-clip-text",
-            colors.gradient,
-            "group-hover:scale-105 transition-transform duration-500"
-          )}>
-            {title}
-          </h3>
-          <p className={cn(
-            "text-sm text-white/60",
-            "group-hover:text-white/90 transition-colors duration-300"
-          )}>
-            {colors.partnerText}
-          </p>
-        </div> */}
+        </div>
+        <PinPerspective
+          title={title}
+          name={name}
+          href={href}
+          category={category}
+        />
       </a>
-    </motion.div>
+
+      {/* Mobile Version with Simple Card */}
+      <div className="block sm:hidden">
+        <div className="rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black border border-white/[0.1] overflow-hidden">
+          <div className={cn("relative z-50 p-4", className)}>{children}</div>
+        </div>
+        <div className="mt-4 flex flex-col items-center gap-2">
+          {name && (
+            <h3 className="text-lg font-semibold text-white text-center">
+              {name}
+            </h3>
+          )}
+          <a
+            href={href || "/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors",
+              colors.mobileBtnClasses
+            )}
+          >
+            Visit Website
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 transform -rotate-45"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 
 const getCategoryColors = (category) => {
   const colors = {
     presenting: {
-      gradient: "from-violet-400 to-violet-600",
-      partnerText: "Presenting Partner",
+      ring: "ring-violet-500/20",
+      glow: "to-violet-500",
+      stroke: "stroke-violet-400",
+      dot: "bg-violet-500",
+      mobileBtnClasses:
+        "bg-violet-500/10 text-violet-400 hover:bg-violet-500/20 border border-violet-500/20",
     },
     platinum: {
-      gradient: "from-slate-200 to-slate-400",
-      partnerText: "Platinum Partner",
+      ring: "ring-slate-400/20",
+      glow: "to-slate-400",
+      stroke: "stroke-slate-300",
+      dot: "bg-slate-400",
+      mobileBtnClasses:
+        "bg-slate-500/10 text-slate-400 hover:bg-slate-500/20 border border-slate-500/20",
     },
     gold: {
-      gradient: "from-amber-400 to-amber-600",
-      partnerText: "Gold Partner",
+      ring: "ring-amber-500/20",
+      glow: "to-amber-500",
+      stroke: "stroke-amber-400",
+      dot: "bg-amber-500",
+      mobileBtnClasses:
+        "bg-amber-500/10 text-amber-400 hover:bg-amber-500/20 border border-amber-500/20",
     },
     fashion: {
-      gradient: "from-pink-400 to-pink-600",
-      partnerText: "Fashion Partner",
+      ring: "ring-pink-500/20",
+      glow: "to-pink-500",
+      stroke: "stroke-pink-400",
+      dot: "bg-pink-500",
+      mobileBtnClasses:
+        "bg-pink-500/10 text-pink-400 hover:bg-pink-500/20 border border-pink-500/20",
     },
     automobile: {
-      gradient: "from-red-400 to-red-600",
-      partnerText: "Automobile Partner",
-    },
-    supporting: {
-      gradient: "from-teal-400 to-teal-600",
-      partnerText: "Supporting Partner",
+      ring: "ring-red-500/20",
+      glow: "to-red-500",
+      stroke: "stroke-red-400",
+      dot: "bg-red-500",
+      mobileBtnClasses:
+        "bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20",
     },
     default: {
-      gradient: "from-white to-white/80",
-      partnerText: "Partner",
+      ring: "ring-white/10",
+      glow: "to-cyan-500",
+      stroke: "stroke-white",
+      dot: "bg-cyan-500",
+      mobileBtnClasses:
+        "bg-white/10 text-white hover:bg-white/20 border border-white/20",
     },
   };
   return colors[category] || colors.default;
+};
+
+export const PinPerspective = ({ title, name, href, category = "default" }) => {
+  const colors = getCategoryColors(category);
+
+  return (
+    <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+      <div className="w-full h-full -mt-7 flex-none inset-0">
+        <div className="absolute top-0 inset-x-0 flex flex-col items-center justify-center">
+          <div
+            className={cn(
+              "relative flex items-center gap-2 z-10 rounded-full bg-zinc-950 py-1.5 px-4",
+              colors.ring
+            )}
+          >
+            <span className="relative z-20 text-white text-sm font-medium inline-block">
+              Visit My Website
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className={cn("h-4 w-4 transform -rotate-45", colors.stroke)}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </div>
+          {name && (
+            <div className="mt-2 text-sm text-white/80 font-medium">{name}</div>
+          )}
+        </div>
+
+        <div
+          style={{
+            perspective: "1000px",
+            transform: "rotateX(70deg) translateZ(0)",
+          }}
+          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
+        >
+          <>
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0,
+                x: "-50%",
+                y: "-50%",
+              }}
+              animate={{
+                opacity: [0, 1, 0.5, 0],
+                scale: 1,
+                z: 0,
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                delay: 0,
+              }}
+              className="absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+            ></motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0,
+                x: "-50%",
+                y: "-50%",
+              }}
+              animate={{
+                opacity: [0, 1, 0.5, 0],
+                scale: 1,
+                z: 0,
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                delay: 2,
+              }}
+              className="absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+            ></motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0,
+                x: "-50%",
+                y: "-50%",
+              }}
+              animate={{
+                opacity: [0, 1, 0.5, 0],
+                scale: 1,
+                z: 0,
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                delay: 4,
+              }}
+              className="absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+            ></motion.div>
+          </>
+        </div>
+
+        <>
+          <motion.div
+            className={cn(
+              "absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent",
+              colors.glow,
+              "translate-y-[14px] w-px h-20 group-hover/pin:h-40 blur-[2px]"
+            )}
+          />
+          <motion.div
+            className={cn(
+              "absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent",
+              colors.glow,
+              "translate-y-[14px] w-px h-20 group-hover/pin:h-40"
+            )}
+          />
+          <motion.div
+            className={cn(
+              "absolute right-1/2 translate-x-[1.5px] bottom-1/2",
+              colors.dot,
+              "translate-y-[14px] w-[4px] h-[4px] rounded-full z-40 blur-[3px]"
+            )}
+          />
+          <motion.div
+            className={cn(
+              "absolute right-1/2 translate-x-[0.5px] bottom-1/2",
+              colors.dot,
+              "translate-y-[14px] w-[2px] h-[2px] rounded-full z-40"
+            )}
+          />
+        </>
+      </div>
+    </motion.div>
+  );
 };

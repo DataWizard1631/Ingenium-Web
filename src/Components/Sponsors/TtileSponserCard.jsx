@@ -142,15 +142,18 @@ export const PinPerspective = ({ title, href }) => {
     <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className="w-full h-full -mt-7 flex-none inset-0">
         <div className="absolute top-0 inset-x-0 flex flex-col items-center justify-center">
-          <div
-            className="relative flex items-center gap-2 z-10 rounded-full bg-zinc-950 py-1.5 px-4 ring-1 ring-colPink/10"
+          <a 
+            href={href || "/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex items-center gap-2 z-10 rounded-full bg-zinc-950 py-1.5 px-4 ring-1 ring-colPink/10 pointer-events-auto hover:bg-zinc-900 transition-colors"
           >
             <span className="relative z-20 text-white text-sm font-medium inline-block">
               Visit Website
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 transform -rotate-45"
+              className={cn("h-4 w-4 transform -rotate-45")}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -162,7 +165,7 @@ export const PinPerspective = ({ title, href }) => {
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-          </div>
+          </a>
         </div>
 
         <div
@@ -234,8 +237,8 @@ export const PinPerspective = ({ title, href }) => {
         </div>
 
         <>
-          <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-colPink translate-y-[14px] w-px h-20 group-hover/pin:h-40 blur-[2px]" />
-          <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-colPink translate-y-[14px] w-px h-20 group-hover/pin:h-40" />
+          <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-colPink translate-y-[20px] w-px h-20 group-hover/pin:h-72 blur-[2px]" />
+          <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-colPink translate-y-[20px] w-px h-20 group-hover/pin:h-72" />
           <motion.div className="absolute right-1/2 translate-x-[1.5px] bottom-1/2 bg-colPink translate-y-[14px] w-[4px] h-[4px] rounded-full z-40 blur-[3px]" />
           <motion.div className="absolute right-1/2 translate-x-[0.5px] bottom-1/2 bg-colPink translate-y-[14px] w-[2px] h-[2px] rounded-full z-40" />
         </>
