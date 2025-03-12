@@ -41,10 +41,11 @@ function About() {
         <div className="w-full mt-0 md:mt-12">
           <div className="section-title mb-0 md:mb-12" data-aos="zoom-in">
             <div className="title-line"></div>
-            <p className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl py-8 font-primaryFont text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text text-center cyber-text">
+            <p className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl pb-8 font-primaryFont text-transparent bg-white bg-clip-text text-center cyber-text">
               MEET OUR TEAM
             </p>
-            <div className="title-line"></div>
+            <div className="absolute bottom-0 md:bottom-4 w-1/2 left-1/4 h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+            {/* <div className="title-line"></div> */}
           </div>
 
           {/* OBs Section */}

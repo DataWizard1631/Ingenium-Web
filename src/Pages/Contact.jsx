@@ -6,19 +6,19 @@ import emailjs from '@emailjs/browser';
 const faqs = [
   {
     question: "What is Ingenium?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    answer: "Ingenium is a tech fest of Ahmedabad University that brings together students passionate about technology, innovation, and engineering. It features coding competitions, hackathons, technical workshops, and various domain-specific events across CSE, Chemical, and Mechanical engineering."
   },
   {
     question: "How can I participate?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    answer: "To participate, simply choose the events you're interested in and fill out their respective registration forms. Most events allow teams of 1-3 members. Check the specific event rules and registration requirements in the Events section."
   },
   {
     question: "When is the event?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    answer: "The event is scheduled for March 28th, 2024. Different events have specific timings throughout the day, starting from 10:00 AM. Check individual event details for exact timing and duration."
   },
   {
     question: "Where is the venue?",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    answer: "The event takes place at Ahmedabad University campus. You can check out our virtual campus tour through the link provided on our website to familiarize yourself with the venue beforehand."
   }
 ];
 
@@ -81,7 +81,7 @@ const Contact = () => {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full bg-white/10 border border-colPink/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-colPink"
+                  className="w-full bg-white/10 font-secFont1 border border-colPink/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-colPink"
                   required
                 />
               </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full bg-white/10 border border-colPink/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-colPink"
+                  className="w-full bg-white/10 font-secFont1 border border-colPink/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-colPink"
                   required
                 />
               </div>
@@ -101,14 +101,14 @@ const Contact = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                   rows="5"
-                  className="w-full bg-white/10 border border-colPink/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-colPink"
+                  className="w-full bg-white/10 font-secFont1 border border-colPink/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:border-colPink"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full bg-colPink text-white rounded-full py-3 hover:bg-pink-700 transition-colors duration-300"
+                className="w-full bg-colPink font-secFont1 text-white rounded-full py-3 hover:bg-pink-700 transition-colors duration-300"
               >
                 {status === 'sending' ? 'Sending...' : 'Send Message'}
               </button>
