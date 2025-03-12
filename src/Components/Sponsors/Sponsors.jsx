@@ -234,7 +234,7 @@ export const Sponsors = () => {
                     {config.partnerText}
                   </p>
                   {/* Mobile Visit Website Button */}
-                  <div className="sm:hidden mt-4">
+                  {/* <div className="sm:hidden mt-4">
                     <a
                       href={sponsor.href}
                       target="_blank"
@@ -243,7 +243,7 @@ export const Sponsors = () => {
                     >
                       Visit Website
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             );
