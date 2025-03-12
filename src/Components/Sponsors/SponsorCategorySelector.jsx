@@ -48,7 +48,7 @@ export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) =>
     <>
       {/* Desktop Version */}
       <div className="hidden sm:flex justify-center mb-16">
-        <div className="flex items-center gap-4 p-2.5 bg-zinc-900/50 backdrop-blur-sm rounded-full border border-white/10 shadow-lg">
+        <div className="flex items-center gap-4 p-2.5 bg-zinc-900/50 backdrop-blur-sm rounded-full border border-white/10 shadow-lg font-[ModernAge]">
           {categories.map((category) => (
             <button
               key={category.id}

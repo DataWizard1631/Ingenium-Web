@@ -6,8 +6,8 @@ import CloudinaryImage from "../../tools/CloudinaryImage";
 
 const categories = [
   { id: "all", label: "All" },
-  { id: "CSE Events", label: "CSE Events" },
   { id: "Hackathon", label: "Hackathon" },
+  { id: "CSE Events", label: "CSE Events" },
   { id: "esports", label: "E-sports" },
   { id: "mechevents", label: "Mech Event" },
   { id: "eeeevents", label: "EEE Event" },
@@ -207,7 +207,7 @@ export const EventLog = () => {
           <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white tracking-[0.17em]">
             EVENT LOG
           </h1>
-          <div className="absolute -bottom-0 md:-bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+          <div className="absolute -bottom-0 md:bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
         </motion.div>
 
       </div>
@@ -228,7 +228,7 @@ export const EventLog = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 + 0.8 }}
               onClick={() => handleCategoryChange(category.id)}
-              className={`text-sm sm:text-base md:text-lg font-secFont1 px-3 sm:px-4 md:px-6 py-2 rounded-full transition-all duration-150 flex items-center gap-2 ${
+              className={`text-sm sm:text-base md:text-sm px-3 sm:px-4 md:px-6 py-2 rounded-full transition-all duration-150 flex items-center gap-2 font-[ModernAge] ${
                 selectedCategory === category.id
                   ? "bg-colPink text-white shadow-lg"
                   : "text-white hover:bg-gray-300/20"
