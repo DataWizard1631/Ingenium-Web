@@ -139,7 +139,8 @@ function Timeline() {
             <div 
               className="absolute top-0 left-0 w-full bg-colPink transition-all duration-500"
               style={{ 
-                height: `${(progressIndex / sortedEvents.length) * 100 + 0.5}%`
+                // height: `${(progressIndex / sortedEvents.length) * 100 + 0.5}%`
+                height: `${(progressIndex / sortedEvents.length) * 100}%`
               }} 
             />
           </div>
