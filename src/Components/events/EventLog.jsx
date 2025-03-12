@@ -221,12 +221,9 @@ export const EventLog = () => {
       >
         {/* Desktop Categories */}
         <div className="hidden sm:flex flex-wrap justify-center gap-6 bg-gray-200/20 backdrop-blur-md rounded-full p-2">
-          {categories.map((category, index) => (
-            <motion.button
+          {categories.map((category) => (
+            <button
               key={category.id}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 + 0.8 }}
               onClick={() => handleCategoryChange(category.id)}
               className={`text-sm sm:text-base md:text-sm px-3 sm:px-4 md:px-6 py-2 rounded-full transition-all duration-150 flex items-center gap-2 font-[ModernAge] ${
                 selectedCategory === category.id
@@ -235,7 +232,7 @@ export const EventLog = () => {
               }`}
             >
               <span>{category.label}</span>
-            </motion.button>
+            </button>
           ))}
         </div>
 

@@ -467,7 +467,7 @@ export const Sponsors = () => {
             <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white tracking-[0.17em]">
               SPONSORS
             </h1>
-            <div className="absolute -bottom-0 md:-bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+            <div className="absolute -bottom-0 md:bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
 
           </motion.div>
          
