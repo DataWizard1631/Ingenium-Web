@@ -38,13 +38,13 @@ function About() {
         </div>
 
         {/* Meet Our Team */}
-        <div className="w-full mt-0 md:mt-12">
+        <div className="w-full mt-8 md:mt-12">
           <div className="section-title mb-0 md:mb-12" data-aos="zoom-in">
             <div className="title-line"></div>
-            <p className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl pb-8 font-primaryFont text-transparent bg-white bg-clip-text text-center cyber-text">
+            <p className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl pb-8 font-primaryFont text-transparent bg-white bg-clip-text text-center cyber-text">
               MEET OUR TEAM
             </p>
-            <div className="absolute bottom-0 md:bottom-4 w-1/2 left-1/4 h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+            <div className="absolute bottom-4 md:bottom-4 w-1/2 left-1/4 h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
             {/* <div className="title-line"></div> */}
           </div>
 

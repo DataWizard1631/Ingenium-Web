@@ -45,7 +45,7 @@ export const Sponsors = () => {
       gradient: "from-slate-200 to-slate-400",
       bgGradient: "from-slate-300/10 via-transparent to-slate-300/10",
       borderColor: "border-slate-500/20",
-      partnerText: "Education Partner",
+      partnerText: (name) => name === "T.I.M.E." ? "Education Partner" : "Platinum Partner",
       textColor: "text-slate-400",
       cols: "sm:grid-cols-2 lg:grid-cols-3",
       cardWidth: "w-[260px] sm:w-[340px]",
@@ -226,12 +226,12 @@ export const Sponsors = () => {
                     </div>
                   </SponserCard>
                 </div>
-                <div className="text-center mt-6">
+                <div className="text-center mt-4 md:mt-6">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white/90 group-hover:text-white transition-colors duration-300 font-secFont1">
                     {sponsor.title}
                   </h3>
-                  <p className={`${config.textColor} mt-2 text-sm sm:text-base opacity-90 group-hover:opacity-100 transition-opacity duration-300 font-secFont1`}>
-                    {config.partnerText}
+                  <p className={`${config.textColor} mt-2 text-sm sm:text-lg opacity-90 group-hover:opacity-100 transition-opacity duration-300 font-secFont1`}>
+                    {typeof config.partnerText === 'function' ? config.partnerText(sponsor.title) : config.partnerText}
                   </p>
                   {/* Mobile Visit Website Button */}
                   {/* <div className="sm:hidden mt-4">
@@ -289,7 +289,7 @@ export const Sponsors = () => {
         }
       }
 
-      return <div className="space-y-32">{allSections}</div>;
+      return <div className="space-y-16 md:space-y-32">{allSections}</div>;
     }
 
     // Handle individual category
@@ -384,8 +384,8 @@ export const Sponsors = () => {
             <h3 className="text-xl sm:text-2xl font-semibold text-white/90 group-hover:text-white transition-colors duration-300 font-secFont1">
               {sponsor.title}
             </h3>
-            <p className={`${config.textColor} mt-2 text-sm sm:text-base opacity-90 group-hover:opacity-100 transition-opacity duration-300 font-secFont1`}>
-              {config.partnerText}
+            <p className={`${config.textColor} mt-2 text-sm sm:text-lg opacity-90 group-hover:opacity-100 transition-opacity duration-300 font-secFont1`}>
+              {typeof config.partnerText === 'function' ? config.partnerText(sponsor.title) : config.partnerText}
             </p>
             {/* Mobile Visit Website Button */}
             <div className="sm:hidden mt-4">
@@ -467,7 +467,7 @@ export const Sponsors = () => {
             <h1 className="font-primaryFont text-3xl xs:text-4xl sm:text-6xl lg:text-9xl mb-3 xs:mb-4 sm:mb-6 lg:mb-8 font-semibold text-white tracking-[0.17em]">
               SPONSORS
             </h1>
-            <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
+            <div className="absolute -bottom-0 md:-bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-colPink to-transparent" />
 
           </motion.div>
          

@@ -243,7 +243,7 @@ export const EventLog = () => {
         <div className="sm:hidden w-full max-w-[50%] mx-auto relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="w-full px-4 py-2 rounded-full bg-gray-200/20 backdrop-blur-md text-white font-secFont1 border border-white/20 focus:outline-none focus:border-colPink text-center relative"
+            className="w-full px-4 py-2 rounded-full bg-gray-200/20 backdrop-blur-md text-white border border-white/20 focus:outline-none focus:border-colPink text-center relative font-[ModernAge]"
           >
             {categories.find((cat) => cat.id === selectedCategory)?.label}
             <span className="absolute right-4 top-1/2 transform -translate-y-1/2">
@@ -271,7 +271,7 @@ export const EventLog = () => {
                     handleCategoryChange(category.id);
                     setIsOpen(false);
                   }}
-                  className={`w-full py-2 px-4 text-center font-secFont1 hover:bg-gray-700 transition-colors ${
+                  className={`w-full py-2 px-4 text-center text-sm hover:bg-gray-700 transition-colors font-[ModernAge] ${
                     selectedCategory === category.id
                       ? "bg-colPink text-white"
                       : "text-white"

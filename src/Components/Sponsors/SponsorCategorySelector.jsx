@@ -78,7 +78,7 @@ export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) =>
       </div>
 
       {/* Mobile Version - Dropdown */}
-      <div className="sm:hidden relative mb-8 px-4">
+      <div className="sm:hidden relative mb-8 px-4 font-[ModernAge]">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
@@ -95,8 +95,8 @@ export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) =>
           <div className="flex items-center gap-3">
             <div
               className={cn(
-                "w-3 h-3 rounded-full shadow-lg",
-                `bg-gradient-to-r ${activeItem?.color}`
+                "w-2 md:w-3 h-2 md:h-3 rounded-full shadow-lg",
+                `bg-white`
               )}
             />
             <span className="text-white font-medium text-lg">
@@ -124,7 +124,7 @@ export const SponsorCategorySelector = ({ activeCategory, onCategoryChange }) =>
 
         {/* Dropdown Menu */}
         {isOpen && (
-          <div className="absolute z-50 w-full mt-2 py-2 bg-zinc-900/95 backdrop-blur-sm rounded-xl border border-white/10 shadow-xl">
+          <div className="absolute z-50 w-[90%] mt-2 py-2 bg-zinc-900/95 backdrop-blur-sm rounded-xl border border-white/10 shadow-xl font-[ModernAge]">
             {categories.map((category) => (
               <button
                 key={category.id}
