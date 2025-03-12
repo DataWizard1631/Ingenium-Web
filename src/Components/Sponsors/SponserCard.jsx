@@ -146,11 +146,19 @@ const getCategoryColors = (category) => {
       mobileBtnClasses:
         "bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20",
     },
+    supporting: {
+      ring: "ring-cyan-500/20",
+      glow: "to-cyan-500",
+      stroke: "stroke-cyan-400",
+      dot: "bg-cyan-500",
+      mobileBtnClasses:
+        "bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20",
+    },
     default: {
       ring: "ring-white/10",
-      glow: "to-cyan-500",
+      glow: "to-white",
       stroke: "stroke-white",
-      dot: "bg-cyan-500",
+      dot: "bg-white",
       mobileBtnClasses:
         "bg-white/10 text-white hover:bg-white/20 border border-white/20",
     },
@@ -164,19 +172,22 @@ export const PinPerspective = ({ title, name, href, category = "default" }) => {
   return (
     <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className="w-full h-full -mt-7 flex-none inset-0">
-        <div className="absolute top-0 inset-x-0 flex flex-col items-center justify-center">
+        {/* Visit Website Button */}
+        <div className="absolute top-0 inset-x-0 flex flex-col items-center justify-center z-50">
           <div
             className={cn(
-              "relative flex items-center gap-2 z-10 rounded-full bg-zinc-950 py-1.5 px-4",
-              colors.ring
+              "relative flex items-center gap-2 rounded-full py-1.5 px-4",
+              "bg-zinc-950/90 backdrop-blur-sm transition-colors duration-300",
+              "shadow-lg",
+              colors.mobileBtnClasses
             )}
           >
-            <span className="relative z-20 text-white text-sm font-medium inline-block">
-              Visit My Website
+            <span className="relative text-sm font-medium inline-block">
+              Visit Website
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={cn("h-4 w-4 transform -rotate-45", colors.stroke)}
+              className="h-4 w-4 transform -rotate-45"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -194,12 +205,47 @@ export const PinPerspective = ({ title, name, href, category = "default" }) => {
           )}
         </div>
 
+        {/* Connecting Line */}
+        <div className="absolute inset-0 z-40">
+          <>
+            <motion.div
+              className={cn(
+                "absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent",
+                colors.glow,
+                "translate-y-[34px] w-px h-20 group-hover/pin:h-40 blur-[2px]"
+              )}
+            />
+            <motion.div
+              className={cn(
+                "absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent",
+                colors.glow,
+                "translate-y-[34px] w-px h-20 group-hover/pin:h-40"
+              )}
+            />
+            <motion.div
+              className={cn(
+                "absolute right-1/2 translate-x-[1.5px] bottom-1/2",
+                colors.dot,
+                "translate-y-[34px] w-[4px] h-[4px] rounded-full blur-[3px]"
+              )}
+            />
+            <motion.div
+              className={cn(
+                "absolute right-1/2 translate-x-[0.5px] bottom-1/2",
+                colors.dot,
+                "translate-y-[34px] w-[2px] h-[2px] rounded-full"
+              )}
+            />
+          </>
+        </div>
+
+        {/* Pulsing Circles */}
         <div
           style={{
             perspective: "1000px",
             transform: "rotateX(70deg) translateZ(0)",
           }}
-          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
+          className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2 z-30"
         >
           <>
             <motion.div
@@ -219,8 +265,12 @@ export const PinPerspective = ({ title, name, href, category = "default" }) => {
                 repeat: Infinity,
                 delay: 0,
               }}
-              className="absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
-            ></motion.div>
+              className={cn(
+                "absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%]",
+                `bg-${category}-500/[0.08]`,
+                "shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+              )}
+            />
             <motion.div
               initial={{
                 opacity: 0,
@@ -238,8 +288,12 @@ export const PinPerspective = ({ title, name, href, category = "default" }) => {
                 repeat: Infinity,
                 delay: 2,
               }}
-              className="absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
-            ></motion.div>
+              className={cn(
+                "absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%]",
+                `bg-${category}-500/[0.08]`,
+                "shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+              )}
+            />
             <motion.div
               initial={{
                 opacity: 0,
@@ -257,41 +311,14 @@ export const PinPerspective = ({ title, name, href, category = "default" }) => {
                 repeat: Infinity,
                 delay: 4,
               }}
-              className="absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
-            ></motion.div>
+              className={cn(
+                "absolute left-1/2 top-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%]",
+                `bg-${category}-500/[0.08]`,
+                "shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+              )}
+            />
           </>
         </div>
-
-        <>
-          <motion.div
-            className={cn(
-              "absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent",
-              colors.glow,
-              "translate-y-[14px] w-px h-20 group-hover/pin:h-40 blur-[2px]"
-            )}
-          />
-          <motion.div
-            className={cn(
-              "absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent",
-              colors.glow,
-              "translate-y-[14px] w-px h-20 group-hover/pin:h-40"
-            )}
-          />
-          <motion.div
-            className={cn(
-              "absolute right-1/2 translate-x-[1.5px] bottom-1/2",
-              colors.dot,
-              "translate-y-[14px] w-[4px] h-[4px] rounded-full z-40 blur-[3px]"
-            )}
-          />
-          <motion.div
-            className={cn(
-              "absolute right-1/2 translate-x-[0.5px] bottom-1/2",
-              colors.dot,
-              "translate-y-[14px] w-[2px] h-[2px] rounded-full z-40"
-            )}
-          />
-        </>
       </div>
     </motion.div>
   );

@@ -23,7 +23,7 @@ function About() {
   }, []);
 
   return (
-    <StyledWrapper className="bg-[#121212] bg-[url('/bg-texture.jpg')] bg-repeat bg-auto py-16 px-4 sm:px-8 lg:px-12 xl:px-24 w-full flex flex-col gap-16 min-h-screen relative">
+    <StyledWrapper className="bg-[#ffb4b4] overflow-x-hidden bg-[url('/bg-texture.jpg')] bg-repeat bg-auto py-16 px-4 sm:px-8 lg:px-12 xl:px-24 w-full flex flex-col gap-16 min-h-screen relative">
       {/* Tech Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(201,15,91,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(201,15,91,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 

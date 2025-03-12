@@ -59,10 +59,10 @@ function Navbar() {
 
             {/* Desktop Navigation - fully opaque text */}
             <div className="hidden lg:flex items-center space-x-8 text-xl">
-              {["Home", "Sponsors", "Events", "Timeline", "Our team", "Contact"].map((item) => (
+              {["Home", "Sponsors", "Events", "Timeline", "Our Team", "Contact"].map((item) => (
                 <Link
                   key={item}
-                    to={item === "Our team" ? "/team" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    to={item === "Our Team" ? "/team" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   className="relative font-secFont1 text-white group py-2"
                 >
                   <span className="relative z-10">{item}</span>
@@ -100,10 +100,10 @@ function Navbar() {
         style={{ top: '64px' }}
       >
         <div className="flex flex-col items-center pt-8 space-y-6 bg-[#080C18]/80 backdrop-blur-sm h-screen w-[50%]">
-          {["Home", "Sponsors", "Events", "Timeline", "Our team", "Contact"].map((item) => (
+          {["Home", "Sponsors", "Events", "Timeline", "Our Team", "Contact"].map((item) => (
             <Link
               key={item}
-              to={item === "Our team" ? "/team" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
+              to={item === "Our Team" ? "/team" : item === "Home" ? "/" : `/${item.toLowerCase()}`}
               className="text-white text-xl font-secFont1 hover:text-gray-300 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
