@@ -10,7 +10,7 @@
       "longDescription": "Jab We Code is a unique programming contest that tests teamwork, adaptability, and strategic decision-making. Teams of two begin by solving separate contests (Contest A and Contest B) for 30 minutes before discussing their progress and swapping challenges. After another 30 minutes, they strategize once more before entering the final 20-minute phase, where both contests are open, and members decide who tackles which problem. The final ranking is determined by the combined scores of both contests. The top three teams win cash prizes.",
       "category": "CSE Events",
       "contact": ["Dhrumi Panchal (9313464215)", "Jugal Vaghmashi (7405222505)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Jab_We_Code_tjqxba.jpg",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png",
       "rules": [
         "Rule 1: Teams consist of two members",
         "Rule 2: Each member starts solving a separate coding contest",
@@ -29,13 +29,13 @@
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Optimized_Mind_bbdium.jpg"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
         },
         {
           "id": "hera-pheri",
           "title": "Hera Pheri 3.0",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Hera_Pheri_i4gccg.jpg"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Hera_Pheri_xzghqe.png"
         }
       ]
     },
@@ -49,7 +49,7 @@
       "longDescription": "Participants will work on one of three given problem statements, using relevant datasets to build the most optimized machine learning model. Teams will be judged based on the efficiency of their models, accuracy of predictions, and innovation in approach. The competition lasts three hours, during which teams analyze data, develop models, and present their findings. Judges will assess optimization and performance metrics to determine winners. The best-performing team for each problem statement wins ₹2000.",
       "category": "CSE-Events",
       "contact": ["Dhrumi Panchal (9313464215)", "Jugal Vaghmashi (7405222505)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Optimized_Mind_bbdium.jpg",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png",
       "rules": [
         "Rule 1: Teams of 1 to 3 members",
         "Rule 2: Each team selects one problem statement from the given options",
@@ -68,7 +68,7 @@
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Jab_We_Code_tjqxba.jpg"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png"
         },
         {
           "id": "hackathon",
@@ -88,7 +88,7 @@
       "longDescription": "This event consists of three rounds. The first is a treasure hunt, where teams solve clues to reach different campus locations. The top 10 teams move to a quiz round, where logical questions determine the final four teams. The last round is a \"Potli\" hunt, where teams search for hidden potlis containing different rewards. The team that finds the golden potli wins ₹5000, with runner-up receiving ₹3000. This event emphasizes problem-solving, teamwork, and quick thinking.",
       "category": "CSE Events",
       "contact": ["Dhrumi Panchal (9313464215)", "Jugal Vaghmashi (7405222505)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Hera_Pheri_i4gccg.jpg",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Hera_Pheri_xzghqe.png",
       "rules": [
         "Rule 1: Teams must complete the treasure hunt to qualify for the quiz round",
         "Rule 2: Top 10 teams from the treasure hunt advance to the quiz round",
@@ -107,13 +107,13 @@
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Jab_We_Code_tjqxba.jpg"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png"
         },
         {
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Optimized_Mind_bbdium.jpg"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
         }
       ]
     },
@@ -144,13 +144,13 @@
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Optimized_Mind_bbdium.jpg"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
         },
         {
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741712890/Jab_We_Code_tjqxba.jpg"
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png"
         }
       ]
     }
