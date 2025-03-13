@@ -198,7 +198,7 @@
 /* Mobile Devices */
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 3.5rem;
+        font-size: 5em;
         top: 30%;
         width: 100%;
         text-align: center;
@@ -207,10 +207,10 @@
     .countdown-container {
         position: fixed;
         top: 10%;
-        left: 50%;
+        left: 10%;
         transform: translate(-50%, -50%);
-        width: 90%;
-        max-width: 95%;
+        width: 80%;
+        max-width: 80%;
         margin: 0 auto;
         gap: 15px;
         display: flex;
@@ -220,7 +220,7 @@
         background: rgba(201, 15, 91, 0.1);
         backdrop-filter: blur(10px);
         border-radius: 15px;
-        padding: 20px;
+        /* padding: 12px; */
         border: 1px solid rgba(201, 15, 91, 0.3);
         box-shadow: 0 8px 32px 0 rgba(201, 15, 91, 0.2);
     }
@@ -230,13 +230,13 @@
         backdrop-filter: none;
         border: none;
         box-shadow: none;
-        min-width: 60px;
+        min-width: 40px;
         text-align: center;
         padding: 5px;
     }
     
     .countdown-value {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
         margin-bottom: 5px;
         line-height: 1.2;
         white-space: nowrap;
@@ -255,18 +255,23 @@
         font-size: 2.5rem;
         margin: 0 5px;
         align-self: flex-start;
-        padding-top: 5px;
+        padding-top: 25px;
     }
 }
 
 /* Small Mobile */
 @media screen and (max-width: 480px) {
+    .title{
+        font-size: 3.5rem;
+    }
+    
     .countdown-container {
         padding: 5px 6px;
         gap: 5px;
         top: 20%;
         left: 5%;
         width: 90%;
+        max-width: 95%;
     }
 
     .countdown-box {
@@ -286,5 +291,6 @@
     .countdown-separator {
         font-size: 2rem;
         margin: 0 2px;
+        padding-top: 5px;
     }
 }
