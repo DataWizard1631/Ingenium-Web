@@ -6,9 +6,34 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import CloudinaryImage from "../../tools/CloudinaryImage";
 
 const EventCarousel = () => {
+  // Helper function to parse date strings
+  const getFirstDate = (dateStr) => {
+    // Extract the first date from strings like "28th march, 29th march"
+    const firstDate = dateStr.split(',')[0].toLowerCase();
+    
+    // Remove suffixes (th, st, nd, rd)
+    const cleanDate = firstDate.replace(/(st|nd|rd|th)/, '');
+    
+    // Create a date object for the current year
+    const currentYear = new Date().getFullYear();
+    const dateObj = new Date(`${cleanDate} ${currentYear}`);
+    
+    return dateObj;
+  };
+
+  // Sort events by date before using them
+  const sortedEvents = React.useMemo(() => {
+    return [...eventsData.events].sort((a, b) => {
+      const dateA = getFirstDate(a.date);
+      const dateB = getFirstDate(b.date);
+      return dateA - dateB;
+    });
+  }, []);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
   const controls = useAnimation();
+  const [slideDirection, setSlideDirection] = useState('right');
 
   // Initialize controls with default animation
   React.useEffect(() => {
@@ -16,12 +41,14 @@ const EventCarousel = () => {
   }, [activeIndex]);
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % eventsData.events.length);
+    setSlideDirection('right');
+    setActiveIndex((prev) => (prev + 1) % sortedEvents.length);
   };
 
   const handlePrev = () => {
+    setSlideDirection('left');
     setActiveIndex(
-      (prev) => (prev - 1 + eventsData.events.length) % eventsData.events.length
+      (prev) => (prev - 1 + sortedEvents.length) % sortedEvents.length
     );
   };
 
@@ -30,8 +57,10 @@ const EventCarousel = () => {
     const dragThreshold = 50; // minimum distance to trigger slide change
 
     if (dragDistance > dragThreshold) {
+      setSlideDirection('left');
       handlePrev();
     } else if (dragDistance < -dragThreshold) {
+      setSlideDirection('right');
       handleNext();
     } else {
       // If drag wasn't far enough, animate back to original position
@@ -72,17 +101,17 @@ const EventCarousel = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
-              initial={{ opacity: 0, x: 200 }}
+              initial={{ opacity: 0, x: slideDirection === 'right' ? 200 : -200 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -200 }}
+              exit={{ opacity: 0, x: slideDirection === 'right' ? -200 : 200 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
               className="absolute inset-0 flex flex-col md:flex-row gap-4 md:gap-12 bg-gradient-to-b from-gray-900/80 to-black/95 md:bg-none rounded-2xl p-3 md:p-6 shadow-xl md:shadow-none"
             >
               {/* Image Section */}
               <div className="relative w-full md:w-fit h-[200px] md:h-full rounded-xl md:rounded-2xl overflow-hidden bg-black/20">
                 <CloudinaryImage
-                  src={eventsData.events[activeIndex].image}
-                  alt={eventsData.events[activeIndex].title}
+                  src={sortedEvents[activeIndex].image}
+                  alt={sortedEvents[activeIndex].title}
                   className="w-full h-full object-contain md:hover:scale-105 transition-transform duration-300"
                   draggable="false"
                 />
@@ -93,21 +122,21 @@ const EventCarousel = () => {
               <div className="w-full md:w-[55%] font-secFont1 text-white space-y-3 md:space-y-6 p-2 md:p-6 select-none ">
                 <div className="space-y-2">
                   <h3 className="text-2xl md:text-4xl font-primaryFont leading-tight">
-                    {eventsData.events[activeIndex].title}
+                    {sortedEvents[activeIndex].title}
                   </h3>
                   <div className="flex items-center gap-2 text-colPink text-sm md:text-lg pt-4">
                     <span className="bg-colPink/10 px-3 py-1 rounded-full">
-                      {eventsData.events[activeIndex].date}
+                      {sortedEvents[activeIndex].date}
                     </span>
                     <span className="w-1 h-1 rounded-full bg-colPink"></span>
                     <span className="bg-colPink/10 px-3 py-1 rounded-full">
-                      {eventsData.events[activeIndex].time}
+                      {sortedEvents[activeIndex].time}
                     </span>
                   </div>
                 </div>
 
                 <p className="font-secFont1 text-gray-300 text-sm md:text-lg leading-relaxed line-clamp-3 md:line-clamp-5">
-                  {eventsData.events[activeIndex].longDescription}
+                  {sortedEvents[activeIndex].longDescription}
                 </p>
 
                 <div className="font-secFont1 space-y-2 bg-white/5 rounded-lg p-3 md:p-0 md:bg-transparent">
@@ -115,7 +144,7 @@ const EventCarousel = () => {
                     <p className="flex flex-wrap gap-2">
                       <span className="font-semibold text-gray-100">Contact: </span>
                       <span className="flex gap-1">
-                        {eventsData.events[activeIndex].contact.map((con, index, arr) => (
+                        {sortedEvents[activeIndex].contact.map((con, index, arr) => (
                           <span key={index}>
                             {con}{index !== arr.length - 1 && ' | '}
                           </span>
@@ -127,9 +156,9 @@ const EventCarousel = () => {
                 </div>
                 {/* className="w-full md:w-1/2 bg-colPink text-white py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-pink-700/80 transition-all duration-300 md:transform shadow-lg shadow-pink-500/20" */}
                 <div className="font-secFont1 flex flex-col gap-2 md:flex-row md:gap-4 pt-3">
-                  {eventsData.events[activeIndex].registrationLink ? (
+                  {sortedEvents[activeIndex].registrationLink ? (
                     <a
-                      href={eventsData.events[activeIndex].registrationLink}
+                      href={sortedEvents[activeIndex].registrationLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full md:w-1/2 bg-colPink text-white py-3 text-center rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-pink-700/80 transition-all duration-300 md:transform shadow-lg shadow-pink-500/20"                    >
@@ -145,7 +174,7 @@ const EventCarousel = () => {
                   )}
                   <button
                     onClick={() =>
-                      navigate(`/event/${eventsData.events[activeIndex].id}`)
+                      navigate(`/event/${sortedEvents[activeIndex].id}`)
                     }
                     className="w-full md:w-1/2 border border-colPink text-colPink py-3 rounded-lg md:rounded-xl text-sm md:text-base font-semibold active:scale-95 md:hover:bg-colPink md:hover:text-white transition-all duration-300 md:transform "
                   >
@@ -158,7 +187,7 @@ const EventCarousel = () => {
 
           {/* Event Navigation Dots */}
           <div className="absolute -bottom-6 md:-bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2">
-            {eventsData.events.map((_, index) => (
+            {sortedEvents.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
