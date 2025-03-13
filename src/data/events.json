@@ -1,3 +1,7 @@
+
+
+
+
 {
   "events": [
     {
@@ -151,6 +155,78 @@
           "title": "Jab We Code",
           "category": "CSE Events",
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png"
+        }
+      ]
+    },
+    {
+      "id": "shaft-tank",
+      "title": "Shaft Tank",
+      "date": "29th March",
+      "time": "10:00 AM",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeCGtjC2J3N_2ULrQ60oqjSdIXFs0NGOQ7K5doOCYSWBhA2mQ/viewform?usp=sharing",
+      "description": "A competition to encourage students to showcase their creativity, innovation, and confidence by pitching their ideas in front of a panel of judges.",
+      "longDescription": "Shaft Tank is designed to bring out the creativity and innovation of students by allowing them to pitch unique ideas or products. Teams of up to 3 members will present their ideas, which can be in the form of an abstract, CAD model, prototype, or a finished product. The event aims to foster confidence and provide a platform for students to showcase their skills. Judges will evaluate pitches based on idea originality, delivery, and potential investment appeal.",
+      "category": "Mech Events",
+      "contact": ["Manush Shah (7486098667)", "Dev Shah (9825219414)"],
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870019/Shaft_Tank_pdfblc.jpg",
+      "rules": [
+        "Rule 1: Team cannot exceed 3 members",
+        "Rule 2: All soft copies related to the pitch must be submitted 48 hours before the event",
+        "Rule 3: The idea/product must be something novel",
+        "Rule 4: Any reference taken from any place must be mentioned. Plagiarism is strictly prohibited",
+        "Rule 5: Pitch cannot exceed 7 minutes",
+        "Rule 6: There will be a 10% deduction of investment if the pitch exceeds the time limit",
+        "Rule 7: Teams must reach the venue at least 30 minutes before the event. Failing to do so will result in disqualification",
+        "Rule 8: Decisions taken by the event heads and panel members will be final"
+      ],
+      "howToApply": [
+        "Finalise team members",
+        "Fill the registration form",
+        "Enjoy the event"
+      ],
+      "relatedEvents": [
+        {
+          "id": "rc-car-race",
+          "title": "RC Car Race",
+          "category": "Mech Events",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/RC_Car_Race_sh7chv.jpg"
+        }
+      ]
+    },
+    {
+      "id": "rc-car-race",
+      "title": "RC Car Race",
+      "date": "30th March",
+      "time": "10:00 AM",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScvaNSweK5qNHR78CM053jpJKfHmNLiqPCe7V2WfDfkKBY6wA/viewform?usp=sharing",
+      "description": "An RC car racing event where teams build and race their own self-fabricated cars on a challenging track with obstacles, aiming for speed, precision, and innovation.",
+      "longDescription": "RC Car Race challenges teams to design and build their own remote-controlled cars for a thrilling competition. Participants must fabricate their cars and navigate a track filled with obstacles like gravel, dirt, ramps, and sharp turns. With strict rules on construction and fair play, the event emphasizes creativity, technical skills, and racing strategy. Teams must fine-tune their vehicles and race against opponents in multiple rounds, culminating in an exciting final lap battle to determine the champion.",
+      "category": "Mech Events",
+      "contact": ["Manush Shah (7486098667)", "Dev Shah (9825219414)"],
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/RC_Car_Race_sh7chv.jpg",
+      "rules": [
+        "Rule 1: Teams must consist of 2-5 members from the same university/college",
+        "Rule 2: Participants must be pursuing undergraduate majors",
+        "Rule 3: Teams must report 45 minutes prior to the first round",
+        "Rule 4: Teams must submit a video of the car working, along with microcontroller code and car specifications",
+        "Rule 5: Only one driver is allowed to control the car at the event",
+        "Rule 6: No team member (including the driver) is allowed inside the yellow line zone enclosing the track",
+        "Rule 7: If a car goes off track, it will be disqualified from the round and event",
+        "Rule 8: A 2-second penalty will be given for minor car collisions based on judge’s decision",
+        "Rule 9: A 10-second penalty applies for deliberate bumps causing another car to go off course",
+        "Rule 10: Partial off-track violations without collision incur a 2-second penalty"
+      ],
+      "howToApply": [
+        "Finalise team members",
+        "Fill the registration form",
+        "Enjoy the event"
+      ],
+      "relatedEvents": [
+        {
+          "id": "shaft-tank",
+          "title": "Shaft Tank",
+          "category": "Mech Events",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870019/Shaft_Tank_pdfblc.jpg"
         }
       ]
     }
