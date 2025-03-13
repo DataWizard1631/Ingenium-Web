@@ -8,15 +8,15 @@ const categories = [
   { id: "all", label: "All" },
   { id: "Hackathon", label: "Hackathon" },
   { id: "CSE Events", label: "CSE Events" },
+  { id: "Mech Events", label: "Mech Events" },
   { id: "esports", label: "E-sports" },
-  { id: "mechevents", label: "Mech Event" },
   { id: "eeeevents", label: "EEE Event" },
   { id: "chemevents", label: "Chem Events" },
 ];
 
 const comingSoonCategories = [
   "esports",
-  "mechevents",
+  // "mechevents",
   "eeeevents",
   "chemevents"
 ];
