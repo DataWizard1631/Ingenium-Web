@@ -9,7 +9,7 @@ export const sponsorsData = {
         {
             "name": "TIME",
             "title": "T.I.M.E.",
-            "href": "https://www.time4education.com/Ahmedabad",
+            "href": "https://time4mba.in/",
             "logo": "/sponsorLogo/time.png"
         },
         {
