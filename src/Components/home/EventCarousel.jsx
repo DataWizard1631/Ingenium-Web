@@ -26,7 +26,15 @@ const EventCarousel = () => {
     return [...eventsData.events].sort((a, b) => {
       const dateA = getFirstDate(a.date);
       const dateB = getFirstDate(b.date);
-      return dateA - dateB;
+
+      if (dateA.getTime() !== dateB.getTime()) {
+        return dateA - dateB;
+      }
+
+      // If dates are equal, compare times
+      const timeA = new Date(`1970/01/01 ${a.time}`);
+      const timeB = new Date(`1970/01/01 ${b.time}`);
+      return timeA - timeB;
     });
   }, []);
 

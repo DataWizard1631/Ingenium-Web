@@ -103,7 +103,29 @@ export const EventLog = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const getAllEvents = () => {
-    return eventsData.events.sort((a, b) => a.date.localeCompare(b.date));
+    return eventsData.events.sort((a, b) => {
+      // Convert dates like "29th March" to Date objects
+      const parseDate = (dateStr) => {
+        // Remove suffixes (th, st, nd, rd) and split
+        const cleanDate = dateStr.replace(/(st|nd|rd|th)/, '');
+        // Create a date object for current year (since month and day are provided)
+        const currentYear = new Date().getFullYear();
+        return new Date(`${cleanDate} ${currentYear}`);
+      };
+
+      // Compare dates
+      const dateA = parseDate(a.date);
+      const dateB = parseDate(b.date);
+      
+      if (dateA.getTime() !== dateB.getTime()) {
+        return dateA - dateB;
+      }
+      
+      // If dates are equal, compare times
+      const timeA = new Date(`1970/01/01 ${a.time}`);
+      const timeB = new Date(`1970/01/01 ${b.time}`);
+      return timeA - timeB;
+    });
   };
 
   const currentEvents = selectedCategory === "all"
