@@ -225,6 +225,116 @@
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870019/Shaft_Tank_pdfblc.jpg"
         }
       ]
+    },
+    {
+      "id": "chy-fragrance",
+      "title": "Chy Fragrance",
+      "date": "25th March",
+      "time": "2:30 PM",
+      "registrationLink": "",
+      "description": "A unique event where participants create their own fragrances using chemical engineering principles.",
+      "longDescription": "Chy Fragrance is a creative and educational event where participants learn to blend fragrances using chemical engineering techniques. Explore the science behind perfumery, experiment with different scents, and create your own signature fragrance. This event combines creativity with technical knowledge, offering a unique experience for chemistry enthusiasts.",
+      "category": "Chem Events",
+      "contact": ["Moksh Shah (9913308472)"],
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/CHY_Fragrance_wlws14.jpg",
+      "rules": [
+        "Rule 1: Open to all students interested in chemistry and perfumery",
+        "Rule 2: Prior registration is mandatory",
+        "Rule 3: Participants must follow safety protocols",
+        "Rule 4: Materials will be provided at the event",
+        "Rule 5: Each participant will create one fragrance"
+      ],
+      "howToApply": [
+        "Fill the registration form",
+        "Pay the event fee",
+        "Attend the event"
+      ],
+      "relatedEvents": [
+        {
+          "id": "hackathon",
+          "title": "Ingenious Hackathon 6.0",
+          "category": "Hackathon",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
+        }
+      ]
+    },
+    {
+      "id": "electric-race",
+      "title": "Electric Race",
+      "date": "23rd March",
+      "time": "2:00 PM",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScGe2gekqvbWU3rjwvHyfK7x5nt5cOIXr4aGMioIPxfe-KvuQ/viewform?usp=sharing",
+      "description": "An event to test your electrical and logical skills to advance through a series of increasingly difficult challenges.",
+      "longDescription": "You and your teammates are in search of a treasure long thought to be a myth. Recently, you came across an opportunity that may lead you to the treasure you seek. But your team is not the only one. Put your electrical and logical skills to the test in this melting pot of treasure hunt, code-breaking, and observation as you race against other teams to be the first to reach the lost treasure.",
+      "category": "Electrical Events",
+      "contact": ["Ayush Purohit (6358851406)"],
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060030/Electric_Race_zoq1sr.jpg",
+      "rules": [
+        "Rule 1: Access to internet is not allowed",
+        "Rule 2: Access to a laptop and smartphones is allowed, without internet access",
+        "Rule 3: Only upon the arrival of the entire team can the team start solving the next puzzle",
+        "Rule 4: Contact with other teams or people not a part of the event, which in any form may compromise the integrity of the puzzles, is not allowed",
+        "Rule 5: The team is allowed to click photos of any resource they may consider useful during the duration of the event",
+        "Rule 6: A volunteer will be present with each team to ensure the above rules are followed"
+      ],
+      "howToApply": [
+        "Fill the registration form",
+        "Enjoy the event"
+      ],
+      "relatedEvents": [
+        {
+          "id": "optimized-minds",
+          "title": "Optimized Minds - Machine Learning",
+          "category": "CSE Events",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
+        },
+        {
+          "id": "hackathon",
+          "title": "Ingenious Hackathon 6.0",
+          "category": "Hackathon",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
+        }
+      ]
+    },
+    {
+      "id": "escape-room",
+      "title": "Override Protocol: Humanity's Last Stand",
+      "date": "23rd March",
+      "time": "3:00 PM",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfGkKlV7OiSprJe3CUsrhsFKU8Dz4r3h1o5dAWKP3Usonf8KQ/viewform?usp=sharing",
+      "description": "AI has gone rogue, and the world is about to end! Your team must outsmart the evil scientist in his own lab, solve puzzles, and uncover the kill code within 45 minutes. Work together to save humanity before time runs out!",
+      "longDescription": "The fate of humanity is in your hands! In Override Protocol: Humanity’s Last Stand, an evil scientist has unleashed a rogue AI, and only your team can stop it. Work together in this high-stakes sci-fi escape room to uncover hidden clues, solve mind-bending puzzles, and find the elusive kill code—before time runs out! With just 45 minutes to prevent catastrophe, teamwork and quick thinking are your only hope. Gather your squad of 4-5 players and prove you can save the world! P.S. Amazing prizes await the winning team ;)",
+      "category": "Take-A-Break",
+      "contact": ["Vrushti Patel (8866024176)", "Archi Daga (9512304004 )"],
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg",
+      "rules": [
+        "Rule 1: No phones/internet allowed during game time",
+        "Rule 2: Direct disqualification if any material or clue in the room gets broken",
+        "Rule 3: Participants must report 10 minutes before the selected time slot",
+        "Rule 4: At least 4 members of the team should be present to start the game",
+        "Rule 5: Participants must not communicate with outsiders/other teams in any way that could compromise the puzzles",
+        "Rule 6: The team with the fastest record wins the game",
+        "Rule 7: In case of conflict, the organiser's decision will be final",
+        "Rule 8: No refund/ cancellation after registration"
+      ],
+      "howToApply": [
+        "Fill the registration form",
+        "Enjoy the event"
+      ],
+      "relatedEvents": [
+        {
+          "id": "optimized-minds",
+          "title": "Optimized Minds - Machine Learning",
+          "category": "CSE Events",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
+        },
+        {
+          "id": "hackathon",
+          "title": "Ingenious Hackathon 6.0",
+          "category": "Hackathon",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
+        }
+      ]
     }
   ]
 }
