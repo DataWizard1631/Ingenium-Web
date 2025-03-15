@@ -186,6 +186,12 @@
           "title": "RC Car Race",
           "category": "Mech Events",
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/RC_Car_Race_sh7chv.jpg"
+        },
+        {
+          "id": "aumazing",
+          "title": "AUmazing Talent",
+          "category": "Take-A-Break",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742061392/shaft-tank_hsskk9.jpg"
         }
       ]
     },
@@ -223,15 +229,21 @@
           "title": "Shaft Tank",
           "category": "Mech Events",
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870019/Shaft_Tank_pdfblc.jpg"
+        },
+        {
+          "id": "escape-room",
+          "title": "Override Protocol: Humanity's Last Stand",
+          "category": "Take-A-Break",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg"
         }
       ]
     },
     {
       "id": "chy-fragrance",
       "title": "Chy Fragrance",
-      "date": "25th March",
-      "time": "2:30 PM",
-      "registrationLink": "",
+      "date": "29th March",
+      "time": "12:00 PM",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfCSLtgiwI7VgjEzbbT3pSFLTs56jYC1uwJhhxBgO30yK7fZw/viewform?usp=dialog",
       "description": "A unique event where participants create their own fragrances using chemical engineering principles.",
       "longDescription": "Chy Fragrance is a creative and educational event where participants learn to blend fragrances using chemical engineering techniques. Explore the science behind perfumery, experiment with different scents, and create your own signature fragrance. This event combines creativity with technical knowledge, offering a unique experience for chemistry enthusiasts.",
       "category": "Chem Events",
@@ -255,14 +267,20 @@
           "title": "Ingenious Hackathon 6.0",
           "category": "Hackathon",
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
+        },
+        {
+          "id": "electric-race",
+          "title": "Electric Race",
+          "category": "Electrical Events",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060030/Electric_Race_zoq1sr.jpg"
         }
       ]
     },
     {
       "id": "electric-race",
       "title": "Electric Race",
-      "date": "23rd March",
-      "time": "2:00 PM",
+      "date": "29th March",
+      "time": "11:00 PM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScGe2gekqvbWU3rjwvHyfK7x5nt5cOIXr4aGMioIPxfe-KvuQ/viewform?usp=sharing",
       "description": "An event to test your electrical and logical skills to advance through a series of increasingly difficult challenges.",
       "longDescription": "You and your teammates are in search of a treasure long thought to be a myth. Recently, you came across an opportunity that may lead you to the treasure you seek. But your team is not the only one. Put your electrical and logical skills to the test in this melting pot of treasure hunt, code-breaking, and observation as you race against other teams to be the first to reach the lost treasure.",
@@ -299,8 +317,8 @@
     {
       "id": "escape-room",
       "title": "Override Protocol: Humanity's Last Stand",
-      "date": "23rd March",
-      "time": "3:00 PM",
+      "date": "29th March",
+      "time": "10:00 AM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfGkKlV7OiSprJe3CUsrhsFKU8Dz4r3h1o5dAWKP3Usonf8KQ/viewform?usp=sharing",
       "description": "AI has gone rogue, and the world is about to end! Your team must outsmart the evil scientist in his own lab, solve puzzles, and uncover the kill code within 45 minutes. Work together to save humanity before time runs out!",
       "longDescription": "The fate of humanity is in your hands! In Override Protocol: Humanity’s Last Stand, an evil scientist has unleashed a rogue AI, and only your team can stop it. Work together in this high-stakes sci-fi escape room to uncover hidden clues, solve mind-bending puzzles, and find the elusive kill code—before time runs out! With just 45 minutes to prevent catastrophe, teamwork and quick thinking are your only hope. Gather your squad of 4-5 players and prove you can save the world! P.S. Amazing prizes await the winning team ;)",
@@ -339,8 +357,8 @@
     {
       "id": "invest-o-mania",
       "title": "Invest-O-Mania",
-      "date": "25th March",
-      "time": "1:00 PM",
+      "date": "28th March",
+      "time": "9:15 AM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScCfiz22D6W6KxpIPrlOBQNK9iLukY_jp0F__pkCqVtQdfT2w/viewform?usp=sharing",
       "description": "Join Invest-O-Mania, a Stock Market Workshop designed to help students grasp key financial concepts. Learn about market trends, stock screeners, and investment strategies in a guided session by Mentor: Kalpesh Patel.",
       "longDescription": "Invest-O-Mania is an exclusive Stock Market Workshop featuring the Master Trader Program (#BhavBhagvanChe) led by Mentor: Kalpesh Patel. This session is designed to provide students with a strong foundation in the world of investing. It will cover essential financial concepts, including investment strategies, risk management, stock screeners, and market indicators. The workshop aims to help students understand market trends and make informed investment decisions. Whether you're a beginner or have prior knowledge, this event will enhance your financial literacy. Plus, exciting giveaways and exclusive rewards await all participants!",
@@ -363,14 +381,20 @@
           "title": "Override Protocol: Humanity's Last Stand",
           "category": "Take-A-Break",
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg"
+        },
+        {
+          "id": "aumazing",
+          "title": "AUmazing Talent",
+          "category": "Take-A-Break",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742061392/shaft-tank_hsskk9.jpg"
         }
       ]
     },
     {
       "id": "aumazing",
       "title": "AUmazing Talent",
-      "date": "23rd March",
-      "time": "12:30 PM",
+      "date": "29th March",
+      "time": "5:00 PM",
       "description": "An activity to show the nine emotions that form the essence of performing arts - Navras.",
       "longDescription": "AUmazing Talent is a unique talent showcase event dedicated to the theme of Navaras - the nine emotions that form the essence of performing arts. The event aims to bring together individuals who can express these emotions through various art forms, providing a stage for performers to showcase their talent through diverse performances. The event is open to all art forms, including dance, music, theatre, poetry, and any other creative expressions that depict the nine rasas: Shringara (Love), Hasya (Laughter), Karuna (Compassion), Raudra (Anger), Veera (Heroism), Bhayanaka (Fear), Bibhatsa (Disgust), Adbhuta (Wonder), and Shanta (Peace). Performances: Open to dance, music that embodies Navarasa.",
       "category": "Take-A-Break",
