@@ -9,9 +9,10 @@ const categories = [
   { id: "Hackathon", label: "Hackathon" },
   { id: "CSE Events", label: "CSE Events" },
   { id: "Mech Events", label: "Mech Events" },
+  { id: "Electrical Events", label: "EEE Events" },
+  { id: "Chem Events", label: "Chem Events" },
+  { id: "Take-A-Break", label: "Take-A-Break" },
   { id: "esports", label: "E-sports" },
-  { id: "eeeevents", label: "EEE Event" },
-  { id: "chemevents", label: "Chem Events" },
 ];
 
 const comingSoonCategories = [
