@@ -335,6 +335,71 @@
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
         }
       ]
+    },
+    {
+      "id": "invest-o-mania",
+      "title": "Invest-O-Mania",
+      "date": "25th March",
+      "time": "1:00 PM",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScCfiz22D6W6KxpIPrlOBQNK9iLukY_jp0F__pkCqVtQdfT2w/viewform?usp=sharing",
+      "description": "Join Invest-O-Mania, a Stock Market Workshop designed to help students grasp key financial concepts. Learn about market trends, stock screeners, and investment strategies in a guided session by Mentor: Kalpesh Patel.",
+      "longDescription": "Invest-O-Mania is an exclusive Stock Market Workshop featuring the Master Trader Program (#BhavBhagvanChe) led by Mentor: Kalpesh Patel. This session is designed to provide students with a strong foundation in the world of investing. It will cover essential financial concepts, including investment strategies, risk management, stock screeners, and market indicators. The workshop aims to help students understand market trends and make informed investment decisions. Whether you're a beginner or have prior knowledge, this event will enhance your financial literacy. Plus, exciting giveaways and exclusive rewards await all participants!",
+      "category": "Take-A-Break",
+      "contact": ["Even Patel (9898159969)"],
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060779/INVEST-O-MANIA_alt_v2_1_hqgsnh.jpg",
+      "rules": [
+        "Rule 1: Open to all university students interested in finance & investments",
+        "Rule 2: Prior registration is mandatory",
+        "Rule 3: No prior stock market knowledge is required",
+        "Rule 4: Maintain decorum and avoid disruptions during the session"
+      ],
+      "howToApply": [
+        "Fill the registration form",
+        "Enjoy the event"
+      ],
+      "relatedEvents": [
+        {
+          "id": "escape-room",
+          "title": "Override Protocol: Humanity's Last Stand",
+          "category": "Take-A-Break",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg"
+        }
+      ]
+    },
+    {
+      "id": "aumazing",
+      "title": "AUmazing Talent",
+      "date": "23rd March",
+      "time": "12:30 PM",
+      "description": "An activity to show the nine emotions that form the essence of performing arts - Navras.",
+      "longDescription": "AUmazing Talent is a unique talent showcase event dedicated to the theme of Navaras - the nine emotions that form the essence of performing arts. The event aims to bring together individuals who can express these emotions through various art forms, providing a stage for performers to showcase their talent through diverse performances. The event is open to all art forms, including dance, music, theatre, poetry, and any other creative expressions that depict the nine rasas: Shringara (Love), Hasya (Laughter), Karuna (Compassion), Raudra (Anger), Veera (Heroism), Bhayanaka (Fear), Bibhatsa (Disgust), Adbhuta (Wonder), and Shanta (Peace). Performances: Open to dance, music that embodies Navarasa.",
+      "category": "Take-A-Break",
+      "contact": ["Vishva Dave (8780765935)", "Vaishvi Patel (9313714364)"],
+      "image": "./shaft-tank.jpeg",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeaekug6sbVJAzJCZ1rj0gavJ2gJoUZkOzntVo6HqF9XMBq9Q/viewform",
+      "rules": [
+        "Rule 1: Content should be original and expressive",
+        "Rule 2: Performances must align with one or more of the nine rasas",
+        "Rule 3: Time limit 5 mins maximum"
+      ],
+      "howToApply": [
+        "Fill the registration form",
+        "Enjoy the event"
+      ],
+      "relatedEvents": [
+        {
+          "id": "invest-o-mania",
+          "title": "Invest-O-Mania",
+          "category": "Take-A-Break",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060779/INVEST-O-MANIA_alt_v2_1_hqgsnh.jpg"
+        },
+        {
+          "id": "escape-room",
+          "title": "Override Protocol: Humanity's Last Stand",
+          "category": "Take-A-Break",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg"
+        }
+      ]
     }
   ]
 }
