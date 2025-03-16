@@ -12,14 +12,14 @@ const categories = [
   { id: "Electrical Events", label: "EEE Events" },
   { id: "Chem Events", label: "Chem Events" },
   { id: "Take-A-Break", label: "Take-A-Break" },
-  { id: "esports", label: "E-sports" },
+  { id: "Esports", label: "E-sports" },
 ];
 
 const comingSoonCategories = [
-  "esports",
+  // "esports",
   // "mechevents",
-  "eeeevents",
-  "chemevents"
+  // "eeeevents",
+  // "chemevents"
 ];
 
 function CardComp({ event }) {
