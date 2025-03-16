@@ -67,10 +67,6 @@
           { "Name": "Vaishvi Patel", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372262/Vaishvi_Patel_Talent_Show_Head_e5nb9k.jpg" },
           { "Name": "Vishwa Dave", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372256/Vishwa_Dave_Talent_Show_Head_d7iary.jpg" }
       ],
-      "Gaming": [
-          { "Name": "Laksh Thanki", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1740389333/Lakshya_Thanki_cs3hfw.jpg" },
-          { "Name": "Tanmay Bansal", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1740389334/Tanmay_Bansal_whzts4.jpg" }
-      ],
       "Sponsorship": [
           { "Name": "Vansh Narania", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372257/Vansh_Narania_Sponsorship_Head_ttvcri.jpg" }
       ],

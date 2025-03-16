@@ -53,9 +53,30 @@ function About() {
             <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#5b5b5b] bg-clip-text cyber-text my-6 md:my-0 md:mb-12">
               OFFICE BEARERS
             </h2>
+
+            {/* First Group: Fest Head & Treasurer */}
+            <div className="w-full flex justify-center mb-12">
+              <div className="max-w-[1200px] w-full flex flex-wrap justify-center gap-x-8 gap-y-12">
+                {teamMembers.Obs.filter(member =>
+                  ["Fest Head", "Treasurer"].includes(member.Position)
+                ).map((member, i) => (
+                  <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
+                    <AboutCard 
+                      name={member.Name}
+                      post={member.Position}
+                      image={member.imageUrl}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Second Group: Secretary & Joint Secretary */}
             <div className="w-full flex justify-center">
               <div className="max-w-[1200px] w-full flex flex-wrap justify-center gap-x-8 gap-y-12">
-                {teamMembers.Obs.map((member, i) => (
+                {teamMembers.Obs.filter(member =>
+                  ["Secretary", "Joint Secretary"].includes(member.Position)
+                ).map((member, i) => (
                   <div key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                     <AboutCard 
                       name={member.Name}
@@ -67,6 +88,7 @@ function About() {
               </div>
             </div>
           </div>
+
 
           {/* Core Teams - 4 cards per row groups */}
           <div className="w-full mb-20">
@@ -210,27 +232,6 @@ function About() {
               {/* Gaming Team */}
               <div className="flex-1">
                 <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text my-6 md:my-0 md:mb-12">
-                  GAMING TEAM
-                </h2>
-                <div className="flex flex-wrap justify-center gap-8">
-                  {teamMembers.Cores["Gaming"].map((member, i) => (
-                    <div key={i} className="w-[280px]" data-aos="fade-up" data-aos-delay={i * 100}>
-                      <AboutCard 
-                        name={member.Name}
-                        post="Gaming"
-                        image={member.imageUrl}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Social Media and Content Row */}
-            <div className="flex flex-col md:flex-row justify-center mb-0 md:mb-20">
-              {/* Social Media Team */}
-              <div className="flex-1">
-                <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text my-6 md:my-0 md:mb-12">
                   SOCIAL MEDIA TEAM
                 </h2>
                 <div className="flex flex-wrap justify-center gap-8">
@@ -245,7 +246,10 @@ function About() {
                   ))}
                 </div>
               </div>
+            </div>
 
+            {/* Content and Registration Row */}
+            <div className="flex flex-col md:flex-row justify-center mb-0 md:mb-20">
               {/* Content Team */}
               <div className="flex-1">
                 <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text my-6 md:my-0 md:mb-12">
@@ -263,14 +267,8 @@ function About() {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Registration/Outreach and Management Teams Row */}
-          <div className="w-full mb-20">
-            {/* First Row with both team categories */}
-            <div className="flex flex-col md:flex-row justify-center mb-0 md:mb-20">
-              {/* Registration & Outreach Section */}
+              {/* Registration & Outreach Team */}
               <div className="flex-1">
                 <h2 className="text-3xl sm:text-4xl font-primaryFont text-center text-transparent bg-gradient-to-r from-white via-pink-200 to-[#C90F5B] bg-clip-text cyber-text my-6 md:my-0 md:mb-12">
                   R & O TEAM
@@ -289,6 +287,13 @@ function About() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Registration/Outreach and Management Teams Row */}
+          <div className="w-full mb-20">
+            {/* First Row with both team categories */}
+            <div className="flex flex-col md:flex-row justify-center mb-0 md:mb-20">
 
               {/* Management Section */}
               <div className="flex-1">
