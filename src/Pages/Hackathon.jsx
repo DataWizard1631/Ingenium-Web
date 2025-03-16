@@ -73,60 +73,48 @@ const Hackathon = () => {
 
   const detailedTimeline = [
     // Day 1 - March 26, 2025
-    { time: "08:00 AM", event: "Registration & Breakfast", duration: "1 hour" },
-    { time: "09:00 AM", event: "Opening Ceremony", duration: "30 mins" },
-    { time: "09:30 AM", event: "Team Formation & Problem Statement Selection", duration: "1 hour" },
-    { time: "10:30 AM", event: "Coding Begins 🚀", duration: "Continuous" },
-    { time: "11:30 AM", event: "Mentor Round 1", duration: "1.5 hours" },
+    { time: "09:00 AM", event: "Entry & Registration", duration: "1 hour" },
+    { time: "10:00 AM", event: "Opening Ceremony", duration: "1 hour" },
+    { time: "11:00 AM", event: "Ideation time & Coding Begins 🚀", duration: "2 hours" },
+    { time: "01:00 PM", event: "Lunch time", duration: "1.5 hours" },
     { time: "01:00 PM", event: "Lunch Break", duration: "1 hour" },
-    { time: "02:30 PM", event: "Technical Workshop: 'Building Scalable Solutions'", duration: "1 hour" },
-    { time: "04:00 PM", event: "Mentor Round 2", duration: "1.5 hours" },
-    { time: "05:30 PM", event: "Evening Snacks", duration: "30 mins" },
-    { time: "08:00 PM", event: "Dinner", duration: "1 hour" },
-    { time: "10:00 PM", event: "Fun Activity: 'Code & Coffee Quiz'", duration: "1 hour" },
-    { time: "11:00 PM", event: "Night Coding Begins 🌙", duration: "Continuous" },
-
+    { time: "02:30 PM", event: "Code Rush", duration: "Continuous" },
+    { time: "06:00 PM", event: "Guest Session & Musical Night", duration: "1.5 hours" },
+    { time: "07:30 PM", event: "Dinner time", duration: "1.5 hours" },
+    { time: "09:00 PM", event: "Code Rush", duration: "Continuous" },
     // Day 2 - March 27, 2025
-    { time: "02:00 AM", event: "Midnight Snacks", duration: "30 mins" },
-    { time: "06:00 AM", event: "Breakfast", duration: "1 hour" },
-    { time: "09:00 AM", event: "Mentor Round 3", duration: "1.5 hours" },
-    { time: "11:00 AM", event: "Progress Presentation", duration: "2 hours" },
-    { time: "01:00 PM", event: "Lunch Break", duration: "1 hour" },
-    { time: "03:00 PM", event: "Final Mentor Round", duration: "2 hours" },
-    { time: "05:00 PM", event: "Project Submission Deadline ⏰", duration: "30 mins" },
-    { time: "05:30 PM", event: "Final Presentations", duration: "2.5 hours" },
-    { time: "08:00 PM", event: "Judging Round", duration: "1 hour" },
+    { time: "01:30 AM", event: "PPT Submission", duration: "30 mins" },
+    { time: "02:00 AM", event: "High tea", duration: "30 mins" },
+    { time: "02:30 AM", event: "Night Coding Begins 🌙", duration: "Continuous" },
+    { time: "08:00 AM", event: "Breakfast", duration: "1.5 hours" },
+    { time: "09:30 AM", event: "Code Rush", duration: "Continuous" },
+    { time: "01:00 PM", event: "PPT submission", duration: "30 mins" },
+    { time: "01:30 PM", event: "Lunch", duration: "1 hours" },
+    { time: "02:30 PM", event: "Final Changes ⏰", duration: "1.5 hours" },
+    { time: "04:00 PM", event: "Project Presentation", duration: "2 hours" },
     { time: "09:00 PM", event: "Winners Announcement & Closing Ceremony 🏆", duration: "1 hour" }
   ];
 
   const prizes = [
     { 
       position: "1st Prize", 
-      amount: "₹50,000", 
+      amount: "₹40,000", 
       extras: [
-        "6-month paid internship opportunity",
-        "Cloud credits worth ₹1,00,000",
-        "1-year GitHub Pro subscription",
-        "Direct entry to startup incubation program"
+        "Certificate & Goodies",
       ]
     },
     { 
       position: "2nd Prize", 
-      amount: "₹30,000", 
+      amount: "₹25,000", 
       extras: [
-        "3-month paid internship opportunity",
-        "Cloud credits worth ₹50,000",
-        "6-month GitHub Pro subscription",
-        "Free mentorship sessions"
+        "Certificate & Goodies",
       ]
     },
     { 
       position: "3rd Prize", 
-      amount: "₹20,000", 
+      amount: "₹15,000", 
       extras: [
-        "Cloud credits worth ₹25,000",
-        "3-month GitHub Pro subscription",
-        "Premium development tools subscription"
+        "Certificate & Goodies",
       ]
     }
   ];
@@ -153,7 +141,7 @@ const Hackathon = () => {
           <h2 className="text-3xl sm:text-4xl font-primaryFont text-center mb-8 sm:mb-12 bg-gradient-to-r from-white to-[#C90F5B] bg-clip-text text-transparent">
             PROBLEM STATEMENTS
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 font-secFont1">
             {problems.map((problem, index) => (
               <motion.div
                 key={problem.id}
@@ -167,39 +155,27 @@ const Hackathon = () => {
                     <FaLightbulb className="text-[#C90F5B] text-2xl sm:text-3xl flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="text-xl sm:text-2xl font-primaryFont mb-2">{problem.title}</h3>
-                      <span className="inline-block px-3 py-1 bg-[#C90F5B]/20 text-[#C90F5B] rounded-full text-sm mb-4">
+                      <span className="inline-block px-3 py-1 bg-[#C90F5B]/20 text-[#C90F5B] rounded-full text-sm md:text-base mb-4">
                         {problem.domain}
                       </span>
-                      <p className="text-sm sm:text-base text-gray-400">{problem.description}</p>
+                      <p className="text-sm sm:text-lg text-gray-400">{problem.description}</p>
                     </div>
                   </div>
 
                   {/* Requirements Section */}
                   <div className="border-t border-[#C90F5B]/20 pt-4">
                     <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Requirements:</h4>
-                    <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm sm:text-base">
+                    <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm sm:text-lg">
                       {problem.requirements.map((req, idx) => (
                         <li key={idx}>{req}</li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Tech Stack Section */}
-                  <div className="border-t border-[#C90F5B]/20 pt-4">
-                    <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Tech Stack:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {problem.techStack.map((tech, idx) => (
-                        <span key={idx} className="px-2 sm:px-3 py-1 bg-[#1A1A1A] border border-[#C90F5B]/30 rounded-full text-xs sm:text-sm">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Resources Section */}
                   <div className="border-t border-[#C90F5B]/20 pt-4">
                     <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Resources Provided:</h4>
-                    <p className="text-sm sm:text-base text-gray-300">{problem.resources}</p>
+                    <p className="text-sm sm:text-lg text-gray-300">{problem.resources}</p>
                   </div>
                 </div>
               </motion.div>
@@ -212,7 +188,7 @@ const Hackathon = () => {
           <h2 className="text-3xl sm:text-4xl font-primaryFont text-center mb-8 sm:mb-12 bg-gradient-to-r from-white to-[#C90F5B] bg-clip-text text-transparent">
             36-HOUR JOURNEY
           </h2>
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden font-secFont1">
             <div className="absolute left-4 sm:left-1/2 h-full w-1 bg-gradient-to-b from-[#C90F5B] via-pink-500 to-[#C90F5B]"></div>
             {detailedTimeline.map((item, index) => (
               <div
@@ -220,7 +196,7 @@ const Hackathon = () => {
                 className="relative flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8"
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               >
-                <div className="absolute left-4 sm:left-1/2 translate-x-[-6px] w-3 sm:w-4 h-3 sm:h-4 bg-[#C90F5B] rounded-full transform -translate-x-1/2">
+                <div className="absolute left-4 sm:left-1/2 translate-x-[-6px] w-3 sm:w-4 h-3 sm:h-4 bg-[#C90F5B] rounded-full transform">
                   <div className="absolute inset-0 bg-[#C90F5B] rounded-full animate-ping opacity-75"></div>
                 </div>
                 
@@ -234,21 +210,21 @@ const Hackathon = () => {
                 </div>
 
                 {/* Desktop Timeline */}
-                <div className={`hidden sm:block flex-1 ${index % 2 === 0 ? 'text-right pr-12' : 'pl-12'}`}>
+                <div className={`hidden sm:block flex-1 ${index % 2 === 0 ? 'text-right pr-12' : 'pl-2'}`}>
                   {index % 2 === 0 && (
                     <div className="bg-[#1A1A1A]/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-[#C90F5B]/30 hover:border-[#C90F5B] transition-all duration-300">
-                      <h3 className="text-lg sm:text-xl font-primaryFont text-[#C90F5B]">{item.time}</h3>
-                      <p className="text-white font-semibold text-base sm:text-lg mb-1">{item.event}</p>
-                      <span className="text-gray-400 text-xs sm:text-sm">{item.duration}</span>
+                      <h3 className="text-lg sm:text-lg font-primaryFont text-[#C90F5B]">{item.time}</h3>
+                      <p className="text-white font-semibold text-base sm:text-2xl mb-1">{item.event}</p>
+                      <span className="text-gray-400 text-xs sm:text-lg">{item.duration}</span>
                     </div>
                   )}
                 </div>
                 <div className={`hidden sm:block flex-1 ${index % 2 === 1 ? 'pl-12' : ''}`}>
                   {index % 2 === 1 && (
                     <div className="bg-[#1A1A1A]/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-[#C90F5B]/30 hover:border-[#C90F5B] transition-all duration-300">
-                      <h3 className="text-lg sm:text-xl font-primaryFont text-[#C90F5B]">{item.time}</h3>
-                      <p className="text-white font-semibold text-base sm:text-lg mb-1">{item.event}</p>
-                      <span className="text-gray-400 text-xs sm:text-sm">{item.duration}</span>
+                      <h3 className="text-lg sm:text-lg font-primaryFont text-[#C90F5B]">{item.time}</h3>
+                      <p className="text-white font-semibold text-base sm:text-2xl mb-1">{item.event}</p>
+                      <span className="text-gray-400 text-xs sm:text-lg">{item.duration}</span>
                     </div>
                   )}
                 </div>
@@ -273,7 +249,7 @@ const Hackathon = () => {
                 <p className="text-2xl sm:text-3xl font-bold text-[#C90F5B] mb-4">{prize.amount}</p>
                 <ul className="text-gray-400 space-y-2">
                   {prize.extras.map((extra, idx) => (
-                    <li key={idx} className="text-xs sm:text-sm">{extra}</li>
+                    <li key={idx} className="text-xs sm:text-lg font-secFont1">{extra}</li>
                   ))}
                 </ul>
               </div>
