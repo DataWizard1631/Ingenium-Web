@@ -30,7 +30,7 @@ function CardComp({ event }) {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
-      className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[300px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+      className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[400px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
     >
       {/* Image */}
       <div className="w-full sm:w-fit h-full sm:h-full">
@@ -43,7 +43,7 @@ function CardComp({ event }) {
 
       {/* Description */}
       <div className="flex flex-col flex-1 justify-between p-4 sm:p-6 md:p-8">
-        <div className="font-primaryFont text-xl sm:text-2xl md:text-3xl mb-4">
+        <div className="font-primaryFont text-lg sm:text-xl md:text-3xl mb-4">
           {event.title}
         </div>
         {/* display date time here */}
