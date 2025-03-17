@@ -30,7 +30,7 @@ function CardComp({ event }) {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
-      className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[300px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+      className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[60vw] xl:w-[50vw] min-h-[300px] sm:h-[40vh] md:h-[45vh] lg:h-[50vh] xl:h-[55vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
     >
       {/* Image */}
       <div className="w-full sm:w-fit h-full sm:h-full">
