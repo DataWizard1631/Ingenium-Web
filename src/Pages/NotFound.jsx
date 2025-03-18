@@ -41,14 +41,14 @@ const NotFound = () => {
           404
         </motion.h1>
         
-        <motion.p 
+        <motion.h1
           className="font-['ModernAge'] text-2xl sm:text-3xl md:text-4xl text-white mt-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           Page Not Found
-        </motion.p>
+        </motion.h1>
         
         <motion.p 
           className="font-['ModernAge'] text-gray-400 mb-8 max-w-md mx-auto text-sm sm:text-base md:text-lg"
