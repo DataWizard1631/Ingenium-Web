@@ -70,7 +70,14 @@ export const AboutUs = () => {
           Engineering and Applied Sciences. This expansive event offers
           a captivating blend of innovation and learning, featuring
           dynamic workshops exploring industry trends, a thrilling
-          hackathon spotlighting coding prowess.
+          hackathon spotlighting coding prowess. Ingenium is not merely an event; it's
+          a celebration of ideas. teamwork. and the limitless potential of
+          technology. Attendees can expect interactive sessions, cutting-
+          edge tech exhibitions, and networking opportunities with
+          industry experts. As the hub Of innovation at Ahmedabad
+          University, Ingenium invites everyone to shape the future—a
+          space where concepts come to life in the ever-evolving world
+          of technology.
           </p>
 
           {/* Counters */}
