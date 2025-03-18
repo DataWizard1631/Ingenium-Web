@@ -24,7 +24,7 @@ const Temp = () => {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date('2025-03-22T00:00:00');
+    const targetDate = new Date('2025-03-22T09:00:00');
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -100,7 +100,7 @@ const Temp = () => {
             }
           }}
         />
-        <div 
+        <h1 
           className="title z-[9999999]"
           style={{
             '--scroll-progress': scrollProgress,
@@ -109,7 +109,7 @@ const Temp = () => {
           }}
         >
           Ingenium'25
-        </div>
+        </h1>
         <div 
           className="countdown-container"
           style={{
