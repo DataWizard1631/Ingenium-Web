@@ -529,9 +529,9 @@
       "rules": [
         "Rule 1: Matches will follow official FIFA tournament rules",
         "Rule 2: No cheating or use of unauthorized software allowed",
-        "Rule 3: Participants must join the designated Discord server for communication",
-        "Rule 4: Matches will be streamed live",
-        "Rule 5: Participants must use the latest version of the game"
+        "Rule 3: Reporting time (15 mins before your match)",
+        "Rule 4: 5 mins of leeway will be provided if the player is late, after which opponent will be given a bye",
+        "Rule 5: Only Club and international teams will be allowed"
       ],
       "howToApply": [
         "Fill the registration form",
