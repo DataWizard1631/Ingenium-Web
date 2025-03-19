@@ -30,7 +30,7 @@ const EventDetails = () => {
           {/* Back Button */}
           <button 
             onClick={() => navigate(-1)}
-            className="mb-8 flex items-center gap-2 px-4 py-1 border-[1px] border-white text-white rounded-full transition-all duration-300 group w-fit"
+            className="mb-8 flex items-center gap-2 px-4 py-2 border-[1px] border-white text-white rounded-full transition-all duration-300 group w-fit"
           >
             <FaArrowLeft className="text-sm md:text-base transition-transform duration-300 group-hover:-translate-x-1" />
             <span className="text-sm md:text-base">Back</span>

@@ -26,12 +26,7 @@ function CardComp({ event }) {
   const navigate = useNavigate();
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.4 }}
-      className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[400px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-    >
+    <div className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[400px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
       {/* Image */}
       <div className="w-full sm:w-fit h-full sm:h-full">
         <CloudinaryImage
@@ -96,7 +91,7 @@ function CardComp({ event }) {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -184,8 +179,8 @@ export const EventLog = () => {
           {currentEvents?.map((event, index) => (
             <motion.div
               key={event.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -50 }}
               transition={{ 
                 duration: 0.5,
