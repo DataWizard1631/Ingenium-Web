@@ -135,6 +135,7 @@ const EventCarousel = () => {
                   <div className="flex items-center gap-2 text-colPink text-sm md:text-lg pt-4">
                     <span className="bg-colPink/10 px-3 py-1 rounded-full">
                       {sortedEvents[activeIndex].date}
+                      {sortedEvents[activeIndex].otherdate && <span> | {sortedEvents[activeIndex].otherdate}</span>}
                     </span>
                     <span className="w-1 h-1 rounded-full bg-colPink"></span>
                     <span className="bg-colPink/10 px-3 py-1 rounded-full">

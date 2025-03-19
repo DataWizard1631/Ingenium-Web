@@ -26,11 +26,11 @@ const EventDetails = () => {
   return (
     <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto min-h-screen">
       <div className="font-['OfficialBook'] bg-black/90 text-white min-h-screen p-4 md:p-8 lg:p-12">
-        <div className="px-4 md:px-16 mx-auto pt-20 md:pt-14 pb-4 md:pb-20">
+        <div className="px-4 md:px-16 mx-auto pt-20 md:pt-10 pb-4 md:pb-20">
           {/* Back Button */}
           <button 
             onClick={() => navigate(-1)}
-            className="mb-8 flex items-center gap-2 px-4 py-2 border-[1px] border-white text-white rounded-full transition-all duration-300 group w-fit"
+            className="mb-8 flex items-center gap-2 px-4 py-1 border-[1px] border-white text-white rounded-full transition-all duration-300 group w-fit"
           >
             <FaArrowLeft className="text-sm md:text-base transition-transform duration-300 group-hover:-translate-x-1" />
             <span className="text-sm md:text-base">Back</span>
@@ -38,9 +38,18 @@ const EventDetails = () => {
 
           {/* Date and Time */}
           <div className="text-base sm:text-lg md:text-2xl lg:text-4xl">
-            <span>{event.date},</span>
-            <span className="ml-2">{event.time}</span>
+            {event.othertime ? (
+              <span>
+                {event.date} - {event.time} & {event.otherdate} - {event.othertime}
+              </span>
+            ) : (
+              <span>
+                {event.date} & {event.otherdate} - {event.time}
+              </span>
+            )}
           </div>
+
+
           
           {/* Event Title and Description */}
           <div className='flex flex-col md:flex-row justify-between w-full items-start md:items-center gap-6 md:gap-8'>
@@ -98,9 +107,9 @@ const EventDetails = () => {
           </div>
 
           {/* Rules and How to Apply Section */}
-          <div className='flex flex-col md:flex-row justify-between w-full items-start gap-8 md:gap-12 px-0 md:px-16 my-8 md:my-16'>
+          <div className='flex flex-col lg:flex-row justify-between w-full items-start gap-8 md:gap-12 px-0 lg:px-16 my-8 md:my-16'>
             {/* Rules Section */}
-            <div className='w-full md:w-[50%]'>
+            <div className='w-full lg:w-[50%]'>
               <div className='flex flex-row gap-4 md:gap-6 w-full items-center bg-[#FF1F79] p-3 md:p-4 rounded-tl-lg rounded-tr-lg'>
                 <FaBook className='text-3xl md:text-5xl' />
                 <p className="text-2xl md:text-4xl lg:text-6xl">Rule Book</p>
@@ -121,7 +130,7 @@ const EventDetails = () => {
              
 
               {/* Related Events */}
-              <div className='w-full md:w-[70%] mx-auto'>
+              <div className='w-full lg:w-[70%] mx-auto'>
                 <p className="text-3xl md:text-4xl lg:text-5xl mb-6">Explore more</p>
                 <div className='flex flex-col gap-4'>
                   {event.relatedEvents.map((relatedEvent) => (
@@ -145,6 +154,27 @@ const EventDetails = () => {
               </div>
             </div>
           </div>
+          
+          { event.carSpecification && (
+          <div className='flex flex-col lg  :flex-row justify-between w-full items-start gap-8 md:gap-12 px-0 lg:px-16 my-8 md:my-16'>
+            {/* Rules Section */}
+            <div className='w-full lg:w-[48.75%]'>
+              <div className='flex flex-row gap-4 md:gap-6 w-full items-center bg-[#FF1F79] p-3 md:p-4 rounded-tl-lg rounded-tr-lg'>
+                <FaBook className='text-3xl md:text-5xl' />
+                <p className="text-2xl md:text-4xl lg:text-6xl">Car Specification</p>
+              </div>
+              <div className="flex flex-col gap-4 md:text-xl bg-[#252525] px-6 md:px-12 py-6 md:py-8 rounded-b-lg">
+                <ul className="list-disc pl-4">
+                  { event.carSpecification && event.carSpecification.map((specification, index) => (
+                    <li key={index} className="mb-2">
+                      {specification}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+          )}
         </div>
       </div>
     </div>

@@ -54,7 +54,9 @@ function CardComp({ event }) {
         <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4">
           <p className="mb-2">
             <span className="font-semibold">Date: </span>
-            <span>{event.date}</span>
+            <span>{event.date} 
+            {event.otherdate && <span> | {event.otherdate}</span>}
+            </span>
           </p>
           <p className="mb-2">
             <span className="font-semibold">Time: </span>
