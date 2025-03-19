@@ -218,16 +218,7 @@
         "Rule 9: For each time the driver deliberately bumps into another car making the other car unstable or off course the driver will be given a 10 second penalty. In this case the car would be allowed to continue the race without facing the consequences of running out of the track mentioned above.",
         "Rule 10: For any instance the car partially gets out of the track without any collisions from other cars the team will be given a two seconds penalty."
       ],
-      "carSpecification": [
-        "- The car must not exceed the size limit of 350*250 mm (length x breadth) and 200 mm in height.",
-        "- The car must be self-fabricated/assembled by the team members.",
-        "- Use of readymade RC equipment such as controllers, Electronic Speed Controllers etc. is prohibited.",
-        "- Teams are expected to use controller boards and mobile applications to control the car.",
-        "- The car can either be 2WD or 4WD based on the team but must not consist of more than 4 wheels.",
-        "- Teams are free to use any method to steer the car.",
-        "- The track will include elements such as gravel, dirt, speed bumps, slippery water surface, sharp turns, and ramps.",
-        "- Teams are expected to design, test, and prepare their car accordingly for the track challenges."
-      ],
+      "guidelinesLink": "https://docs.google.com/document/d/1J4YtMZVBRfnkKtH6_m3yZxYTJ9zB-ODKreeCjol-Bzk/edit?usp=sharing",
       "howToApply": [
         "Finalise team members",
         "Fill the registration form",
@@ -420,6 +411,7 @@
         "Rule 2: Performances must align with one or more of the nine rasas",
         "Rule 3: Time limit 5 mins maximum"
       ],
+      "guidelinesLink": "https://docs.google.com/document/d/1MKZYoFc_rJqbTtNz7mb5YA1DKTxxHsbfxvLSonDtu8I/edit?usp=sharing",
       "howToApply": [
         "Fill the registration form",
         "Enjoy the event"

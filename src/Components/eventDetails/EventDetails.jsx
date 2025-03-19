@@ -62,17 +62,13 @@ const EventDetails = () => {
           
           {/* Event Title and Description */}
           <div className='flex flex-col md:flex-row justify-between w-full items-start md:items-center gap-6 md:gap-8'>
-            <h1 className="font-['ModernAge'] text-3xl sm:text-4xl md:text-7xl lg:text-8xl uppercase w-full md:w-[50%] mt-4">
+            <h1 className="font-['ModernAge'] text-3xl sm:text-4xl md:text-7xl lg:text-8xl uppercase w-full mt-4">
               {event.title}
             </h1>
-            
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed w-full md:w-[50%]">
-              {event.description}
-            </p>
           </div>
 
           {/* Long Description and Image Section */}
-          <div className="flex md:flex-row flex-col-reverse md:justify-between gap-8 md:gap-12 my-12 md:my-28">
+          <div className="flex md:flex-row flex-col-reverse md:justify-between gap-8 md:gap-12 my-12 md:my-28 md:mt-12">
             {/* Long Description */}
             <div className="w-full md:w-[60%]">
               <p className="text-sm sm:text-base md:text-xl lg:text-2xl leading-relaxed text-justify mb-8">
@@ -131,6 +127,14 @@ const EventDetails = () => {
                     </li>
                   ))}
                 </ul>
+                {
+                  event.guidelinesLink && (
+                    <a href={event.guidelinesLink} target="_blank" rel="noopener noreferrer" className="text-colPink hover:text-pink-400 transition-all duration-300 text-lg md:text-xl font-semibold group">
+                    Click here to view guidelines 
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">→</span>
+                  </a>
+                  )
+                }
               </div>
             </div>
 
@@ -163,27 +167,7 @@ const EventDetails = () => {
               </div>
             </div>
           </div>
-          
-          { event.carSpecification && (
-          <div className='flex flex-col lg  :flex-row justify-between w-full items-start gap-8 md:gap-12 px-0 lg:px-16 my-8 md:my-16'>
-            {/* Rules Section */}
-            <div className='w-full lg:w-[48.75%]'>
-              <div className='flex flex-row gap-4 md:gap-6 w-full items-center bg-[#FF1F79] p-3 md:p-4 rounded-tl-lg rounded-tr-lg'>
-                <FaBook className='text-3xl md:text-5xl' />
-                <p className="text-2xl md:text-4xl lg:text-6xl">Car Specification</p>
-              </div>
-              <div className="flex flex-col gap-4 md:text-xl bg-[#252525] px-6 md:px-12 py-6 md:py-8 rounded-b-lg">
-                <ul className="list-disc pl-4">
-                  { event.carSpecification && event.carSpecification.map((specification, index) => (
-                    <li key={index} className="mb-2">
-                      {specification}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-          )}
+        
         </div>
       </div>
     </div>
