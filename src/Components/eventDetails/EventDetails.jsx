@@ -38,16 +38,23 @@ const EventDetails = () => {
 
           {/* Date and Time */}
           <div className="text-base sm:text-lg md:text-2xl lg:text-4xl">
-            {event.othertime ? (
-              <span>
-                {event.date} - {event.time} & {event.otherdate} - {event.othertime}
-              </span>
+            {event.otherdate ? (
+              event.othertime ? (
+                <span>
+                  {event.date} - {event.time} & {event.otherdate} - {event.othertime}
+                </span>
+              ) : (
+                <span>
+                  {event.date} & {event.otherdate} - {event.time}
+                </span>
+              )
             ) : (
               <span>
-                {event.date} & {event.otherdate} - {event.time}
+                {event.date} - {event.time}
               </span>
             )}
           </div>
+
 
 
           
