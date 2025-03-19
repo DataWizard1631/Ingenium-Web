@@ -137,10 +137,16 @@ const EventCarousel = () => {
                       {sortedEvents[activeIndex].date}
                       {sortedEvents[activeIndex].otherdate && <span> | {sortedEvents[activeIndex].otherdate}</span>}
                     </span>
-                    <span className="w-1 h-1 rounded-full bg-colPink"></span>
-                    <span className="bg-colPink/10 px-3 py-1 rounded-full">
-                      {sortedEvents[activeIndex].time}
-                    </span>
+                    {
+                      sortedEvents[activeIndex].category !== "Esports" && (
+                        <>
+                        <span className="w-1 h-1 rounded-full bg-colPink"></span>
+                          <span className="bg-colPink/10 px-3 py-1 rounded-full">
+                          {sortedEvents[activeIndex].time}
+                        </span>
+                        </>
+                      )
+                    }
                   </div>
                 </div>
 

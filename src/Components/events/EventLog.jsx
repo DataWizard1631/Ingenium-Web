@@ -42,10 +42,17 @@ function CardComp({ event }) {
           {event.title}
         </div>
         {/* display date time here */}
-
-        <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4 line-clamp-3">
-          {event.longDescription}
-        </div>
+        {
+          event.category === "Esports" ? (
+            <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4 line-clamp-4">
+              {event.longDescription}
+            </div>
+          ) : (
+            <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4 line-clamp-3">
+              {event.description}
+            </div>
+          )
+        }
         <div className="font-secFont1 text-sm sm:text-base md:text-lg mb-4">
           <p className="mb-2">
             <span className="font-semibold">Date: </span>
@@ -53,10 +60,14 @@ function CardComp({ event }) {
             {event.otherdate && <span> | {event.otherdate}</span>}
             </span>
           </p>
-          <p className="mb-2">
-            <span className="font-semibold">Time: </span>
-            <span>{event.time}</span>
-          </p>
+          {
+            event.category !== "Esports" && (
+              <p className="mb-2">
+                <span className="font-semibold">Time: </span>
+                <span>{event.time}</span>
+              </p>
+            )
+          }
           <p className="flex flex-wrap gap-2">
             <span className="font-semibold">Contact: </span>
             <span className="flex flex-col gap-1">{event.contact.map((con, index) => (

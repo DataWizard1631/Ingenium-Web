@@ -193,7 +193,7 @@ function Timeline() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
                     className={`px-4 py-2 rounded-full backdrop-blur-sm border 
-                      hidden sm:block absolute -left-[250px] -top-4
+                      hidden sm:block absolute -top-4 ${event.category === "Esports" ? "-left-[175px]" : "-left-[250px]"}
                       ${eventStatus === 'completed' ? 'bg-gray-900/30 border-colPink/50' :
                         eventStatus === 'current' ? 'bg-colPink/20 border-colPink' :
                         'bg-white/10 border-white/20'}`}
@@ -203,7 +203,8 @@ function Timeline() {
                       eventStatus === 'current' ? 'text-colPink' :
                       'text-white'
                     }`}>
-                      {event.date} • {event.time}
+                      {event.date}
+                      {event.category !== "Esports" && <span> - {event.time}</span>}
                     </div>
                   </motion.div>
 
@@ -222,7 +223,8 @@ function Timeline() {
                       eventStatus === 'current' ? 'text-colPink' :
                       'text-white'
                     }`}>
-                      {event.date} • {event.time}
+                      {event.date}
+                      {event.category !== "Esports" && <span> - {event.time}</span>}
                     </div>
                   </motion.div>
 

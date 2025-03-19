@@ -50,7 +50,9 @@ const EventDetails = () => {
               )
             ) : (
               <span>
-                {event.date} - {event.time}
+                {event.date} {
+                event.category !== "Esports" && <span>- {event.time}</span>
+                }
               </span>
             )}
           </div>
