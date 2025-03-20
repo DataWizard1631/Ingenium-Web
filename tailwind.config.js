@@ -19,6 +19,7 @@ export default {
       },
       fontFamily: {
         primaryFont: ['ModernAge', 'sans-serif'], 
+        // secFont1: ['Montserrat', 'sans-serif'],
         secFont1: ['OfficialBook', 'sans-serif'],
         secFont2: ['Poppins-Regular', 'sans-serif'],
       },
