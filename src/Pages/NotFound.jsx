@@ -76,7 +76,7 @@ const NotFound = () => {
 
       {/* Decorative Elements */}
       <motion.div 
-        className="absolute bottom-10 left-0 right-0 text-center text-gray-500 text-sm sm:text-base"
+        className="absolute bottom-10 left-0 right-0 text-center text-gray-500 text-sm sm:text-base font-['ModernAge']"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
