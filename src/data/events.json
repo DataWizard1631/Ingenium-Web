@@ -553,11 +553,11 @@
       "registrationLink": "404",
       "description": "A hands-on certified workshop on Heat Exchanger Design using Aspen Plus, conducted by Professor Sridhar Dalai, offered practical insights into simulation and optimization techniques. Participants gained valuable skills in designing efficient heat exchangers, learning industry-relevant methodologies, and enhancing their process engineering knowledge through guided demonstrations and interactive problem-solving session.",
       "longDescription": "The Hands-On Certified Workshop on Heat Exchanger Design Using Aspen Plus, conducted by **Professor Sridhar Dalai, offers practical training for **Mechanical and Chemical Engineering students (UG, PG, and Ph.D.) with basic knowledge of heat transfer. The workshop covers heat exchanger selection, process parameter setup, design principles, and optimization techniques using **Aspen Plus. Through interactive sessions and real-world simulations, participants develop practical skills in designing and analyzing heat exchangers. The workshop bridges theory with industrial application, and the certification awarded enhances participants' academic and professional portfolios, preparing them for future career opportunities in process and thermal engineering.",
-      "contact": ["Bhishmadevsinh Rathod (9925126496)"],
+      "contact": ["Moksh Vora (9913308472)"],
       "category": "Chem Events",
       "meetingType": "offline",
       "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742585182/ASPEN_WORKSHOP_1_1_1_jo0xa0.jpg",
-      "rules": [],
+      "rules": ["Rules will be declared before the starting of event in offline mode."],
       "howToApply": [
         "Directly Attend the workshop (No registration required)"
       ],
