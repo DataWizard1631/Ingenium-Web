@@ -96,6 +96,7 @@
     position: relative;
     z-index: 2;
     line-height: 1;
+    transition: all 0.1s ease-out;
 }
 
 .countdown-label {
@@ -164,6 +165,27 @@
     100% {
         opacity: 1;
     }
+}
+
+/* Add new animation for the countdown effect */
+@keyframes countdownPulse {
+    0% {
+        transform: scale(1);
+        color: #fff;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #C90F5B;
+    }
+    100% {
+        transform: scale(1);
+        color: #fff;
+    }
+}
+
+/* Add this class for animating numbers */
+.countdown-value.animating {
+    animation: countdownPulse 0.2s ease-in-out;
 }
 
 /* Tablet */

@@ -17,57 +17,49 @@ const Hackathon = () => {
       id: 1,
       title: "AI-Powered Mental Health Companion",
       description: "Design an AI-driven mental health support system that can:",
-      requirements: [
+      KeyFeatures: [
         "Detect early signs of anxiety and depression through text/voice analysis",
         "Provide personalized coping strategies and exercises",
         "Connect users with professional help when needed",
         "Ensure user privacy and data security",
       ],
-      techStack: ["Machine Learning", "NLP", "React Native", "Firebase"],
       domain: "Healthcare & AI",
-      resources: "Access to mental health APIs and Azure credits"
     },
     {
       id: 2,
       title: "Blockchain-Based Supply Chain Tracker",
       description: "Create a transparent supply chain management system that can:",
-      requirements: [
+      KeyFeatures: [
         "Track products from source to consumer using blockchain",
         "Verify authenticity and prevent counterfeiting",
         "Monitor storage conditions (temperature, humidity) using IoT",
         "Generate QR codes for consumer verification",
       ],
-      techStack: ["Solidity", "Web3.js", "IoT Sensors", "React"],
       domain: "Blockchain & IoT",
-      resources: "Ethereum test network and IoT development kit"
     },
     {
       id: 3,
       title: "AR-Enhanced Learning Platform",
       description: "Develop an augmented reality education platform that:",
-      requirements: [
+      KeyFeatures: [
         "Creates interactive 3D models for complex concepts",
         "Supports real-time collaboration between students",
         "Provides progress tracking and analytics",
         "Works on both mobile and web platforms",
       ],
-      techStack: ["Unity", "ARCore/ARKit", "WebGL", "Node.js"],
       domain: "Education & AR",
-      resources: "Unity Pro License and AR development tools"
     },
     {
       id: 4,
       title: "Smart Energy Grid Optimizer",
       description: "Build an AI-powered system that can:",
-      requirements: [
+      KeyFeatures: [
         "Predict and optimize energy consumption patterns",
         "Integrate renewable energy sources efficiently",
         "Provide real-time usage analytics and suggestions",
         "Handle peak load balancing automatically",
       ],
-      techStack: ["Python", "TensorFlow", "IoT", "GraphQL"],
       domain: "Sustainability & AI",
-      resources: "Energy consumption datasets and cloud credits"
     }
   ];
 
@@ -162,21 +154,16 @@ const Hackathon = () => {
                     </div>
                   </div>
 
-                  {/* Requirements Section */}
+                  {/* KeyFeatures Section */}
                   <div className="border-t border-[#C90F5B]/20 pt-4">
-                    <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Requirements:</h4>
+                    <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Key Features:</h4>
                     <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm sm:text-lg">
-                      {problem.requirements.map((req, idx) => (
+                      {problem.KeyFeatures.map((req, idx) => (
                         <li key={idx}>{req}</li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Resources Section */}
-                  <div className="border-t border-[#C90F5B]/20 pt-4">
-                    <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Resources Provided:</h4>
-                    <p className="text-sm sm:text-lg text-gray-300">{problem.resources}</p>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -246,7 +233,7 @@ const Hackathon = () => {
               >
                 <FaTrophy className="text-[#C90F5B] text-3xl sm:text-4xl mx-auto mb-4" />
                 <h3 className="text-xl sm:text-2xl font-primaryFont mb-4">{prize.position}</h3>
-                <p className="text-2xl sm:text-3xl font-bold text-[#C90F5B] mb-4">{prize.amount}</p>
+                <p className="text-2xl sm:text-3xl font-bold text-[#C90F5B] mb-4 font-primaryFont">{prize.amount}</p>
                 <ul className="text-gray-400 space-y-2">
                   {prize.extras.map((extra, idx) => (
                     <li key={idx} className="text-xs sm:text-lg font-secFont1">{extra}</li>
