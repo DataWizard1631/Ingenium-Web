@@ -35,6 +35,7 @@ function App() {
           <Route path="event/:id" element={<EventDetails />} />
           <Route path="sponsors" element={<SponsorPage />} /> 
           <Route path="hackathon" element={<Hackathon />} />
+          <Route path="404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

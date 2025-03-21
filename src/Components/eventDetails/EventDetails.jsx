@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, Navigate } from 'react-router-dom';
 import { FaBook, FaArrowLeft } from "react-icons/fa";
 import eventsData from '../../data/events.json';
 import CloudinaryImage from '../../tools/CloudinaryImage';
@@ -7,6 +7,7 @@ import CloudinaryImage from '../../tools/CloudinaryImage';
 const EventDetails = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,10 +18,15 @@ const EventDetails = () => {
     
     const foundEvent = eventsData.events.find(e => e.id === id);
     setEvent(foundEvent);
+    setLoading(false);
   }, [id]);
 
-  if (!event) {
+  if (loading) {
     return <div className="text-white text-center pt-20">Loading...</div>;
+  }
+
+  if (!event) {
+    return <Navigate to="/404" replace />;
   }
 
   return (
