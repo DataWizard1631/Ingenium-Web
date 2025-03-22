@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaTrophy, FaClock, FaCode, FaLightbulb } from 'react-icons/fa';
+import { FaTrophy, FaClock, FaCode, FaLightbulb, FaGlobe } from 'react-icons/fa';
 
 const Hackathon = () => {
   useEffect(() => {
@@ -179,6 +179,28 @@ const Hackathon = () => {
                       <p className="text-sm sm:text-lg text-gray-400">{problem.description}</p>
                     </div>
                   </div>
+
+                  {
+                    problem.id === 2 && (
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <div className="flex items-center gap-2">
+                        <FaGlobe className="text-[#C90F5B]" size={18} />
+                        <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B]">
+                          Research Paper:
+                        </h4>
+                      </div>
+                      <a
+                        href="https://drive.google.com/file/d/1Gs-FjVfHaPndnS7X9tlq-QqshtqVu_If/view?usp=drivesdk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm sm:text-lg text-gray-400 hover:text-[#C90F5B] transition-colors duration-300 underline underline-offset-4"
+                      >
+                        Research Paper Link
+                      </a>
+                    </div>
+
+                    )
+                  }
 
                   {/* KeyFeatures Section */}
                   <div className="border-t border-[#C90F5B]/20 pt-4">
