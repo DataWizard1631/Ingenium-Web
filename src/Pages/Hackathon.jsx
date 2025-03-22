@@ -66,6 +66,29 @@ const Hackathon = () => {
     }
   ];
 
+  const evaluationCriteria = [
+    {
+      id: 1,
+      title: "Innovation and Creativity",
+      description: "How unique, original, and creative is the solution? Does it address the problem in a novel way or introduce a fresh perspective?"
+    },
+    {
+      id: 2,
+      title: "Technical Sophistication and Execution",
+      description: "How well was the solution built? Does it function as intended? Is the code clean, efficient, and scalable? List the frameworks, libraries, and technologies you plan to use. Reasoning: Explain your choices (e.g., scalability, ease of use, cost-effectiveness). Technical sophistication will be a key evaluation criterion. Judges recognize that partially solving a complex challenge can demonstrate comparable skill and effort to fully completing a simpler one."
+    },
+    {
+      id: 3,
+      title: "Impact and Relevance",
+      description: "How impactful is the solution in addressing the problem statement? Does it have real-world applicability and potential to create meaningful change?"
+    },
+    {
+      id: 4,
+      title: "Presentation and Report Statement",
+      description: "How effectively does the team communicate their idea? Is the presentation clear, engaging, and compelling? Does it tell a story that connects the problem, solution, and impact?"
+    }
+  ];
+
   const detailedTimeline = [
     // Day 1 - March 26, 2025
     { time: "09:00 AM", event: "Entry & Registration", duration: "1 hour" },
@@ -173,6 +196,42 @@ const Hackathon = () => {
           </div>
         </div>
 
+        {/* Evaluation Criteria Section */}
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-primaryFont text-center mb-8 sm:mb-12 bg-gradient-to-r from-white to-[#C90F5B] bg-clip-text text-transparent">
+            EVALUATION CRITERIA
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 font-secFont1">
+            {evaluationCriteria.map((criterion, index) => (
+              <motion.div
+                key={criterion.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-[#1A1A1A]/80 backdrop-blur-sm p-6 rounded-xl border border-[#C90F5B]/30 hover:border-[#C90F5B] transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <FaCode className="text-[#C90F5B] text-2xl sm:text-3xl flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-primaryFont mb-3">{criterion.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-400">{criterion.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <a 
+              href="/Problem Statements.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-[#C90F5B] text-white rounded-full font-secFont1 hover:bg-[#A00D4A] transition-all duration-300"
+            >
+              View Detailed Problem Statements
+            </a>
+          </div>
+        </div>
+
         {/* Timeline Section */}
         <div className="mb-12 sm:mb-16 md:mb-20" data-aos="fade-up">
           <h2 className="text-3xl sm:text-4xl font-primaryFont text-center mb-8 sm:mb-12 bg-gradient-to-r from-white to-[#C90F5B] bg-clip-text text-transparent">
@@ -186,7 +245,7 @@ const Hackathon = () => {
                 className="relative flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8"
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               >
-                <div className="absolute left-4 sm:left-1/2 translate-x-[-6px] w-3 sm:w-4 h-3 sm:h-4 bg-[#C90F5B] rounded-full transform">
+                <div className="absolute left-4 sm:left-1/2 translate-x-[-4px] md:translate-x-[-6px] w-3 sm:w-4 h-3 sm:h-4 bg-[#C90F5B] rounded-full transform">
                   <div className="absolute inset-0 bg-[#C90F5B] rounded-full animate-ping opacity-75"></div>
                 </div>
                 
