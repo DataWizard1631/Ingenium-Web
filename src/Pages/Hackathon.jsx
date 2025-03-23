@@ -110,7 +110,7 @@ const Hackathon = () => {
     { time: "01:30 PM", event: "Lunch", duration: "1 hours" },
     { time: "02:30 PM", event: "Final Changes ⏰", duration: "1.5 hours" },
     { time: "04:00 PM", event: "Project Presentation", duration: "2 hours" },
-    { time: "09:00 PM", event: "Winners Announcement & Closing Ceremony 🏆", duration: "1 hour" }
+    { time: "06:00 PM", event: "Winners Announcement & Closing Ceremony 🏆", duration: "1 hour" }
   ];
 
   const prizes = [
