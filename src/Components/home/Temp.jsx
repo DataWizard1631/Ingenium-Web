@@ -45,7 +45,7 @@ const Temp = () => {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date('2025-03-22T09:00:00');
+    const targetDate = new Date('2025-03-28T00:00:00');
     const confettiEndTime = new Date('2025-03-23T00:00:00');
 
     const calculateTimeLeft = () => {
