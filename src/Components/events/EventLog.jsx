@@ -25,8 +25,35 @@ const comingSoonCategories = [
 function CardComp({ event }) {
   const navigate = useNavigate();
 
+  // Add helper function to check if event has passed
+  const isEventPassed = (dateStr, timeStr) => {
+    const months = {
+      'January': 0, 'February': 1, 'March': 2, 'April': 3, 'May': 4, 'June': 5,
+      'July': 6, 'August': 7, 'September': 8, 'October': 9, 'November': 10, 'December': 11
+    };
+    
+    const [day, month] = dateStr.split(' ');
+    const cleanDay = day.replace(/(st|nd|rd|th)/, '');
+    const currentYear = new Date().getFullYear();
+    const date = new Date(currentYear, months[month], parseInt(cleanDay));
+    
+    if (timeStr) {
+      const [time, period] = timeStr.split(' ');
+      const [hours, minutes] = time.split(':');
+      let hour = parseInt(hours);
+      if (period === 'PM' && hour !== 12) hour += 12;
+      if (period === 'AM' && hour === 12) hour = 0;
+      date.setHours(hour);
+      date.setMinutes(parseInt(minutes));
+    }
+    
+    return date < new Date();
+  };
+
+  const eventPassed = isEventPassed(event.date, event.time);
+
   return (
-    <div className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[400px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+    <div className={`w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[400px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 ${eventPassed ? 'brightness-75' : ''}`}>
       {/* Image */}
       <div className="w-full sm:w-fit h-full sm:h-full">
         <CloudinaryImage
@@ -77,7 +104,14 @@ function CardComp({ event }) {
         </div>
         <div className="font-secFont1 flex sm:flex-row gap-3 sm:gap-4 lg:mb-4">
           {/* Register Button */}
-          {event.registrationLink ? (
+          {eventPassed ? (
+            <button
+              className="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-full opacity-50 cursor-not-allowed text-sm sm:text-base text-center"
+              disabled
+            >
+              Event Completed
+            </button>
+          ) : event.registrationLink ? (
             <a
               href={event.registrationLink}
               target="_blank"
@@ -88,10 +122,10 @@ function CardComp({ event }) {
             </a>
           ) : (
             <button
-              className="px-4 sm:px-6 py-2 bg-colPink text-white rounded-full opacity-50 cursor-not-allowed text-sm sm:text-base text-center"
+              className="px-4 sm:px-6 py-2 bg-gray-500 text-white rounded-full opacity-50 cursor-not-allowed text-sm sm:text-base text-center"
               disabled
             >
-              Register
+              Registration Closed
             </button>
           )}
           <button

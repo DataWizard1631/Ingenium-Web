@@ -21,6 +21,31 @@ const EventDetails = () => {
     setLoading(false);
   }, [id]);
 
+  // Add helper function to check if event has passed
+  const isEventPassed = (dateStr, timeStr) => {
+    const months = {
+      'January': 0, 'February': 1, 'March': 2, 'April': 3, 'May': 4, 'June': 5,
+      'July': 6, 'August': 7, 'September': 8, 'October': 9, 'November': 10, 'December': 11
+    };
+    
+    const [day, month] = dateStr.split(' ');
+    const cleanDay = day.replace(/(st|nd|rd|th)/, '');
+    const currentYear = new Date().getFullYear();
+    const date = new Date(currentYear, months[month], parseInt(cleanDay));
+    
+    if (timeStr) {
+      const [time, period] = timeStr.split(' ');
+      const [hours, minutes] = time.split(':');
+      let hour = parseInt(hours);
+      if (period === 'PM' && hour !== 12) hour += 12;
+      if (period === 'AM' && hour === 12) hour = 0;
+      date.setHours(hour);
+      date.setMinutes(parseInt(minutes));
+    }
+    
+    return date < new Date();
+  };
+
   if (loading) {
     return <div className="text-white text-center pt-20">Loading...</div>;
   }
@@ -90,7 +115,11 @@ const EventDetails = () => {
                     </li>
                   ))}
                 </ul>
-                {event.registrationLink && (
+                {isEventPassed(event.date, event.time) ? (
+                  <div className="inline-block mt-4 md:mt-8 text-gray-300 border border-colPink rounded-full px-4 py-2 text-lg md:text-xl">
+                    Event Completed
+                  </div>
+                ) : event.registrationLink ? (
                   <a
                     href={event.registrationLink}
                     target="_blank"
@@ -100,6 +129,10 @@ const EventDetails = () => {
                     Click here to register 
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">→</span>
                   </a>
+                ) : (
+                  <div className="inline-block mt-4 md:mt-8 text-gray-400 text-lg md:text-xl">
+                    Registration Closed
+                  </div>
                 )}
               </div>
             </div>
