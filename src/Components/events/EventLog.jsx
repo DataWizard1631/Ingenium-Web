@@ -53,7 +53,7 @@ function CardComp({ event }) {
   const eventPassed = isEventPassed(event.date, event.time);
 
   return (
-    <div className={`w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[500px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 ${eventPassed ? 'brightness-75' : ''}`}>
+    <div className={`w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-fit sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 ${eventPassed ? 'brightness-75' : ''}`}>
       {/* Image */}
       <div className="w-full sm:w-fit h-full sm:h-full">
         <CloudinaryImage
