@@ -10,6 +10,10 @@ const pitcherSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  password: {
+    type: String,
+    required: true
+  },
   ideaTitle: {
     type: String,
     required: true
@@ -34,6 +38,8 @@ const pitcherSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Investment'
   }]
+}, {
+  timestamps: true
 });
 
 export default mongoose.model('Pitcher', pitcherSchema); 

@@ -16,13 +16,14 @@ const investorSchema = new mongoose.Schema({
   },
   walletBalance: {
     type: Number,
-    required: true,
-    default: 1000000 // 10 Lakh initial balance
+    default: 100000
   },
   investments: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Investment'
   }]
+}, {
+  timestamps: true
 });
 
 export default mongoose.model('Investor', investorSchema); 

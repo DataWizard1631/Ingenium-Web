@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
-const ProtectedRoute = () => {
-  const investor = localStorage.getItem('investor');
+const ProtectedRoute = ({ type }) => {
+  const user = localStorage.getItem(type);
   
-  if (!investor) {
+  if (!user) {
     return <Navigate to="/shaft-tank/login" replace />;
   }
 

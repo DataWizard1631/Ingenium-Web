@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaWallet, FaChartLine, FaUser } from 'react-icons/fa';
+import { FaWallet, FaChartLine, FaUser, FaSignOutAlt } from 'react-icons/fa';
 
 const ShaftDashboard = () => {
+  const navigate = useNavigate();
   const [pitchers, setPitchers] = useState([]);
   const investor = JSON.parse(localStorage.getItem('investor'));
 
@@ -21,6 +22,11 @@ const ShaftDashboard = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('investor');
+    navigate('/login');
+  };
+
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
       {/* Header with Wallet */}
@@ -28,11 +34,19 @@ const ShaftDashboard = () => {
         <h1 className="text-3xl md:text-4xl font-primaryFont text-white">
           Welcome, {investor.name}
         </h1>
-        <div className="flex items-center gap-3 bg-[#131313] px-4 py-2 rounded-lg">
-          <FaWallet className="text-colPink" />
-          <span className="text-white font-secFont1">
-            ₹{investor.walletBalance.toLocaleString()}
-          </span>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 bg-[#131313] px-4 py-2 rounded-lg">
+            <FaWallet className="text-colPink" />
+            <span className="text-white font-secFont1">
+              ₹{investor.walletBalance.toLocaleString()}
+            </span>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-2 bg-red-600 px-4 py-2 rounded-lg text-white font-secFont1 hover:bg-red-700 transition-colors"
+          >
+            <FaSignOutAlt /> Logout
+          </button>
         </div>
       </div>
 

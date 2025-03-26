@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { FaUser, FaLightbulb } from 'react-icons/fa';
 
 const ShaftLogin = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const [userType, setUserType] = useState('investor');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/auth/login', {
+      const response = await fetch(`http://localhost:3000/api/auth/${userType}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -18,8 +20,8 @@ const ShaftLogin = () => {
       
       const data = await response.json();
       if (response.ok) {
-        localStorage.setItem('investor', JSON.stringify(data.investor));
-        navigate('/shaft-tank/dashboard');
+        localStorage.setItem(userType, JSON.stringify(data[userType]));
+        navigate(userType === 'investor' ? '/shaft-tank/dashboard' : '/shaft-tank/pitcher-dashboard');
       } else {
         setError(data.message);
       }
@@ -38,6 +40,29 @@ const ShaftLogin = () => {
         <h1 className="text-4xl md:text-6xl font-primaryFont text-white text-center mb-8">
           Shaft Tank
         </h1>
+        
+        <div className="flex gap-4 mb-6">
+          <button
+            onClick={() => setUserType('investor')}
+            className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg font-secFont1 ${
+              userType === 'investor' 
+                ? 'bg-colPink text-white' 
+                : 'bg-[#131313] text-gray-400'
+            }`}
+          >
+            <FaUser /> Investor
+          </button>
+          <button
+            onClick={() => setUserType('pitcher')}
+            className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg font-secFont1 ${
+              userType === 'pitcher' 
+                ? 'bg-colPink text-white' 
+                : 'bg-[#131313] text-gray-400'
+            }`}
+          >
+            <FaLightbulb /> Pitcher
+          </button>
+        </div>
         
         <form onSubmit={handleSubmit} className="space-y-6 bg-[#131313] p-8 rounded-2xl">
           <div>
@@ -67,7 +92,7 @@ const ShaftLogin = () => {
             type="submit"
             className="w-full bg-colPink font-secFont1 text-white rounded-lg py-3 hover:bg-pink-700 transition-colors duration-300"
           >
-            Login as Investor
+            Login as {userType === 'investor' ? 'Investor' : 'Pitcher'}
           </button>
         </form>
       </motion.div>
