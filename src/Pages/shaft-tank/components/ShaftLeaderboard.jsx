@@ -26,8 +26,6 @@ const ShaftLeaderboard = () => {
       });
       
       const data = await response.json();
-      console.log('Response status:', response.status);
-      console.log('Response data:', data);
       
       if (!response.ok) {
         throw new Error(data.message || data.error || 'Failed to fetch leaderboard');

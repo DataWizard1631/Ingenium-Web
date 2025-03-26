@@ -31,8 +31,6 @@ const PitcherDashboard = () => {
         throw new Error('Failed to fetch pitcher details');
       }
 
-      console.log("data", pitcherData);
-
       // Then fetch investments
       const investmentsResponse = await fetch(`http://localhost:3000/api/investments/pitcher/${pitcher.id}`);
       const investmentsData = await investmentsResponse.json();
@@ -56,7 +54,7 @@ const PitcherDashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('pitcher');
-    navigate('/login');
+    navigate('/shaft-tank');
   };
 
   return (

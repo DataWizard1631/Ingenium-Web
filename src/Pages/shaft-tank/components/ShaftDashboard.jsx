@@ -24,7 +24,7 @@ const ShaftDashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('investor');
-    navigate('/login');
+    navigate('/shaft-tank');
   };
 
   return (
