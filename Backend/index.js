@@ -10,28 +10,47 @@ dotenv.config();
 
 const app = express();
 
-// Completely open CORS configuration
+// Most permissive CORS configuration possible
 app.use((req, res, next) => {
+  // Allow all origins and methods
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', '*');
-  res.header('Access-Control-Allow-Headers', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  res.header('Access-Control-Expose-Headers', '*');
+  res.header('Cross-Origin-Resource-Policy', 'cross-origin');
+  res.header('Cross-Origin-Opener-Policy', 'unsafe-none');
+  res.header('Cross-Origin-Embedder-Policy', 'unsafe-none');
+  
+  // Handle preflight
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  
   next();
 });
 
-// Handle OPTIONS requests
+// Enable pre-flight for all routes
 app.options('*', (req, res) => {
   res.status(200).send();
 });
 
-// Basic middleware
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Database connection
 dbConnect();
 
-// Routes
-app.use('/api/auth', authRoutes);
+// Routes with explicit CORS handling
+app.use('/api/auth', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  res.header('Cross-Origin-Resource-Policy', 'cross-origin');
+  next();
+}, authRoutes);
+
 app.use('/api/pitchers', pitcherRoutes);
 app.use('/api/investments', investmentRoutes);
 
@@ -42,13 +61,10 @@ app.get("/" , (req,res) => {
     })
 })
 
-// Error handling middleware
+// Error handling
 app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ 
-    message: 'Something broke!',
-    error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
-  });
+  console.error(err);
+  res.status(500).json({ message: 'Internal Server Error' });
 });
 
 // Server setup
