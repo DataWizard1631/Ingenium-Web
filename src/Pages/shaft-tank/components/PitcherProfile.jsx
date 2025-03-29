@@ -19,7 +19,7 @@ const PitcherProfile = () => {
 
   const fetchPitcherDetails = async () => {
     try {
-      const response = await fetch(`http://https://ingenium-web2.onrender.com/api/pitchers/${id}`, {
+      const response = await fetch(`https://ingenium-web2.onrender.com/api/pitchers/${id}`, {
         headers: {
           'Authorization': `Bearer ${investor.token}`
         }
@@ -43,7 +43,7 @@ const PitcherProfile = () => {
         return;
       }
 
-      const response = await fetch('http://https://ingenium-web2.onrender.com/api/investments', {
+      const response = await fetch('https://ingenium-web2.onrender.com/api/investments', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

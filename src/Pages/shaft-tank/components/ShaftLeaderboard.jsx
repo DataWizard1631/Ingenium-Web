@@ -17,7 +17,7 @@ const ShaftLeaderboard = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch('http://https://ingenium-web2.onrender.com/api/pitchers/leaderboard', {
+      const response = await fetch('https://ingenium-web2.onrender.com/api/pitchers/leaderboard', {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
