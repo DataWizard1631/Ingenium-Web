@@ -10,35 +10,24 @@ dotenv.config();
 
 const app = express();
 
-// CORS configuration
-app.use(cors({
-  origin: [
-    'http://localhost:5173', 
-    'https://ingenium-web2.vercel.app', 
-    'https://ingenium-web2.onrender.com',
-    'https://www.ingenium2025.com',
-    'https://ingenium2025.com'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
-  exposedHeaders: ['Access-Control-Allow-Origin'],
-  credentials: true
-}));
-
-// Add pre-flight handling for all routes
-app.options('*', cors());
-
-// Add headers middleware
+// Most permissive CORS configuration for debugging
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Accept');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  
   next();
 });
 
-// Middleware
-app.use(express.json()); // Body parser middleware to parse JSON body
-app.use(express.urlencoded({ extended: true })); // Body parser middleware to parse URL-encoded bodies
+// Basic middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Database connection
 dbConnect();
@@ -55,9 +44,20 @@ app.get("/" , (req,res) => {
     })
 })
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ 
+    message: 'Something broke!',
+    error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
+  });
+});
+
 // Server setup
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 export default app;
 
