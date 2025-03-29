@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Hyperspeed from './Hyperspeed';
+import Confetti from 'react-confetti';
 import './Temp.css';
 
 const Temp = () => {
@@ -10,7 +11,27 @@ const Temp = () => {
     minutes: 0,
     seconds: 0
   });
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+  const [isAnimatingCountdown, setIsAnimatingCountdown] = useState(false);
 
+  // Handle window resize for confetti
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Existing scroll handler
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -24,18 +45,68 @@ const Temp = () => {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date('2025-03-22T00:00:00');
+    const targetDate = new Date('2025-03-28T00:00:00');
+    const confettiEndTime = new Date('2025-03-29T00:00:00');
 
     const calculateTimeLeft = () => {
       const now = new Date();
       const difference = targetDate - now;
 
-      if (difference > 0) {
+      // Check if we're in the confetti window
+      if (now >= targetDate && now <= confettiEndTime) {
+        if (!isAnimatingCountdown) {
+          // Start the countdown animation
+          setIsAnimatingCountdown(true);
+          setTimeLeft({
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: 15
+          });
+
+          // Animate countdown to zero
+          const animateCountdown = () => {
+            setTimeLeft(prev => {
+              if (prev.seconds > 0) {
+                return { ...prev, seconds: prev.seconds - 1 };
+              } else if (prev.minutes > 0) {
+                return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+              } else if (prev.hours > 0) {
+                return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
+              } else if (prev.days > 0) {
+                return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
+              }
+              return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+            });
+          };
+
+          // Run animation every 20ms (fast countdown)
+          const animationInterval = setInterval(() => {
+            animateCountdown();
+          }, 200);
+
+          // After animation, show confetti
+          setTimeout(() => {
+            clearInterval(animationInterval);
+            setShowConfetti(true);
+            setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+          }, 3500); // Animation duration
+        }
+      } else if (difference > 0) {
+        setShowConfetti(false);
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60)
+        });
+      } else {
+        setShowConfetti(false);
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
         });
       }
     };
@@ -43,7 +114,7 @@ const Temp = () => {
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isAnimatingCountdown]);
 
   const padNumber = (num) => String(num).padStart(2, '0');
 
@@ -55,6 +126,15 @@ const Temp = () => {
       background: '#000',
       overflow: 'hidden'
     }}>
+      {showConfetti && (
+        <Confetti
+          width={windowDimensions.width}
+          height={windowDimensions.height}
+          numberOfPieces={200}
+          recycle={true}
+          colors={['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']}
+        />
+      )}
       <div className="hero-section" style={{ 
         height: '100vh', 
         position: 'relative',
@@ -100,16 +180,16 @@ const Temp = () => {
             }
           }}
         />
-        <div 
-          className="title z-[9999999]"
+        <h1 
+          className="title z-[9999999] mt-8"
           style={{
             '--scroll-progress': scrollProgress,
             opacity: 1 - scrollProgress,
             transform: `scale(${1 - (scrollProgress * 0.3)})`,
           }}
         >
-          Ingenium'25
-        </div>
+          {showConfetti ? "Ingenium'25 is Live!" : "Ingenium'25"}
+        </h1>
         <div 
           className="countdown-container"
           style={{
@@ -119,22 +199,22 @@ const Temp = () => {
           }}
         >
           <div className="countdown-box">
-            <div className="countdown-value">{padNumber(timeLeft.days)}</div>
+            <div className={`countdown-value ${isAnimatingCountdown ? 'animating' : ''}`}>{padNumber(timeLeft.days)}</div>
             <div className="countdown-label">Days</div>
           </div>
           <div className="countdown-separator">:</div>
           <div className="countdown-box">
-            <div className="countdown-value">{padNumber(timeLeft.hours)}</div>
+            <div className={`countdown-value ${isAnimatingCountdown ? 'animating' : ''}`}>{padNumber(timeLeft.hours)}</div>
             <div className="countdown-label">Hours</div>
           </div>
           <div className="countdown-separator">:</div>
           <div className="countdown-box">
-            <div className="countdown-value">{padNumber(timeLeft.minutes)}</div>
+            <div className={`countdown-value ${isAnimatingCountdown ? 'animating' : ''}`}>{padNumber(timeLeft.minutes)}</div>
             <div className="countdown-label">Minutes</div>
           </div>
           <div className="countdown-separator">:</div>
           <div className="countdown-box">
-            <div className="countdown-value">{padNumber(timeLeft.seconds)}</div>
+            <div className={`countdown-value ${isAnimatingCountdown ? 'animating' : ''}`}>{padNumber(timeLeft.seconds)}</div>
             <div className="countdown-label">Seconds</div>
           </div>
         </div>

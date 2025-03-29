@@ -111,7 +111,7 @@ export const TitleSponserCard = ({
                 href={href || "/"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-base font-medium bg-gradient-to-r from-rose-500 to-pink-600 text-white hover:from-rose-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-rose-500/25 w-full group"
+                className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-base font-medium bg-gradient-to-r from-rose-500 to-pink-600 text-white hover:from-rose-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-rose-500/25 w-full group font-secFont1"
               >
                 <span>Visit Website</span>
                 <svg

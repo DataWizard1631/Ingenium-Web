@@ -214,10 +214,11 @@
         "Rule 5: Only one driver is allowed to control the car at the event",
         "Rule 6: No team member (including the driver) is allowed inside the yellow line zone enclosing the track",
         "Rule 7: If a car goes off track, it will be disqualified from the round and event",
-        "Rule 8: A 2-second penalty will be given for minor car collisions based on judge’s decision",
-        "Rule 9: A 10-second penalty applies for deliberate bumps causing another car to go off course",
-        "Rule 10: Partial off-track violations without collision incur a 2-second penalty"
+        "Rule 8: For each time the car slightly touches or braces another car on the track the team will be given a two second penalty depending on the decision of the judge.",
+        "Rule 9: For each time the driver deliberately bumps into another car making the other car unstable or off course the driver will be given a 10 second penalty. In this case the car would be allowed to continue the race without facing the consequences of running out of the track mentioned above.",
+        "Rule 10: For any instance the car partially gets out of the track without any collisions from other cars the team will be given a two seconds penalty."
       ],
+      "guidelinesLink": "https://docs.google.com/document/d/1J4YtMZVBRfnkKtH6_m3yZxYTJ9zB-ODKreeCjol-Bzk/edit?usp=sharing",
       "howToApply": [
         "Finalise team members",
         "Fill the registration form",
@@ -241,13 +242,14 @@
     {
       "id": "chy-fragrance",
       "title": "Chy Fragrance",
-      "date": "29th March",
+      "date": "28th March",
+      "otherdate": "29th March",
       "time": "12:00 PM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfCSLtgiwI7VgjEzbbT3pSFLTs56jYC1uwJhhxBgO30yK7fZw/viewform?usp=dialog",
       "description": "A unique event where participants create their own fragrances using chemical engineering principles.",
       "longDescription": "Chy Fragrance is a creative and educational event where participants learn to blend fragrances using chemical engineering techniques. Explore the science behind perfumery, experiment with different scents, and create your own signature fragrance. This event combines creativity with technical knowledge, offering a unique experience for chemistry enthusiasts.",
       "category": "Chem Events",
-      "contact": ["Moksh Shah (9913308472)"],
+      "contact": ["Moksh Vora (9913308472)"],
       "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/CHY_Fragrance_wlws14.jpg",
       "rules": [
         "Rule 1: Open to all students interested in chemistry and perfumery",
@@ -280,7 +282,7 @@
       "id": "electric-race",
       "title": "Electric Race",
       "date": "29th March",
-      "time": "11:00 PM",
+      "time": "11:00 AM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScGe2gekqvbWU3rjwvHyfK7x5nt5cOIXr4aGMioIPxfe-KvuQ/viewform?usp=sharing",
       "description": "An event to test your electrical and logical skills to advance through a series of increasingly difficult challenges.",
       "longDescription": "You and your teammates are in search of a treasure long thought to be a myth. Recently, you came across an opportunity that may lead you to the treasure you seek. But your team is not the only one. Put your electrical and logical skills to the test in this melting pot of treasure hunt, code-breaking, and observation as you race against other teams to be the first to reach the lost treasure.",
@@ -318,6 +320,7 @@
       "id": "escape-room",
       "title": "Override Protocol: Humanity's Last Stand",
       "date": "29th March",
+      "otherdate": "30th March",
       "time": "10:00 AM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfGkKlV7OiSprJe3CUsrhsFKU8Dz4r3h1o5dAWKP3Usonf8KQ/viewform?usp=sharing",
       "description": "AI has gone rogue, and the world is about to end! Your team must outsmart the evil scientist in his own lab, solve puzzles, and uncover the kill code within 45 minutes. Work together to save humanity before time runs out!",
@@ -358,7 +361,9 @@
       "id": "invest-o-mania",
       "title": "Invest-O-Mania",
       "date": "28th March",
-      "time": "9:15 AM",
+      "otherdate": "29th March",
+      "time": "01:00 PM",
+      "othertime": "3:30 PM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScCfiz22D6W6KxpIPrlOBQNK9iLukY_jp0F__pkCqVtQdfT2w/viewform?usp=sharing",
       "description": "Join Invest-O-Mania, a Stock Market Workshop designed to help students grasp key financial concepts. Learn about market trends, stock screeners, and investment strategies in a guided session by Mentor: Kalpesh Patel.",
       "longDescription": "Invest-O-Mania is an exclusive Stock Market Workshop featuring the Master Trader Program (#BhavBhagvanChe) led by Mentor: Kalpesh Patel. This session is designed to provide students with a strong foundation in the world of investing. It will cover essential financial concepts, including investment strategies, risk management, stock screeners, and market indicators. The workshop aims to help students understand market trends and make informed investment decisions. Whether you're a beginner or have prior knowledge, this event will enhance your financial literacy. Plus, exciting giveaways and exclusive rewards await all participants!",
@@ -396,7 +401,7 @@
       "date": "29th March",
       "time": "5:00 PM",
       "description": "An activity to show the nine emotions that form the essence of performing arts - Navras.",
-      "longDescription": "AUmazing Talent is a unique talent showcase event dedicated to the theme of Navaras - the nine emotions that form the essence of performing arts. The event aims to bring together individuals who can express these emotions through various art forms, providing a stage for performers to showcase their talent through diverse performances. The event is open to all art forms, including dance, music, theatre, poetry, and any other creative expressions that depict the nine rasas: Shringara (Love), Hasya (Laughter), Karuna (Compassion), Raudra (Anger), Veera (Heroism), Bhayanaka (Fear), Bibhatsa (Disgust), Adbhuta (Wonder), and Shanta (Peace). Performances: Open to dance, music that embodies Navarasa.",
+      "longDescription": "AUmazing Talent is a unique talent showcase event dedicated to the theme of Navaras - the nine emotions that form the essence of performing arts. The event aims to bring together individuals who can express these emotions through various art forms, providing a stage for performers to showcase their talent through diverse performances. The event is open to all art forms, including dance, music, theatre, and any other creative expressions that depict the nine rasas: Shringara (Love), Hasya (Laughter), Karuna (Compassion), Raudra (Anger), Veera (Heroism), Bhayanaka (Fear), Bibhatsa (Disgust), Adbhuta (Wonder), and Shanta (Peace). Performances: Open to dance, music that embodies Navarasa.",
       "category": "Take-A-Break",
       "contact": ["Vishva Dave (8780765935)", "Vaishvi Patel (9313714364)"],
       "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742061392/shaft-tank_hsskk9.jpg",
@@ -404,8 +409,9 @@
       "rules": [
         "Rule 1: Content should be original and expressive",
         "Rule 2: Performances must align with one or more of the nine rasas",
-        "Rule 3: Time limit 5 mins maximum"
+        "Rule 3: Time limit - 20 minutes maximum"
       ],
+      "guidelinesLink": "https://docs.google.com/document/d/1MKZYoFc_rJqbTtNz7mb5YA1DKTxxHsbfxvLSonDtu8I/edit?usp=sharing",
       "howToApply": [
         "Fill the registration form",
         "Enjoy the event"
@@ -428,8 +434,8 @@
     {
       "id": "valorant",
       "title": "Valorant",
-      "date": "29th March",
-      "time": "1:00 PM",
+      "date": "28th March",
+      "time": "12:00 PM",
       "registrationLink": "https://forms.gle/zW7gFrZy6kha5dCo7",
       "description": "Compete in the tactical shooter game Valorant, showcasing your skills in strategy and teamwork.",
       "longDescription": "Join the Valorant tournament to test your skills in this fast-paced, tactical shooter game. Teams will compete in intense matches, requiring coordination, strategy, and precision. Whether you're a seasoned player or new to the game, this event offers a thrilling competitive experience with exciting prizes for the winners.",
@@ -466,8 +472,8 @@
     {
       "id": "bgmi",
       "title": "BGMI",
-      "date": "28th March",
-      "time": "1:00 PM",
+      "date": "29th March",
+      "time": "12:00 PM",
       "registrationLink": "https://forms.gle/im1E3UaLEGwVRTzC8",
       "description": "Battle it out in the mobile battle royale game BGMI, where strategy and survival skills are key to victory.",
       "longDescription": "Participate in the BGMI tournament, a battle royale experience where squads compete to be the last team standing. Test your survival skills, teamwork, and strategic thinking in intense matches. This event is perfect for mobile gaming enthusiasts looking for a competitive challenge, with exciting rewards for top performers.",
@@ -505,7 +511,7 @@
       "id": "fifa",
       "title": "FIFA",
       "date": "30th March",
-      "time": "2:00 PM",
+      "time": "12:00 PM",
       "registrationLink": "https://forms.gle/M7PZbgjuWhVA15j2A",
       "description": "Compete in the popular football simulation game FIFA, showcasing your skills in virtual football.",
       "longDescription": "Join the FIFA tournament to compete in exciting virtual football matches. Test your skills in one-on-one matches, showcasing your ability to score goals and defend against opponents. This event is perfect for football enthusiasts and gamers alike, with thrilling competition and prizes for the top players.",
@@ -515,9 +521,9 @@
       "rules": [
         "Rule 1: Matches will follow official FIFA tournament rules",
         "Rule 2: No cheating or use of unauthorized software allowed",
-        "Rule 3: Participants must join the designated Discord server for communication",
-        "Rule 4: Matches will be streamed live",
-        "Rule 5: Participants must use the latest version of the game"
+        "Rule 3: Reporting time (15 mins before your match)",
+        "Rule 4: 5 mins of leeway will be provided if the player is late, after which opponent will be given a bye",
+        "Rule 5: Only Club and international teams will be allowed"
       ],
       "howToApply": [
         "Fill the registration form",
@@ -536,6 +542,31 @@
           "title": "BGMI",
           "category": "Esports",
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139675/BGMI_cordab.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chy-workshop",
+      "title": "Hands On Certified Workshop on Heat Exchanger Design Using 'Espen Plus'",
+      "date": "28th March",
+      "time": "02:00 PM",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfEcRNCX3MEnoH9iTjOJBxUHJ5wR1p_MBhV-zWf3vbXKaNL_g/viewform",
+      "description": "A hands-on certified workshop on Heat Exchanger Design using Aspen Plus, conducted by Professor Sridhar Dalai, offered practical insights into simulation and optimization techniques. Participants gained valuable skills in designing efficient heat exchangers, learning industry-relevant methodologies, and enhancing their process engineering knowledge through guided demonstrations and interactive problem-solving session.",
+      "longDescription": "The Hands-On Certified Workshop on Heat Exchanger Design Using Aspen Plus, conducted by **Professor Sridhar Dalai, offers practical training for **Mechanical and Chemical Engineering students (UG, PG, and Ph.D.) with basic knowledge of heat transfer. The workshop covers heat exchanger selection, process parameter setup, design principles, and optimization techniques using **Aspen Plus. Through interactive sessions and real-world simulations, participants develop practical skills in designing and analyzing heat exchangers. The workshop bridges theory with industrial application, and the certification awarded enhances participants' academic and professional portfolios, preparing them for future career opportunities in process and thermal engineering.",
+      "contact": ["Moksh Vora (9913308472)"],
+      "category": "Chem Events",
+      "meetingType": "offline",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742585182/ASPEN_WORKSHOP_1_1_1_jo0xa0.jpg",
+      "rules": ["Rules will be declared before the starting of event in offline mode."],
+      "howToApply": [
+        "Directly Attend the workshop (No registration required)"
+      ],
+      "relatedEvents": [
+        {
+          "id": "chy-fragrance",
+          "title": "Chy Fragrance",
+          "category": "Chem Events",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/CHY_Fragrance_wlws14.jpg"
         }
       ]
     }

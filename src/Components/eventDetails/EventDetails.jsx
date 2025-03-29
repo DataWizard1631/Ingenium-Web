@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, Navigate } from 'react-router-dom';
 import { FaBook, FaArrowLeft } from "react-icons/fa";
 import eventsData from '../../data/events.json';
 import CloudinaryImage from '../../tools/CloudinaryImage';
@@ -7,6 +7,7 @@ import CloudinaryImage from '../../tools/CloudinaryImage';
 const EventDetails = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,20 +18,50 @@ const EventDetails = () => {
     
     const foundEvent = eventsData.events.find(e => e.id === id);
     setEvent(foundEvent);
+    setLoading(false);
   }, [id]);
 
-  if (!event) {
+  // Add helper function to check if event has passed
+  const isEventPassed = (dateStr, timeStr) => {
+    const months = {
+      'January': 0, 'February': 1, 'March': 2, 'April': 3, 'May': 4, 'June': 5,
+      'July': 6, 'August': 7, 'September': 8, 'October': 9, 'November': 10, 'December': 11
+    };
+    
+    const [day, month] = dateStr.split(' ');
+    const cleanDay = day.replace(/(st|nd|rd|th)/, '');
+    const currentYear = new Date().getFullYear();
+    const date = new Date(currentYear, months[month], parseInt(cleanDay));
+    
+    if (timeStr) {
+      const [time, period] = timeStr.split(' ');
+      const [hours, minutes] = time.split(':');
+      let hour = parseInt(hours);
+      if (period === 'PM' && hour !== 12) hour += 12;
+      if (period === 'AM' && hour === 12) hour = 0;
+      date.setHours(hour);
+      date.setMinutes(parseInt(minutes));
+    }
+    
+    return date < new Date();
+  };
+
+  if (loading) {
     return <div className="text-white text-center pt-20">Loading...</div>;
+  }
+
+  if (!event) {
+    return <Navigate to="/404" replace />;
   }
 
   return (
     <div className="bg-[url('/bg-texture.jpg')] bg-repeat bg-auto min-h-screen">
       <div className="font-['OfficialBook'] bg-black/90 text-white min-h-screen p-4 md:p-8 lg:p-12">
-        <div className="px-4 md:px-16 mx-auto pt-20 md:pt-14 pb-4 md:pb-20">
+        <div className="px-4 md:px-16 mx-auto pt-20 md:pt-10 pb-4 md:pb-20">
           {/* Back Button */}
           <button 
             onClick={() => navigate(-1)}
-            className="mb-8 flex items-center gap-2 px-4 py-2 border-[1px] border-white text-white rounded-full transition-all duration-300 group w-fit"
+            className="mb-4 md:mb-8 flex items-center gap-2 px-4 py-2 border-[1px] border-white text-white rounded-full transition-all duration-300 group w-fit"
           >
             <FaArrowLeft className="text-sm md:text-base transition-transform duration-300 group-hover:-translate-x-1" />
             <span className="text-sm md:text-base">Back</span>
@@ -38,23 +69,34 @@ const EventDetails = () => {
 
           {/* Date and Time */}
           <div className="text-base sm:text-lg md:text-2xl lg:text-4xl">
-            <span>{event.date},</span>
-            <span className="ml-2">{event.time}</span>
+            {event.otherdate ? (
+              event.othertime ? (
+                <span>
+                  {event.date} - {event.time} & {event.otherdate} - {event.othertime}
+                </span>
+              ) : (
+                <span>
+                  {event.date} & {event.otherdate} - {event.time}
+                </span>
+              )
+            ) : (
+              <span>
+                {event.date} {
+                event.category !== "Esports" && <span>- {event.time}</span>
+                }
+              </span>
+            )}
           </div>
           
           {/* Event Title and Description */}
           <div className='flex flex-col md:flex-row justify-between w-full items-start md:items-center gap-6 md:gap-8'>
-            <h1 className="font-['ModernAge'] text-3xl sm:text-4xl md:text-7xl lg:text-8xl uppercase w-full md:w-[50%] mt-4">
+            <h1 className="font-['ModernAge'] text-3xl sm:text-4xl md:text-7xl lg:text-8xl uppercase w-full mt-4">
               {event.title}
             </h1>
-            
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed w-full md:w-[50%]">
-              {event.description}
-            </p>
           </div>
 
           {/* Long Description and Image Section */}
-          <div className="flex md:flex-row flex-col-reverse md:justify-between gap-8 md:gap-12 my-12 md:my-28">
+          <div className="flex md:flex-row flex-col-reverse md:justify-between gap-8 md:gap-12 my-6 md:my-28 md:mt-12">
             {/* Long Description */}
             <div className="w-full md:w-[60%]">
               <p className="text-sm sm:text-base md:text-xl lg:text-2xl leading-relaxed text-justify mb-8">
@@ -73,7 +115,11 @@ const EventDetails = () => {
                     </li>
                   ))}
                 </ul>
-                {event.registrationLink && (
+                {isEventPassed(event.date, event.time) ? (
+                  <div className="inline-block mt-4 md:mt-8 text-gray-300 border border-colPink rounded-full px-4 py-2 text-lg md:text-xl">
+                    Event Completed
+                  </div>
+                ) : event.registrationLink ? (
                   <a
                     href={event.registrationLink}
                     target="_blank"
@@ -83,6 +129,10 @@ const EventDetails = () => {
                     Click here to register 
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">→</span>
                   </a>
+                ) : (
+                  <div className="inline-block mt-4 md:mt-8 text-gray-400 text-lg md:text-xl">
+                    Registration Closed
+                  </div>
                 )}
               </div>
             </div>
@@ -98,9 +148,9 @@ const EventDetails = () => {
           </div>
 
           {/* Rules and How to Apply Section */}
-          <div className='flex flex-col md:flex-row justify-between w-full items-start gap-8 md:gap-12 px-0 md:px-16 my-8 md:my-16'>
+          <div className='flex flex-col lg:flex-row justify-between w-full items-start gap-8 md:gap-12 px-0 lg:px-16 my-8 md:my-16'>
             {/* Rules Section */}
-            <div className='w-full md:w-[50%]'>
+            <div className='w-full lg:w-[50%]'>
               <div className='flex flex-row gap-4 md:gap-6 w-full items-center bg-[#FF1F79] p-3 md:p-4 rounded-tl-lg rounded-tr-lg'>
                 <FaBook className='text-3xl md:text-5xl' />
                 <p className="text-2xl md:text-4xl lg:text-6xl">Rule Book</p>
@@ -113,6 +163,14 @@ const EventDetails = () => {
                     </li>
                   ))}
                 </ul>
+                {
+                  event.guidelinesLink && (
+                    <a href={event.guidelinesLink} target="_blank" rel="noopener noreferrer" className="text-colPink hover:text-pink-400 transition-all duration-300 text-lg md:text-xl font-semibold group">
+                    Click here to view guidelines 
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">→</span>
+                  </a>
+                  )
+                }
               </div>
             </div>
 
@@ -121,7 +179,7 @@ const EventDetails = () => {
              
 
               {/* Related Events */}
-              <div className='w-full md:w-[70%] mx-auto'>
+              <div className='w-full lg:w-[70%] mx-auto'>
                 <p className="text-3xl md:text-4xl lg:text-5xl mb-6">Explore more</p>
                 <div className='flex flex-col gap-4'>
                   {event.relatedEvents.map((relatedEvent) => (
@@ -145,6 +203,7 @@ const EventDetails = () => {
               </div>
             </div>
           </div>
+        
         </div>
       </div>
     </div>

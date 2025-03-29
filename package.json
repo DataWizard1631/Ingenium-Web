@@ -30,6 +30,7 @@
     "path": "^0.12.7",
     "postprocessing": "^6.36.6",
     "react": "^18.3.1",
+    "react-confetti": "^6.4.0",
     "react-dom": "^18.3.1",
     "react-gtm-module": "^2.0.11",
     "react-hot-toast": "^2.5.1",

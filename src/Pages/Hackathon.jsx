@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaTrophy, FaClock, FaCode, FaLightbulb } from 'react-icons/fa';
+import { FaTrophy, FaClock, FaCode, FaLightbulb, FaGlobe } from 'react-icons/fa';
 
 const Hackathon = () => {
   useEffect(() => {
@@ -15,59 +15,77 @@ const Hackathon = () => {
   const problems = [
     {
       id: 1,
-      title: "AI-Powered Mental Health Companion",
-      description: "Design an AI-driven mental health support system that can:",
-      requirements: [
-        "Detect early signs of anxiety and depression through text/voice analysis",
-        "Provide personalized coping strategies and exercises",
-        "Connect users with professional help when needed",
-        "Ensure user privacy and data security",
+      title: "Alternative Credit Evaluation Tool for Farmers.",
+      description: "Traditional credit evaluation methods often fail to capture the unique challenges and opportunities faced by farmers. Factors such as land quality, weather patterns, and crop yield potential play a significant role in determining a farmer's creditworthiness. Your challenge is to design an Alternative Credit Evaluation Tool that incorporates non-traditional data sources such as live GIS (Geographic Information System) data, upcoming weather forecasts, soil health metrics, etc., to create a more inclusive credit scoring system for farming loans. The tool should help financial institutions assess risk more accurately and enable farmers to access fair and tailored credit options.",
+      KeyFeatures: [
+        "Data Integration: Utilize live GIS data, weather forecasts, soil health metrics, and past crop yields.",
+        "Financial Risk Assessment: Provide a transparent and explainable scoring system that financial institutions can trust.",
+        "User Accessibility: Ensure the tool is usable by banks, NBFCs, and farmers with minimal technical knowledge.",
+        "Scalability & Adaptability: Design the tool to work across different regions with diverse farming conditions.",
+        "Regulatory Compliance: Ensure adherence to financial regulations and data privacy laws."
       ],
-      techStack: ["Machine Learning", "NLP", "React Native", "Firebase"],
-      domain: "Healthcare & AI",
-      resources: "Access to mental health APIs and Azure credits"
+      domain: "Fintech",
     },
     {
       id: 2,
-      title: "Blockchain-Based Supply Chain Tracker",
-      description: "Create a transparent supply chain management system that can:",
-      requirements: [
-        "Track products from source to consumer using blockchain",
-        "Verify authenticity and prevent counterfeiting",
-        "Monitor storage conditions (temperature, humidity) using IoT",
-        "Generate QR codes for consumer verification",
+      title: " Investigating the Effectiveness of Deep Reinforcement Learning (DRL) in Algorithmic Trading",
+      description: "Algorithmic trading has evolved significantly with the advent of advanced machine learning techniques, particularly Deep Reinforcement Learning (DRL). Participants are tasked with exploring the effectiveness of DRL in developing adaptive trading strategies using the provided research paper on DRL-based algorithmic trading. While participants are not expected to design the core algorithm, they must: Implement the given DRL-based trading model. Test the model using real or simulated market data. Analyze its performance and derive insights into its effectiveness, adaptability, and limitations in dynamic market conditions. The goal is to demonstrate if and how DRL can be leveraged to create robust and adaptive trading strategies.",
+      KeyFeatures: [
+        "Model Implementation: Implement the provided DRL-based algorithmic trading model.",
+        "Data Handling: Use real or simulated market data to test the model.",
+        "Performance Evaluation: Analyze effectiveness using key financial metrics (e.g., Sharpe ratio, ROI).",
+        "Market Adaptability: Assessment must be done on how the model performs under changing market conditions.",
+        "Visualization & Insights: Present findings through graphs, performance comparisons, and risk analysis.",
+        "Legal Considerations: Ensure the trading model follows ethical financial practices and regulations."
       ],
-      techStack: ["Solidity", "Web3.js", "IoT Sensors", "React"],
-      domain: "Blockchain & IoT",
-      resources: "Ethereum test network and IoT development kit"
+      domain: "Fintech & Machine Learning",
     },
     {
       id: 3,
-      title: "AR-Enhanced Learning Platform",
-      description: "Develop an augmented reality education platform that:",
-      requirements: [
-        "Creates interactive 3D models for complex concepts",
-        "Supports real-time collaboration between students",
-        "Provides progress tracking and analytics",
-        "Works on both mobile and web platforms",
+      title: "Streamlining the Adoption of India's CBDC (e-Rupee)",
+      description: "The Indian government has introduced the Central Bank Digital Currency (CBDC), known as the e-rupee, as a legal tender. However, its adoption remains limited compared to traditional payment methods like UPI wallets and cash. Your challenge is to design a solution that streamlines the adoption and usage of this blockchain-based tender in everyday transactions. Consider addressing barriers such as user awareness, accessibility, integration with existing payment systems, and incentives for both consumers and merchants. Your solution should aim to make e-Rupee a more viable and widely accepted form of currency in India's digital economy.",
+      KeyFeatures: [
+        "Seamless Integration: The provided solution must be compatible with existing digital payment solutions like UPI and bank accounts.",
+        "Merchant & Consumer Incentives: Propose reward systems to encourage adoption by businesses and individuals.",
+        "Security & Privacy: Address concerns related to digital currency security and user trust.",
+        "Government & Regulatory Compliance: Ensure alignment with RBI guidelines for CBDC adoption.",
       ],
-      techStack: ["Unity", "ARCore/ARKit", "WebGL", "Node.js"],
-      domain: "Education & AR",
-      resources: "Unity Pro License and AR development tools"
+      domain: "Fintech",
     },
     {
       id: 4,
-      title: "Smart Energy Grid Optimizer",
-      description: "Build an AI-powered system that can:",
-      requirements: [
-        "Predict and optimize energy consumption patterns",
-        "Integrate renewable energy sources efficiently",
-        "Provide real-time usage analytics and suggestions",
-        "Handle peak load balancing automatically",
+      title: "AI-Powered Retail Investor Dashboard",
+      description: "Retail investors often struggle with making informed financial decisions due to the complexity of financial markets, tax regulations, and the lack of personalized guidance. Your challenge is to design and develop an AI-powered dashboard tailored for retail investors. The dashboard should integrate APIs from financial data providers, tax compliance tools, and market regulation databases to provide a comprehensive and user-friendly interface. Key features of the dashboard should include:",
+      KeyFeatures: [
+        "AI-Based Personalized Financial Advisory: Utilize Large Language Models (LLMs) to offer personalized investment advice based on the user's financial goals, risk appetite, and market conditions. Integrate tax calculation and compliance tools to help users understand their tax obligations related to investments.  The dashboard must be compliant with a database of market laws and regulations.",
+        "User Authentication and Personalization: Implement a secure user login system to allow personalized experiences. Users should be able to save their preferences and track their investment portfolios.",
+        "Interactive Visualizations: Develop interactive charts and graphs to help users visualize their investment performance, market trends, and potential future scenarios. ",
+        "Integration with Financial APIs: Seamlessly integrate with financial APIs to fetch real-time market data, stock prices, and other relevant financial information.",
       ],
-      techStack: ["Python", "TensorFlow", "IoT", "GraphQL"],
-      domain: "Sustainability & AI",
-      resources: "Energy consumption datasets and cloud credits"
+      domain: "Fintech & AI",
+    }
+  ];
+
+  const evaluationCriteria = [
+    {
+      id: 1,
+      title: "Innovation and Creativity",
+      description: "How unique, original, and creative is the solution? Does it address the problem in a novel way or introduce a fresh perspective?"
+    },
+    {
+      id: 2,
+      title: "Technical Sophistication and Execution",
+      description: "How well was the solution built? Does it function as intended? Is the code clean, efficient, and scalable? List the frameworks, libraries, and technologies you plan to use. Reasoning: Explain your choices (e.g., scalability, ease of use, cost-effectiveness). Technical sophistication will be a key evaluation criterion. Judges recognize that partially solving a complex challenge can demonstrate comparable skill and effort to fully completing a simpler one."
+    },
+    {
+      id: 3,
+      title: "Impact and Relevance",
+      description: "How impactful is the solution in addressing the problem statement? Does it have real-world applicability and potential to create meaningful change?"
+    },
+    {
+      id: 4,
+      title: "Presentation and Report Statement",
+      description: "How effectively does the team communicate their idea? Is the presentation clear, engaging, and compelling? Does it tell a story that connects the problem, solution, and impact?"
     }
   ];
 
@@ -92,7 +110,7 @@ const Hackathon = () => {
     { time: "01:30 PM", event: "Lunch", duration: "1 hours" },
     { time: "02:30 PM", event: "Final Changes ⏰", duration: "1.5 hours" },
     { time: "04:00 PM", event: "Project Presentation", duration: "2 hours" },
-    { time: "09:00 PM", event: "Winners Announcement & Closing Ceremony 🏆", duration: "1 hour" }
+    { time: "06:00 PM", event: "Winners Announcement & Closing Ceremony 🏆", duration: "1 hour" }
   ];
 
   const prizes = [
@@ -162,24 +180,77 @@ const Hackathon = () => {
                     </div>
                   </div>
 
-                  {/* Requirements Section */}
+                  {
+                    problem.id === 2 && (
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <div className="flex items-center gap-2">
+                        <FaGlobe className="text-[#C90F5B]" size={18} />
+                        <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B]">
+                          Research Paper:
+                        </h4>
+                      </div>
+                      <a
+                        href="https://drive.google.com/file/d/1Gs-FjVfHaPndnS7X9tlq-QqshtqVu_If/view?usp=drivesdk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm sm:text-lg text-gray-400 hover:text-[#C90F5B] transition-colors duration-300 underline underline-offset-4"
+                      >
+                        Research Paper Link
+                      </a>
+                    </div>
+
+                    )
+                  }
+
+                  {/* KeyFeatures Section */}
                   <div className="border-t border-[#C90F5B]/20 pt-4">
-                    <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Requirements:</h4>
+                    <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Key Features:</h4>
                     <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm sm:text-lg">
-                      {problem.requirements.map((req, idx) => (
+                      {problem.KeyFeatures.map((req, idx) => (
                         <li key={idx}>{req}</li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Resources Section */}
-                  <div className="border-t border-[#C90F5B]/20 pt-4">
-                    <h4 className="text-base sm:text-lg font-primaryFont text-[#C90F5B] mb-3">Resources Provided:</h4>
-                    <p className="text-sm sm:text-lg text-gray-300">{problem.resources}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Evaluation Criteria Section */}
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-primaryFont text-center mb-8 sm:mb-12 bg-gradient-to-r from-white to-[#C90F5B] bg-clip-text text-transparent">
+            EVALUATION CRITERIA
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 font-secFont1">
+            {evaluationCriteria.map((criterion, index) => (
+              <motion.div
+                key={criterion.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-[#1A1A1A]/80 backdrop-blur-sm p-6 rounded-xl border border-[#C90F5B]/30 hover:border-[#C90F5B] transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <FaCode className="text-[#C90F5B] text-2xl sm:text-3xl flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-primaryFont mb-3">{criterion.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-400">{criterion.description}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <a 
+              href="/Problem Statements.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-[#C90F5B] text-white rounded-full font-secFont1 hover:bg-[#A00D4A] transition-all duration-300"
+            >
+              View Detailed Problem Statements
+            </a>
           </div>
         </div>
 
@@ -196,7 +267,7 @@ const Hackathon = () => {
                 className="relative flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8"
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               >
-                <div className="absolute left-4 sm:left-1/2 translate-x-[-6px] w-3 sm:w-4 h-3 sm:h-4 bg-[#C90F5B] rounded-full transform">
+                <div className="absolute left-4 sm:left-1/2 translate-x-[-4px] md:translate-x-[-6px] w-3 sm:w-4 h-3 sm:h-4 bg-[#C90F5B] rounded-full transform">
                   <div className="absolute inset-0 bg-[#C90F5B] rounded-full animate-ping opacity-75"></div>
                 </div>
                 
@@ -246,7 +317,7 @@ const Hackathon = () => {
               >
                 <FaTrophy className="text-[#C90F5B] text-3xl sm:text-4xl mx-auto mb-4" />
                 <h3 className="text-xl sm:text-2xl font-primaryFont mb-4">{prize.position}</h3>
-                <p className="text-2xl sm:text-3xl font-bold text-[#C90F5B] mb-4">{prize.amount}</p>
+                <p className="text-2xl sm:text-3xl font-bold text-[#C90F5B] mb-4 font-primaryFont">{prize.amount}</p>
                 <ul className="text-gray-400 space-y-2">
                   {prize.extras.map((extra, idx) => (
                     <li key={idx} className="text-xs sm:text-lg font-secFont1">{extra}</li>

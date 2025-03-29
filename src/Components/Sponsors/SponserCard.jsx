@@ -78,7 +78,7 @@ export const SponserCard = ({
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors",
+              "inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors font-secFont1",
               colors.mobileBtnClasses
             )}
           >
@@ -182,7 +182,7 @@ export const PinPerspective = ({ title, name, href, category = "default" }) => {
               colors.mobileBtnClasses
             )}
           >
-            <span className="relative text-sm font-medium inline-block">
+            <span className="relative text-sm font-medium inline-block font-secFont1">
               Visit Website
             </span>
             <svg

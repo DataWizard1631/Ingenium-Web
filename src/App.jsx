@@ -12,6 +12,7 @@ import SponsorPage from "./Pages/SponsorPage.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 import Hackathon from "./Pages/Hackathon.jsx";
 import Timeline from "./Pages/Timeline.jsx";
+import ShaftTank from "./Pages/shaft-tank/ShaftTank";
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
           <Route path="event/:id" element={<EventDetails />} />
           <Route path="sponsors" element={<SponsorPage />} /> 
           <Route path="hackathon" element={<Hackathon />} />
+          <Route path="404" element={<NotFound />} />
+          <Route path="shaft-tank/*" element={<ShaftTank />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

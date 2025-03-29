@@ -23,20 +23,47 @@ const EventCarousel = () => {
 
   // Sort events by date before using them
   const sortedEvents = React.useMemo(() => {
-    return [...eventsData.events].sort((a, b) => {
-      const dateA = getFirstDate(a.date);
-      const dateB = getFirstDate(b.date);
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); // Set to start of day for fair comparison
 
-      if (dateA.getTime() !== dateB.getTime()) {
-        return dateA - dateB;
-      }
+    // Filter out past events and then sort remaining events
+    return [...eventsData.events]
+      .filter(event => {
+        const eventDate = getFirstDate(event.date);
+        // If dates are equal, check the time
+        if (eventDate.getTime() === currentDate.getTime()) {
+          const eventTime = new Date(`1970/01/01 ${event.time}`);
+          const currentTime = new Date();
+          return eventTime > currentTime;
+        }
+        return eventDate >= currentDate;
+      })
+      .sort((a, b) => {
+        const dateA = getFirstDate(a.date);
+        const dateB = getFirstDate(b.date);
 
-      // If dates are equal, compare times
-      const timeA = new Date(`1970/01/01 ${a.time}`);
-      const timeB = new Date(`1970/01/01 ${b.time}`);
-      return timeA - timeB;
-    });
+        if (dateA.getTime() !== dateB.getTime()) {
+          return dateA - dateB;
+        }
+
+        // If dates are equal, compare times
+        const timeA = new Date(`1970/01/01 ${a.time}`);
+        const timeB = new Date(`1970/01/01 ${b.time}`);
+        return timeA - timeB;
+      });
   }, []);
+
+  // Add a check for empty events
+  if (sortedEvents.length === 0) {
+    return (
+      <div className="relative w-full bg-black py-8 sm:py-16 md:py-24 md:pb-28 overflow-hidden">
+        <h2 className="text-[2.2rem] sm:text-4xl md:text-6xl font-primaryFont text-white text-center mb-8 mt-8 md:mt-8 sm:mb-16 px-4">
+          Upcoming Events
+        </h2>
+        <p className="text-white text-center text-lg">No upcoming events at the moment.</p>
+      </div>
+    );
+  }
 
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
@@ -135,11 +162,18 @@ const EventCarousel = () => {
                   <div className="flex items-center gap-2 text-colPink text-sm md:text-lg pt-4">
                     <span className="bg-colPink/10 px-3 py-1 rounded-full">
                       {sortedEvents[activeIndex].date}
+                      {sortedEvents[activeIndex].otherdate && <span> | {sortedEvents[activeIndex].otherdate}</span>}
                     </span>
-                    <span className="w-1 h-1 rounded-full bg-colPink"></span>
-                    <span className="bg-colPink/10 px-3 py-1 rounded-full">
-                      {sortedEvents[activeIndex].time}
-                    </span>
+                    {
+                      sortedEvents[activeIndex].category !== "Esports" && (
+                        <>
+                        <span className="w-1 h-1 rounded-full bg-colPink"></span>
+                          <span className="bg-colPink/10 px-3 py-1 rounded-full">
+                          {sortedEvents[activeIndex].time}
+                        </span>
+                        </>
+                      )
+                    }
                   </div>
                 </div>
 

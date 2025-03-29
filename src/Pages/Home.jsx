@@ -49,7 +49,7 @@ function Home() {
   }, []);
 
   return (
-    <div className='bg-black w-full h-full pt-16'>
+    <div className='bg-black w-full h-full'>
         <Temp/>
         <AboutUs/>
         <AuGlimpes/>
