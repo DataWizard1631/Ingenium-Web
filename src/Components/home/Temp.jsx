@@ -190,7 +190,7 @@ const Temp = () => {
         >
           {showConfetti ? "Ingenium'25 is Live!" : "Ingenium'25"}
         </h1>
-        <div 
+        {/* <div 
           className="countdown-container"
           style={{
             '--scroll-progress': scrollProgress,
@@ -217,7 +217,7 @@ const Temp = () => {
             <div className={`countdown-value ${isAnimatingCountdown ? 'animating' : ''}`}>{padNumber(timeLeft.seconds)}</div>
             <div className="countdown-label">Seconds</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

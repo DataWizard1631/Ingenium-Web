@@ -13,6 +13,7 @@ const categories = [
   { id: "Chem Events", label: "Chem Events" },
   { id: "Take-A-Break", label: "Take-A-Break" },
   { id: "Esports", label: "E-sports" },
+  { id: "Pro-night Events", label: "Pro-night" },
 ];
 
 const comingSoonCategories = [

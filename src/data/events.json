@@ -569,6 +569,32 @@
           "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/CHY_Fragrance_wlws14.jpg"
         }
       ]
+    },
+    {
+      "id": "standup-comedy",
+      "title": "Pro night - Standup Comedy",
+      "date": "30th March",
+      "time": "06:00 PM",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeIMD7FYsz-YPBUZRFEhi2IKTV-r9ypZ9DRVdMhH2pHW4BrIw/viewform",
+      "description": "Join us for a hilarious Pro Night - Standup Comedy featuring Madhur Virli and Nishant Suri, and enjoy a night full of laughter and fun.",
+      "longDescription": "Get ready for a laughter-packed evening with Madhur Virli and Nishant Suri at the Pro Night - Standup Comedy! These two talented comedians will bring their unique comedic styles to the stage, with a blend of witty observations, relatable humor, and unforgettable jokes. The event promises to keep you entertained from start to finish, with both Madhur and Nishant delivering their best material. Whether you're a fan of observational humor or sharp one-liners, this show is sure to leave you in stitches.",
+      "contact": ["Vansh Narania (6376343259)"],
+      "category": "Pro-night Events",
+      "meetingType": "offline",
+      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1743265202/Standup_online_1_r7x3lg.jpg",
+      "rules": ["Enjoy the show"],
+      "howToApply": [
+        "Buy the pass from the link",
+        "Enjoy the show"
+      ],
+      "relatedEvents": [
+        {
+          "id": "hera-pheri",
+          "title": "Hera Pheri 3.0",
+          "category": "CSE Events",
+          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Hera_Pheri_xzghqe.png"
+        }
+      ]
     }
   ]
 }
