@@ -24,7 +24,7 @@ const PitcherDashboard = () => {
   const fetchInvestments = async () => {
     try {
       // First fetch pitcher details
-      const pitcherResponse = await fetch(`http://localhost:3000/api/pitchers/${pitcher.id}`);
+      const pitcherResponse = await fetch(`http://https://ingenium-web2.onrender.com/api/pitchers/${pitcher.id}`);
       const pitcherData = await pitcherResponse.json();
       
       if (!pitcherResponse.ok) {
@@ -32,7 +32,7 @@ const PitcherDashboard = () => {
       }
 
       // Then fetch investments
-      const investmentsResponse = await fetch(`http://localhost:3000/api/investments/pitcher/${pitcher.id}`);
+      const investmentsResponse = await fetch(`http://https://ingenium-web2.onrender.com/api/investments/pitcher/${pitcher.id}`);
       const investmentsData = await investmentsResponse.json();
       
       if (!investmentsResponse.ok) {

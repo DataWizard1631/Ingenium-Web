@@ -17,7 +17,7 @@ const InvestorProfile = () => {
   const fetchInvestments = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3000/api/investments/investor/${investor.id}`);
+      const response = await fetch(`http://https://ingenium-web2.onrender.com/api/investments/investor/${investor.id}`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch investments');

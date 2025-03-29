@@ -12,7 +12,7 @@ const ShaftLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/api/auth/${userType}/login`, {
+      const response = await fetch(`http://https://ingenium-web2.onrender.com/api/auth/${userType}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

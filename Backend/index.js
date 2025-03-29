@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json()); // Body parser middleware to parse JSON body
 app.use(express.urlencoded({ extended: true })); // Body parser middleware to parse URL-encoded bodies
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
+    origin: ['http://localhost:5173', 'https://https://ingenium-web2.onrender.com'],
     credentials: true,
 }));
 

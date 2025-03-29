@@ -14,7 +14,7 @@ const ShaftDashboard = () => {
 
   const fetchPitchers = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/pitchers');
+      const response = await fetch('http://https://ingenium-web2.onrender.com/api/pitchers');
       const data = await response.json();
       setPitchers(data);
     } catch (error) {
