@@ -10,13 +10,17 @@ dotenv.config();
 
 const app = express();
 
+// CORS configuration
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://ingenium2025.com', 'https://ingenium-web2.onrender.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
 // Middleware
 app.use(express.json()); // Body parser middleware to parse JSON body
 app.use(express.urlencoded({ extended: true })); // Body parser middleware to parse URL-encoded bodies
-app.use(cors({
-    origin: ['http://localhost:5173', 'https://ingenium-web2.onrender.com'],
-    credentials: true,
-}));
 
 // Database connection
 dbConnect();
