@@ -12,12 +12,29 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://www.ingenium2025.com','https://ingenium2025.com', 'https://ingenium-web2.onrender.com', '*'],
+  origin: [
+    'http://localhost:5173', 
+    'https://ingenium-web2.vercel.app', 
+    'https://ingenium-web2.onrender.com',
+    'https://www.ingenium2025.com',
+    'https://ingenium2025.com'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-    // res.header('Access-Control-Allow-Origin', '*');
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  exposedHeaders: ['Access-Control-Allow-Origin'],
   credentials: true
 }));
+
+// Add pre-flight handling for all routes
+app.options('*', cors());
+
+// Add headers middleware
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Accept');
+  next();
+});
 
 // Middleware
 app.use(express.json()); // Body parser middleware to parse JSON body
@@ -39,8 +56,10 @@ app.get("/" , (req,res) => {
 })
 
 // Server setup
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+export default app;
 
 
 
