@@ -6,6 +6,7 @@ import Temp from '../Components/home/Temp';
 import RecapCards from '../Components/home/RecapCards';
 import WhyJoinUs from '../Components/home/WhyJoinUs';
 import AuGlimpes from '../Components/home/AuGlimpes';
+import PopularEvents from '../Components/home/PopularEvents';
 
 function Home() {
   useEffect(() => {
@@ -72,7 +73,8 @@ function Home() {
         </>
 
         <RecapCards/>
-        <EventCarousel/>
+        {/* <EventCarousel/> */}
+        <PopularEvents />
         <WhyJoinUs />
         
     </div>
