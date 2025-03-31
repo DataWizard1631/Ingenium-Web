@@ -30,7 +30,7 @@ const PopularEvents = () => {
   };
 
   return (
-    <div className="py-16 md:py-32 px-4 md:px-8 bg-black">
+    <div className="py-16 md:py-32 pb-0 px-8 md:px-8 bg-black">
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
