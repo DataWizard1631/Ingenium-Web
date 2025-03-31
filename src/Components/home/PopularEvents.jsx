@@ -46,7 +46,7 @@ const PopularEvents = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
-        className="max-w-[95rem] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10"
+        className="max-w-[100rem] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10"
       >
         {popularEvents.map((event, index) => (
           <motion.div
@@ -127,7 +127,7 @@ const PopularEvents = () => {
       >
         <button 
           onClick={() => navigate('/events')}
-          className="px-8 py-3 bg-transparent border border-colPink text-colPink rounded-full hover:bg-colPink hover:text-white transition-all duration-300 font-secFont1"
+          className="px-6 py-2 text-lg bg-transparent border border-colPink text-colPink rounded-full hover:bg-colPink hover:text-white transition-all duration-300 font-secFont1"
         >
           View All Events
         </button>
