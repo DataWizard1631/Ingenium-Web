@@ -5,13 +5,13 @@ const AuGlimpes = () => {
   const [isVideoLoading, setIsVideoLoading] = useState(true);
   const [isImagesLoading, setIsImagesLoading] = useState(true);
 
-  const cloudinaryVideoUrl = "https://res.cloudinary.com/dub5rms8i/video/upload/v1741718675/au_video_ubchqy.mp4";
+  const cloudinaryVideoUrl = "https://res.cloudinary.com/daouhylls/video/upload/v1745579621/au_video_jrfrkr.mp4";
   
   const schoolImages = [
-    { src: "https://res.cloudinary.com/dub5rms8i/image/upload/v1741718962/uc_kpfqsi.jpg", title: "School of Engineering & Applied Sciences" },
-    { src: "https://res.cloudinary.com/dub5rms8i/image/upload/v1741718962/sas_jfjqk2.jpg", title: "School of Arts & Sciences" },
-    { src: "https://res.cloudinary.com/dub5rms8i/image/upload/v1741718962/amsom_ujy5hg.jpg", title: "Amrut Mody School of Management" },
-    { src: "https://res.cloudinary.com/dub5rms8i/image/upload/v1741718962/uc_kpfqsi.jpg", title: "University Centre" }
+    { src: "https://res.cloudinary.com/daouhylls/image/upload/v1745579577/seas_znpbrk.png", title: "School of Engineering & Applied Sciences" },
+    { src: "https://res.cloudinary.com/daouhylls/image/upload/v1745579576/sas_gszklu.jpg", title: "School of Arts & Sciences" },
+    { src: "https://res.cloudinary.com/daouhylls/image/upload/v1745579576/amsom_mkwonw.jpg", title: "Amrut Mody School of Management" },
+    { src: "https://res.cloudinary.com/daouhylls/image/upload/v1745579575/uc_ebhsdy.jpg", title: "University Centre" }
   ];
 
   return (

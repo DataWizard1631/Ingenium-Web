@@ -232,7 +232,7 @@ function Timeline() {
                   <div className={`bg-gradient-to-b from-gray-900/90 to-black/95 
                     rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl 
                     transition-all duration-300 hover:-translate-y-1 border 
-                    ${eventStatus === 'completed' ? 'border-colPink/10 brightness-75' :
+                    ${eventStatus === 'completed' ? 'border-colPink/10' :
                       eventStatus === 'current' ? 'border-colPink/30' :
                       'border-white/20'}`}
                   >
@@ -242,18 +242,17 @@ function Timeline() {
                         <CloudinaryImage 
                           src={event.image} 
                           alt={event.title}
-                          className={`w-full h-full object-cover transition-transform duration-300 
-                            ${eventPassed ? 'brightness-75' : ''}`}
+                          className="w-full h-full object-cover transition-transform duration-300"
                         />
                       </div>
 
                       {/* Content Section */}
                       <div className="sm:w-[65%] p-6 font-secFont1">
                         <div className="flex flex-col gap-2">
-                          <h3 className={`font-primaryFont text-3xl text-white transition-colors duration-300 
-                            ${eventPassed ? 'opacity-75' : ''}`}>{event.title}</h3>
-                          <p className={`text-gray-400 text-lg mt-2 
-                            ${eventPassed ? 'opacity-75' : ''}`}>{event.description}</p>
+                          <h3 className="font-primaryFont text-3xl text-white transition-colors duration-300">
+                            {event.title}
+                          </h3>
+                          <p className="text-gray-400 text-lg mt-2">{event.description}</p>
                           <div className="mt-4 flex flex-col sm:flex-row gap-2">
                             {/* Updated Register Button */}
                             {eventPassed ? (
@@ -283,8 +282,7 @@ function Timeline() {
                             <button 
                               onClick={() => navigate(`/event/${event.id}`)}
                               className={`px-4 py-2 border border-colPink text-colPink rounded-full 
-                                ${eventPassed ? 'opacity-75 hover:opacity-100' : 'hover:bg-colPink hover:text-white'} 
-                                transition-all duration-300 text-lg`}
+                                hover:bg-colPink hover:text-white transition-all duration-300 text-lg`}
                             >
                               Learn More
                             </button>

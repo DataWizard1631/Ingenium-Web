@@ -10,14 +10,14 @@
       "longDescription": "Jab We Code is a unique programming contest that tests teamwork, adaptability, and strategic decision-making. Teams of two begin by solving separate contests (Contest A and Contest B) for 30 minutes before discussing their progress and swapping challenges. After another 30 minutes, they strategize once more before entering the final 20-minute phase, where both contests are open, and members decide who tackles which problem. The final ranking is determined by the combined scores of both contests. The top three teams win cash prizes.",
       "category": "CSE Events",
       "contact": ["Dhrumi Panchal (9313464215)", "Jugal Vaghmashi (7405222505)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576266/Jab_We_Code_boiks4.jpg",
       "rules": [
         "Rule 1: Teams consist of two members",
         "Rule 2: Each member starts solving a separate coding contest",
         "Rule 3: After 30 minutes, a 5-minute discussion is allowed before switching contests",
         "Rule 4: After another 30 minutes, teams get a final 5-minute discussion",
         "Rule 5: The last 20 minutes allow both members to work on separate contests simultaneously",
-        "Rule 6: The team’s total score determines the winners"
+        "Rule 6: The team's total score determines the winners"
       ],
       "howToApply": [
         "Finalise team members",
@@ -29,13 +29,13 @@
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576271/Optimized_Mind_jlwvzv.jpg"
         },
         {
           "id": "hera-pheri",
           "title": "Hera Pheri 3.0",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Hera_Pheri_xzghqe.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576983/Babu_Bhaiya_in_the_house_Get_ready_for_a_crazy_ride_of_wit_fun_and_surprises_at_Ingenium_2025_Join_us_for_an_event_full_of_twists_turns_and_laughter._Are_you_ready_to_hustle_._Scan_the_QR_code_to_know_more_...Credits_w9mjiw.jpg "
         }
       ]
     },
@@ -49,7 +49,7 @@
       "longDescription": "Participants will work on one of three given problem statements, using relevant datasets to build the most optimized machine learning model. Teams will be judged based on the efficiency of their models, accuracy of predictions, and innovation in approach. The competition lasts three hours, during which teams analyze data, develop models, and present their findings. Judges will assess optimization and performance metrics to determine winners. The best-performing team for each problem statement wins ₹2000.",
       "category": "CSE Events",
       "contact": ["Dhrumi Panchal (9313464215)", "Jugal Vaghmashi (7405222505)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576271/Optimized_Mind_jlwvzv.jpg",
       "rules": [
         "Rule 1: Teams of 1 to 3 members",
         "Rule 2: Each team selects one problem statement from the given options",
@@ -68,13 +68,13 @@
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576266/Jab_We_Code_boiks4.jpg"
         },
         {
           "id": "hackathon",
           "title": "Ingenious Hackathon 6.0",
           "category": "Hackathon",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576983/Ingenious_6.0_Hackathon_-_2_Days_of_Coding_Innovation_Join_the_ultimate_coding_challenge_at_Ahmedabad_University_on_March_22nd_for_a_2-day_code_rush_with_a_massive_100K_prize_pool_Hosted_by_Ingenium_2025_IEEE_Ahmeda_ym13bc.jpg"
         }
       ]
     },
@@ -88,7 +88,7 @@
       "longDescription": "This event consists of three rounds. The first is a treasure hunt, where teams solve clues to reach different campus locations. The top 10 teams move to a quiz round, where logical questions determine the final four teams. The last round is a \"Potli\" hunt, where teams search for hidden potlis containing different rewards. The team that finds the golden potli wins ₹5000, with runner-up receiving ₹3000. This event emphasizes problem-solving, teamwork, and quick thinking.",
       "category": "CSE Events",
       "contact": ["Dhrumi Panchal (9313464215)", "Jugal Vaghmashi (7405222505)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Hera_Pheri_xzghqe.png",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576983/Babu_Bhaiya_in_the_house_Get_ready_for_a_crazy_ride_of_wit_fun_and_surprises_at_Ingenium_2025_Join_us_for_an_event_full_of_twists_turns_and_laughter._Are_you_ready_to_hustle_._Scan_the_QR_code_to_know_more_...Credits_w9mjiw.jpg ",
       "rules": [
         "Rule 1: Teams must complete the treasure hunt to qualify for the quiz round",
         "Rule 2: Top 10 teams from the treasure hunt advance to the quiz round",
@@ -107,13 +107,13 @@
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576266/Jab_We_Code_boiks4.jpg"
         },
         {
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576271/Optimized_Mind_jlwvzv.jpg"
         }
       ]
     },
@@ -124,10 +124,10 @@
       "time": "9:00 AM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeMOdR_P24l_1uf30CmNjeOaobG_fVfS88PACIHxpKDZtlPPA/viewform?usp=sharing",
       "description": "The Ingenious Hackathon, a highlight of the annual Ingenium tech fest, is a hub of innovation and coding excellence. Aspiring programmers tackle real-world challenges under time constraints, testing their problem-solving skills, teamwork, and adaptability.",
-      "longDescription": "Welcome to Ingenious Hackathon 6.0, a dynamic 36-hour innovation sprint where creativity meets technology! Whether you're a beginner taking your first steps into coding or a seasoned developer pushing the boundaries of what's possible, this is your space to build, learn, and collaborate. At Ingenious Hackathon 6.0, we believe in the power of ideas. Over the course of the event, you'll form teams, brainstorm solutions, and develop impactful projects around cutting-edge themes like AI/ML, Web3, FinTech, Sustainability, IoT, Open Innovation, and much more. We’re bringing together developers, designers, product thinkers, and creators to solve real-world challenges, build something meaningful, and connect with an inspiring tech community. Why Join? ✨ Turn your ideas into working prototypes. 🤝 Network with industry experts, mentors, and fellow innovators. 🏆 Win exciting prizes and showcase your work to top judges. 📚 Learn new skills through workshops and mentorship. 🚀 Build something that could make a difference. No matter your background or experience level, this hackathon is for YOU. So grab your laptop, fuel your creativity, and get ready to build the future.",
+      "longDescription": "Welcome to Ingenious Hackathon 6.0, a dynamic 36-hour innovation sprint where creativity meets technology! Whether you're a beginner taking your first steps into coding or a seasoned developer pushing the boundaries of what's possible, this is your space to build, learn, and collaborate. At Ingenious Hackathon 6.0, we believe in the power of ideas. Over the course of the event, you'll form teams, brainstorm solutions, and develop impactful projects around cutting-edge themes like AI/ML, Web3, FinTech, Sustainability, IoT, Open Innovation, and much more. We're bringing together developers, designers, product thinkers, and creators to solve real-world challenges, build something meaningful, and connect with an inspiring tech community. Why Join? ✨ Turn your ideas into working prototypes. 🤝 Network with industry experts, mentors, and fellow innovators. 🏆 Win exciting prizes and showcase your work to top judges. 📚 Learn new skills through workshops and mentorship. 🚀 Build something that could make a difference. No matter your background or experience level, this hackathon is for YOU. So grab your laptop, fuel your creativity, and get ready to build the future.",
       "category": "Hackathon",
       "contact": ["ieee.sb@ahduni.edu.in"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576983/Ingenious_6.0_Hackathon_-_2_Days_of_Coding_Innovation_Join_the_ultimate_coding_challenge_at_Ahmedabad_University_on_March_22nd_for_a_2-day_code_rush_with_a_massive_100K_prize_pool_Hosted_by_Ingenium_2025_IEEE_Ahmeda_ym13bc.jpg",
       "rules": [
         "Rule 1: Only upon the arrival of the entire team can the team start solving the next puzzle",
         "Rule 2: Contact with other teams or people not a part of the event, which in any form may compromise the integrity of the puzzles, is not allowed",
@@ -144,13 +144,13 @@
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576271/Optimized_Mind_jlwvzv.jpg"
         },
         {
           "id": "jab-we-code",
           "title": "Jab We Code",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Jab_We_Code_sau6mm.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576266/Jab_We_Code_boiks4.jpg"
         }
       ]
     },
@@ -164,7 +164,7 @@
       "longDescription": "Shaft Tank is designed to bring out the creativity and innovation of students by allowing them to pitch unique ideas or products. Teams of up to 3 members will present their ideas, which can be in the form of an abstract, CAD model, prototype, or a finished product. The event aims to foster confidence and provide a platform for students to showcase their skills. Judges will evaluate pitches based on idea originality, delivery, and potential investment appeal.",
       "category": "Mech Events",
       "contact": ["Manush Shah (7486098667)", "Dev Shah (9825219414)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870019/Shaft_Tank_pdfblc.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Shaft_Tank_le5t7h.jpg",
       "rules": [
         "Rule 1: Team cannot exceed 3 members",
         "Rule 2: All soft copies related to the pitch must be submitted 48 hours before the event",
@@ -185,13 +185,13 @@
           "id": "rc-car-race",
           "title": "RC Car Race",
           "category": "Mech Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/RC_Car_Race_sh7chv.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576272/RC_Car_Race_njuimp.jpg"
         },
         {
           "id": "aumazing",
           "title": "AUmazing Talent",
           "category": "Take-A-Break",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742061392/shaft-tank_hsskk9.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576272/shaft-tank_hsskk9.jpg"
         }
       ]
     },
@@ -205,7 +205,7 @@
       "longDescription": "RC Car Race challenges teams to design and build their own remote-controlled cars for a thrilling competition. Participants must fabricate their cars and navigate a track filled with obstacles like gravel, dirt, ramps, and sharp turns. With strict rules on construction and fair play, the event emphasizes creativity, technical skills, and racing strategy. Teams must fine-tune their vehicles and race against opponents in multiple rounds, culminating in an exciting final lap battle to determine the champion.",
       "category": "Mech Events",
       "contact": ["Manush Shah (7486098667)", "Dev Shah (9825219414)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/RC_Car_Race_sh7chv.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576272/RC_Car_Race_njuimp.jpg",
       "rules": [
         "Rule 1: Teams must consist of 2-5 members from the same university/college",
         "Rule 2: Participants must be pursuing undergraduate majors",
@@ -229,13 +229,13 @@
           "id": "shaft-tank",
           "title": "Shaft Tank",
           "category": "Mech Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870019/Shaft_Tank_pdfblc.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Shaft_Tank_le5t7h.jpg"
         },
         {
           "id": "escape-room",
           "title": "Override Protocol: Humanity's Last Stand",
           "category": "Take-A-Break",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Escape_Room_s0c0m7.jpg"
         }
       ]
     },
@@ -250,7 +250,7 @@
       "longDescription": "Chy Fragrance is a creative and educational event where participants learn to blend fragrances using chemical engineering techniques. Explore the science behind perfumery, experiment with different scents, and create your own signature fragrance. This event combines creativity with technical knowledge, offering a unique experience for chemistry enthusiasts.",
       "category": "Chem Events",
       "contact": ["Moksh Vora (9913308472)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/CHY_Fragrance_wlws14.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576272/CHY_Fragrance_plxppq.jpg",
       "rules": [
         "Rule 1: Open to all students interested in chemistry and perfumery",
         "Rule 2: Prior registration is mandatory",
@@ -268,13 +268,13 @@
           "id": "hackathon",
           "title": "Ingenious Hackathon 6.0",
           "category": "Hackathon",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576983/Ingenious_6.0_Hackathon_-_2_Days_of_Coding_Innovation_Join_the_ultimate_coding_challenge_at_Ahmedabad_University_on_March_22nd_for_a_2-day_code_rush_with_a_massive_100K_prize_pool_Hosted_by_Ingenium_2025_IEEE_Ahmeda_ym13bc.jpg"
         },
         {
           "id": "electric-race",
           "title": "Electric Race",
           "category": "Electrical Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060030/Electric_Race_zoq1sr.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576268/Electric_Race_gmbnyh.jpg"
         }
       ]
     },
@@ -288,7 +288,7 @@
       "longDescription": "You and your teammates are in search of a treasure long thought to be a myth. Recently, you came across an opportunity that may lead you to the treasure you seek. But your team is not the only one. Put your electrical and logical skills to the test in this melting pot of treasure hunt, code-breaking, and observation as you race against other teams to be the first to reach the lost treasure.",
       "category": "Electrical Events",
       "contact": ["Ayush Purohit (6358851406)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060030/Electric_Race_zoq1sr.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576268/Electric_Race_gmbnyh.jpg",
       "rules": [
         "Rule 1: Access to internet is not allowed",
         "Rule 2: Access to a laptop and smartphones is allowed, without internet access",
@@ -306,13 +306,13 @@
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576271/Optimized_Mind_jlwvzv.jpg"
         },
         {
           "id": "hackathon",
           "title": "Ingenious Hackathon 6.0",
           "category": "Hackathon",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576983/Ingenious_6.0_Hackathon_-_2_Days_of_Coding_Innovation_Join_the_ultimate_coding_challenge_at_Ahmedabad_University_on_March_22nd_for_a_2-day_code_rush_with_a_massive_100K_prize_pool_Hosted_by_Ingenium_2025_IEEE_Ahmeda_ym13bc.jpg"
         }
       ]
     },
@@ -324,10 +324,10 @@
       "time": "10:00 AM",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfGkKlV7OiSprJe3CUsrhsFKU8Dz4r3h1o5dAWKP3Usonf8KQ/viewform?usp=sharing",
       "description": "AI has gone rogue, and the world is about to end! Your team must outsmart the evil scientist in his own lab, solve puzzles, and uncover the kill code within 45 minutes. Work together to save humanity before time runs out!",
-      "longDescription": "The fate of humanity is in your hands! In Override Protocol: Humanity’s Last Stand, an evil scientist has unleashed a rogue AI, and only your team can stop it. Work together in this high-stakes sci-fi escape room to uncover hidden clues, solve mind-bending puzzles, and find the elusive kill code—before time runs out! With just 45 minutes to prevent catastrophe, teamwork and quick thinking are your only hope. Gather your squad of 4-5 players and prove you can save the world! P.S. Amazing prizes await the winning team ;)",
+      "longDescription": "The fate of humanity is in your hands! In Override Protocol: Humanity's Last Stand, an evil scientist has unleashed a rogue AI, and only your team can stop it. Work together in this high-stakes sci-fi escape room to uncover hidden clues, solve mind-bending puzzles, and find the elusive kill code—before time runs out! With just 45 minutes to prevent catastrophe, teamwork and quick thinking are your only hope. Gather your squad of 4-5 players and prove you can save the world! P.S. Amazing prizes await the winning team ;)",
       "category": "Take-A-Break",
       "contact": ["Vrushti Patel (8866024176)", "Archi Daga (9512304004 )"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Escape_Room_s0c0m7.jpg",
       "rules": [
         "Rule 1: No phones/internet allowed during game time",
         "Rule 2: Direct disqualification if any material or clue in the room gets broken",
@@ -347,13 +347,13 @@
           "id": "optimized-minds",
           "title": "Optimized Minds - Machine Learning",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Optimized_Mind_wl0omk.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576271/Optimized_Mind_jlwvzv.jpg"
         },
         {
           "id": "hackathon",
           "title": "Ingenious Hackathon 6.0",
           "category": "Hackathon",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741713922/Hackathon_1_a3i5ku.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576983/Ingenious_6.0_Hackathon_-_2_Days_of_Coding_Innovation_Join_the_ultimate_coding_challenge_at_Ahmedabad_University_on_March_22nd_for_a_2-day_code_rush_with_a_massive_100K_prize_pool_Hosted_by_Ingenium_2025_IEEE_Ahmeda_ym13bc.jpg"
         }
       ]
     },
@@ -369,7 +369,7 @@
       "longDescription": "Invest-O-Mania is an exclusive Stock Market Workshop featuring the Master Trader Program (#BhavBhagvanChe) led by Mentor: Kalpesh Patel. This session is designed to provide students with a strong foundation in the world of investing. It will cover essential financial concepts, including investment strategies, risk management, stock screeners, and market indicators. The workshop aims to help students understand market trends and make informed investment decisions. Whether you're a beginner or have prior knowledge, this event will enhance your financial literacy. Plus, exciting giveaways and exclusive rewards await all participants!",
       "category": "Take-A-Break",
       "contact": ["Even Patel (9898159969)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060779/INVEST-O-MANIA_alt_v2_1_hqgsnh.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/INVEST-O-MANIA_erpvrd.jpg",
       "rules": [
         "Rule 1: Open to all university students interested in finance & investments",
         "Rule 2: Prior registration is mandatory",
@@ -385,13 +385,13 @@
           "id": "escape-room",
           "title": "Override Protocol: Humanity's Last Stand",
           "category": "Take-A-Break",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Escape_Room_s0c0m7.jpg"
         },
         {
           "id": "aumazing",
           "title": "AUmazing Talent",
           "category": "Take-A-Break",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742061392/shaft-tank_hsskk9.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576272/shaft-tank_hsskk9.jpg"
         }
       ]
     },
@@ -404,7 +404,7 @@
       "longDescription": "AUmazing Talent is a unique talent showcase event dedicated to the theme of Navaras - the nine emotions that form the essence of performing arts. The event aims to bring together individuals who can express these emotions through various art forms, providing a stage for performers to showcase their talent through diverse performances. The event is open to all art forms, including dance, music, theatre, and any other creative expressions that depict the nine rasas: Shringara (Love), Hasya (Laughter), Karuna (Compassion), Raudra (Anger), Veera (Heroism), Bhayanaka (Fear), Bibhatsa (Disgust), Adbhuta (Wonder), and Shanta (Peace). Performances: Open to dance, music that embodies Navarasa.",
       "category": "Take-A-Break",
       "contact": ["Vishva Dave (8780765935)", "Vaishvi Patel (9313714364)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742061392/shaft-tank_hsskk9.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576272/AUmazing_wdizub.jpg",
       "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeaekug6sbVJAzJCZ1rj0gavJ2gJoUZkOzntVo6HqF9XMBq9Q/viewform",
       "rules": [
         "Rule 1: Content should be original and expressive",
@@ -421,13 +421,13 @@
           "id": "invest-o-mania",
           "title": "Invest-O-Mania",
           "category": "Take-A-Break",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060779/INVEST-O-MANIA_alt_v2_1_hqgsnh.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/INVEST-O-MANIA_erpvrd.jpg"
         },
         {
           "id": "escape-room",
           "title": "Override Protocol: Humanity's Last Stand",
           "category": "Take-A-Break",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/Escape_Room_1_oy7oae.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Escape_Room_s0c0m7.jpg"
         }
       ]
     },
@@ -441,7 +441,7 @@
       "longDescription": "Join the Valorant tournament to test your skills in this fast-paced, tactical shooter game. Teams will compete in intense matches, requiring coordination, strategy, and precision. Whether you're a seasoned player or new to the game, this event offers a thrilling competitive experience with exciting prizes for the winners.",
       "category": "Esports",
       "contact": ["Discord server"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139674/Valorant_p6jndc.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Valorant_wu7cwu.jpg",
       "rules": [
         "Rule 1: Teams must consist of 5 players",
         "Rule 2: Matches will follow official Valorant competitive rules",
@@ -459,13 +459,13 @@
           "id": "bgmi",
           "title": "BGMI",
           "category": "Esports",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139675/BGMI_cordab.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/BGMI_qfczke.jpg"
         },
         {
           "id": "fifa",
           "title": "FIFA",
           "category": "Esports",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139675/FIFA_jt255v.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745577569/FOOTBALL_FANS_AND_GAMING_ENTHUSIASTS_it_s_time_to_lace_up_your_virtual_boots_and_show_off_your_FIFA_skills_on_the_grand_stage_Join_us_at_Ahmedabad_University_s_Ingenium_2025_for_the_ULTIMATE_FIFA_Face-Off_where_only_t_pyo57q.jpg"
         }
       ]
     },
@@ -479,7 +479,7 @@
       "longDescription": "Participate in the BGMI tournament, a battle royale experience where squads compete to be the last team standing. Test your survival skills, teamwork, and strategic thinking in intense matches. This event is perfect for mobile gaming enthusiasts looking for a competitive challenge, with exciting rewards for top performers.",
       "category": "Esports",
       "contact": ["Discord server"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139675/BGMI_cordab.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/BGMI_qfczke.jpg",
       "rules": [
         "Rule 1: Teams must consist of 4 players",
         "Rule 2: Matches will follow official BGMI tournament rules",
@@ -497,13 +497,13 @@
           "id": "valorant",
           "title": "Valorant",
           "category": "Esports",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139674/Valorant_p6jndc.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Valorant_wu7cwu.jpg"
         },
         {
           "id": "fifa",
           "title": "FIFA",
           "category": "Esports",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139675/FIFA_jt255v.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745577569/FOOTBALL_FANS_AND_GAMING_ENTHUSIASTS_it_s_time_to_lace_up_your_virtual_boots_and_show_off_your_FIFA_skills_on_the_grand_stage_Join_us_at_Ahmedabad_University_s_Ingenium_2025_for_the_ULTIMATE_FIFA_Face-Off_where_only_t_pyo57q.jpg"
         }
       ]
     },
@@ -517,7 +517,7 @@
       "longDescription": "Join the FIFA tournament to compete in exciting virtual football matches. Test your skills in one-on-one matches, showcasing your ability to score goals and defend against opponents. This event is perfect for football enthusiasts and gamers alike, with thrilling competition and prizes for the top players.",
       "category": "Esports",
       "contact": ["Bhishmadevsinh Rathod (9925126496)", "Naman Badiani (9825212343)"],
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139675/FIFA_jt255v.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745577569/FOOTBALL_FANS_AND_GAMING_ENTHUSIASTS_it_s_time_to_lace_up_your_virtual_boots_and_show_off_your_FIFA_skills_on_the_grand_stage_Join_us_at_Ahmedabad_University_s_Ingenium_2025_for_the_ULTIMATE_FIFA_Face-Off_where_only_t_pyo57q.jpg",
       "rules": [
         "Rule 1: Matches will follow official FIFA tournament rules",
         "Rule 2: No cheating or use of unauthorized software allowed",
@@ -535,13 +535,13 @@
           "id": "valorant",
           "title": "Valorant",
           "category": "Esports",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139674/Valorant_p6jndc.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/Valorant_wu7cwu.jpg"
         },
         {
           "id": "bgmi",
           "title": "BGMI",
           "category": "Esports",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742139675/BGMI_cordab.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576269/BGMI_qfczke.jpg"
         }
       ]
     },
@@ -556,7 +556,7 @@
       "contact": ["Moksh Vora (9913308472)"],
       "category": "Chem Events",
       "meetingType": "offline",
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742585182/ASPEN_WORKSHOP_1_1_1_jo0xa0.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576267/WORKSHOP_f8hdb6.jpg",
       "rules": ["Rules will be declared before the starting of event in offline mode."],
       "howToApply": [
         "Directly Attend the workshop (No registration required)"
@@ -566,7 +566,7 @@
           "id": "chy-fragrance",
           "title": "Chy Fragrance",
           "category": "Chem Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1742060016/CHY_Fragrance_wlws14.jpg"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576272/CHY_Fragrance_plxppq.jpg"
         }
       ]
     },
@@ -581,7 +581,7 @@
       "contact": ["Vansh Narania (6376343259)"],
       "category": "Pro-night Events",
       "meetingType": "offline",
-      "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1743265202/Standup_online_1_r7x3lg.jpg",
+      "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576984/standup_rafazi.jpg",
       "rules": ["Enjoy the show"],
       "howToApply": [
         "Buy the pass from the link",
@@ -592,7 +592,7 @@
           "id": "hera-pheri",
           "title": "Hera Pheri 3.0",
           "category": "CSE Events",
-          "image": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741870020/Hera_Pheri_xzghqe.png"
+          "image": "https://res.cloudinary.com/daouhylls/image/upload/v1745576983/Babu_Bhaiya_in_the_house_Get_ready_for_a_crazy_ride_of_wit_fun_and_surprises_at_Ingenium_2025_Join_us_for_an_event_full_of_twists_turns_and_laughter._Are_you_ready_to_hustle_._Scan_the_QR_code_to_know_more_...Credits_w9mjiw.jpg "
         }
       ]
     }

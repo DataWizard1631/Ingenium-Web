@@ -26,7 +26,7 @@ const comingSoonCategories = [
 function CardComp({ event }) {
   const navigate = useNavigate();
 
-  // Add helper function to check if event has passed
+  // Keep the isEventPassed helper function for the registration button logic
   const isEventPassed = (dateStr, timeStr) => {
     const months = {
       'January': 0, 'February': 1, 'March': 2, 'April': 3, 'May': 4, 'June': 5,
@@ -39,7 +39,7 @@ function CardComp({ event }) {
     const date = new Date(currentYear, months[month], parseInt(cleanDay));
     
     if (timeStr) {
-      const [time, period] = timeStr.split(' ');
+      const [time, period] = timeStr.split(':');
       const [hours, minutes] = time.split(':');
       let hour = parseInt(hours);
       if (period === 'PM' && hour !== 12) hour += 12;
@@ -54,7 +54,7 @@ function CardComp({ event }) {
   const eventPassed = isEventPassed(event.date, event.time);
 
   return (
-    <div className={`w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[500px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 ${eventPassed ? 'brightness-75' : ''}`}>
+    <div className="w-full sm:w-[90vw] md:w-[80vw] lg:w-[45vw] min-h-[500px] sm:h-[40vh] md:h-[45vh] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
       {/* Image */}
       <div className="w-full sm:w-fit h-full sm:h-full">
         <CloudinaryImage

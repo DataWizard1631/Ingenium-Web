@@ -3,100 +3,100 @@
       {
           "Position": "Fest Head",
           "Name": "Pratham Patel",
-          "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372264/Pratham_Kankotiya_Fest_Head_inaycq.jpg"
+          "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578637/Pratham_Kankotiya_Fest_Head_bvz6nq.jpg"
       },
       {
           "Position": "Fest Head",
           "Name": "Purvansh Desai",
-          "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372260/Purvansh_Desai_Fest_Head_u0rvj4.jpg"
+          "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578636/Purvansh_Desai_Fest_Head_l4i61t.jpg"
       },
       {
           "Position": "Treasurer",
           "Name": "Shrey Salvi",
-          "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372260/Shrey_Salvi_Treasurer_z8ys9j.jpg"
+          "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578681/Shrey_Salvi_Treasurer_u9qnw8.jpg"
       },
       {
           "Position": "Secretary",
           "Name": "Bhishmadevsinh Rathod",
-          "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372280/Bhishmadevsinh_Rathod_Secretary_dwrjdk.jpg"
+          "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578678/Bhishmadevsinh_Rathod_Secretary_gitizb.jpg"
       },
       {
           "Position": "Joint Secretary",
           "Name": "Manya Trivedi",
-          "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372271/Manya_Trivedi_Joint_Secretary_ev240f.jpg"
+          "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578656/Manya_Trivedi_Joint_Secretary_rdwlhi.jpg"
       }
   ],
   "Cores": {
       "Logistics": [
-          { "Name": "Param Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/f_auto,fl_lossy/v1739372271/Param_Shah_Logistic_and_Onground_Operations_Head_taswww.jpg" },
-          { "Name": "Shreya Godhani", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372259/Shreya_Godhani_Logistic_and_Onground_Operations_Head_opi4mi.jpg" }
+          { "Name": "Param Shah", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578643/Param_Shah_Logistic_and_Onground_Operations_Head_ffjape.jpg" },
+          { "Name": "Shreya Godhani", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578682/Shreya_Godhani_Logistic_and_Onground_Operations_Head_dpnc2n.jpg" }
       ],
       "Decoration": [
-          { "Name": "Maitri Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372270/Maitri_Shah_Decoration_Head_yl62as.jpg" },
-          { "Name": "Krisha Patwa", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372277/Krisha_Patwa_Decoration_Head_xiroql.jpg" }
+          { "Name": "Maitri Shah", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578658/Maitri_Shah_Decoration_Head_k8tbzy.jpg" },
+          { "Name": "Krisha Patwa", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578659/Krisha_Patwa_Decoration_Head_r6tabm.jpg" }
       ],
       "Graphics": [
-          { "Name": "Deepayu Ninama", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741715667/IMG_4505_vt4ogo.jpg" },
-          { "Name": "Diya Kuria", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1740389441/IMG_20250224_145937_pctxbf.jpg" }
+          { "Name": "Deepayu Ninama", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578667/Deepayu_Ninama_kdwfho.jpg" },
+          { "Name": "Diya Kuria", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745579504/diya_lpmpxq.jpg" }
       ],
       "CSE Events": [
-          { "Name": "Dhrumi Panchal", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372278/Dhrumi_Panchal_CSE_Head_cdbqhj.jpg" },
-          { "Name": "Jugal Vaghmashi", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372275/Jugal_Vaghmashi_CSE_Head_sfgyrx.jpg" }
+          { "Name": "Dhrumi Panchal", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578675/Dhrumi_Panchal_CSE_Head_ucpxgn.jpg" },
+          { "Name": "Jugal Vaghmashi", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578664/Jugal_Vaghmashi_CSE_Head_kzjpxx.jpg" }
       ],
       "Mech Events": [
-          { "Name": "Manush Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372269/Manush_Shah_Mech_Events_Head_hf4poq.jpg" },
-          { "Name": "Dev Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372277/Dev_Shah_Mech_Events_Head_ckk7qm.jpg" }
+          { "Name": "Manush Shah", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578657/Manush_Shah_Mech_Events_Head_lpzfen.jpg" },
+          { "Name": "Dev Shah", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578679/Dev_Shah_Mech_Events_Head_vzyrqi.jpg" }
       ],
       "Chem Events": [
-          { "Name": "Moksh Vora", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372268/Moksh_Vora_Chem_Events_Head_yspucq.jpg" }
+          { "Name": "Moksh Vora", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578651/Moksh_Vora_Chem_Events_Head_onh2dz.jpg" }
       ],
       "EEE": [
-          { "Name": "Ayush Purohit", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372279/Aayush_Purohit_EEE_Event_Head_prxykr.jpg" }
+          { "Name": "Ayush Purohit", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578678/Aayush_Purohit_EEE_Event_Head_wkenz3.jpg" }
       ],
       "Escape Room": [
-          { "Name": "Archi Daga", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372279/Archi_Daga_Escape_Room_Head_vyhdld.jpg" },
-          { "Name": "Vrushti Patel", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372260/Vrushti_Patel_Escape_Room_Head_upz43h.jpg" }
+          { "Name": "Archi Daga", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578673/Archi_Daga_Escape_Room_Head_yfkkcz.jpg" },
+          { "Name": "Vrushti Patel", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578639/Vrushti_Patel_Escape_Room_Head_afibam.jpg" }
       ],
       "Registration": [
-          { "Name": "Pratham Sandesara", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372260/Pratham_Sandesara_Registration_and_Outreach_Head_umvxtn.jpg" }
+          { "Name": "Pratham Sandesara", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578639/Pratham_Sandesara_Registration_and_Outreach_Head_hbkunx.jpg" }
       ],
       "Outreach": [
-          { "Name": "Hitanshu Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372273/Hitanshu_Shah_Registration_and_Outreach_Head_zbc68s.jpg" }
+          { "Name": "Hitanshu Shah", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578666/Hitanshu_Shah_Registration_and_Outreach_Head_jadzeo.jpg" }
       ],
       "AUmazing Talent": [
-          { "Name": "Vaishvi Patel", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372262/Vaishvi_Patel_Talent_Show_Head_e5nb9k.jpg" },
-          { "Name": "Vishwa Dave", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372256/Vishwa_Dave_Talent_Show_Head_d7iary.jpg" }
+          { "Name": "Vaishvi Patel", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578657/Vaishvi_Patel_Talent_Show_Head_zhucbn.jpg" },
+          { "Name": "Vishwa Dave", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578771/Vishwa_Dave_Talent_Show_Head_wgf4vx.jpg" }
       ],
       "Sponsorship": [
-          { "Name": "Vansh Narania", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372257/Vansh_Narania_Sponsorship_Head_ttvcri.jpg" }
+          { "Name": "Vansh Narania", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578651/Vansh_Narania_Sponsorship_Head_bjehoz.jpg" }
       ],
       "Social Media": [
-          { "Name": "Jainik Patel", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372379/Jainik_Patel_Social_Media_Head_madd3i.jpg" },
-          { "Name": "Heer Shah", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372275/Heer_Shah_Social_Media_Head_cbdpdl.jpg" }
+          { "Name": "Jainik Patel", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578667/Jainik_Patel_Social_Media_Head_vxxy8r.jpg" },
+          { "Name": "Heer Shah", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745579517/Heer_Shah_Social_Media_Head_1_dhlzga.jpg" }
       ],
       "Hackathon": [
-          { "Name": "Deepayu Ninama", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741715667/IMG_4505_vt4ogo.jpg" }
+          { "Name": "Deepayu Ninama", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578667/Deepayu_Ninama_kdwfho.jpg" }
       ],
       "Mechathon": [
-          { "Name": "Manya Trivedi", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372271/Manya_Trivedi_Joint_Secretary_ev240f.jpg" }
+          { "Name": "Manya Trivedi", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578656/Manya_Trivedi_Joint_Secretary_rdwlhi.jpg" }
       ],
       "Chemathon": [
           { "Name": "AiChE", "imageUrl": "./public/1.jpg" }
       ],
       "Content": [
-          { "Name": "Naman Badiani", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372267/Naman_Badiani_Content_Head_o23te8.jpg" },
-          { "Name": "Tirth Teraiya", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372258/Tirth_Teraiya_Content_Head_lpszvh.jpg" }
+          { "Name": "Naman Badiani", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578659/Naman_Badiani_Content_Head_rccpba.jpg" },
+          { "Name": "Tirth Teraiya", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578636/Tirth_Teraiya_Content_Head_av3upi.jpg" }
       ],
       "Invest-o-mania": [
-          { "Name": "Even Patel", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1739372275/Even_Patel_Invest-O-Mania_hEAD_haqj0f.jpg" }
+          { "Name": "Even Patel", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578666/Even_Patel_Invest-O-Mania_hEAD_xbxp5e.jpg" }
       ]
   },
   "Web Devs": [
-    { "Name": "Deep Patel", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741724088/IMG_20250312_014236_dpl4lj.jpg" },
-    { "Name": "Vishv Boda", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741724089/IMG_20250312_014118_b9wcjs.jpg" },
-    { "Name": "Subrat Jain", "imageUrl": "https://res.cloudinary.com/dvhcrdl4b/image/upload/v1741755459/Screenshot_20250312_100718_Gallery_y7jwf7.jpg" }
+    { "Name": "Deep Patel", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578679/deep_patel_ru5k4t.jpg" },
+    { "Name": "Vishv Boda", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578657/vishv_boda_lh0cz1.jpg" },
+    { "Name": "Subrat Jain", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578683/subrat_jain_s8b2t9.jpg" }
   ],
   "Web Design": [
-    { "Name": "Deepayu Ninama", "imageUrl": "https://res.cloudinary.com/dub5rms8i/image/upload/v1741715667/IMG_4505_vt4ogo.jpg" }
+    { "Name": "Deepayu Ninama", "imageUrl": "https://res.cloudinary.com/daouhylls/image/upload/v1745578667/Deepayu_Ninama_kdwfho.jpg" }
   ]
 }
